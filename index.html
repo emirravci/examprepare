@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Sınav Hazırlık Platformu | Akıllı Takip & İstatistik</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- App Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. GLOBAL LOADER SPINNER -->
+    <div id="global-loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- 2. TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- 3. CONFIRMATION MODAL -->
+    <div class="modal-overlay" id="confirm-modal">
+        <div class="modal-card">
+            <div class="modal-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <h3 class="modal-title" id="modal-title">Emin misiniz?</h3>
+            <p class="modal-body" id="modal-body">Bu işlemi geri alamazsınız.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="confirm-cancel-btn">Vazgeç</button>
+                <button class="btn btn-danger" id="confirm-ok-btn">Evet, Devam Et</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. AUTHENTICATION VIEW (Giriş Yap / Kayıt Ol) -->
+    <section id="auth-view">
+        <div class="auth-wrapper">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <div class="brand-badge">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h2 id="auth-mode-title">Tekrar Hoş Geldin!</h2>
+                    <p id="auth-mode-desc">Sınav hazırlık paneline erişmek için giriş yap</p>
+                </div>
+
+                <form id="auth-form">
+                    <div class="form-group" id="fullname-group" style="display: none;">
+                        <label for="auth-fullname"><i class="fa-solid fa-user"></i> Ad Soyad</label>
+                        <input type="text" id="auth-fullname" placeholder="Örn: Emir Yılmaz" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="auth-email"><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
+                        <input type="email" id="auth-email" required placeholder="ogrenci@ornek.com" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="auth-password"><i class="fa-solid fa-lock"></i> Şifre</label>
+                        <input type="password" id="auth-password" required placeholder="En az 6 karakter" autocomplete="current-password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="auth-submit-btn">
+                        <span>Giriş Yap</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-footer">
+                    <button type="button" id="auth-toggle-mode" class="btn-text">
+                        Henüz hesabın yok mu? <strong>Kayıt Ol</strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MAIN APPLICATION CONTAINER -->
+    <div id="app-container">
+        
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="app-sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-info">
+                    <h3>SınavYolum</h3>
+                    <span>Hazırlık Asistanı</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <button data-view-target="dashboard" class="nav-btn">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Genel Bakış</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="exams" class="nav-btn">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Sınavlar & Çalışmalar</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="stats" class="nav-btn">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>İstatistikler</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="profile" class="nav-btn">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>Profil & Hedefler</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-chip">
+                    <div class="user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name" id="current-user-name">Öğrenci</span>
+                        <span class="user-email" id="current-user-email">ogrenci@mail.com</span>
+                    </div>
+                </div>
+                <button class="btn-icon btn-logout-action" title="Çıkış Yap">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <div class="app-main-layout">
+            
+            <!-- Top Mobile / Desktop Header -->
+            <header class="app-header">
+                <div class="header-left">
+                    <div class="mobile-brand">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>SınavYolum</span>
+                    </div>
+                    <h1 class="header-title" id="current-page-title">Genel Bakış</h1>
+                </div>
+
+                <div class="header-right">
+                    <div class="streak-badge" title="Çalışma Serisi">
+                        <i class="fa-solid fa-fire text-accent"></i>
+                        <span>3 Gün Seri</span>
+                    </div>
+                    <button class="header-action-btn btn-logout-action desktop-hide" title="Çıkış Yap">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Views Content -->
+            <main class="app-content">
+
+                <!-- VIEW 1: DASHBOARD / GENEL BAKIŞ -->
+                <section id="dashboard-view" class="view-section active">
+                    
+                    <!-- Welcome Hero Banner -->
+                    <div class="welcome-card">
+                        <div class="welcome-text">
+                            <h2>Bugün hedefine bir adım daha yaklaş! 🎯</h2>
+                            <p>Sınava hazırlık sürecini takip et, eksiklerini gör ve başarıya ulaş.</p>
+                        </div>
+                        <div class="welcome-action">
+                            <button class="btn btn-light" data-view-target="exams">
+                                <i class="fa-solid fa-plus"></i> Yeni Kayıt Ekle
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Hızlı İstatistik Kartları -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon bg-indigo-light">
+                                <i class="fa-solid fa-bullseye text-indigo"></i>
+                            </div>
+                            <div class="stat-data">
+                                <span class="stat-label">Hedef Sınav</span>
+                                <h3 class="stat-value" id="dash-target-exam">YKS / KPSS</h3>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-emerald-light">
+                                <i class="fa-solid fa-calendar-check text-emerald"></i>
+                            </div>
+                            <div class="stat-data">
+                                <span class="stat-label">Kalan Süre</span>
+                                <h3 class="stat-value" id="dash-days-left">Geri Sayım</h3>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-amber-light">
+                                <i class="fa-solid fa-list-check text-amber"></i>
+                            </div>
+                            <div class="stat-data">
+                                <span class="stat-label">Çözülen Soru</span>
+                                <h3 class="stat-value" id="dash-questions-solved">0</h3>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon bg-rose-light">
+                                <i class="fa-solid fa-chart-simple text-rose"></i>
+                            </div>
+                            <div class="stat-data">
+                                <span class="stat-label">Son Net / Puan</span>
+                                <h3 class="stat-value" id="dash-latest-score">--</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Boş Durum & Başlangıç Bilgisi -->
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-rocket text-indigo"></i>
+                                <h3>Altyapı Başarıyla Hazırlandı</h3>
+                            </div>
+                            <span class="badge badge-success">Sistem Aktif</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted" style="margin-bottom: 1rem;">
+                                Supabase veritabanı entegrasyonu, kullanıcı girişi, mobil duyarlı arayüz ve sayfa yapısı hazırlandı.
+                            </p>
+                            <div class="info-box">
+                                <i class="fa-solid fa-info-circle"></i>
+                                <div>
+                                    <strong>İçerik bekleniyor:</strong>
+                                    Projede yer almasını istediğiniz özellikleri (örneğin Deneme Takibi, Soru Sayacı, Konu İlerlemesi, Pomodoro zamanlayıcı vb.) anlattığınızda doğrudan bu altyapıya entegre edeceğiz!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 2: EXAMS & STUDIES / SINAVLAR & ÇALIŞMALAR -->
+                <section id="exams-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-book-open text-indigo"></i>
+                                <h3>Sınavlar ve Çalışmalar</h3>
+                            </div>
+                            <button class="btn btn-primary btn-sm" id="btn-add-exam-record">
+                                <i class="fa-solid fa-plus"></i> Kayıt Ekle
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="empty-state">
+                                <div class="empty-icon"><i class="fa-solid fa-pencil"></i></div>
+                                <h4>Henüz çalışma kaydı bulunmuyor</h4>
+                                <p class="text-muted">Projenin detaylarını belirlediğimizde bu alandan deneme sınavı ve ders çalışmalarınızı kaydedebileceksiniz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 3: STATS & ANALYTICS / İSTATİSTİKLER -->
+                <section id="stats-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-chart-line text-indigo"></i>
+                                <h3>Gelişim ve Net Analizleri</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="empty-state">
+                                <div class="empty-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                                <h4>İstatistikler hazırlanıyor</h4>
+                                <p class="text-muted">Girilen veriler arttıkça ders bazlı başarı oranları, net grafikleri ve eksik konu analizleri burada yer alacak.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- VIEW 4: PROFILE & SETTINGS / PROFİL & HEDEFLER -->
+                <section id="profile-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-user-gear text-indigo"></i>
+                                <h3>Öğrenci Profili & Sınav Hedefleri</h3>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form id="profile-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="profile-name">Ad Soyad</label>
+                                        <input type="text" id="profile-name" placeholder="Adınız Soyadınız">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-target-exam">Hazırlandığınız Sınav</label>
+                                        <select id="profile-target-exam">
+                                            <option value="YKS-TYT-AYT">YKS (TYT - AYT)</option>
+                                            <option value="KPSS">KPSS</option>
+                                            <option value="LGS">LGS</option>
+                                            <option value="DGS">DGS</option>
+                                            <option value="ALES">ALES</option>
+                                            <option value="YDS">YDS / Dil</option>
+                                            <option value="Diger">Diğer / Üniversite Sınavı</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-target-score">Hedef Puan / Net / Sıralama</label>
+                                        <input type="text" id="profile-target-score" placeholder="Örn: 450 Puan / İlk 10.000">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profile-target-date">Hedef Sınav Tarihi</label>
+                                        <input type="date" id="profile-target-date">
+                                    </div>
+                                </div>
+                                <div class="form-actions" style="margin-top: 1.5rem;">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fa-solid fa-floppy-disk"></i> Değişiklikleri Kaydet
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- 6. MOBILE BOTTOM NAVIGATION BAR -->
+        <nav class="mobile-bottom-nav">
+            <button data-view-target="dashboard" class="mobile-nav-btn active">
+                <i class="fa-solid fa-house"></i>
+                <span>Genel Bakış</span>
+            </button>
+            <button data-view-target="exams" class="mobile-nav-btn">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Çalışmalar</span>
+            </button>
+            <button data-view-target="stats" class="mobile-nav-btn">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>İstatistik</span>
+            </button>
+            <button data-view-target="profile" class="mobile-nav-btn">
+                <i class="fa-solid fa-user-gear"></i>
+                <span>Profil</span>
+            </button>
+        </nav>
+
+    </div>
+
+    <!-- SUPABASE JS CDN CLIENT -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- MODULAR JAVASCRIPT MODULES -->
+    <script type="module" src="js/supabase.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
