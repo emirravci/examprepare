@@ -1,0 +1,83 @@
+[
+  {
+    "id": "lec-alan-01",
+    "section": "alan",
+    "topic": "Algoritma ve Programlama Mantığı",
+    "title": "Karmaşıklık Analizi (Big-O) ve Sıralama/Arama Algoritmaları",
+    "readTime": "6 dk",
+    "summary": "Big-O notasyonu, en kötü durum analizleri, sıralama algoritmalarının maliyetleri ve arama teknikleri.",
+    "content": "### 1. Zaman ve Alan Karmaşıklığı (Asymptotic Notation)\n* **O(1) - Sabit Zaman:** Girdi boyutu ne olursa olsun işlem süresi değişmez (Örn: Dizi indeksine erişim, Hash Table okuma).\n* **O(log n) - Logaritmik Zaman:** Her adımda problem boyutu yarıya iner (Örn: Sıralı dizide İkili Arama / Binary Search).\n* **O(n) - Doğrusal Zaman:** Eleman sayısı kadar işlem (Örn: Sırasız dizide doğrusal arama, tek döngü).\n* **O(n log n) - Doğrusal Logaritmik:** Karşılaştırma tabanlı en verimli sıralama algoritmaları (Merge Sort, Heap Sort).\n* **O(n²) - Karesel Zaman:** İç içe iki döngü (Örn: Bubble Sort, Selection Sort, Insertion Sort, en kötü durumda Quick Sort).\n\n### 2. Temel Sıralama Algoritmaları Karşılaştırması\n| Algoritma | En İyi (Best) | Ortalama (Avg) | En Kötü (Worst) | Bellek (Space) | Kararlılık (Stable) |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Quick Sort** | O(n log n) | O(n log n) | **O(n²)** | O(log n) | Hayır |\n| **Merge Sort** | O(n log n) | O(n log n) | **O(n log n)** | **O(n)** | **Evet** |\n| **Heap Sort** | O(n log n) | O(n log n) | **O(n log n)** | **O(1)** | Hayır |\n| **Insertion Sort** | **O(n)** | O(n²) | O(n²) | O(1) | Evet |\n\n> 💡 **Sınav İpucu:** Quick Sort pratikte önbellek dostu olduğu için çok hızlıdır ancak pivot en kötü seçilirse O(n²) olur. Merge Sort garanti O(n log n)'dir ama O(n) ekstra bellek ister."
+  },
+  {
+    "id": "lec-alan-02",
+    "section": "alan",
+    "topic": "Veri Yapıları ve Problem Çözme",
+    "title": "Temel Veri Yapıları: Stack, Queue, Hash Table ve Ağaçlar",
+    "readTime": "7 dk",
+    "summary": "LIFO/FIFO yapıları, Hash çakışmaları, İkili Arama Ağaçları (BST) ve Dengeleme (AVL/Heap).",
+    "content": "### 1. Yığın (Stack) ve Kuyruk (Queue)\n* **Stack (Yığın):** **LIFO** (Last In, First Out). Fonksiyon çağrı yığını (Call Stack), parantez eşleme, Geri Al (Undo) mekanizmalarında kullanılır. Temel işlemler: `push`, `pop`, `peek` (Tümü O(1)).\n* **Queue (Kuyruk):** **FIFO** (First In, First Out). Yazıcı kuyrukları, BFS (Genişlik Öncelikli Arama), mesajlaşma sistemleri (RabbitMQ, Kafka). Temel işlemler: `enqueue`, `dequeue` (Tümü O(1)).\n\n### 2. Hash Tabloları (Hash Table)\n* Anahtar-Değer (Key-Value) eşlemesi. Ortalama arama, ekleme, silme: **O(1)**. En kötü durumda çakışmalar (Collision) nedeniyle **O(n)**.\n* **Çakışma Çözme:** Chaining (Bağlı liste ile zincirleme) veya Open Addressing (Linear Probing, Quadratic Probing).\n\n### 3. Ağaç Yapıları (Trees)\n* **Binary Search Tree (BST):** Sol çocuk < Kök < Sağ çocuk. Dengeliyse arama/ekleme/silme **O(log n)**, zincir haline gelirse **O(n)**.\n* **AVL Ağacı:** Kendini dengeleyen BST'dir. Herhangi bir düğümün sol ve sağ alt ağaçlarının yükseklik farkı (Balance Factor) en fazla 1 olabilir. Denge bozulduğunda döndürmeler (Rotations: LL, RR, LR, RL) yapılır.\n* **Heap (Öbek):** Öncelik kuyruklarında (Priority Queue) kullanılır. Max-Heap'te en büyük eleman, Min-Heap'te en küçük eleman her zaman köktedir. Ekleme ve çıkarma **O(log n)**."
+  },
+  {
+    "id": "lec-alan-03",
+    "section": "alan",
+    "topic": "Veri Tabanı ve SQL",
+    "title": "SQL Sorguları, Normalizasyon ve ACID Prensipleri",
+    "readTime": "8 dk",
+    "summary": "JOIN çeşitleri, 1NF-BCNF kuralları, transaction yönetimi ve bankacılık ACID garantileri.",
+    "content": "### 1. SQL JOIN Türleri\n* **INNER JOIN:** Yalnızca her iki tabloda da ON koşuluyla eşleşen satırları döndürür.\n* **LEFT JOIN (LEFT OUTER):** Sol tablodaki tüm satırları getirir; sağda eşleşmeyenler için sütunlar `NULL` olur.\n* **RIGHT JOIN:** Sağ tablodaki tüm satırları ve soldan eşleşenleri getirir.\n* **FULL OUTER JOIN:** İki tablodan birinde bile eşleşme olan tüm satırları getirir.\n\n### 2. Transaction ve ACID Prensipleri (Bankacılık için Hayati)\n* **A - Atomicity (Bölünemezlik):** Ya hep ya hiç! İşlem ya tamamen commit edilir ya da rollback ile iptal edilir.\n* **C - Consistency (Tutarlılık):** Veritabanı kurallarına (kısıtlar, tetikleyiciler) her zaman uyulur.\n* **I - Isolation (Yalıtım):** Aynı anda çalışan işlemler birbirinin ara durumlarını görmez.\n* **D - Durability (Kalıcılık):** Commit edilen işlem sistem çökse dahi diskte kalıcıdır.\n\n### 3. Normalizasyon Aşamaları\n* **1NF:** Her sütunda atomik (bölünemez) tek bir değer olmalı, tekrarlayan gruplar bulunmamalı.\n* **2NF:** 1NF olmalı + Kısmi bağımlılık (Partial Dependency) olmamalı (Tüm anahtar olmayan sütunlar Composite Primary Key'in tamamına bağlı olmalı).\n* **3NF:** 2NF olmalı + Geçişli bağımlılık (Transitive Dependency) olmamalı (A -> B ve B -> C durumu yok edilmeli).\n* **BCNF:** 3NF'in daha sıkı halidir; her belirleyici (determinant) bir aday anahtar (Candidate Key) olmalıdır."
+  },
+  {
+    "id": "lec-alan-04",
+    "section": "alan",
+    "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
+    "title": "SOLID Prensipleri, Tasarım Desenleri ve SDLC",
+    "readTime": "7 dk",
+    "summary": "Nesne yönelimli tasarımın 5 temel ilkesi, GoF tasarım desenleri ve Çevik (Agile/Scrum) metodolojiler.",
+    "content": "### 1. SOLID Prensipleri\n* **S - Single Responsibility:** Bir sınıfın değişmek için yalnızca tek bir nedeni (tek bir sorumluluğu) olmalıdır.\n* **O - Open/Closed:** Sınıflar genişletilmeye açık (Open for extension), değiştirilmeye kapalı (Closed for modification) olmalıdır.\n* **L - Liskov Substitution:** Alt sınıflar, üst sınıflarının yerine geçebilmeli ve programın davranışını bozmamalıdır.\n* **I - Interface Segregation:** İstemciler kullanmadıkları metotları içeren şişkin arayüzlere bağımlı tutulmamalıdır; arayüzler özelleşmelidir.\n* **D - Dependency Inversion:** Yüksek seviyeli modüller düşük seviyeli modüllere doğrudan değil, soyutlamalara (interfaces) bağımlı olmalıdır.\n\n### 2. Yaygın Tasarım Desenleri (Design Patterns)\n* **Singleton (Creational):** Bir sınıftan çalışma zamanında yalnızca tek bir nesne üretilmesini ve buna genel erişim noktası sağlar.\n* **Factory Method (Creational):** Nesne üretim mantığını istemciden gizleyip alt sınıflara devreder.\n* **Observer (Behavioral):** Bir nesnenin durumundaki değişiklikleri tüm abonelere (dinleyicilere) otomatik bildirir (Örn: Olay güdümlü mimariler).\n* **Adapter (Structural):** Birbiriyle uyumsuz iki arayüzün birlikte çalışmasını sağlar.\n\n### 3. Yazılım Yaşam Döngüsü (SDLC) ve Agile\n* **Waterfall:** Sıralı, aşamalı, esnekliği az geleneksel model.\n* **Scrum (Agile):** 1-4 haftalık sprintler, Daily Standup, Sprint Planning, Sprint Review, Sprint Retrospective rolleri (Product Owner, Scrum Master, Developer Team)."
+  },
+  {
+    "id": "lec-alan-05",
+    "section": "alan",
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "title": "OSI 7 Katmanı, TCP/IP ve İşletim Sistemi Kavramları",
+    "readTime": "8 dk",
+    "summary": "Ağ protokolleri, TCP vs UDP, Süreç ve Thread ayrımı, Deadlock 4 Coffman şartı, Sanal Bellek.",
+    "content": "### 1. OSI Katmanları ve Protokoller\n* **7. Uygulama:** HTTP, HTTPS, DNS, DHCP, FTP, SMTP\n* **6. Sunum:** TLS/SSL, Şifreleme, Sıkıştırma (JSON, XML)\n* **5. Oturum:** Oturum açma/yönetme\n* **4. Taşıma:** **TCP** (Güvenilir, bağlantı odaklı, 3-way handshake) vs **UDP** (Hızlı, bağlantısız, ses/video akışı)\n* **3. Ağ:** IP, ICMP, Yönlendiriciler (Router), Alt ağ hesabı (Subnetting)\n* **2. Veri Bağlantısı:** MAC adresleri, Çerçeveler (Frame), Switch\n* **1. Fiziksel:** Bitler, kablolar, sinyaller\n\n### 2. İşletim Sistemleri Temelleri\n* **Process vs Thread:** Process bağımsız bellek alanına sahiptir; Thread ise aynı process içindeki kaynakları ve belleği paylaşan hafif yürütme birimidir.\n* **Deadlock (Kilitlenme) 4 Şartı (Coffman):**\n  1. Mutual Exclusion (Karşılıklı Dışlama)\n  2. Hold and Wait (Tut ve Bekle)\n  3. No Preemption (Zorla Alma Yok)\n  4. Circular Wait (Dairesel Bekleme)\n* **Sanal Bellek ve Sayfalama (Paging):** Fiziksel bellekten büyük programların çalışmasını sağlar. Bellek sayfalara (Pages), fiziksel RAM ise çerçevelere (Frames) bölünür. İstenen sayfa RAM'de yoksa **Page Fault** oluşur."
+  },
+  {
+    "id": "lec-alan-06",
+    "section": "alan",
+    "topic": "Bilgi Güvenliği Temelleri",
+    "title": "Siber Güvenlik, Kriptografi ve OWASP Top 10",
+    "readTime": "6 dk",
+    "summary": "CIA Üçlüsü, simetrik vs asimetrik şifreleme, web saldırıları (SQLi, XSS, CSRF) ve bankacılık veri güvenliği.",
+    "content": "### 1. CIA Üçlüsü (Bilgi Güvenliğinin Temeli)\n* **Confidentiality (Gizlilik):** Veriye yalnızca yetkili kişilerin erişebilmesi (Şifreleme, erişim kontrolleri).\n* **Integrity (Bütünlük):** Verinin yetkisiz kişilerce bozulmaması veya değiştirilmemesi (Hash fonksiyonları, dijital imza).\n* **Availability (Erişilebilirlik):** Sistemin ve verinin ihtiyaç duyulduğunda hazır olması (DDoS koruması, yedeklilik).\n\n### 2. Kriptografi\n* **Simetrik Şifreleme:** Şifreleme ve deşifreleme için aynı anahtar kullanılır. Çok hızlıdır (Örn: AES, DES).\n* **Asimetrik Şifreleme:** Açık anahtar (Public Key) şifreler, özel anahtar (Private Key) çözer (Örn: RSA, ECC, TLS El Sıkışması).\n* **Hash Fonksiyonları:** Tek yönlü özetleme yapar, geri döndürülemez (Örn: SHA-256, bcrypt).\n\n### 3. OWASP En Yaygın Zafiyetler\n* **SQL Injection (SQLi):** Doğrulanmamış girdinin SQL komutuna karışması. Çözüm: Parametreli sorgular (Prepared Statements).\n* **Cross-Site Scripting (XSS):** Kullanıcı tarayıcısında zararlı JavaScript çalıştırılması.\n* **CSRF (Cross-Site Request Forgery):** Kullanıcının oturumunu kullanarak habersiz istek yaptırma. Çözüm: Anti-CSRF Token."
+  },
+  {
+    "id": "lec-gk-01",
+    "section": "genel-kultur",
+    "topic": "Bankacılık ve Ekonomi Genel Kültürü",
+    "title": "Ziraat Bankası Tarihi, TCMB Rolü ve Temel Bankacılık",
+    "readTime": "7 dk",
+    "summary": "1863 Mithat Paşa Memleket Sandıkları, TCMB fiyat istikrarı görevi, BDDK, TMSF ve finansal göstergeler.",
+    "content": "### 1. Ziraat Bankası'nın Tarihçesi ve Önemi (Kesin Bilinmeli)\n* **Kuruluş:** 1863 yılında Niş Valisi **Mithat Paşa** tarafından Pirot kasabasında **'Memleket Sandıkları'** adıyla kurulmuştur.\n* **Amaç:** Çiftçileri yüksek faizli tefecilerden kurtarmak ve tarımsal üretimi milli fonlarla finanse etmek.\n* **Resmi Dönüşüm:** 15 Ağustos 1888 tarihinde modern 'Ziraat Bankası' unvanını almıştır.\n* **Bugünkü Konumu:** Türkiye'nin ilk ve aktif büyüklük açısından en büyük kamu sermayeli bankasıdır.\n\n### 2. Para Otoriteleri ve Düzenleyici Kurumlar\n* **TCMB (Merkez Bankası):** Temel amacı **fiyat istikrarını** sağlamaktır. Para basma tekeline ve politika faizini belirleme yetkisine sahiptir.\n* **BDDK (Bankacılık Düzenleme ve Denetleme Kurumu):** Bankacılık sektörünü denetler, lisans verir ve mevzuata uyumu kontrol eder.\n* **TMSF (Tasarruf Mevduatı Sigorta Fonu):** Vatandaşların bankalardaki tasarruf mevduatlarını yasal limitler dahilinde garanti ve sigorta altına alır.\n\n### 3. Temel Bankacılık Terimleri\n* **Mevduat:** Bankaya faiz veya koruma amacıyla yatırılan para (Vadesiz, Vadeli).\n* **Katılım Bankacılığı:** Faizsiz finans ilkelerine dayalı, kar ve zarar ortaklığı modeliyle çalışan bankacılık türü.\n* **Enflasyon:** Fiyatlar genel düzeyinin sürekli artmasıdır. Talep enflasyonu (aşırı talep) ve Maliyet enflasyonu (girdi maliyetleri) olarak ayrılır."
+  },
+  {
+    "id": "lec-gy-01",
+    "section": "genel-yetenek",
+    "topic": "Sayısal ve Sözel Mantık Taktikleri",
+    "title": "Problem Çözme Kısayolları ve Sözel Mantık Tablo Kurma",
+    "readTime": "6 dk",
+    "summary": "Faiz, yüzde, hız problemleri formülleri ve sözel mantıkta hata yaptırmayan tablo çizim yöntemi.",
+    "content": "### 1. Sayısal Problem Çözüm Formülleri\n* **Basit Faiz Formülü:** `Faiz (F) = (Anapara * Faiz Oranı * Zaman) / Payda`\n  * Yıllık: `(A * n * t) / 100`\n  * Aylık: `(A * n * t) / 1200`\n  * Günlük: `(A * n * t) / 36000` (Bankacılık hesaplamalarında 1 yıl 360 gün alınır).\n* **Ortalama Hız Formülü:** İki şehir arası gidiş hızı V1, dönüş hızı V2 ise:\n  * `V_ort = (2 * V1 * V2) / (V1 + V2)` (Harmonik Ortalama).\n* **Yüzde ve Kar-Zarar:** Bir ürünün maliyetine 100x deyin. %30 karlı satış = 130x. Bu fiyata %20 indirim = 130x * 0.8 = 104x (%4 net kar).\n\n### 2. Sözel Mantıkta 3 Adımda Tablo Kurma\n1. **Sabit Değişkeni Bulun:** Günler (Pzt-Paz), sıralar (1-5) veya katlar gibi sıralı olan nesneleri tablonun başlığı yapın.\n2. **Kesin Bilgileri Yerleştirin:** \"Deniz 3. gündür\", \"Burak kesinlikle Cuma değildir\" gibi net verileri doğrudan kutucuklara yazın.\n3. **Bağlantılı Öbekleri Gruplayın:** \"Ali, Can'dan hemen önceki gündür\" bilgisi `[Ali, Can]` şeklinde bitişik bir bloktur. Yalnızca 2 kişilik boş yer arayın!"
+  },
+  {
+    "id": "lec-eng-01",
+    "section": "ingilizce",
+    "topic": "Gramer ve Finans Kelimeleri",
+    "title": "Banka & YDS İngilizce: Kritik Bağlaçlar ve Finans Kelimeleri",
+    "readTime": "6 dk",
+    "summary": "Zıtlık ve sebep bağlaçları (In spite of vs Although), Conditionals özet ve bankacılık sınavında en çok çıkan 20 kelime.",
+    "content": "### 1. Sınavda En Çok Puan Kazandıran Zıtlık Bağlaçları\n* **Cümle Alanlar (Subject + Verb):** `Although`, `Even though`, `Though`, `While`, `Whereas`\n  * *Örn:* Although the interest rates rose, inflation continued to climb.\n* **İsim / İsim Öbeği / -ing Alanlar:** `Despite`, `In spite of`\n  * *Örn:* Despite experiencing severe market volatility, the bank posted record profits.\n* **Geçiş Sözcükleri (Noktalama ile ayrılır):** `However`, `Nevertheless`, `Nonetheless`, `On the other hand`\n\n### 2. Bankacılık ve Bilişim Sınavında En Çok Çıkan Kelimeler\n* **Asset:** Varlık, aktifler\n* **Liability:** Yükümlülük, borç\n* **Yield:** Getiri, kazanç oranı\n* **Collateral:** Teminat, rehin\n* **Breach (Data breach):** İhlal, güvenlik sızıntısı\n* **Volatility / Fluctuation:** Dalgalanma, oynaklık\n* **Maturity date:** Vade tarihi\n* **Compliance:** Mevzuata uygunluk, regülasyon\n* **Fiscal policy:** Maliye politikası"
+  }
+]

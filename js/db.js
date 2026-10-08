@@ -8,25 +8,28 @@ class DataManager {
     constructor() {
         this.questions = [];
         this.flashcards = [];
+        this.lectures = [];
         this.isLoaded = false;
     }
 
-    // 1. SORULARI VE KARTLARI YÜKLE
+    // 1. SORULARI, KARTLARI VE KONU ANLATIMLARINI YÜKLE
     async init() {
         if (this.isLoaded) return;
 
         try {
-            // Local JSON dosyalarından soruları yükle
-            const [alanRes, gkRes, gyRes, engRes, fcRes] = await Promise.all([
+            // Local JSON dosyalarından verileri yükle
+            const [alanRes, gkRes, gyRes, engRes, fcRes, lecRes] = await Promise.all([
                 fetch('./data/questions/alan_bilgisayar.json').then(r => r.json()).catch(() => []),
                 fetch('./data/questions/genel_kultur.json').then(r => r.json()).catch(() => []),
                 fetch('./data/questions/genel_yetenek.json').then(r => r.json()).catch(() => []),
                 fetch('./data/questions/ingilizce.json').then(r => r.json()).catch(() => []),
-                fetch('./data/flashcards.json').then(r => r.json()).catch(() => [])
+                fetch('./data/flashcards.json').then(r => r.json()).catch(() => []),
+                fetch('./data/lectures.json').then(r => r.json()).catch(() => [])
             ]);
 
             this.questions = [...alanRes, ...gkRes, ...gyRes, ...engRes];
             this.flashcards = fcRes;
+            this.lectures = lecRes;
 
             // Supabase bağlıysa soruları ve kartları eşitlemeyi deneyebiliriz (sessiz arka plan)
             if (isSupabaseConfigured() && supabase) {
@@ -34,7 +37,7 @@ class DataManager {
             }
 
             this.isLoaded = true;
-            console.log(`[DataManager] ${this.questions.length} soru, ${this.flashcards.length} kart yüklendi.`);
+            console.log(`[DataManager] ${this.questions.length} soru, ${this.flashcards.length} kart, ${this.lectures.length} konu anlatımı yüklendi.`);
         } catch (err) {
             console.error("[DataManager] Soru yükleme hatası:", err);
         }
@@ -393,6 +396,36 @@ class DataManager {
             }
         };
     }
+
+    // 8. KONU ANLATIMLARI (LECTURES)
+    getLectures(section = 'all') {
+        if (!section || section === 'all') return this.lectures;
+        return this.lectures.filter(l => l.section === section);
+    }
+
+    getLectureById(id) {
+        return this.lectures.find(l => l.id === id);
+    }
+
+    getCompletedLectureIds() {
+        try {
+            return new Set(JSON.parse(localStorage.getItem('ziraat_completed_lectures') || '[]'));
+        } catch {
+            return new Set();
+        }
+    }
+
+    toggleLectureCompleted(id) {
+        const completed = this.getCompletedLectureIds();
+        if (completed.has(id)) {
+            completed.delete(id);
+        } else {
+            completed.add(id);
+        }
+        localStorage.setItem('ziraat_completed_lectures', JSON.stringify([...completed]));
+        return completed.has(id);
+    }
 }
 
 export const db = new DataManager();
+

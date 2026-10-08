@@ -1,7 +1,7 @@
 -- ==============================================================================
 -- ZİRAAT BANKASI UZMAN YARDIMCILIĞI SINAV HAZIRLIK UYGULAMASI
 -- GÜNCEL SUPABASE VERİTABANI ŞEMASI (MASTER DDL SCRIPT)
--- Son Güncelleme: 8 Ekim 2026
+-- Son Güncelleme: 8 Ekim 2026 (Tam İdempotent Sürüm)
 -- ==============================================================================
 
 -- 1. PROFILES (Kullanıcı Profilleri & Genel Ayarlar)
@@ -20,14 +20,17 @@ create table if not exists public.profiles (
 
 alter table public.profiles enable row level security;
 
+drop policy if exists "Kullanıcı kendi profilini görüntüleyebilir" on public.profiles;
 create policy "Kullanıcı kendi profilini görüntüleyebilir"
     on public.profiles for select
     using (auth.uid() = id);
 
+drop policy if exists "Kullanıcı kendi profilini oluşturabilir" on public.profiles;
 create policy "Kullanıcı kendi profilini oluşturabilir"
     on public.profiles for insert
     with check (auth.uid() = id);
 
+drop policy if exists "Kullanıcı kendi profilini güncelleyebilir" on public.profiles;
 create policy "Kullanıcı kendi profilini güncelleyebilir"
     on public.profiles for update
     using (auth.uid() = id);
@@ -48,13 +51,14 @@ create table if not exists public.questions (
     created_at timestamptz default now() not null
 );
 
--- Soru tablosunu herkes okuyabilir (genel soru bankası), kullanıcılar sadece kendi eklediklerini düzenleyebilir
 alter table public.questions enable row level security;
 
+drop policy if exists "Tüm kullanıcılar soruları okuyabilir" on public.questions;
 create policy "Tüm kullanıcılar soruları okuyabilir"
     on public.questions for select
     using (true);
 
+drop policy if exists "Giriş yapmış kullanıcılar soru ekleyebilir" on public.questions;
 create policy "Giriş yapmış kullanıcılar soru ekleyebilir"
     on public.questions for insert
     with check (auth.role() = 'authenticated');
@@ -106,18 +110,22 @@ create table if not exists public.attempts (
 
 alter table public.attempts enable row level security;
 
+drop policy if exists "Kullanıcı kendi sınav girişimlerini görebilir" on public.attempts;
 create policy "Kullanıcı kendi sınav girişimlerini görebilir"
     on public.attempts for select
     using (auth.uid() = user_id);
 
+drop policy if exists "Kullanıcı kendi sınav girişimlerini kaydedebilir" on public.attempts;
 create policy "Kullanıcı kendi sınav girişimlerini kaydedebilir"
     on public.attempts for insert
     with check (auth.uid() = user_id);
 
+drop policy if exists "Kullanıcı kendi sınav girişimlerini güncelleyebilir" on public.attempts;
 create policy "Kullanıcı kendi sınav girişimlerini güncelleyebilir"
     on public.attempts for update
     using (auth.uid() = user_id);
 
+drop policy if exists "Kullanıcı kendi sınav girişimlerini silebilir" on public.attempts;
 create policy "Kullanıcı kendi sınav girişimlerini silebilir"
     on public.attempts for delete
     using (auth.uid() = user_id);
@@ -142,18 +150,22 @@ create table if not exists public.user_reviews (
 
 alter table public.user_reviews enable row level security;
 
+drop policy if exists "Kullanıcı kendi yanlış defterini görebilir" on public.user_reviews;
 create policy "Kullanıcı kendi yanlış defterini görebilir"
     on public.user_reviews for select
     using (auth.uid() = user_id);
 
+drop policy if exists "Kullanıcı kendi yanlış defterine ekleme yapabilir" on public.user_reviews;
 create policy "Kullanıcı kendi yanlış defterine ekleme yapabilir"
     on public.user_reviews for insert
     with check (auth.uid() = user_id);
 
+drop policy if exists "Kullanıcı kendi yanlış defterini güncelleyebilir" on public.user_reviews;
 create policy "Kullanıcı kendi yanlış defterini güncelleyebilir"
     on public.user_reviews for update
     using (auth.uid() = user_id);
 
+drop policy if exists "Kullanıcı kendi yanlış defterinden silebilir" on public.user_reviews;
 create policy "Kullanıcı kendi yanlış defterinden silebilir"
     on public.user_reviews for delete
     using (auth.uid() = user_id);
@@ -173,6 +185,7 @@ create table if not exists public.flashcards (
 
 alter table public.flashcards enable row level security;
 
+drop policy if exists "Herkes flashcardları görüntüleyebilir" on public.flashcards;
 create policy "Herkes flashcardları görüntüleyebilir"
     on public.flashcards for select
     using (true);
@@ -189,12 +202,51 @@ create table if not exists public.user_flashcard_progress (
 
 alter table public.user_flashcard_progress enable row level security;
 
+drop policy if exists "Kullanıcı kendi kart ilerlemesini yönetebilir" on public.user_flashcard_progress;
 create policy "Kullanıcı kendi kart ilerlemesini yönetebilir"
     on public.user_flashcard_progress for all
     using (auth.uid() = user_id)
     with check (auth.uid() = user_id);
 
--- 6. OTOMATİK PROFİL OLUŞTURMA TRİGGERI (Auth -> Profiles)
+-- 6. LECTURES (Konu Anlatımları ve Hap Notlar)
+create table if not exists public.lectures (
+    id text primary key,
+    section text not null check (section in ('alan', 'genel-kultur', 'genel-yetenek', 'ingilizce')),
+    topic text not null,
+    title text not null,
+    read_time text,
+    summary text,
+    content text not null,
+    created_at timestamptz default now() not null
+);
+
+alter table public.lectures enable row level security;
+
+drop policy if exists "Herkes konu anlatımlarını okuyabilir" on public.lectures;
+create policy "Herkes konu anlatımlarını okuyabilir"
+    on public.lectures for select
+    using (true);
+
+-- Kullanıcı konu çalışma ilerlemesi (Okundu / Yer imi)
+create table if not exists public.user_lecture_progress (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid references auth.users(id) on delete cascade not null,
+    lecture_id text not null references public.lectures(id) on delete cascade,
+    is_completed boolean default false,
+    bookmarked boolean default false,
+    completed_at timestamptz,
+    constraint unique_user_lecture unique (user_id, lecture_id)
+);
+
+alter table public.user_lecture_progress enable row level security;
+
+drop policy if exists "Kullanıcı kendi konu ilerlemesini yönetebilir" on public.user_lecture_progress;
+create policy "Kullanıcı kendi konu ilerlemesini yönetebilir"
+    on public.user_lecture_progress for all
+    using (auth.uid() = user_id)
+    with check (auth.uid() = user_id);
+
+-- 7. OTOMATİK PROFİL OLUŞTURMA TRİGGERI (Auth -> Profiles)
 create or replace function public.handle_new_user()
 returns trigger as $$
 begin

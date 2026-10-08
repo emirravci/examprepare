@@ -39,6 +39,11 @@ const state = {
         cards: [],
         currentIndex: 0,
         category: 'all'
+    },
+    // Konu Anlatımı Modu
+    lectures: {
+        category: 'all',
+        searchQuery: ''
     }
 };
 
@@ -55,6 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 3. Modülleri başlat
     initDashboard();
+    initLecturesMode();
     initPracticeMode();
     initExamMode();
     initFlashcardsMode();
@@ -148,6 +154,154 @@ function updateDashboardStats() {
         const readiness = Math.min(100, Math.round(last.totalScore || 60));
         if (readinessEl) readinessEl.textContent = `%${readiness}`;
     }
+}
+
+// ==============================================================================
+// 2.5. KONU ANLATIMI VE DERS NOTLARI MODÜLÜ
+// ==============================================================================
+function initLecturesMode() {
+    const searchInput = document.getElementById('lecture-search-input');
+    const categoryBtns = document.querySelectorAll('[data-lec-sec]');
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.lectures.category = e.currentTarget.getAttribute('data-lec-sec');
+            renderLecturesList();
+        });
+    });
+
+    searchInput?.addEventListener('input', (e) => {
+        state.lectures.searchQuery = e.target.value.trim().toLowerCase();
+        renderLecturesList();
+    });
+
+    document.addEventListener('view-lectures-loaded', renderLecturesList);
+    renderLecturesList();
+}
+
+function renderLecturesList() {
+    const container = document.getElementById('lectures-list-container');
+    const badge = document.getElementById('lectures-progress-badge');
+    if (!container) return;
+
+    let lectures = db.getLectures(state.lectures.category);
+    const query = state.lectures.searchQuery;
+
+    if (query) {
+        lectures = lectures.filter(l => 
+            l.title.toLowerCase().includes(query) ||
+            l.topic.toLowerCase().includes(query) ||
+            l.summary.toLowerCase().includes(query) ||
+            l.content.toLowerCase().includes(query)
+        );
+    }
+
+    const completedSet = db.getCompletedLectureIds();
+    const allTotal = db.getLectures('all').length;
+    if (badge) {
+        badge.textContent = `${completedSet.size} / ${allTotal} Konu Tamamlandı`;
+    }
+
+    if (lectures.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <i class="fa-solid fa-magnifying-glass text-dim" style="font-size: 2.5rem; margin-bottom: 0.75rem;"></i>
+                <h4>Aradığınız kriterde konu bulunamadı</h4>
+                <p class="text-muted">Arama filtrenizi temizleyebilir veya başka bir anahtar kelime deneyebilirsiniz.</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = '';
+    lectures.forEach(lec => {
+        const isCompleted = completedSet.has(lec.id);
+        const card = document.createElement('div');
+        card.className = `lecture-card ${isCompleted ? 'completed' : ''}`;
+        card.id = `lec-card-${lec.id}`;
+
+        const sectionLabels = {
+            'alan': 'ALAN BİLGİSİ (BİLGİSAYAR & YZ)',
+            'genel-kultur': 'GENEL KÜLTÜR (BANKA & TARİH)',
+            'genel-yetenek': 'GENEL YETENEK (PROBLEM & MANTIK)',
+            'ingilizce': 'İNGİLİZCE (GRAMER & KELİME)'
+        };
+
+        card.innerHTML = `
+            <div class="lecture-card-header">
+                <div class="lecture-title-wrap">
+                    <div class="lecture-meta">
+                        <span class="badge badge-indigo">${sectionLabels[lec.section] || lec.section.toUpperCase()}</span>
+                        <span class="badge badge-neutral"><i class="fa-regular fa-clock"></i> ${lec.readTime || '5 dk'}</span>
+                        <span class="badge badge-neutral">${escapeHtml(lec.topic)}</span>
+                    </div>
+                    <h3 class="lecture-title">${escapeHtml(lec.title)}</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(lec.summary)}</p>
+                </div>
+                <div class="lecture-card-actions">
+                    <button class="btn-toggle-read ${isCompleted ? 'completed' : ''}" data-lec-id="${lec.id}">
+                        <i class="fa-solid ${isCompleted ? 'fa-circle-check' : 'fa-circle'}"></i>
+                        <span>${isCompleted ? 'Çalışıldı' : 'Tamamla'}</span>
+                    </button>
+                    <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </div>
+            </div>
+            <div class="lecture-card-body">
+                <div class="lecture-content-viewer">
+                    ${formatLectureContent(lec.content)}
+                </div>
+            </div>
+        `;
+
+        // Başlığa tıklandığında açılır-kapanır (Accordion)
+        card.querySelector('.lecture-card-header').addEventListener('click', (e) => {
+            if (e.target.closest('.btn-toggle-read')) return; // Butona tıklanmışsa katlama
+            card.classList.toggle('expanded');
+        });
+
+        // Tamamlandı durumunu değiştir
+        card.querySelector('.btn-toggle-read').addEventListener('click', (e) => {
+            e.stopPropagation();
+            const nowCompleted = db.toggleLectureCompleted(lec.id);
+            if (nowCompleted) {
+                showToast(`"${lec.title}" tamamlandı olarak işaretlendi! 🎯`, "success", 2500);
+            }
+            renderLecturesList();
+        });
+
+        container.appendChild(card);
+    });
+}
+
+// Zengin Markdown Formatlayıcı
+function formatLectureContent(md) {
+    if (!md) return '';
+
+    let html = escapeHtml(md);
+
+    // Başlıklar
+    html = html.replace(/### (.*?)(<br>|\n|$)/g, '<h3>$1</h3>');
+
+    // Kalın ve İtalik
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+    // Kod etiketleri
+    html = html.replace(/`(.*?)`/g, '<code>$1</code>');
+
+    // Alıntı blokları (Quote)
+    html = html.replace(/&gt; (.*?)(<br>|\n|$)/g, '<blockquote>$1</blockquote>');
+
+    // Liste maddeleri
+    html = html.replace(/^\* (.*?)$/gm, '<li>$1</li>');
+    html = html.replace(/(<li>.*?<\/li>)/gs, '<ul>$1</ul>');
+
+    // Satır sonları
+    html = html.replace(/\n/g, '<br>');
+
+    return html;
 }
 
 // ==============================================================================

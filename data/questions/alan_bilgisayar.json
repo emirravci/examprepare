@@ -188,5 +188,196 @@
     "explanation": "Açık Bankacılık (Open Banking / PSD2 standartları), finansal verilerin standart API protokolleri üzerinden üçüncü taraf fintech sağlayıcıları ile güvenle paylaşılmasını sağlayan modern bankacılık ekosistemidir.",
     "tags": ["fintek", "acik-bankacilik", "api", "bankacilik"],
     "source": "original"
+  },
+  {
+    "id": "alan-011",
+    "section": "alan",
+    "topic": "Algoritma ve Programlama Mantığı",
+    "subtopic": "Graf Algoritmaları",
+    "difficulty": 2,
+    "stem": "Ağırlıklı ve negatif kenar ağırlığı bulunmayan bir graf üzerinde tek bir başlangıç düğümünden diğer tüm düğümlere en kısa yolları (Shortest Path) bulan klasik açgözlü (greedy) algoritma hangisidir?",
+    "options": [
+      "Bellman-Ford Algoritması",
+      "Dijkstra Algoritması",
+      "Floyd-Warshall Algoritması",
+      "Kruskal Algoritması",
+      "Prim Algoritması"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dijkstra algoritması, negatif kenar ağırlığı olmayan graflarda tek kaynaklı en kısa yol problemini bir öncelik kuyruğu (min-heap) kullanarak O((V + E) log V) sürede çözer. Bellman-Ford ise negatif ağırlıklı kenarları da destekler.",
+    "tags": ["graf", "en-kisa-yol", "dijkstra", "algoritma"],
+    "source": "original"
+  },
+  {
+    "id": "alan-012",
+    "section": "alan",
+    "topic": "Veri Yapıları ve Problem Çözme",
+    "subtopic": "Hash Tabloları",
+    "difficulty": 2,
+    "stem": "Hash tablolarında çakışma (Collision) yönetimi için 'Açık Adresleme - Doğrusal Yoklama' (Open Addressing - Linear Probing) kullanıldığında, birbirini takip eden dolu yuvaların birikerek performansı düşürmesi sorununa ne ad verilir?",
+    "options": [
+      "İkincil Kümeleme (Secondary Clustering)",
+      "Birincil Kümeleme (Primary Clustering)",
+      "Taşma (Overflow)",
+      "Zincirleme (Chaining)",
+      "Ayrıklaştırma (Segmentation)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Doğrusal yoklamada ardışık dolu yuvaların birleşmesi 'Primary Clustering' (Birincil Kümeleme) olarak adlandırılır ve arama sürelerini uzatır. Bu durum Karesel Yoklama veya Çift Hash (Double Hashing) ile azaltılır.",
+    "tags": ["hash", "veri-yapilari", "clustering", "collision"],
+    "source": "original"
+  },
+  {
+    "id": "alan-013",
+    "section": "alan",
+    "topic": "Veri Tabanı ve SQL",
+    "subtopic": "Normalizasyon",
+    "difficulty": 3,
+    "stem": "Bir ilişkisel tabloda 3NF sağlanmış olmasına rağmen, birden fazla örtüşen bileşik aday anahtar (Overlapping Composite Candidate Keys) bulunması durumunda ortaya çıkan anomalileri gidermek için tanımlanan ve 'her fonksiyonel belirleyicinin mutlaka bir süper anahtar olmasını' şart koşan form hangisidir?",
+    "options": [
+      "2. Normal Form (2NF)",
+      "Boyce-Codd Normal Formu (BCNF)",
+      "4. Normal Form (4NF)",
+      "5. Normal Form (5NF)",
+      "Denormalizasyon"
+    ],
+    "answerIndex": 1,
+    "explanation": "Boyce-Codd Normal Formu (BCNF), 3NF'in özel ve daha katı bir halidir. X -> Y fonksiyonel bağımlılığında X'in mutlaka bir Süper Anahtar (Super Key) olmasını şart koşar.",
+    "tags": ["veritabani", "normalizasyon", "bcnf", "3nf"],
+    "source": "original"
+  },
+  {
+    "id": "alan-014",
+    "section": "alan",
+    "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
+    "subtopic": "Versiyon Kontrolü (Git)",
+    "difficulty": 2,
+    "stem": "Git versiyon kontrol sisteminde bir dalın (branch) başlangıç noktasını hedef dalın en son commit'inin üzerine taşıyarak doğrusal (linear) ve temiz bir commit geçmişi oluşturan komut hangisidir?",
+    "options": [
+      "git merge",
+      "git rebase",
+      "git cherry-pick",
+      "git reset --hard",
+      "git stash"
+    ],
+    "answerIndex": 1,
+    "explanation": "git rebase, commit'leri sanki hedef daldan dallanmış gibi baştan uygulayarak ekstra birleştirme (merge commit) üretmeden doğrusal bir geçmiş sağlar.",
+    "tags": ["git", "yazilim-muhendisligi", "rebase"],
+    "source": "original"
+  },
+  {
+    "id": "alan-015",
+    "section": "alan",
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "Taşıma Katmanı ve TCP",
+    "difficulty": 2,
+    "stem": "TCP protokolünde istemci ile sunucu arasında güvenilir bir bağlantı kurmak için uygulanan 'Üç Yollu El Sıkışma' (3-Way Handshake) bayrak sırası doğru olarak hangisidir?",
+    "options": [
+      "ACK -> SYN -> SYN-ACK",
+      "SYN -> SYN-ACK -> ACK",
+      "SYN -> ACK -> FIN",
+      "FIN -> ACK -> FIN-ACK",
+      "RST -> SYN -> ACK"
+    ],
+    "answerIndex": 1,
+    "explanation": "TCP bağlantısı kurulurken: 1) İstemci: SYN gönderir, 2) Sunucu: SYN-ACK ile yanıtlar, 3) İstemci: ACK göndererek bağlantıyı aktif eder.",
+    "tags": ["ag", "tcp", "handshake", "transport-layer"],
+    "source": "original"
+  },
+  {
+    "id": "alan-016",
+    "section": "alan",
+    "topic": "Bilgi Güvenliği Temelleri",
+    "subtopic": "Kriptografi",
+    "difficulty": 2,
+    "stem": "HTTPS protokolü kullanılırken istemci ve sunucu arasındaki ilk güvenli el sıkışmada (TLS Handshake) oturum anahtarlarının güvenle paylaşılması için asimetrik şifreleme, ardından verilerin hızlı aktarımı için simetrik şifreleme (örn: AES) kullanılır. Bu modele ne ad verilir?",
+    "options": [
+      "Hibrit Şifreleme (Hybrid Cryptography)",
+      "Kuantum Şifreleme",
+      "Blokzincir Şifreleme",
+      "Tek Kullanımlık Şerit (One-Time Pad)",
+      "Homomorfik Şifreleme"
+    ],
+    "answerIndex": 0,
+    "explanation": "Hibrit şifreleme, asimetrik şifrelemenin anahtar paylaşım güvenliği ile simetrik şifrelemenin yüksek hızını birleştiren modern TLS/HTTPS temel mimarisidir.",
+    "tags": ["kriptografi", "tls", "https", "guvenlik"],
+    "source": "original"
+  },
+  {
+    "id": "alan-017",
+    "section": "alan",
+    "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri",
+    "subtopic": "Aşırı Öğrenme (Overfitting)",
+    "difficulty": 2,
+    "stem": "Bir makine öğrenmesi modelinin eğitim verisindeki gürültüleri dahi ezberlemesi sonucu eğitim başarısının çok yüksek, ancak test verisindeki genelleme başarısının çok düşük olması durumuna (Overfitting) karşı aşağıdakilerden hangisi bir çözüm **değildir**?",
+    "options": [
+      "Düzenlileştirme (L1 / L2 Regularization - Lasso / Ridge)",
+      "Modelin parametre sayısını ve katman derinliğini ciddi oranda artırmak",
+      "Erken Durdurma (Early Stopping)",
+      "Çapraz Doğrulama (K-Fold Cross Validation)",
+      "Seyreltme (Dropout) uygulamak"
+    ],
+    "answerIndex": 1,
+    "explanation": "Modelin parametre sayısını ve katman derinliğini artırmak modelin karmaşıklığını artırır ve aşırı öğrenmeyi (Overfitting) daha da şiddetlendirir. Diğer seçenekler ise aşırı öğrenmeyi önleme teknikleridir.",
+    "tags": ["makine-ogrenmesi", "overfitting", "regularization"],
+    "source": "original"
+  },
+  {
+    "id": "alan-018",
+    "section": "alan",
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "subtopic": "Konteyner ve Sanallaştırma",
+    "difficulty": 2,
+    "stem": "Geleneksel Sanal Makineler (Virtual Machines) ile Docker gibi Konteyner (Container) teknolojileri arasındaki en temel mimari fark hangisidir?",
+    "options": [
+      "Konteynerlerin her biri ayrı bir donanım gerektirir.",
+      "Konteynerler konuk işletim sistemi (Guest OS) yerine ana makinenin çekirdeğini (Host OS Kernel) paylaşır.",
+      "Sanal makineler Docker'dan her zaman daha hızlı başlar.",
+      "Konteynerler yalnızca tek bir programlama dilini çalıştırabilir.",
+      "Konteynerlerde ağ iletişimi kurulamaz."
+    ],
+    "answerIndex": 1,
+    "explanation": "Konteynerler Hypervisor ve her biri için ayrı bir Guest OS barındırmak yerine ana işletim sisteminin çekirdeğini (Kernel) izole süreçler halinde paylaşır; bu sayede çok hafif ve hızlı başlarlar.",
+    "tags": ["docker", "konteyner", "sanallastirma", "devops"],
+    "source": "original"
+  },
+  {
+    "id": "alan-019",
+    "section": "alan",
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "subtopic": "RESTful API Mimarisi",
+    "difficulty": 2,
+    "stem": "HTTP protokolünde ve RESTful mimaride bir isteğin birden fazla kez arka arkaya çağrılması durumunda sunucuda aynı etkiyi yaratması özelliğine 'İdempotent' (Tekdüze) denir. Aşağıdaki HTTP metodlarından hangisi **idempotent değildir**?",
+    "options": [
+      "GET",
+      "PUT",
+      "DELETE",
+      "POST",
+      "HEAD"
+    ],
+    "answerIndex": 3,
+    "explanation": "POST metodu her çağrıldığında yeni bir kaynak oluşturabileceğinden (örn: arka arkaya iki kez çağrılırsa iki yeni kayıt üretir) idempotent değildir. GET, PUT ve DELETE ise idempotenttir.",
+    "tags": ["api", "rest", "http", "idempotent"],
+    "source": "original"
+  },
+  {
+    "id": "alan-020",
+    "section": "alan",
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "Eşzamanlılık (Concurrency)",
+    "difficulty": 3,
+    "stem": "Birden fazla thread'in paylaşılan aynı değişken veya bellek alanına eşzamanlı erişmeye çalıştığı ve sonucun iş parçacıklarının çalışma sırasına bağlı olarak hatalı çıktığı duruma ne ad verilir?",
+    "options": [
+      "Yarış Durumu (Race Condition)",
+      "Deadlock",
+      "Sayfa Hatası (Page Fault)",
+      "Bellek Sızıntısı (Memory Leak)",
+      "Bağlam Değişimi (Context Switch)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Race Condition (Yarış Durumu), iki veya daha fazla thread'in senkronizasyon (Mutex/Semaphore) olmadan aynı paylaşılan kaynağa eşzamanlı yazmaya çalışması sonucu ortaya çıkan tutarsızlıktır.",
+    "tags": ["isletim-sistemleri", "race-condition", "concurrency"],
+    "source": "original"
   }
 ]
+

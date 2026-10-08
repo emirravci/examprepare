@@ -131,5 +131,158 @@
     "explanation": "Piyasadaki mal ve hizmet miktarına kıyasla para miktarının ve satın alma arzusunun fazla olması nedeniyle fiyatların artmasına 'Talep Enflasyonu' denir.",
     "tags": ["ekonomi", "enflasyon", "para-teorisi"],
     "source": "original"
+  },
+  {
+    "id": "gk-008",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "BDDK",
+    "difficulty": 2,
+    "stem": "Türkiye'de bankaların kuruluş ve faaliyet izinlerini veren, finansal sistemin güven ve istikrar içinde çalışmasını denetleyen bağımsız idari otorite hangisidir?",
+    "options": [
+      "Bankacılık Düzenleme ve Denetleme Kurumu (BDDK)",
+      "Sermaye Piyasası Kurulu (SPK)",
+      "Türkiye Bankalar Birliği (TBB)",
+      "Hazine ve Maliye Bakanlığı",
+      "Mali Suçları Araştırma Kurulu (MASAK)"
+    ],
+    "answerIndex": 0,
+    "explanation": "5411 sayılı Bankacılık Kanunu uyarınca bankaların ve finansal kuruluşların düzenlenmesi ve denetlenmesinden BDDK sorumludur.",
+    "tags": ["bddk", "bankacilik", "denetim"],
+    "source": "original"
+  },
+  {
+    "id": "gk-009",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "Para Politikası Araçları",
+    "difficulty": 2,
+    "stem": "Merkez Bankası'nın piyasadaki para arzını ve likiditeyi düzenlemek amacıyla devlet iç borçlanma senetlerini alıp satması işlemine ne ad verilir?",
+    "options": [
+      "Açık Piyasa İşlemleri (APİ)",
+      "Zorunlu Karşılık Oranı Değişimi",
+      "Reeskont Kredisi",
+      "Mevduat Munzam Karşılığı",
+      "Devalüasyon"
+    ],
+    "answerIndex": 0,
+    "explanation": "Açık Piyasa İşlemleri (APİ), Merkez Bankası'nın piyasadaki likiditeyi çekmek için tahvil satması veya likidite vermek için tahvil alması işlemidir.",
+    "tags": ["ekonomi", "api", "tcmb", "para-politikasi"],
+    "source": "original"
+  },
+  {
+    "id": "gk-010",
+    "section": "genel-kultur",
+    "topic": "İnkılap Tarihi",
+    "subtopic": "Cumhuriyet Dönemi Bankacılığı",
+    "difficulty": 2,
+    "stem": "Cumhuriyet döneminin ilk ulusal özel bankası olarak 1924 yılında Atatürk'ün talimatıyla kurulan ve ilk genel müdürlüğünü Celal Bayar'ın yaptığı banka hangisidir?",
+    "options": [
+      "Türkiye İş Bankası",
+      "Sümerbank",
+      "Etibank",
+      "Halkbank",
+      "Vakıfbank"
+    ],
+    "answerIndex": 0,
+    "explanation": "Türkiye İş Bankası, 26 Ağustos 1924 tarihinde İzmir İktisat Kongresi kararları doğrultusunda Celal Bayar öncülüğünde kurulan ilk ulusal bankadır.",
+    "tags": ["tarih", "cumhuriyet", "is-bankasi", "celal-bayar"],
+    "source": "original"
+  },
+  {
+    "id": "gk-011",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "Ekonomik Kavramlar",
+    "difficulty": 2,
+    "stem": "Bir ekonomide ekonomik durgunluk (resesyon) ve yüksek işsizlik yaşanırken aynı zamanda yüksek enflasyonun bir arada görülmesi kriz durumuna ne ad verilir?",
+    "options": [
+      "Stagflasyon",
+      "Deflasyon",
+      "Hiperenflasyon",
+      "Dezenflasyon",
+      "Slumpflasyon"
+    ],
+    "answerIndex": 0,
+    "explanation": "Stagflasyon (Stagnation + Inflation), ekonomik büyümenin durduğu ve işsizliğin arttığı bir ortamda fiyat artışlarının devam etmesi krizidir.",
+    "tags": ["ekonomi", "stagflasyon", "enflasyon"],
+    "source": "original"
+  },
+  {
+    "id": "gk-012",
+    "section": "genel-kultur",
+    "topic": "Türkiye Coğrafyası",
+    "subtopic": "Ulaşım ve Ticaret",
+    "difficulty": 2,
+    "stem": "Türkiye'nin Avrupa'ya açılan ve demiryolu ile karayolu transit taşımacılığında en yoğun trafiğe sahip olan Bulgaristan sınırındaki sınır kapısı hangisidir?",
+    "options": [
+      "Kapıkule Sınır Kapısı",
+      "İpsala Sınır Kapısı",
+      "Sarp Sınır Kapısı",
+      "Habur Sınır Kapısı",
+      "Gürbulak Sınır Kapısı"
+    ],
+    "answerIndex": 0,
+    "explanation": "Edirne'de bulunan Kapıkule Sınır Kapısı, Türkiye ile Bulgaristan arasında yer alır ve dünyanın en yoğun kara sınır kapılarından biridir.",
+    "tags": ["cografya", "sinir-kapilari", "kapikule", "ticaret"],
+    "source": "original"
+  },
+  {
+    "id": "gk-013",
+    "section": "genel-kultur",
+    "topic": "Vatandaşlık ve Anayasa",
+    "subtopic": "Temel Haklar ve Yargı",
+    "difficulty": 2,
+    "stem": "1982 Anayasası'na göre kanunların, Cumhurbaşkanlığı kararnamelerinin ve TBMM İçtüzüğünün Anayasaya şekil ve esas bakımından uygunluğunu denetleyen yüksek mahkeme hangisidir?",
+    "options": [
+      "Anayasa Mahkemesi",
+      "Yargıtay",
+      "Danıştay",
+      "Uyuşmazlık Mahkemesi",
+      "Sayıştay"
+    ],
+    "answerIndex": 0,
+    "explanation": "Anayasa Mahkemesi, kanun ve kararnamelerin anayasaya uygunluk denetimini yapan ve bireysel başvuruları karara bağlayan en üst anayasal denetim organıdır.",
+    "tags": ["vatandaslik", "anayasa-mahkemesi", "hukuk"],
+    "source": "original"
+  },
+  {
+    "id": "gk-014",
+    "section": "genel-kultur",
+    "topic": "Banka Tarihi ve Kuruluşu",
+    "subtopic": "Ziraat Bankası Logo ve Misyon",
+    "difficulty": 1,
+    "stem": "Ziraat Bankası'nın kurumsal kimliğinde ve ambleminde yer alan simge aşağıdakilerden hangisini temsil eder?",
+    "options": [
+      "Başak (Buğday Başakları - Tarımsal Üretim ve Bereket)",
+      "Terazi (Adalet)",
+      "Güneş (Aydınlanma)",
+      "Gemi Dümeni (Ticaret)",
+      "Çark (Sanayi)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ziraat Bankası amblemi, bankanın baş harfleri (Z ve B) ile stilize edilmiş buğday başaklarından oluşur; tarımsal kalkınma ve bereketi simgeler.",
+    "tags": ["ziraat-bankasi", "amblem", "tarih"],
+    "source": "original"
+  },
+  {
+    "id": "gk-015",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "TBB (Türkiye Bankalar Birliği)",
+    "difficulty": 2,
+    "stem": "Türkiye'de mevduat kabul eden ve kalkınma/yatırım bankalarının üye olmak zorunda olduğu, bankacılık mesleki ilkelerini belirleyen kamu kurumu niteliğindeki meslek kuruluşu hangisidir?",
+    "options": [
+      "Türkiye Bankalar Birliği (TBB)",
+      "Türkiye Katılım Bankaları Birliği (TKBB)",
+      "Borsa İstanbul (BİST)",
+      "Takasbank",
+      "Merkezi Kayıt Kuruluşu (MKK)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Türkiye Bankalar Birliği (TBB), 5411 sayılı kanun gereği Türkiye'de faaliyet gösteren tüm mevduat ve yatırım bankalarının zorunlu üye olduğu tüzel kişiliğe sahip meslek kuruluşudur.",
+    "tags": ["tbb", "bankacilik", "turkiye-bankalar-birligi"],
+    "source": "original"
   }
 ]
+

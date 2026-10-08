@@ -93,5 +93,158 @@
     "explanation": "Burada sahiplik (iyelik) ilişkisi vardır: 'Algoritmaların yeteneği' anlamını vermek için 'whose + noun' (whose ability) yapısı kullanılır.",
     "tags": ["grammar", "relative-clauses", "whose"],
     "source": "original"
+  },
+  {
+    "id": "eng-006",
+    "section": "ingilizce",
+    "topic": "Grammar",
+    "subtopic": "Passive Voice",
+    "difficulty": 2,
+    "stem": "The new risk management guidelines ________ by the supervisory banking authority before the close of the current fiscal quarter.",
+    "options": [
+      "will be implemented",
+      "implementing",
+      "implemented",
+      "have implemented",
+      "were implementing"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cümle gelecekte denetleyici kurum tarafından uygulanacak kuralları anlatan bir edilgen (Passive Voice) yapıdır: 'will be implemented' (uygulanacaktır).",
+    "tags": ["grammar", "passive-voice", "future"],
+    "source": "original"
+  },
+  {
+    "id": "eng-007",
+    "section": "ingilizce",
+    "topic": "Vocabulary",
+    "subtopic": "Financial Terms",
+    "difficulty": 2,
+    "stem": "Commercial banks often require borrowers to pledge physical property or securities as ________ to guarantee the repayment of substantial business loans.",
+    "options": [
+      "collateral",
+      "dividend",
+      "subsidy",
+      "deficit",
+      "inflation"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Collateral' (teminat, rehin, ipotek), kredi geri ödemesini güvence altına almak için bankaya sunulan varlıktır.",
+    "tags": ["vocabulary", "finance", "collateral"],
+    "source": "original"
+  },
+  {
+    "id": "eng-008",
+    "section": "ingilizce",
+    "topic": "Grammar",
+    "subtopic": "Conjunctions of Contrast",
+    "difficulty": 2,
+    "stem": "________ traditional retail branches continue to experience declining foot traffic, mobile banking applications are registering unprecedented user engagement.",
+    "options": [
+      "While",
+      "Because",
+      "Despite",
+      "Therefore",
+      "In case"
+    ],
+    "answerIndex": 0,
+    "explanation": "'While' (veya Whereas), iki durum arasındaki zıtlığı belirtmek için tam bir yan cümlenin (Subject + Verb) başında kullanılır: 'Geleneksel şubeler azalırken, mobil bankacılık rekor kırıyor'. 'Despite' arkasından tam cümle alamaz.",
+    "tags": ["grammar", "conjunctions", "while", "contrast"],
+    "source": "original"
+  },
+  {
+    "id": "eng-009",
+    "section": "ingilizce",
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "Digital payment transactions now ________ more than sixty percent of the total retail banking turnover in metropolitan areas.",
+    "options": [
+      "account for",
+      "look down upon",
+      "run out of",
+      "turn down",
+      "take after"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Account for' (oluşturmak, tekabül etmek, açıklamak), bir bütünün belirli bir oranını oluşturmak anlamına gelir ('account for more than 60%').",
+    "tags": ["vocabulary", "phrasal-verbs", "account-for"],
+    "source": "original"
+  },
+  {
+    "id": "eng-010",
+    "section": "ingilizce",
+    "topic": "Vocabulary",
+    "subtopic": "Economics",
+    "difficulty": 2,
+    "stem": "A persistent rise in raw material and energy prices often triggers ________ pressures throughout an economy, prompting consumers to cut discretionary spending.",
+    "options": [
+      "inflationary",
+      "obsolete",
+      "redundant",
+      "negligible",
+      "fraudulent"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Inflationary pressures' (enflasyonist baskılar), fiyatlar genel düzeyinin yukarı doğru itilmesini ifade eden yaygın bir ekonomi terimidir.",
+    "tags": ["vocabulary", "economics", "inflationary"],
+    "source": "original"
+  },
+  {
+    "id": "eng-011",
+    "section": "ingilizce",
+    "topic": "Grammar",
+    "subtopic": "Modals",
+    "difficulty": 3,
+    "stem": "The automated payment system failed during peak hours; the engineers ________ the stress-test simulations thoroughly before deployment.",
+    "options": [
+      "should have conducted",
+      "must conduct",
+      "can conduct",
+      "would conduct",
+      "needn't have conducted"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Should have + V3' (yapmalıydı ama yapmadı), geçmişe yönelik pişmanlık veya yerine getirilmemiş bir gerekliliği ifade eder: 'Mühendisler sistemi canlıya almadan önce simülasyonları yapmalıydı'.",
+    "tags": ["grammar", "modals", "should-have"],
+    "source": "original"
+  },
+  {
+    "id": "eng-012",
+    "section": "ingilizce",
+    "topic": "Vocabulary",
+    "subtopic": "Banking",
+    "difficulty": 2,
+    "stem": "Treasury bonds that have a 10-year ________ will pay fixed semi-annual coupon interest until the principal amount is reimbursed.",
+    "options": [
+      "maturity",
+      "bankruptcy",
+      "recession",
+      "depreciation",
+      "arbitrage"
+    ],
+    "answerIndex": 0,
+    "explanation": "'Maturity' (vade / vade sonu), bir finansal borç veya yatırım aracının anaparasının geri ödeneceği son tarihtir.",
+    "tags": ["vocabulary", "finance", "maturity"],
+    "source": "original"
+  },
+  {
+    "id": "eng-013",
+    "section": "ingilizce",
+    "topic": "Sentence Completion",
+    "subtopic": "Cause and Effect",
+    "difficulty": 2,
+    "stem": "The central bank decided to lower reserve requirements ________ commercial lenders could provide more liquidity to private sector enterprises.",
+    "options": [
+      "so that",
+      "whereas",
+      "despite",
+      "unless",
+      "however"
+    ],
+    "answerIndex": 0,
+    "explanation": "'So that' (-sın diye / amacıyla), amaç bildiren bir bağlaçtır ve kendisinden sonra cümle ile birlikte sıklıkla 'could / can / may' modalları kullanılır.",
+    "tags": ["grammar", "conjunctions", "so-that"],
+    "source": "original"
   }
 ]
+

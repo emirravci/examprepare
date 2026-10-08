@@ -152,7 +152,11 @@ document.getElementById('confirm-modal')?.addEventListener('click', (e) => {
 // ========================================================
 const navItems = {
     'dashboard': document.querySelectorAll('[data-view-target="dashboard"]'),
-    'exams': document.querySelectorAll('[data-view-target="exams"]'),
+    'lectures': document.querySelectorAll('[data-view-target="lectures"]'),
+    'practice': document.querySelectorAll('[data-view-target="practice"]'),
+    'exam': document.querySelectorAll('[data-view-target="exam"]'),
+    'review': document.querySelectorAll('[data-view-target="review"]'),
+    'flashcards': document.querySelectorAll('[data-view-target="flashcards"]'),
     'stats': document.querySelectorAll('[data-view-target="stats"]'),
     'profile': document.querySelectorAll('[data-view-target="profile"]')
 };
@@ -167,6 +171,9 @@ export async function showView(viewId, extraData = null) {
     document.querySelectorAll('.nav-item').forEach(item => {
         item.classList.remove('active');
     });
+    document.querySelectorAll('.mobile-nav-btn').forEach(item => {
+        item.classList.remove('active');
+    });
 
     // İlgili view'ı aktif et
     const targetView = document.getElementById(`${viewId}-view`);
@@ -176,22 +183,25 @@ export async function showView(viewId, extraData = null) {
     }
 
     // İlgili menü öğelerini aktif et
-    if (navItems[viewId]) {
-        navItems[viewId].forEach(el => {
-            el.closest('.nav-item')?.classList.add('active');
-        });
-    }
+    document.querySelectorAll(`[data-view-target="${viewId}"]`).forEach(el => {
+        el.classList.add('active');
+        el.closest('.nav-item')?.classList.add('active');
+    });
 
     // Mobil menü / başlık senkronizasyonu
     const pageTitleEl = document.getElementById('current-page-title');
     if (pageTitleEl) {
         const titles = {
             'dashboard': 'Genel Bakış',
-            'exams': 'Sınavlar & Çalışmalar',
-            'stats': 'İstatistikler',
-            'profile': 'Profil & Hedefler'
+            'lectures': 'Konu Anlatımı & Notlar',
+            'practice': 'Konu Alıştırması',
+            'exam': 'Tam Deneme Sınavı',
+            'review': 'Yanlış Defteri',
+            'flashcards': 'Hap Bilgi Kartları',
+            'stats': 'İstatistik & Baraj',
+            'profile': 'Profil & Ayarlar'
         };
-        pageTitleEl.textContent = titles[viewId] || 'Sınav Hazırlık';
+        pageTitleEl.textContent = titles[viewId] || 'Ziraat Sınav Asistanı';
     }
 
     // Dinamik lazy-loading ve veri güncelleme eventi tetikle

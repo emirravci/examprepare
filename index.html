@@ -112,6 +112,12 @@
                         </button>
                     </li>
                     <li class="nav-item">
+                        <button data-view-target="lectures" class="nav-btn">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Konu Anlatımı</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
                         <button data-view-target="practice" class="nav-btn">
                             <i class="fa-solid fa-book-open"></i>
                             <span>Konu Alıştırması</span>
@@ -281,6 +287,40 @@
                                     <p class="schedule-desc">Zayıf konulardan mini testler, formül ve kavram notları okuma, dinlenme ve sınav evrakları kontrolü.</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================
+                     VIEW: LECTURES / KONU ANLATIMLARI VE DERS NOTLARI
+                     ======================================================== -->
+                <section id="lectures-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-graduation-cap text-indigo"></i>
+                                <h3>Sınav Konu Anlatımları & Hap Notlar</h3>
+                            </div>
+                            <span id="lectures-progress-badge" class="badge badge-success">0 / 9 Konu Tamamlandı</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Arama ve Kategori Filtreleri -->
+                            <div class="lecture-controls-bar">
+                                <div class="lecture-search-box">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input type="text" id="lecture-search-input" placeholder="Konu, formül veya kavram ara (örn: ACID, Mithat Paşa, Big-O, JOIN, OSI)...">
+                                </div>
+                                <div class="lecture-category-pills">
+                                    <button class="pill-btn active" data-lec-sec="all">Tümü</button>
+                                    <button class="pill-btn" data-lec-sec="alan">Alan (Bilgisayar & YZ)</button>
+                                    <button class="pill-btn" data-lec-sec="genel-kultur">GY-GK (Banka & Tarih)</button>
+                                    <button class="pill-btn" data-lec-sec="genel-yetenek">Genel Yetenek (Problem & Mantık)</button>
+                                    <button class="pill-btn" data-lec-sec="ingilizce">İngilizce (Gramer & Kelime)</button>
+                                </div>
+                            </div>
+
+                            <!-- Konu Listesi Grid -->
+                            <div id="lectures-list-container" class="lectures-grid"></div>
                         </div>
                     </div>
                 </section>
@@ -700,6 +740,10 @@
             <button data-view-target="dashboard" class="mobile-nav-btn active">
                 <i class="fa-solid fa-house"></i>
                 <span>Panel</span>
+            </button>
+            <button data-view-target="lectures" class="mobile-nav-btn">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Konu</span>
             </button>
             <button data-view-target="practice" class="mobile-nav-btn">
                 <i class="fa-solid fa-book-open"></i>
