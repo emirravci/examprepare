@@ -1,0 +1,192 @@
+[
+  {
+    "id": "alan-001",
+    "section": "alan",
+    "topic": "Algoritma ve Programlama Mantığı",
+    "subtopic": "Karmaşıklık Analizi",
+    "difficulty": 2,
+    "stem": "Aşağıdaki algoritmaların en kötü durum (Worst-Case) zaman karmaşıklıkları karşılaştırıldığında, hangisinin karmaşıklığı diğerlerinden **daha büyüktür**?",
+    "options": [
+      "Merge Sort - O(n log n)",
+      "Quick Sort - O(n²)",
+      "Heap Sort - O(n log n)",
+      "İkili Arama (Binary Search) - O(log n)",
+      "Dizi Üzerinde Doğrusal Arama (Linear Search) - O(n)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Quick Sort algoritmasının en kötü durum (Worst-Case) karmaşıklığı pivot seçiminin en kötü olduğu durumlarda (örneğin zaten sıralı bir dizide ilk veya son elemanın seçilmesi) O(n²)'dir. Merge Sort ve Heap Sort her durumda (en kötü dahil) O(n log n) ile çalışır.",
+    "tags": ["algoritma", "karmaşıklık", "big-o", "sıralama"],
+    "source": "original"
+  },
+  {
+    "id": "alan-002",
+    "section": "alan",
+    "topic": "Veri Yapıları ve Problem Çözme",
+    "subtopic": "Ağaç Yapıları",
+    "difficulty": 2,
+    "stem": "Dengeli bir İkili Arama Ağacında (Balanced Binary Search Tree - AVL) $n$ adet düğüm bulunmaktadır. Bu ağaca yeni bir eleman ekleme (insertion) işleminin zaman karmaşıklığı nedir?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Dengeli bir AVL ağacının yüksekliği h = O(log n) olarak sınırlandırılmıştır. Ekleme işlemi ve sonrasında gerekebilecek döndürme (rotation) işlemleri yükseklikle orantılı olduğundan toplam zaman karmaşıklığı O(log n)'dir.",
+    "tags": ["veri-yapıları", "ağaçlar", "avl", "karmaşıklık"],
+    "source": "original"
+  },
+  {
+    "id": "alan-003",
+    "section": "alan",
+    "topic": "Veri Tabanı ve SQL",
+    "subtopic": "ACID Prensipleri",
+    "difficulty": 2,
+    "stem": "Bir bankacılık uygulamasında A hesabından 1.000 TL düşülüp B hesabına 1.000 TL eklenmektedir. Sistemsel bir kesinti olsa dahi işlemin ya tamamen gerçekleşmesini ya da hiç gerçekleşmemiş gibi eski haline dönmesini sağlayan ACID özelliği hangisidir?",
+    "options": [
+      "Atomicity (Bütünlük/Bölünemezlik)",
+      "Consistency (Tutarlılık)",
+      "Isolation (Yalıtım)",
+      "Durability (Kalıcılık)",
+      "Concurrency (Eşzamanlılık)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Atomicity (Bölünemezlik/Hep ya da Hiç), bir transaction içindeki tüm adımların tek bir birim olarak ele alınmasını sağlar. Adımlardan biri bile başarısız olursa tüm işlem geri alınır (rollback).",
+    "tags": ["veritabanı", "acid", "transaction", "bankacılık"],
+    "source": "original"
+  },
+  {
+    "id": "alan-004",
+    "section": "alan",
+    "topic": "Veri Tabanı ve SQL",
+    "subtopic": "SQL JOIN",
+    "difficulty": 2,
+    "stem": "İki tablo birleştirilirken, sol tablodaki tüm satırları ve sağ tablodaki yalnızca eşleşen satırları getiren; eşleşme olmayan sağ tablo sütunları için NULL değer döndüren SQL ifadesi hangisidir?",
+    "options": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN (veya LEFT OUTER JOIN)",
+      "FULL OUTER JOIN",
+      "CROSS JOIN"
+    ],
+    "answerIndex": 2,
+    "explanation": "LEFT JOIN, soldaki tablonun tüm satırlarını korur. Sağdaki tabloda ON koşulunu sağlayan bir eşleşme yoksa o sütunlar NULL olarak doldurulur.",
+    "tags": ["sql", "join", "veritabanı"],
+    "source": "original"
+  },
+  {
+    "id": "alan-005",
+    "section": "alan",
+    "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
+    "subtopic": "SOLID Prensipleri",
+    "difficulty": 3,
+    "stem": "SOLID prensiplerinden hangisi, 'Yazılım varlıkları (sınıflar, modüller) genişletilmeye açık (open for extension), ancak değiştirilmeye kapalı (closed for modification) olmalıdır' kuralını ifade eder?",
+    "options": [
+      "Single Responsibility Principle (SRP)",
+      "Open/Closed Principle (OCP)",
+      "Liskov Substitution Principle (LSP)",
+      "Interface Segregation Principle (ISP)",
+      "Dependency Inversion Principle (DIP)"
+    ],
+    "answerIndex": 1,
+    "explanation": "OCP (Open/Closed Principle), var olan çalışan kodu değiştirmeden yeni davranışların (örneğin interface ve kalıtım/polimorfizm aracılığıyla) sisteme eklenebilmesini savunur.",
+    "tags": ["yazılım-mühendisliği", "solid", "tasarım-prensipleri"],
+    "source": "original"
+  },
+  {
+    "id": "alan-006",
+    "section": "alan",
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "OSI Modeli",
+    "difficulty": 1,
+    "stem": "OSI başvuru modelinde yönlendiricilerin (Router) çalıştığı ve mantıksal adresleme (IP adresleri) ile paket yönlendirmesinin yapıldığı katman hangisidir?",
+    "options": [
+      "Fiziksel Katman (Physical Layer)",
+      "Veri Bağlantı Katmanı (Data Link Layer)",
+      "Ağ Katmanı (Network Layer)",
+      "Taşıma Katmanı (Transport Layer)",
+      "Uygulama Katmanı (Application Layer)"
+    ],
+    "answerIndex": 2,
+    "explanation": "Ağ Katmanı (Network Layer - 3. Katman), IP adresleme, paketleme ve yönlendiriciler (Router) aracılığıyla en iyi yolun bulunması (routing) işlemlerinden sorumludur.",
+    "tags": ["ağ", "osi", "router", "network"],
+    "source": "original"
+  },
+  {
+    "id": "alan-007",
+    "section": "alan",
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "İşletim Sistemleri - Deadlock",
+    "difficulty": 3,
+    "stem": "İşletim sistemlerinde bir kilitlenmenin (Deadlock) meydana gelebilmesi için gerekli olan dört Coffman koşulundan hangisi, 'Kaynakları elinde tutan bir sürecin, başka kaynakları beklerken mevcut kaynaklarını bırakmaması' durumunu ifade eder?",
+    "options": [
+      "Karşılıklı Dışlama (Mutual Exclusion)",
+      "Tut ve Bekle (Hold and Wait)",
+      "Kesinti Yok (No Preemption)",
+      "Dairesel Bekleme (Circular Wait)",
+      "Açlık (Starvation)"
+    ],
+    "answerIndex": 1,
+    "explanation": "Hold and Wait (Tut ve Bekle) şartı; bir sürecin en az bir kaynağı elinde tutarken aynı zamanda başka bir süreç tarafından tutulan diğer kaynakları talep edip beklemesi durumudur.",
+    "tags": ["işletim-sistemleri", "deadlock", "coffman"],
+    "source": "original"
+  },
+  {
+    "id": "alan-008",
+    "section": "alan",
+    "topic": "Bilgi Güvenliği Temelleri",
+    "subtopic": "Web Güvenliği",
+    "difficulty": 2,
+    "stem": "Kullanıcı girdilerinin filtrelenmeden doğrudan dinamik SQL sorgularına dahil edilmesi sonucu saldırganın veritabanı sorgusunu manipüle edebildiği güvenlik zafiyeti hangisidir?",
+    "options": [
+      "Cross-Site Scripting (XSS)",
+      "SQL Injection (SQLi)",
+      "Cross-Site Request Forgery (CSRF)",
+      "Man-in-the-Middle (MitM)",
+      "Distributed Denial of Service (DDoS)"
+    ],
+    "answerIndex": 1,
+    "explanation": "SQL Injection, güvenilmez kullanıcı verilerinin SQL ifadesiyle birleştirilerek veritabanı motoruna çalıştırılması sonucu yetkisiz veri okuma veya değiştirme imkanı veren en yaygın OWASP zafiyetlerinden biridir. Parametreli sorgular (Prepared Statements) ile önlenir.",
+    "tags": ["güvenlik", "sqli", "owasp"],
+    "source": "original"
+  },
+  {
+    "id": "alan-009",
+    "section": "alan",
+    "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri",
+    "subtopic": "Model Değerlendirme",
+    "difficulty": 2,
+    "stem": "Dengesiz sınıf dağılımına sahip bir veri kümesinde (örneğin sahte banka işlemlerinin %1 olduğu dolandırıcılık tespiti modelinde), modelin başarısını ölçmek için tek başına Doğruluk (Accuracy) yerine tercih edilmesi gereken en uygun metrik hangisidir?",
+    "options": [
+      "Ortalama Hata Kareleri Kökü (RMSE)",
+      "R-Kare (R²)",
+      "F1-Skoru (veya Precision & Recall)",
+      "Ortalama Mutlak Hata (MAE)",
+      "Doğruluk Oranı (Accuracy)"
+    ],
+    "answerIndex": 2,
+    "explanation": "Dengesiz veri setlerinde model tüm verilere 'sahte değil' dese bile %99 doğruluk alabilir. Bu nedenle Precision (Kesinlik) ve Recall (Duyarlılık) değerlerinin harmonik ortalaması olan F1-Skoru kullanılır.",
+    "tags": ["yapay-zeka", "makine-ogrenmesi", "f1-score", "metrikler"],
+    "source": "original"
+  },
+  {
+    "id": "alan-010",
+    "section": "alan",
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "subtopic": "Bulut ve API Mimarisi",
+    "difficulty": 2,
+    "stem": "Bankaların müşteri rızası dahilinde hesap bilgilerini ve ödeme başlatma hizmetlerini güvenli API'lar aracılığıyla üçüncü parti lisanslı finansal kuruluşlarla paylaşmasına olanak tanıyan mimari kavrama ne ad verilir?",
+    "options": [
+      "Açık Bankacılık (Open Banking)",
+      "Monolitik Bankacılık (Monolithic Architecture)",
+      "Karanlık Ağ (Darknet)",
+      "Kapalı Devre Finans (Closed Banking)",
+      "Blokzincir Madenciliği (Proof of Work)"
+    ],
+    "answerIndex": 0,
+    "explanation": "Açık Bankacılık (Open Banking / PSD2 standartları), finansal verilerin standart API protokolleri üzerinden üçüncü taraf fintech sağlayıcıları ile güvenle paylaşılmasını sağlayan modern bankacılık ekosistemidir.",
+    "tags": ["fintek", "acik-bankacilik", "api", "bankacilik"],
+    "source": "original"
+  }
+]

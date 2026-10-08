@@ -1,0 +1,97 @@
+[
+  {
+    "id": "gy-001",
+    "section": "genel-yetenek",
+    "topic": "Problemler",
+    "subtopic": "Yüzde ve Kar-Zarar",
+    "difficulty": 2,
+    "stem": "Bir banka mevduat sahibine yıllık %40 basit faiz oranı teklif etmektedir. Bir yatırımcı 50.000 TL parasını 9 aylığına bu bankaya yatırırsa vade sonunda toplam kaç TL faiz geliri elde eder?",
+    "options": [
+      "12.000 TL",
+      "15.000 TL",
+      "18.000 TL",
+      "20.000 TL",
+      "22.500 TL"
+    ],
+    "answerIndex": 1,
+    "explanation": "Basit Faiz formülü: F = (A * n * t) / 1200. Burada A = 50.000, n = 40 (yıllık faiz), t = 9 (ay). F = (50.000 * 40 * 9) / 1200 = 18.000.000 / 1200 = 15.000 TL faiz getirisi olur.",
+    "tags": ["matematik", "faiz-problemleri", "sayisal"],
+    "source": "original"
+  },
+  {
+    "id": "gy-002",
+    "section": "genel-yetenek",
+    "topic": "Problemler",
+    "subtopic": "Hız ve Hareket",
+    "difficulty": 2,
+    "stem": "A ve B şehirleri arasındaki mesafe 480 km'dir. A'dan B'ye saatte 80 km hızla giden bir araç, dönüşte hızını saatte 120 km'ye çıkarırsa bu aracın gidiş-dönüşteki ortalama hızı saatte kaç km olur?",
+    "options": [
+      "96 km/s",
+      "100 km/s",
+      "102 km/s",
+      "105 km/s",
+      "108 km/s"
+    ],
+    "answerIndex": 0,
+    "explanation": "Gidiş süresi t1 = 480 / 80 = 6 saat. Dönüş süresi t2 = 480 / 120 = 4 saat. Toplam yol = 480 + 480 = 960 km. Toplam zaman = 6 + 4 = 10 saat. Ortalama Hız = Toplam Yol / Toplam Zaman = 960 / 10 = 96 km/s. (Not: Harmonik ortalama formülü de 2*80*120/(80+120) = 96 verir).",
+    "tags": ["matematik", "hareket-problemleri", "ortalama-hiz"],
+    "source": "original"
+  },
+  {
+    "id": "gy-003",
+    "section": "genel-yetenek",
+    "topic": "Sayısal Mantık",
+    "subtopic": "Sayı Dizileri",
+    "difficulty": 2,
+    "stem": "Aşağıdaki sayı dizisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n3, 7, 15, 31, 63, ?",
+    "options": [
+      "95",
+      "127",
+      "128",
+      "135",
+      "142"
+    ],
+    "answerIndex": 1,
+    "explanation": "Kural: Her terim kendinden önceki sayının 2 katının 1 fazlasıdır (x * 2 + 1) veya eklenen farklar 4, 8, 16, 32, 64 şeklinde 2'nin kuvvetleridir. 63 * 2 + 1 = 127.",
+    "tags": ["sayisal-mantik", "sayi-dizisi", "oruntu"],
+    "source": "original"
+  },
+  {
+    "id": "gy-004",
+    "section": "genel-yetenek",
+    "topic": "Sözel Mantık",
+    "subtopic": "Sıralama ve Tablo",
+    "difficulty": 3,
+    "stem": "Bir yazılım şirketinde çalışan Ali, Burak, Can, Deniz ve Emre isimli 5 mühendis pazartesiden cumaya kadar haftanın farklı birer gününde nöbet tutmaktadır.\n- Ali, Can'dan hemen önceki gün nöbetçidir.\n- Deniz çarşamba günü nöbetçidir.\n- Burak nöbetini cuma günü tutmamaktadır.\nBuna göre Burak hangi gün nöbet tutmaktadır?",
+    "options": [
+      "Pazartesi",
+      "Salı",
+      "Çarşamba",
+      "Perşembe",
+      "Cuma"
+    ],
+    "answerIndex": 0,
+    "explanation": "Deniz Çarşamba nöbetçidir (3. gün). Ali ve Can peş peşe gelecektir. Çarşamba dolu olduğuna göre geriye peş peşe iki gün sadece (Perşembe-Cuma) kalır. Yani Ali Perşembe, Can Cuma günüdür. Burak Cuma tutmadığına ve Perşembe dolu olduğuna göre geriye Pazartesi ve Salı kalır. Burak ve Emre'den biri Pzt, biri Salı'dır. Şıklarda Salı-Pzt ilişkisinde tek kesin uygun seçenek Pazartesi'dir.",
+    "tags": ["sozel-mantik", "siralama", "mantik-bulmacasi"],
+    "source": "original"
+  },
+  {
+    "id": "gy-005",
+    "section": "genel-yetenek",
+    "topic": "Türkçe ve Paragraf",
+    "subtopic": "Paragrafta Anlam",
+    "difficulty": 2,
+    "stem": "\"Yapay zeka sistemleri sadece insan iş gücünü ikame etmekle kalmıyor; analitik düşünme, hızlı karar alma ve büyük veri setlerini anlamlandırma süreçlerini baştan tanımlıyor. Geleceğin profesyonelleri yalnızca algoritma yazanlar değil, yapay zekanın çıktılarını eleştirel bir süzgeçten geçirebilenler olacaktır.\"\n\nBu parçadan çıkarılabilecek **en kapsamlı yargı** aşağıdakilerden hangisidir?",
+    "options": [
+      "Yapay zeka tüm insan mesleklerini yakında yok edecektir.",
+      "Gelecekte teknik kodlama becerisi tek başına yeterli olmayıp eleştirel analiz becerisi belirleyici olacaktır.",
+      "Büyük veri analizi yalnızca bilgisayar mühendislerinin uzmanlık alanıdır.",
+      "Yapay zekanın kararlarına tamamen güvenmek en doğru çalışma modelidir.",
+      "İnsan iş gücü yapay zeka karşısında değerini bütünüyle yitirmiştir."
+    ],
+    "answerIndex": 1,
+    "explanation": "Metnin ana fikri, yapay zekanın süreçleri değiştirdiği ve gelecekte sadece kod yazmanın değil, çıktıları eleştirel yorumlama kabiliyetinin önem kazanacağıdır (B şıkkı).",
+    "tags": ["turkce", "paragraf", "ana-fikir"],
+    "source": "original"
+  }
+]

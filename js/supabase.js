@@ -3,9 +3,9 @@
 // ========================================================
 
 // Supabase Proje Bilgileri
-// Yeni oluşturduğunuz Supabase projenizin Settings -> API ekranındaki bilgileri buraya girebilirsiniz.
-export const SUPABASE_URL = "https://YOUR_SUPABASE_PROJECT_ID.supabase.co";
-export const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+const RAW_SUPABASE_URL = "https://zogtxxdharbvucjivgvf.supabase.co/rest/v1/";
+export const SUPABASE_URL = RAW_SUPABASE_URL.replace(/\/rest\/v1\/?$/, '').trim();
+export const SUPABASE_ANON_KEY = "sb_publishable_tVHIjb8upoQE57Tf2GNdNQ_V1On2c33";
 
 // Supabase bağlantı kontrolü
 export const isSupabaseConfigured = () => {

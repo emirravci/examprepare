@@ -1,0 +1,135 @@
+[
+  {
+    "id": "gk-001",
+    "section": "genel-kultur",
+    "topic": "Banka Tarihi ve Kuruluşu",
+    "subtopic": "Ziraat Bankası",
+    "difficulty": 1,
+    "stem": "Ziraat Bankası'nın temeli kabul edilen ve çiftçilere uygun koşullarda kredi sağlamak amacıyla 1863 yılında kurulan ilk mali teşkilat hangisidir ve kurucusu kimdir?",
+    "options": [
+      "Memleket Sandıkları - Mithat Paşa",
+      "Emniyet Sandığı - Namık Kemal",
+      "İtibar-ı Milli Bankası - Enver Paşa",
+      "Osmanlı Bankası - Fuat Paşa",
+      "Düyun-u Umumiye - Mahmut Şevket Paşa"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ziraat Bankası'nın temeli, 1863 yılında Niş Valisi Mithat Paşa tarafından kurulan 'Memleket Sandıkları'dır. Daha sonra 1888 yılında resmi olarak bugünkü Ziraat Bankası haline dönüştürülmüştür.",
+    "tags": ["ziraat-bankasi", "mithat-pasa", "tarih", "memleket-sandiklari"],
+    "source": "original"
+  },
+  {
+    "id": "gk-002",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "Merkez Bankası",
+    "difficulty": 2,
+    "stem": "Türkiye Cumhuriyet Merkez Bankası'nın (TCMB) 1211 sayılı kanunla belirlenmiş olan **temel ve öncelikli amacı** aşağıdakilerden hangisidir?",
+    "options": [
+      "Bütçe açığını kapatmak",
+      "Fiyat istikrarını sağlamak",
+      "Döviz kurlarını sabit tutmak",
+      "İhracatı artırmak",
+      "Bankaların kar oranlarını denetlemek"
+    ],
+    "answerIndex": 1,
+    "explanation": "1211 sayılı TCMB Kanunu'nun 4. maddesine göre Bankanın temel amacı 'fiyat istikrarını sağlamaktır'. Fiyat istikrarı sağlama hedefiyle uyumlu olmak kaydıyla hükümetin büyüme ve istihdam politikalarını destekler.",
+    "tags": ["ekonomi", "tcmb", "fiyat-istikrari", "para-politikasi"],
+    "source": "original"
+  },
+  {
+    "id": "gk-003",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "TMSF ve Sigorta",
+    "difficulty": 2,
+    "stem": "Türkiye'de faaliyet gösteren kredi kuruluşlarında gerçek kişilerin açtırmış olduğu ticari nitelikte olmayan tasarruf mevduatı ve katılım fonu hesapları, aşağıdaki kurumlardan hangisi tarafından sigortalanmaktadır?",
+    "options": [
+      "Bankacılık Düzenleme ve Denetleme Kurumu (BDDK)",
+      "Sermaye Piyasası Kurulu (SPK)",
+      "Tasarruf Mevduatı Sigorta Fonu (TMSF)",
+      "Borsa İstanbul (BİST)",
+      "Hazine ve Maliye Bakanlığı"
+    ],
+    "answerIndex": 2,
+    "explanation": "Tasarruf Mevduatı Sigorta Fonu (TMSF), bankalardaki gerçek kişilere ait tasarruf mevduatlarını yasal limitler dahilinde garanti ve sigorta altına alan resmi kuruluştur.",
+    "tags": ["bankacilik", "tmsf", "mevduat-sigortasi"],
+    "source": "original"
+  },
+  {
+    "id": "gk-004",
+    "section": "genel-kultur",
+    "topic": "İnkılap Tarihi",
+    "subtopic": "Ekonomi Kongresi",
+    "difficulty": 2,
+    "stem": "Yeni Türkiye Cumhuriyeti'nin ekonomik bağımsızlık ilkelerini ve kalkınma modelini belirlemek üzere Şubat 1923'te düzenlenen ve 'Misak-ı İktisadi' kararlarının kabul edildiği kongre hangisidir?",
+    "options": [
+      "Sivas Kongresi",
+      "İzmir İktisat Kongresi",
+      "Erzurum Kongresi",
+      "Alaşehir Kongresi",
+      "Balıkesir Kongresi"
+    ],
+    "answerIndex": 1,
+    "explanation": "17 Şubat - 4 Mart 1923 tarihleri arasında toplanan İzmir İktisat Kongresi, genç Türkiye'nin yerli üretimi ve milli sermayeyi destekleme ilkelerini belirlediği tarihi kongredir.",
+    "tags": ["tarih", "inkilap-tarihi", "izmir-iktisat-kongresi"],
+    "source": "original"
+  },
+  {
+    "id": "gk-005",
+    "section": "genel-kultur",
+    "topic": "Vatandaşlık ve Anayasa",
+    "subtopic": "Yasama ve Yargı",
+    "difficulty": 2,
+    "stem": "1982 Anayasası'na göre Türkiye Büyük Millet Meclisi (TBMM) üye tamsayısı ve kanun teklif etmeye yetkili makam aşağıdakilerden hangisidir?",
+    "options": [
+      "550 Milletvekili - Yalnızca Cumhurbaşkanı",
+      "600 Milletvekili - Milletvekilleri",
+      "600 Milletvekili - Bakanlar Kurulu",
+      "450 Milletvekili - Başbakan",
+      "500 Milletvekili - Danıştay"
+    ],
+    "answerIndex": 1,
+    "explanation": "2017 anayasa değişikliği ile TBMM üye sayısı 600'e çıkarılmıştır ve kanun teklif etme yetkisi münhasıran milletvekillerine aittir (Bütçe kanunu teklifi hariç, onu Cumhurbaşkanı sunar).",
+    "tags": ["vatandaslik", "anayasa", "tbmm"],
+    "source": "original"
+  },
+  {
+    "id": "gk-006",
+    "section": "genel-kultur",
+    "topic": "Türkiye Coğrafyası",
+    "subtopic": "Ekonomik Coğrafya",
+    "difficulty": 2,
+    "stem": "Türkiye'de taşkömürü yataklarının neredeyse tamamının bulunduğu ve demir-çelik sanayisinin bu hammaddeden ötürü geliştiği havza hangisidir?",
+    "options": [
+      "Zonguldak - Bartın - Karabük Havzası",
+      "Kütahya - Tavşanlı Havzası",
+      "Manisa - Soma Havzası",
+      "Afşin - Elbistan Havzası",
+      "Sivas - Divriği Havzası"
+    ],
+    "answerIndex": 0,
+    "explanation": "Türkiye'de 1. Jeolojik zamanda (Paleozoik) oluşmuş yüksek kalorili taşkömürü yatakları yalnızca Zonguldak ve çevresinde yer alır; Karabük ve Ereğli Demir-Çelik fabrikaları bu sayede burada kurulmuştur. (Soma ve Afşin'de linyit vardır).",
+    "tags": ["cografya", "turkiye-cografyasi", "madenler", "sanayi"],
+    "source": "original"
+  },
+  {
+    "id": "gk-007",
+    "section": "genel-kultur",
+    "topic": "Ekonomi ve Bankacılık",
+    "subtopic": "Enflasyon ve Para Politikası",
+    "difficulty": 2,
+    "stem": "Bir ekonomide toplam talebin toplam arzı aşması nedeniyle fiyatlar genel düzeyinin sürekli ve hissedilir biçimde yükselmesi türüne ne ad verilir?",
+    "options": [
+      "Maliyet Enflasyonu",
+      "Talep Enflasyonu",
+      "Stagflasyon",
+      "Deflasyon",
+      "Devalüasyon"
+    ],
+    "answerIndex": 1,
+    "explanation": "Piyasadaki mal ve hizmet miktarına kıyasla para miktarının ve satın alma arzusunun fazla olması nedeniyle fiyatların artmasına 'Talep Enflasyonu' denir.",
+    "tags": ["ekonomi", "enflasyon", "para-teorisi"],
+    "source": "original"
+  }
+]

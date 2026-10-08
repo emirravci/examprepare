@@ -1,128 +1,96 @@
 # Ziraat Bankası Uzman Yardımcılığı Sınavı Hazırlık Rehberi (Bilgisayar Mühendisliği)
 
-**Hedef Sınav Tarihi:** 24 Ekim  
-**Hedef Kadro:** Uzman Yardımcısı (Bilgi Teknolojileri / Mühendislik Grubu)  
-**Sınavı Düzenleyen Kurum:** Ziraat Bankası (İstanbul Üniversitesi / Sınav Merkezi İş Birliğiyle)
+**Sınav Tarihi:** 24 Ekim Cumartesi, Saat 14.00  
+**Organizasyon:** İstanbul Üniversitesi  
+**Sınav Grubu:** Bilgisayar, Bilişim ve Yapay Zeka (Kontenjan: Mühendislik/BT grupları için toplam ~135 kişi)  
+**Mülakat Kriteri:** Barajı geçenler arasından kontenjanın **3 katı** aday çağrılacaktır (Yani sadece barajı geçmek yetmez, sıralama için yüksek puan şarttır).
 
 ---
 
-## 1. Sınavın Genel Formatı ve Kritik Kurallar
+## ⚠️ EN KRİTİK NOKTA: BÖLÜM BAZLI BARAJ KURALLARI
 
-* **Toplam Soru Sayısı:** 140 Soru
-* **Toplam Sınav Süresi:** 160 Dakika
-* **Soru Başına Ortalama Süre:** ~1.14 Dakika (Hızlı karar alma ve zaman yönetimi çok önemlidir)
-* **Puanlama Kuralı (Kritik Avantaj):** **Yanlış cevaplar doğru cevapları GÖTÜRMEZ.**  
-  *(Asla boş soru bırakılmamalıdır! Emin olunmayan sorularda en mantıklı seçenek işaretlenmelidir.)*
-* **Baraj Kuralı:** Sınavda genellikle her bir bölüm grubu için ayrı baraj şartı (%50 veya %60 başarı) bulunmaktadır. Bu nedenle yalnızca alan bilgisine değil, İngilizce ve GY-GK bölümlerine de dengeli hazırlanmak şarttır.
+Mühendis adayların en sık yaptığı hata sadece teknik alana odaklanmaktır. **Alanınızda 40'ta 40 yapsanız bile GY-GK veya İngilizce barajına takılırsanız doğrudan elenirsiniz!**
 
----
+| Bölüm No | Test Adı ve İçeriği | Soru Sayısı | Zorunlu Baraj Kriteri | Önerilen Süre |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Bölüm** | **Genel Yetenek (40) + Genel Kültür (20)** | **60 Soru** | **En az %60 → 36 DOĞRU** 🚨 *(En Riskli Bölüm)* | ~55 dk |
+| **2. Bölüm** | **İngilizce** (Gramer, Kelime, Okuma) | **40 Soru** | **En az %60 → 24 DOĞRU** 🚨 | ~35 dk |
+| **3. Bölüm** | **Alan (Bilgisayar, Bilişim & YZ)** | **40 Soru** | **En az %50 → 20 DOĞRU** | ~45 dk |
+| **Kontrol** | Boşları doldurma ve turlama | - | - | ~25 dk |
+| **TOPLAM** | **Tek Oturum** | **140 Soru** | **Genel Puan En Az 60** | **160 Dakika** |
 
-## 2. Soru Dağılımı ve Test Grupları
-
-| Bölüm No | Test Adı | Soru Sayısı | Tahmini İdeal Süre |
-| :--- | :--- | :--- | :--- |
-| **1. Bölüm** | **Genel Yetenek & Genel Kültür** | **60 Soru** | **60 - 65 dk** |
-| | - Genel Yetenek (Matematik, Sayısal Mantık, Türkçe, Sözel Mantık) | ~40 Soru | |
-| | - Genel Kültür (Tarih, Coğrafya, Vatandaşlık, Güncel Bilgiler) | ~20 Soru | |
-| **2. Bölüm** | **Yabancı Dil (İngilizce)** | **40 Soru** | **40 - 45 dk** |
-| **3. Bölüm** | **Alan Bilgisi (Bilgisayar Mühendisliği / Bilişim)** | **40 Soru** | **45 - 50 dk** |
-| **TOPLAM** | | **140 Soru** | **160 Dakika** |
+> 📌 **Önemli Kural:** Sınavda yanlışlar doğruyu götürmez! Boş soru bırakılmamalıdır.
 
 ---
 
-## 3. Bilgisayar Mühendisliği Alan Bilgisi Konuları
+## 1. BÖLÜM: GENEL YETENEK & GENEL KÜLTÜR (60 Soru - Hedef: En Az 36 Doğru)
 
-Banka BT alımlarında teknik sorular genellikle üniversite müfredatının temel yapı taşlarından ve sektörel pratiklerden gelir:
+Mühendisler sayısalda genellikle avantajlıdır; **asıl eleyici kısım Türkçe (sözel mantık/paragraf) ve Genel Kültür'dür.**
 
-### 1. Algoritmalar ve Veri Yapıları
-* Zaman ve Alan Karmaşıklığı: Asymptotic Notations, Big-O ($O(1), O(n), O(n \log n), O(n^2)$)
-* Veri Yapıları: Diziler (Arrays), Bağlı Listeler (Linked Lists), Yığın (Stack), Kuyruk (Queue)
-* Ağaç Yapıları: İkili Arama Ağaçları (BST), AVL, Heap, Trie
-* Graf Algoritmaları: BFS, DFS, Dijkstra en kısa yol
-* Sıralama & Arama: QuickSort, MergeSort, Binary Search
+### A. Genel Yetenek (40 Soru)
+* **Sözel Kısım (Hız ve Dikkat Gerektirir):**
+  * **Paragrafta Anlam & Hızlı Okuma:** Uzun metinler süre çalar. İlk cümleyi ve son cümleyi iyi yakalama, anahtar kelimeleri çizme pratiği yapılmalı.
+  * **Sözel Mantık:** Tablo kurma ve olasılık eleme mantığı (A, B, C kişileri ve sıralama soruları).
+  * **Cümle Tamamlama & Anlatım Bozuklukları / Dil Bilgisi.**
+* **Sayısal Kısım (Mühendis Avantajı - Fire Verilmemeli):**
+  * Sayı ve kesir problemleri, yüzde, faiz, kar-zarar problemleri.
+  * Hız-zaman ve işçi problemleri.
+  * Tablo ve grafik yorumlama (bankacılık sınavlarında sık çıkar).
+  * Sayı dizileri, mantık ve sıralama bulmacaları.
 
-### 2. Veritabanı Yönetim Sistemleri (RDBMS & NoSQL)
-* İlişkisel Veritabanı Kavramları: Primary Key, Foreign Key, Unique, Check
-* SQL Sorguları: `SELECT`, `JOIN` (INNER, LEFT, RIGHT, FULL), `GROUP BY`, `HAVING`, Alt sorgular (Subqueries)
-* Normalizasyon: 1NF, 2NF, 3NF, BCNF kuralları ve anormalliklerin giderilmesi
-* Transaction & ACID Prensipleri: Atomicity, Consistency, Isolation, Durability
-* İndeksleme ve Performans (B-Tree indeksler)
-
-### 3. Nesne Yönelimli Programlama (OOP) ve Yazılım Mimarisi
-* 4 Temel OOP İlkesi: Kapsülleme (Encapsulation), Kalıtım (Inheritance), Çok Biçimlilik (Polymorphism), Soyutlama (Abstraction)
-* SOLID Prensipleri (Single Responsibility, Open/Closed, Liskov, Interface Segregation, Dependency Inversion)
-* Temel Tasarım Desenleri (Design Patterns): Singleton, Factory, Observer, Builder, Adapter
-* Yazılım Yaşam Döngüsü (SDLC) ve Çevik Yöntemler: Agile, Scrum, Kanban
-* Versiyon Kontrol Sistemleri: Git (commit, merge, rebase, branch stratejileri)
-
-### 4. Bilgisayar Ağları ve İletişim Protokolleri
-* OSI 7 Katmanı ve TCP/IP Modeli (Her katmanın görevi ve çalışan protokoller)
-* Taşıma Katmanı: TCP vs UDP farkları, el sıkışma (3-way handshake)
-* Uygulama Katmanı Protokolleri: HTTP/HTTPS, DNS, DHCP, FTP, SMTP, SSH
-* IP Adresleme & Alt Ağlar (Subnetting, IPv4 / IPv6, CIDR notasyonu)
-* Temel Ağ Güvenliği: Firewall, VPN, SSL/TLS, Simetrik vs Asimetrik Şifreleme (AES, RSA)
-
-### 5. İşletim Sistemleri ve Sistem Mimarisi
-* Süreç ve İş Parçacığı (Process vs Thread, Context Switching)
-* Eşzamanlılık (Concurrency), Yarış Durumu (Race Condition), Kilitlenme (Deadlock) ve 4 şartı (Coffman koşulları)
-* CPU Zamanlama Algoritmaları: FCFS, SJF, Round Robin, Priority
-* Bellek Yönetimi: Sanal Bellek (Virtual Memory), Sayfalama (Paging), Segmentasyon, Page Fault
-
-### 6. Güncel Finansal Teknolojiler (Fintek) ve Güvenlik Kavramları
-* Web Mimarileri: RESTful API, JSON, SOAP farkları
-* Mikroservis Mimarisi vs Monolitik Mimari
-* Kimlik Doğrulama & Yetkilendirme: OAuth 2.0, JWT (JSON Web Token)
-* Temel Web Güvenlik Açıkları: SQL Injection, XSS, CSRF
-* Temel Yapay Zeka & Makine Öğrenmesi Terimleri (Supervised vs Unsupervised learning)
+### B. Genel Kültür (20 Soru - Nokta Atışı Bilgiler)
+* **1. Bankacılık ve Ekonomi Gündemi (Çok Sık Sorulur):**
+  * Enflasyon, politika faizi, döviz kuru mekanizmaları, Merkez Bankası'nın (TCMB) temel görevleri.
+  * Temel bankacılık ürünleri: Mevduat, kredi türleri, katılım bankacılığı farkı, Tasarruf Mevduatı Sigorta Fonu (TMSF).
+  * **Ziraat Bankası Tarihi:** 1863 yılında Mithat Paşa tarafından "Memleket Sandıkları" olarak kurulması, Türkiye'nin ilk ve en büyük kamu bankası olması.
+* **2. Tarih & Coğrafya & Vatandaşlık:**
+  * Atatürk İlkeleri ve İnkılap Tarihi (Lozan, Mudanya, Kongreler, Cumhuriyet dönemi reformları).
+  * Türkiye Coğrafyası: Bölgelerin ekonomik özellikleri, tarım ürünleri, sanayi ve ulaşım hatları.
+  * Temel Yurttaşlık: Anayasa organları (TBMM, Cumhurbaşkanlığı, Yargı), temel hak ve hürriyetler.
+* **3. Güncel Gelişmeler & Teknoloji:**
+  * Yapay zeka ve dijital dönüşümün finans dünyasına etkileri, güncel uluslararası gelişmeler.
 
 ---
 
-## 4. Genel Yetenek - Genel Kültür Konuları
+## 2. BÖLÜM: İNGİLİZCE (40 Soru - Hedef: En Az 24 Doğru)
 
-* **Matematik & Sayısal Mantık:** Oran-orantı, problemler (sayı, kesir, yüzde, yaş, işçi-havuz, hareket), grafik ve tablo okuma, permütasyon-kombinasyon-olasılık, sayı dizileri ve şekil ilişkileri.
-* **Türkçe:** Paragrafta ana fikir, yardımcı fikirler, anlatım teknikleri, mantıksal sıralama, sözel mantık bulmacaları.
-* **Genel Kültür:** 
-  * Atatürk İlkeleri ve İnkılap Tarihi (Milli Mücadele, Antlaşmalar, Kongreler)
-  * Türkiye Coğrafyası (Bölgeler, tarım, madenler, ticaret, nüfus yapısı)
-  * Temel Vatandaşlık (Anayasa hukuku, devlet organları, temel haklar)
-  * Güncel Olaylar (Son ekonomik gelişmeler, uluslararası kuruluşlar, Ziraat Bankası'nın kuruluş tarihi ve temel misyonu - 1863 Mithat Paşa / Memleket Sandıkları).
+Soru sayısı çok yüksek (40 soru) ve baraj %60 (24 doğru). Zamanı iyi yönetmek şarttır.
 
----
-
-## 5. İngilizce Testi İçin Bilinmesi Gerekenler
-
-* **Gramer & Yapılar:** Tenses, Conditionals (If Clauses), Passive Voice, Relative Clauses, Modals, Conjunctions (Bağlaçlar).
-* **Kelime Bilgisi:** İş dünyası, finans, bankacılık ve teknoloji ağırlıklı terimler (`inflation`, `assets`, `liabilities`, `transaction`, `breach`, `fluctuation`, `yield` vb.).
-* **Okuma Parçaları:** Orta-ileri seviye (B1-B2) 4-5 kısa paragraf ve bunlara bağlı çıkarım soruları.
-
----
-
-## 6. Sınava Kalan Süre İçin 16 Günlük Hızlı Kamp Planı
-
-### 📅 1. Hafta (1 - 7. Gün): Alan Bilgisi & Temel Kavramlar
-* **Gün 1-2:** Veri Yapıları (Ağaçlar, Hash Table, Stack, Queue) & Algoritmalar (Sıralama, Big-O).
-* **Gün 3-4:** SQL & Veritabanı (Karmaşık JOIN sorguları, Normalizasyon, ACID).
-* **Gün 5:** OOP Prensipleri, SOLID, Design Patterns & Git.
-* **Gün 6:** Bilgisayar Ağları (OSI, TCP/IP, Protokoller) & Güvenlik (SQLi, XSS, Şifreleme).
-* **Gün 7:** İşletim Sistemleri (Process, Thread, Deadlock, Sayfalama) & Haftalık Alan Bilgisi Mini Testi.
-* *(Her gün 30 dk İngilizce kelime/bağlaç tekrarı)*
-
-### 📅 2. Hafta (8 - 13. Gün): GY-GK & Soru Pratiği
-* **Gün 8-9:** Sayısal Mantık & Problem Çözme Hızlandırma.
-* **Gün 10:** Sözel Mantık Çözüm Taktikleri & Hızlı Paragraf Okuma.
-* **Gün 11:** İnkılap Tarihi & Coğrafya Hızlı Tekrarı + Vatandaşlık Önemli Maddeleri.
-* **Gün 12:** İngilizce Paragraf Çözümleri & Cümle Tamamlama Egzersizleri.
-* **Gün 13:** Karma Alan Bilgisi + Fintek / Güncel Teknoloji Kavramları.
-
-### 📅 Son 3 Gün (14 - 16. Gün): Simülasyon ve Son Rötuşlar
-* **Gün 14:** **Tam Zamanlı Deneme Sınavı (140 Soru - 160 Dakika)**, eksik analizi.
-* **Gün 15:** Yanlış yapılan soruların tekrarı, formül ve kavram notları okuma.
-* **Gün 16:** Hafif zihinsel tekrar, sınav evraklarının hazırlanması ve dinlenme.
+### Konu Başlıkları:
+* **Gramer (Zaman kazandıracak net sorular):**
+  * Zamanlar (Tenses) ve Zaman Uyumları
+  * Koşul Cümleleri (Conditionals: Type 1, 2, 3, Mixed)
+  * Edilgen Yapı (Passive Voice) & Ettirgenler (Causatives)
+  * Sıfat Cümlecikleri (Relative Clauses: which, who, that, where, whose)
+  * Bağlaçlar & Geçiş İfadeleri (Conjunctions: although, despite, however, moreover, unless, in order to)
+  * Edatlar (Prepositions) ve Phrasal Verbs
+* **Kelime Bilgisi (Finans, Teknoloji ve İş Dünyası Odaklı):**
+  * Örn: `asset` (varlık), `liability` (yükümlülük/borç), `inflation` (enflasyon), `interest rate` (faiz oranı), `breach` (ihlal), `yield` (getiri), `fluctuation` (dalgalanma), `compliance` (uyumluluk).
+* **Cümle Tamamlama & Cloze Test:**
+  * Parça içinde boş bırakılan gramer/kelime tamamlamaları.
+* **Paragraf ve Okuduğunu Anlama (Sınavın en çok süre yiyen kısmı):**
+  * Teknoloji, yapay zeka, küresel ticaret ve ekonomi temalı 4-5 okuma parçası.
+  * Taktik: Önce soruları ve soru köklerini okuyup ardından paragrafı taramak (skimming & scanning).
 
 ---
 
-## 7. Sınav Anı Taktikleri
+## 3. BÖLÜM: ALAN BİLGİSİ - BİLGİSAYAR MÜHENDİSLİĞİ (40 Soru - Hedef: En Az 20 Doğru)
 
-1. **Boş Bırakmama Kuralı:** Yanlış doğruyu götürmediği için sürenin son 3-5 dakikasında boş kalan soru kesinlikle olmamalıdır.
-2. **Turlama Yöntemi:** İlk turda 30-40 saniye içinde çözebildiğiniz net soruları işaretleyin; uzun işlem veya kafa karıştıran soruların yanına işaret koyup ikinci turda dönün.
-3. **Zaman Disiplini:** Bir soruda 2 dakikadan fazla takılmayın. 140 soru olduğu için soru kaçırmamak anahtardır.
+Resmi 8 ana başlık (her başlıktan ortalama ~5 soru):
+1. **Algoritma ve Programlama Mantığı:** Kod izleme (trace), döngüler, özyineleme (recursion), Big-O karmaşıklığı.
+2. **Veri Yapıları ve Problem Çözme:** Dizi, bağlı liste, stack, queue, hash table, BST, heap, graf (BFS/DFS), maliyet hesapları.
+3. **Veri Tabanı ve SQL:** SELECT, JOIN'ler, GROUP BY, HAVING, Normalizasyon (1NF-3NF, BCNF), Transaction & ACID.
+4. **Yazılım Mühendisliği ve Sistem Geliştirme:** SDLC, Agile (Scrum/Kanban), UML, SOLID, Design Patterns (Singleton, Factory vb.), Git.
+5. **Bilgisayar Ağları ve İşletim Sistemleri:** OSI ve TCP/IP katmanları, alt ağ (subnet) hesabı, DNS, HTTP/HTTPS; Süreç/Thread, CPU zamanlama, Deadlock, Sayfalama (Paging).
+6. **Bilgi Güvenliği Temelleri:** CIA üçlüsü, şifreleme (AES, RSA, TLS), SQLi, XSS, CSRF, DDoS, OWASP Top 10, KVKK.
+7. **Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri:** Denetimli/Denetimsiz öğrenme, Regresyon/Sınıflandırma, Karar ağaçları, CNN/RNN, Overfitting, Metrikler (Precision, Recall, F1, ROC-AUC).
+8. **Sistem Analizi ve Dijital Teknoloji Uygulamaları:** BPMN, Bulut Bilişim (IaaS/PaaS/SaaS, Docker/K8s), Açık Bankacılık (Open Banking), API, Blokzincir, ETL, ITIL/COBIT.
+
+---
+
+## ⏱️ SINAV ANINDA 160 DAKİKA ZAMAN YÖNETİMİ PLANI
+
+1. **0 - 55. dk (1. Bölüm GY-GK):** 60 soruyu çözün. Sayısalları seri çözüp sözel paragraf ve genel kültürü tamamlayın.
+2. **55 - 90. dk (2. Bölüm İngilizce):** 40 soru için 35 dakika. Gramer sorularını seri geçip paragraflara odaklanın.
+3. **90 - 135. dk (3. Bölüm Alan Bilgisi):** 40 soru için 45 dakika. Kod izleme ve SQL çıktılarını kitapçık kenarında adım adım yazarak çözün.
+4. **135 - 160. dk (Son 25 dk - Kontrol ve Boşlar):** Boş kalan sorulara geri dönün, sürenin son dakikalarında **asla boş soru bırakmadan** tüm cevapları işaretleyin.

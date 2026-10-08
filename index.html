@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#0b1120">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Sınav Hazırlık Platformu | Akıllı Takip & İstatistik</title>
+    <title>Ziraat Bankası Uzman Yardımcılığı Hazırlık Platformu | 24 Ekim Simülasyonu</title>
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- FontAwesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -51,10 +51,10 @@
             <div class="auth-card">
                 <div class="auth-header">
                     <div class="brand-badge">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                        <i class="fa-solid fa-building-columns"></i>
                     </div>
-                    <h2 id="auth-mode-title">Tekrar Hoş Geldin!</h2>
-                    <p id="auth-mode-desc">Sınav hazırlık paneline erişmek için giriş yap</p>
+                    <h2 id="auth-mode-title">Ziraat Sınav Asistanı</h2>
+                    <p id="auth-mode-desc">24 Ekim Uzman Yardımcılığı Sınavı Çalışma Paneli</p>
                 </div>
 
                 <form id="auth-form">
@@ -65,7 +65,7 @@
 
                     <div class="form-group">
                         <label for="auth-email"><i class="fa-solid fa-envelope"></i> E-posta Adresi</label>
-                        <input type="email" id="auth-email" required placeholder="ogrenci@ornek.com" autocomplete="email">
+                        <input type="email" id="auth-email" required placeholder="muhendis@ornek.com" autocomplete="email">
                     </div>
 
                     <div class="form-group">
@@ -95,11 +95,11 @@
         <aside class="app-sidebar">
             <div class="sidebar-brand">
                 <div class="brand-logo">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                    <i class="fa-solid fa-building-columns"></i>
                 </div>
                 <div class="brand-info">
-                    <h3>SınavYolum</h3>
-                    <span>Hazırlık Asistanı</span>
+                    <h3>ZiraatUzman</h3>
+                    <span>BT Hazırlık Asistanı</span>
                 </div>
             </div>
 
@@ -112,21 +112,39 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button data-view-target="exams" class="nav-btn">
+                        <button data-view-target="practice" class="nav-btn">
                             <i class="fa-solid fa-book-open"></i>
-                            <span>Sınavlar & Çalışmalar</span>
+                            <span>Konu Alıştırması</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="exam" class="nav-btn">
+                            <i class="fa-solid fa-stopwatch"></i>
+                            <span>Tam Deneme (140 S)</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="review" class="nav-btn">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Yanlış Defteri</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="flashcards" class="nav-btn">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Flashcards</span>
                         </button>
                     </li>
                     <li class="nav-item">
                         <button data-view-target="stats" class="nav-btn">
                             <i class="fa-solid fa-chart-line"></i>
-                            <span>İstatistikler</span>
+                            <span>İstatistik & Baraj</span>
                         </button>
                     </li>
                     <li class="nav-item">
                         <button data-view-target="profile" class="nav-btn">
                             <i class="fa-solid fa-user-gear"></i>
-                            <span>Profil & Hedefler</span>
+                            <span>Profil & Ayarlar</span>
                         </button>
                     </li>
                 </ul>
@@ -135,11 +153,11 @@
             <div class="sidebar-footer">
                 <div class="user-chip">
                     <div class="user-avatar">
-                        <i class="fa-solid fa-user"></i>
+                        <i class="fa-solid fa-user-astronaut"></i>
                     </div>
                     <div class="user-details">
-                        <span class="user-name" id="current-user-name">Öğrenci</span>
-                        <span class="user-email" id="current-user-email">ogrenci@mail.com</span>
+                        <span class="user-name" id="current-user-name">Mühendis Adayı</span>
+                        <span class="user-email" id="current-user-email">muhendis@mail.com</span>
                     </div>
                 </div>
                 <button class="btn-icon btn-logout-action" title="Çıkış Yap">
@@ -155,16 +173,16 @@
             <header class="app-header">
                 <div class="header-left">
                     <div class="mobile-brand">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>SınavYolum</span>
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>ZiraatUzman</span>
                     </div>
                     <h1 class="header-title" id="current-page-title">Genel Bakış</h1>
                 </div>
 
                 <div class="header-right">
-                    <div class="streak-badge" title="Çalışma Serisi">
-                        <i class="fa-solid fa-fire text-accent"></i>
-                        <span>3 Gün Seri</span>
+                    <div class="streak-badge" title="24 Ekim Sınavına Kalan Süre">
+                        <i class="fa-solid fa-calendar-day text-accent"></i>
+                        <span id="header-countdown-badge">16 Gün Kaldı</span>
                     </div>
                     <button class="header-action-btn btn-logout-action desktop-hide" title="Çıkış Yap">
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -175,18 +193,20 @@
             <!-- Page Views Content -->
             <main class="app-content">
 
-                <!-- VIEW 1: DASHBOARD / GENEL BAKIŞ -->
+                <!-- ========================================================
+                     VIEW 1: DASHBOARD / GENEL BAKIŞ
+                     ======================================================== -->
                 <section id="dashboard-view" class="view-section active">
                     
                     <!-- Welcome Hero Banner -->
                     <div class="welcome-card">
                         <div class="welcome-text">
-                            <h2>Bugün hedefine bir adım daha yaklaş! 🎯</h2>
-                            <p>Sınava hazırlık sürecini takip et, eksiklerini gör ve başarıya ulaş.</p>
+                            <h2>24 Ekim Ziraat Uzman Yardımcılığı Hedefi 🎯</h2>
+                            <p>Toplam 140 soru, 160 dakika: <strong>GY-GK (≥36)</strong>, <strong>İngilizce (≥24)</strong>, <strong>Alan (≥20)</strong> barajlarını aşmaya odaklan!</p>
                         </div>
                         <div class="welcome-action">
-                            <button class="btn btn-light" data-view-target="exams">
-                                <i class="fa-solid fa-plus"></i> Yeni Kayıt Ekle
+                            <button class="btn btn-light" data-view-target="exam">
+                                <i class="fa-solid fa-play"></i> Deneme Başlat
                             </button>
                         </div>
                     </div>
@@ -198,18 +218,18 @@
                                 <i class="fa-solid fa-bullseye text-indigo"></i>
                             </div>
                             <div class="stat-data">
-                                <span class="stat-label">Hedef Sınav</span>
-                                <h3 class="stat-value" id="dash-target-exam">YKS / KPSS</h3>
+                                <span class="stat-label">Sınav Tarihi</span>
+                                <h3 class="stat-value">24 Ekim 14:00</h3>
                             </div>
                         </div>
 
                         <div class="stat-card">
                             <div class="stat-icon bg-emerald-light">
-                                <i class="fa-solid fa-calendar-check text-emerald"></i>
+                                <i class="fa-solid fa-gauge-high text-emerald"></i>
                             </div>
                             <div class="stat-data">
-                                <span class="stat-label">Kalan Süre</span>
-                                <h3 class="stat-value" id="dash-days-left">Geri Sayım</h3>
+                                <span class="stat-label">Hazırlık Skoru</span>
+                                <h3 class="stat-value" id="dash-readiness-score">%65</h3>
                             </div>
                         </div>
 
@@ -219,93 +239,422 @@
                             </div>
                             <div class="stat-data">
                                 <span class="stat-label">Çözülen Soru</span>
-                                <h3 class="stat-value" id="dash-questions-solved">0</h3>
+                                <h3 class="stat-value" id="dash-solved-count">0</h3>
                             </div>
                         </div>
 
                         <div class="stat-card">
                             <div class="stat-icon bg-rose-light">
-                                <i class="fa-solid fa-chart-simple text-rose"></i>
+                                <i class="fa-solid fa-triangle-exclamation text-rose"></i>
                             </div>
                             <div class="stat-data">
-                                <span class="stat-label">Son Net / Puan</span>
-                                <h3 class="stat-value" id="dash-latest-score">--</h3>
+                                <span class="stat-label">Riskli Bölüm</span>
+                                <h3 class="stat-value" id="dash-riskiest-section">GY-GK & Sözel</h3>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Boş Durum & Başlangıç Bilgisi -->
+                    <!-- 8-24 Ekim Günlük Çalışma Planı -->
                     <div class="content-card">
                         <div class="card-header">
                             <div class="card-title">
-                                <i class="fa-solid fa-rocket text-indigo"></i>
-                                <h3>Altyapı Başarıyla Hazırlandı</h3>
+                                <i class="fa-solid fa-calendar-check text-indigo"></i>
+                                <h3>8 - 24 Ekim Hızlı Kamp Planı</h3>
                             </div>
-                            <span class="badge badge-success">Sistem Aktif</span>
+                            <span class="badge badge-success">16 Günlük Program</span>
                         </div>
                         <div class="card-body">
-                            <p class="text-muted" style="margin-bottom: 1rem;">
-                                Supabase veritabanı entegrasyonu, kullanıcı girişi, mobil duyarlı arayüz ve sayfa yapısı hazırlandı.
-                            </p>
-                            <div class="info-box">
-                                <i class="fa-solid fa-info-circle"></i>
-                                <div>
-                                    <strong>İçerik bekleniyor:</strong>
-                                    Projede yer almasını istediğiniz özellikleri (örneğin Deneme Takibi, Soru Sayacı, Konu İlerlemesi, Pomodoro zamanlayıcı vb.) anlattığınızda doğrudan bu altyapıya entegre edeceğiz!
+                            <div class="schedule-grid">
+                                <div class="schedule-item active-day">
+                                    <div class="schedule-day">1. Hafta (8-14 Ekim)</div>
+                                    <div class="schedule-title">Alan Bilgisi & Temel Eksikleri Kapat</div>
+                                    <p class="schedule-desc">Algoritmalar, Veri Yapıları, SQL Normalizasyon/ACID, OOP SOLID, Ağlar & İşletim Sistemleri. Günlük 40 dk İngilizce gramer & bağlaçlar.</p>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-day">2. Hafta (15-21 Ekim)</div>
+                                    <div class="schedule-title">GY-GK Hızlanma & İlk Tam Deneme</div>
+                                    <p class="schedule-desc">Sözel Mantık, Paragraf Hızı, Ziraat Bankası Tarihi (1863 Mithat Paşa), Temel Bankacılık/TCMB ve ilk 140 soruluk tam deneme simülasyonu.</p>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-day">Son 3 Gün (22-24 Ekim)</div>
+                                    <div class="schedule-title">Yanlış Defteri Tekrarı & Sınav Provası</div>
+                                    <p class="schedule-desc">Zayıf konulardan mini testler, formül ve kavram notları okuma, dinlenme ve sınav evrakları kontrolü.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- VIEW 2: EXAMS & STUDIES / SINAVLAR & ÇALIŞMALAR -->
-                <section id="exams-view" class="view-section">
+                <!-- ========================================================
+                     VIEW 2: PRACTICE / KONU BAZLI ALIŞTIRMA
+                     ======================================================== -->
+                <section id="practice-view" class="view-section">
+                    <!-- Filtreler Kartı -->
                     <div class="content-card">
                         <div class="card-header">
                             <div class="card-title">
-                                <i class="fa-solid fa-book-open text-indigo"></i>
-                                <h3>Sınavlar ve Çalışmalar</h3>
+                                <i class="fa-solid fa-filter text-indigo"></i>
+                                <h3>Konu ve Soru Filtresi</h3>
                             </div>
-                            <button class="btn btn-primary btn-sm" id="btn-add-exam-record">
-                                <i class="fa-solid fa-plus"></i> Kayıt Ekle
-                            </button>
+                            <span id="practice-pool-count" class="badge badge-success">-- Soru Mevcut</span>
                         </div>
                         <div class="card-body">
-                            <div class="empty-state">
-                                <div class="empty-icon"><i class="fa-solid fa-pencil"></i></div>
-                                <h4>Henüz çalışma kaydı bulunmuyor</h4>
-                                <p class="text-muted">Projenin detaylarını belirlediğimizde bu alandan deneme sınavı ve ders çalışmalarınızı kaydedebileceksiniz.</p>
+                            <div class="filter-row">
+                                <div class="filter-col">
+                                    <label><i class="fa-solid fa-layer-group"></i> Bölüm</label>
+                                    <select id="practice-section-select">
+                                        <option value="all">Tüm Bölümler</option>
+                                        <option value="alan">3. Bölüm: Alan (Bilgisayar & YZ)</option>
+                                        <option value="genel-kultur">1. Bölüm: Genel Kültür (Banka / Tarih)</option>
+                                        <option value="genel-yetenek">1. Bölüm: Genel Yetenek (Sayısal / Sözel)</option>
+                                        <option value="ingilizce">2. Bölüm: İngilizce</option>
+                                    </select>
+                                </div>
+                                <div class="filter-col">
+                                    <label><i class="fa-solid fa-tags"></i> Alt Konu</label>
+                                    <select id="practice-topic-select">
+                                        <option value="all">Tüm Konular</option>
+                                    </select>
+                                </div>
+                                <div class="filter-col">
+                                    <label><i class="fa-solid fa-sliders"></i> Zorluk</label>
+                                    <select id="practice-difficulty-select">
+                                        <option value="all">Tümü (1-3)</option>
+                                        <option value="1">Kolay (1)</option>
+                                        <option value="2">Orta (2)</option>
+                                        <option value="3">Zor (3)</option>
+                                    </select>
+                                </div>
+                                <div class="filter-col">
+                                    <label><i class="fa-solid fa-crosshairs"></i> Filtre Tipi</label>
+                                    <select id="practice-type-select">
+                                        <option value="all">Tüm Sorular</option>
+                                        <option value="only-wrong">Yalnızca Yanlışlarım</option>
+                                        <option value="only-unsolved">Yalnızca Çözmediklerim</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; justify-content: flex-end;">
+                                <button class="btn btn-primary" id="btn-start-practice">
+                                    <i class="fa-solid fa-play"></i> Alıştırmayı Başlat
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soru Çözme Kartı -->
+                    <div id="practice-question-container" style="display: none;">
+                        <div class="content-card question-card">
+                            <div class="card-header question-header">
+                                <div class="question-meta">
+                                    <span class="badge badge-indigo" id="practice-badge-section">Alan</span>
+                                    <span class="badge badge-neutral" id="practice-badge-topic">Veri Tabanı</span>
+                                    <span class="badge badge-difficulty" id="practice-badge-diff">Zorluk: 2</span>
+                                </div>
+                                <div class="question-tools">
+                                    <button class="btn-icon" id="btn-practice-flag" title="Bayrakla / İşaretle">
+                                        <i class="fa-regular fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="question-counter" id="practice-question-counter">Soru 1 / 10</div>
+                                <div class="question-stem" id="practice-question-stem">Soru yükleniyor...</div>
+
+                                <!-- Seçenekler -->
+                                <div class="options-list" id="practice-options-list"></div>
+
+                                <!-- Anında Çözüm Açıklaması (Alıştırma Modu) -->
+                                <div class="explanation-box" id="practice-explanation-box" style="display: none;">
+                                    <div class="exp-title">
+                                        <i class="fa-solid fa-circle-info"></i> Çözüm ve Açıklama:
+                                    </div>
+                                    <p id="practice-explanation-text"></p>
+                                </div>
+
+                                <div class="question-nav-actions">
+                                    <button class="btn btn-secondary" id="btn-practice-prev" disabled>
+                                        <i class="fa-solid fa-chevron-left"></i> Önceki
+                                    </button>
+                                    <button class="btn btn-primary" id="btn-practice-next">
+                                        Sonraki <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- VIEW 3: STATS & ANALYTICS / İSTATİSTİKLER -->
+                <!-- ========================================================
+                     VIEW 3: EXAM / TAM DENEME SIMULASYONU
+                     ======================================================== -->
+                <section id="exam-view" class="view-section">
+                    <!-- Sınav Başlama Ekranı -->
+                    <div id="exam-lobby-screen">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <i class="fa-solid fa-stopwatch text-indigo"></i>
+                                    <h3>Gerçek Sınav Simülatörü (140 Soru - 160 Dakika)</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="exam-rules-box">
+                                    <h4>🚨 Sınav Kuralları ve Barajlar:</h4>
+                                    <ul>
+                                        <li><strong>1. Bölüm:</strong> 20 Genel Kültür + 40 Genel Yetenek = 60 Soru <em>(Baraj: En az 36 Doğru / %60)</em></li>
+                                        <li><strong>2. Bölüm:</strong> 40 İngilizce Soru <em>(Baraj: En az 24 Doğru / %60)</em></li>
+                                        <li><strong>3. Bölüm:</strong> 40 Bilgisayar Mühendisliği Alan Sorusu <em>(Baraj: En az 20 Doğru / %50)</em></li>
+                                        <li><strong>Süre:</strong> 160 Dakika (Süre bitiminde otomatik teslim edilir).</li>
+                                        <li><strong>Puanlama:</strong> Yanlış doğruyu götürmez; boş soru bırakmayınız!</li>
+                                    </ul>
+                                </div>
+
+                                <div class="exam-start-actions">
+                                    <button class="btn btn-primary btn-lg" id="btn-start-mock-exam">
+                                        <i class="fa-solid fa-play"></i> Deneme Sınavını Başlat (160 dk)
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canlı Sınav Ekranı -->
+                    <div id="exam-active-screen" style="display: none;">
+                        <div class="exam-header-bar">
+                            <div class="exam-live-timer">
+                                <i class="fa-regular fa-clock"></i>
+                                <span id="exam-timer-display">160:00</span>
+                            </div>
+                            <div class="exam-progress-info">
+                                <span id="exam-answered-stat">0 / 140 Cevaplandı</span>
+                            </div>
+                            <button class="btn btn-danger btn-sm" id="btn-finish-exam">
+                                Sınavı Bitir
+                            </button>
+                        </div>
+
+                        <div class="exam-layout-grid">
+                            <!-- Soru Alanı -->
+                            <div class="exam-main-panel">
+                                <div class="content-card question-card">
+                                    <div class="card-header question-header">
+                                        <div class="question-meta">
+                                            <span class="badge badge-indigo" id="exam-badge-section">Bölüm</span>
+                                            <span class="badge badge-neutral" id="exam-badge-topic">Konu</span>
+                                        </div>
+                                        <button class="btn-icon" id="btn-exam-flag" title="Soruyu Bayrakla">
+                                            <i class="fa-regular fa-bookmark"></i>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="question-counter" id="exam-question-counter">Soru 1 / 140</div>
+                                        <div class="question-stem" id="exam-question-stem">Soru yükleniyor...</div>
+                                        <div class="options-list" id="exam-options-list"></div>
+
+                                        <div class="question-nav-actions">
+                                            <button class="btn btn-secondary" id="btn-exam-prev">Önceki</button>
+                                            <button class="btn btn-primary" id="btn-exam-next">Sonraki</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Soru Gezgini (Navigator Matrix) -->
+                            <div class="exam-navigator-panel">
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <h4 style="font-size: 0.95rem;">Soru Gezgini</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="nav-legend">
+                                            <span><span class="legend-dot dot-answered"></span> Cevaplı</span>
+                                            <span><span class="legend-dot dot-flagged"></span> Bayraklı</span>
+                                            <span><span class="legend-dot dot-empty"></span> Boş</span>
+                                        </div>
+                                        <div class="navigator-grid" id="exam-navigator-grid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sınav Sonuç & Baraj Analiz Ekranı -->
+                    <div id="exam-result-screen" style="display: none;">
+                        <div class="content-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    <i class="fa-solid fa-square-poll-vertical text-indigo"></i>
+                                    <h3>Deneme Sınavı Sonuç Raporu & Baraj Analizi</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="exam-verdict-banner" class="verdict-banner">
+                                    <!-- Dinamik Baraj Durumu -->
+                                </div>
+
+                                <div class="threshold-cards-grid">
+                                    <div class="threshold-card" id="card-thresh-gygk">
+                                        <div class="th-header">
+                                            <h4>1. Bölüm: GY-GK</h4>
+                                            <span class="badge" id="badge-thresh-gygk">--</span>
+                                        </div>
+                                        <div class="th-score" id="score-thresh-gygk">0 / 60</div>
+                                        <div class="th-target">Zorunlu Baraj: 36 Doğru (%60)</div>
+                                        <div class="th-diff" id="diff-thresh-gygk">--</div>
+                                    </div>
+
+                                    <div class="threshold-card" id="card-thresh-eng">
+                                        <div class="th-header">
+                                            <h4>2. Bölüm: İngilizce</h4>
+                                            <span class="badge" id="badge-thresh-eng">--</span>
+                                        </div>
+                                        <div class="th-score" id="score-thresh-eng">0 / 40</div>
+                                        <div class="th-target">Zorunlu Baraj: 24 Doğru (%60)</div>
+                                        <div class="th-diff" id="diff-thresh-eng">--</div>
+                                    </div>
+
+                                    <div class="threshold-card" id="card-thresh-alan">
+                                        <div class="th-header">
+                                            <h4>3. Bölüm: Alan Bilgisi</h4>
+                                            <span class="badge" id="badge-thresh-alan">--</span>
+                                        </div>
+                                        <div class="th-score" id="score-thresh-alan">0 / 40</div>
+                                        <div class="th-target">Zorunlu Baraj: 20 Doğru (%50)</div>
+                                        <div class="th-diff" id="diff-thresh-alan">--</div>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                                    <button class="btn btn-secondary" id="btn-result-review-wrongs">
+                                        <i class="fa-solid fa-rotate-left"></i> Yanlışları Deftere Ekle
+                                    </button>
+                                    <button class="btn btn-primary" data-view-target="dashboard">
+                                        <i class="fa-solid fa-house"></i> Panele Dön
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================
+                     VIEW 4: REVIEW / YANLIŞ DEFTERİ & LEITNER TEKRAR
+                     ======================================================== -->
+                <section id="review-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-rotate-left text-indigo"></i>
+                                <h3>Yanlış Defteri & Aralıklı Tekrar (Leitner Kutuları)</h3>
+                            </div>
+                            <span class="badge badge-success" id="review-total-badge">0 Soru Tekrarda</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted" style="margin-bottom: 1.5rem;">
+                                Denemelerde ve alıştırmalarda yanlış yaptığınız sorular otomatik olarak bu deftere kaydedilir. Doğru bildikçe tekrar sıklığı uzar, yanlış bildikçe 1. kutuya döner.
+                            </p>
+                            <div id="review-questions-list"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================
+                     VIEW 5: FLASHCARDS / KAVRAM KARTLARI
+                     ======================================================== -->
+                <section id="flashcards-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <i class="fa-solid fa-layer-group text-indigo"></i>
+                                <h3>Hızlı Hatırlatma Kartları (Flashcards)</h3>
+                            </div>
+                            <div class="card-filter-buttons">
+                                <button class="btn btn-secondary btn-sm active" data-fc-filter="all">Tümü</button>
+                                <button class="btn btn-secondary btn-sm" data-fc-filter="alan">Alan</button>
+                                <button class="btn btn-secondary btn-sm" data-fc-filter="ingilizce">İngilizce</button>
+                                <button class="btn btn-secondary btn-sm" data-fc-filter="genel-kultur">GY-GK</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <!-- Flashcard Alanı -->
+                            <div class="flashcard-container">
+                                <div class="flashcard" id="active-flashcard">
+                                    <div class="fc-inner">
+                                        <div class="fc-front">
+                                            <span class="fc-badge" id="fc-badge">Kategori</span>
+                                            <h3 id="fc-front-text">Kart Sorusunu Görmek İçin Tıkla</h3>
+                                            <span class="fc-hint"><i class="fa-solid fa-arrows-rotate"></i> Çevirmek için dokun</span>
+                                        </div>
+                                        <div class="fc-back">
+                                            <span class="fc-badge">Açıklama / Cevap</span>
+                                            <p id="fc-back-text">Açıklama</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fc-actions">
+                                    <button class="btn btn-danger" id="btn-fc-again">
+                                        <i class="fa-solid fa-xmark"></i> Tekrar Göster
+                                    </button>
+                                    <button class="btn btn-success" id="btn-fc-known">
+                                        <i class="fa-solid fa-check"></i> Biliyorum
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================
+                     VIEW 6: STATS / İSTATİSTİKLER
+                     ======================================================== -->
                 <section id="stats-view" class="view-section">
                     <div class="content-card">
                         <div class="card-header">
                             <div class="card-title">
                                 <i class="fa-solid fa-chart-line text-indigo"></i>
-                                <h3>Gelişim ve Net Analizleri</h3>
+                                <h3>Bölüm ve Konu Bazlı Performans</h3>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="empty-state">
-                                <div class="empty-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                                <h4>İstatistikler hazırlanıyor</h4>
-                                <p class="text-muted">Girilen veriler arttıkça ders bazlı başarı oranları, net grafikleri ve eksik konu analizleri burada yer alacak.</p>
+                            <div class="stats-overview-grid">
+                                <div class="stat-item">
+                                    <span class="stat-lbl">Genel Yetenek - Genel Kültür</span>
+                                    <div class="prog-bar-container">
+                                        <div class="prog-bar bg-indigo" style="width: 60%;"></div>
+                                    </div>
+                                    <span class="stat-val">Baraj: 36/60 (%60)</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-lbl">İngilizce</span>
+                                    <div class="prog-bar-container">
+                                        <div class="prog-bar bg-emerald" style="width: 60%;"></div>
+                                    </div>
+                                    <span class="stat-val">Baraj: 24/40 (%60)</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-lbl">Alan Bilgisi (Bilgisayar & YZ)</span>
+                                    <div class="prog-bar-container">
+                                        <div class="prog-bar bg-amber" style="width: 50%;"></div>
+                                    </div>
+                                    <span class="stat-val">Baraj: 20/40 (%50)</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- VIEW 4: PROFILE & SETTINGS / PROFİL & HEDEFLER -->
+                <!-- ========================================================
+                     VIEW 7: PROFILE & SETTINGS
+                     ======================================================== -->
                 <section id="profile-view" class="view-section">
                     <div class="content-card">
                         <div class="card-header">
                             <div class="card-title">
                                 <i class="fa-solid fa-user-gear text-indigo"></i>
-                                <h3>Öğrenci Profili & Sınav Hedefleri</h3>
+                                <h3>Öğrenci Profili & Sınav Ayarları</h3>
                             </div>
                         </div>
                         <div class="card-body">
@@ -318,27 +667,24 @@
                                     <div class="form-group">
                                         <label for="profile-target-exam">Hazırlandığınız Sınav</label>
                                         <select id="profile-target-exam">
+                                            <option value="Ziraat Bankası Uzman Yrd. (BT / Bilgisayar Müh.)" selected>Ziraat Bankası Uzman Yrd. (BT / Bilgisayar Müh.)</option>
                                             <option value="YKS-TYT-AYT">YKS (TYT - AYT)</option>
                                             <option value="KPSS">KPSS</option>
-                                            <option value="LGS">LGS</option>
-                                            <option value="DGS">DGS</option>
-                                            <option value="ALES">ALES</option>
-                                            <option value="YDS">YDS / Dil</option>
-                                            <option value="Diger">Diğer / Üniversite Sınavı</option>
+                                            <option value="Diger">Diğer</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="profile-target-score">Hedef Puan / Net / Sıralama</label>
-                                        <input type="text" id="profile-target-score" placeholder="Örn: 450 Puan / İlk 10.000">
+                                        <label for="profile-target-score">Hedef Sıralama / Puan</label>
+                                        <input type="text" id="profile-target-score" value="İlk 135 (Mülakat Kotası)">
                                     </div>
                                     <div class="form-group">
                                         <label for="profile-target-date">Hedef Sınav Tarihi</label>
-                                        <input type="date" id="profile-target-date">
+                                        <input type="date" id="profile-target-date" value="2026-10-24">
                                     </div>
                                 </div>
                                 <div class="form-actions" style="margin-top: 1.5rem;">
                                     <button type="submit" class="btn btn-primary">
-                                        <i class="fa-solid fa-floppy-disk"></i> Değişiklikleri Kaydet
+                                        <i class="fa-solid fa-floppy-disk"></i> Ayarları Kaydet
                                     </button>
                                 </div>
                             </form>
@@ -353,19 +699,23 @@
         <nav class="mobile-bottom-nav">
             <button data-view-target="dashboard" class="mobile-nav-btn active">
                 <i class="fa-solid fa-house"></i>
-                <span>Genel Bakış</span>
+                <span>Panel</span>
             </button>
-            <button data-view-target="exams" class="mobile-nav-btn">
+            <button data-view-target="practice" class="mobile-nav-btn">
                 <i class="fa-solid fa-book-open"></i>
-                <span>Çalışmalar</span>
+                <span>Alıştırma</span>
             </button>
-            <button data-view-target="stats" class="mobile-nav-btn">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>İstatistik</span>
+            <button data-view-target="exam" class="mobile-nav-btn">
+                <i class="fa-solid fa-stopwatch"></i>
+                <span>Deneme</span>
             </button>
-            <button data-view-target="profile" class="mobile-nav-btn">
-                <i class="fa-solid fa-user-gear"></i>
-                <span>Profil</span>
+            <button data-view-target="review" class="mobile-nav-btn">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Tekrar</span>
+            </button>
+            <button data-view-target="flashcards" class="mobile-nav-btn">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Kartlar</span>
             </button>
         </nav>
 
@@ -376,6 +726,7 @@
 
     <!-- MODULAR JAVASCRIPT MODULES -->
     <script type="module" src="js/supabase.js"></script>
+    <script type="module" src="js/db.js"></script>
     <script type="module" src="js/app.js"></script>
 </body>
 </html>

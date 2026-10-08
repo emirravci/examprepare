@@ -1,0 +1,97 @@
+[
+  {
+    "id": "eng-001",
+    "section": "ingilizce",
+    "topic": "Grammar",
+    "subtopic": "Conditionals",
+    "difficulty": 2,
+    "stem": "If the central bank ________ the benchmark interest rate sooner, the domestic currency ________ so significantly against foreign currencies last year.",
+    "options": [
+      "had raised / would not have depreciated",
+      "raised / will not depreciate",
+      "has raised / would not depreciate",
+      "raises / would not have depreciated",
+      "would raise / had not depreciated"
+    ],
+    "answerIndex": 0,
+    "explanation": "Cümle geçmişte gerçekleşmemiş bir durumu anlattığı için Type 3 Conditional (Past Unreal) yapısı gerektirir: If + Past Perfect (had raised), would + have + V3 (would not have depreciated).",
+    "tags": ["grammar", "conditionals", "if-clause", "type-3"],
+    "source": "original"
+  },
+  {
+    "id": "eng-002",
+    "section": "ingilizce",
+    "topic": "Vocabulary",
+    "subtopic": "Banking & Finance",
+    "difficulty": 2,
+    "stem": "In financial accounting, a company's total ________ represents the debts and financial obligations that it owes to outside parties, such as loans and accounts payable.",
+    "options": [
+      "assets",
+      "liabilities",
+      "dividends",
+      "revenues",
+      "equities"
+    ],
+    "answerIndex": 1,
+    "explanation": "'Liabilities' (yükümlülükler / borçlar), bir işletmenin dış taraflara olan borç ve taahhütlerini ifade eder. 'Assets' ise varlıklar demektir.",
+    "tags": ["vocabulary", "finance", "accounting", "banking"],
+    "source": "original"
+  },
+  {
+    "id": "eng-003",
+    "section": "ingilizce",
+    "topic": "Grammar",
+    "subtopic": "Conjunctions",
+    "difficulty": 2,
+    "stem": "________ experiencing volatile market fluctuations in the first quarter, the state bank managed to report record net profitability by year-end.",
+    "options": [
+      "In spite of",
+      "Although",
+      "Therefore",
+      "Unless",
+      "Provided that"
+    ],
+    "answerIndex": 0,
+    "explanation": "'In spite of' (veya Despite) kendisinden sonra isim öbeği veya -ing (gerund) alır ve zıtlık bildirir: 'In spite of experiencing...'. 'Although' ise tam bir cümle (özne + yüklem) gerektirirdi.",
+    "tags": ["grammar", "conjunctions", "in-spite-of"],
+    "source": "original"
+  },
+  {
+    "id": "eng-004",
+    "section": "ingilizce",
+    "topic": "Vocabulary",
+    "subtopic": "Cybersecurity & IT",
+    "difficulty": 2,
+    "stem": "The financial institution immediately notified its regulatory authorities and affected customers following a severe data ________ that compromised sensitive account credentials.",
+    "options": [
+      "prosperity",
+      "surplus",
+      "breach",
+      "collateral",
+      "maturity"
+    ],
+    "answerIndex": 2,
+    "explanation": "'Data breach' (veri ihlali/sızıntısı), hassas verilerin yetkisiz kişilerin eline geçmesi durumudur.",
+    "tags": ["vocabulary", "cybersecurity", "breach", "it"],
+    "source": "original"
+  },
+  {
+    "id": "eng-005",
+    "section": "ingilizce",
+    "topic": "Sentence Completion",
+    "subtopic": "Relative Clauses",
+    "difficulty": 2,
+    "stem": "Machine learning algorithms, ________ ability to identify subtle patterns in massive transaction streams is well documented, are increasingly deployed for real-time fraud prevention.",
+    "options": [
+      "whose",
+      "which",
+      "whom",
+      "that",
+      "where"
+    ],
+    "answerIndex": 0,
+    "explanation": "Burada sahiplik (iyelik) ilişkisi vardır: 'Algoritmaların yeteneği' anlamını vermek için 'whose + noun' (whose ability) yapısı kullanılır.",
+    "tags": ["grammar", "relative-clauses", "whose"],
+    "source": "original"
+  }
+]

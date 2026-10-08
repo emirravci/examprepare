@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fc-001",
+    "category": "alan",
+    "topic": "Veri Tabanı ve SQL",
+    "front": "ACID Prensipleri Nelerdir?",
+    "back": "• Atomicity: Ya hep ya hiç (bölünemezlik).\n• Consistency: Tutarlılık kurallarının korunması.\n• Isolation: Eşzamanlı işlemlerin birbirinden yalıtılması.\n• Durability: İşlem tamamlandığında diske kalıcı yazılması.",
+    "tags": ["acid", "database", "transaction"]
+  },
+  {
+    "id": "fc-002",
+    "category": "alan",
+    "topic": "Yazılım Mühendisliği",
+    "front": "SOLID Prensipleri Nelerdir?",
+    "back": "• S (Single Responsibility): Tek bir sorumluluk.\n• O (Open/Closed): Gelişime açık, değişime kapalı.\n• L (Liskov Substitution): Alt sınıflar üst sınıf yerine geçebilmeli.\n• I (Interface Segregation): İstemciye özel küçük arayüzler.\n• D (Dependency Inversion): Üst modüller alt modüllere değil, soyutlamalara bağımlı olmalı.",
+    "tags": ["solid", "oop", "yazilim"]
+  },
+  {
+    "id": "fc-003",
+    "category": "alan",
+    "topic": "Bilgisayar Ağları",
+    "front": "OSI 7 Katmanı (Aşağıdan Yukarıya)",
+    "back": "1. Fiziksel (Physical) - Bitler, kablolar\n2. Veri Bağlantısı (Data Link) - Çerçeveler, MAC, Switch\n3. Ağ (Network) - Paketler, IP, Router\n4. Taşıma (Transport) - Segmentler, TCP/UDP, Portlar\n5. Oturum (Session) - Oturum yönetimi\n6. Sunum (Presentation) - Şifreleme, sıkıştırma, format (JSON/TLS)\n7. Uygulama (Application) - HTTP, DNS, SMTP, FTP",
+    "tags": ["osi", "network", "protokol"]
+  },
+  {
+    "id": "fc-004",
+    "category": "alan",
+    "topic": "İşletim Sistemleri",
+    "front": "Deadlock (Kilitlenme) İçin 4 Coffman Şartı",
+    "back": "1. Mutual Exclusion (Karşılıklı Dışlama)\n2. Hold and Wait (Tut ve Bekle)\n3. No Preemption (Kesinti / Zorla Alma Yok)\n4. Circular Wait (Dairesel Bekleme)\n* Bu 4 şart aynı anda gerçekleştiğinde Deadlock oluşur; biri engellenirse deadlock önlenir.",
+    "tags": ["deadlock", "os", "coffman"]
+  },
+  {
+    "id": "fc-005",
+    "category": "genel-kultur",
+    "topic": "Ziraat Bankası Tarihi",
+    "front": "Ziraat Bankası Ne Zaman ve Nasıl Kurulmuştur?",
+    "back": "• 1863 yılında Niş Valisi Mithat Paşa tarafından 'Memleket Sandıkları' adıyla kuruldu.\n• Amaç çiftçileri tefecilerden koruyup uygun maliyetli tarımsal kredi sağlamaktı.\n• 1888 yılında günümüz modern Ziraat Bankası'na dönüştürüldü.\n• Türkiye'nin ilk kamu bankasıdır.",
+    "tags": ["ziraat", "mithat-pasa", "tarih"]
+  },
+  {
+    "id": "fc-006",
+    "category": "ingilizce",
+    "topic": "Finans Kelimeleri",
+    "front": "Assets vs. Liabilities Farkı Nedir?",
+    "back": "• Assets: Bir şirketin veya kişinin sahip olduğu ekonomik varlıklar/alacaklar (nakit, mülk, menkul kıymet).\n• Liabilities: Borçlar ve yükümlülükler (krediler, ödenecek borçlar, tahviller).",
+    "tags": ["english", "finance", "vocabulary"]
+  }
+]
