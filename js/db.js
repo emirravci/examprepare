@@ -32,8 +32,14 @@ class DataManager {
                 fetch('./data/youtube_channels.json').then(r => r.json()).catch(() => [])
             ]);
 
+            const allFetched = [...bgkRes, ...ornRes, ...engRes, ...alanRes];
+            const qMap = new Map();
+            allFetched.forEach(q => { if (q && q.id) qMap.set(q.id, q); });
+            if (Array.isArray(masterRes)) {
+                masterRes.forEach(q => { if (q && q.id && !qMap.has(q.id)) qMap.set(q.id, q); });
+            }
+            this.questions = Array.from(qMap.values());
             this.masterExamQuestions = masterRes.length === 140 ? masterRes : [];
-            this.questions = masterRes.length > 0 ? masterRes : [...bgkRes, ...ornRes, ...engRes, ...alanRes];
             this.flashcards = fcRes;
             this.lectures = lecRes;
             this.resources = extRes;
@@ -84,6 +90,19 @@ class DataManager {
                     content: l.content
                 }));
                 await supabase.from('lectures').upsert(mappedLectures, { onConflict: 'id', ignoreDuplicates: true });
+            }
+
+            // Flashcardları Supabase'e toplu upsert et
+            if (this.flashcards.length > 0) {
+                const mappedCards = this.flashcards.map(f => ({
+                    id: f.id,
+                    category: f.category,
+                    topic: f.topic,
+                    front: f.front,
+                    back: f.back,
+                    tags: f.tags || []
+                }));
+                await supabase.from('flashcards').upsert(mappedCards, { onConflict: 'id', ignoreDuplicates: true });
             }
         } catch (e) {
             console.warn("Supabase arka plan eşitleme bildirimi:", e);

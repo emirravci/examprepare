@@ -1,4 +1,37 @@
--- ==============================================================================
+const fs = require('fs');
+const path = require('path');
+
+function esc(val) {
+    if (val === null || val === undefined) return 'NULL';
+    return "'" + String(val).replace(/'/g, "''") + "'";
+}
+
+function escArray(arr) {
+    if (!arr || !Array.isArray(arr) || arr.length === 0) return "ARRAY[]::text[]";
+    const items = arr.map(item => "'" + String(item).replace(/'/g, "''") + "'");
+    return "ARRAY[" + items.join(', ') + "]::text[]";
+}
+
+function escJson(obj) {
+    if (!obj) return "'[]'::jsonb";
+    return "'" + JSON.stringify(obj).replace(/'/g, "''") + "'::jsonb";
+}
+
+// 1. DATA FILES
+const bgk = JSON.parse(fs.readFileSync('data/questions/bankacilik_genel_kultur.json', 'utf8'));
+const orn = JSON.parse(fs.readFileSync('data/questions/oruntu_analitik.json', 'utf8'));
+const eng = JSON.parse(fs.readFileSync('data/questions/ingilizce.json', 'utf8'));
+const alan = JSON.parse(fs.readFileSync('data/questions/alan_bilgisayar.json', 'utf8'));
+const allQuestions = [...bgk, ...orn, ...eng, ...alan];
+
+const lectures = JSON.parse(fs.readFileSync('data/lectures.json', 'utf8'));
+const flashcards = JSON.parse(fs.readFileSync('data/flashcards.json', 'utf8'));
+const resources = JSON.parse(fs.readFileSync('data/external_resources.json', 'utf8'));
+
+console.log(`Loaded: ${allQuestions.length} questions, ${lectures.length} lectures, ${flashcards.length} flashcards, ${resources.length} resources.`);
+
+// 2. DDL SCRIPT (SCHEMA)
+const schemaSql = `-- ==============================================================================
 -- ZİRAAT BANKASI UZMAN / MÜFETTİŞ YARDIMCILIĞI SINAV HAZIRLIK UYGULAMASI
 -- GÜNCEL SUPABASE VERİTABANI ŞEMASI (MASTER DDL SCRIPT)
 -- Son Güncelleme: 9 Ekim 2026 (Tam İdempotent Sürüm - Notlar, Videolar ve Tüm Modüller Dahil)
@@ -341,3 +374,136 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
+`;
+
+fs.writeFileSync('supabase_schema.sql', schemaSql, 'utf8');
+console.log('Saved updated supabase_schema.sql');
+
+// 3. SEED DATA GENERATOR
+let seedSql = `-- ==============================================================================
+-- ZİRAAT BANKASI UZMAN / MÜFETTİŞ YARDIMCILIĞI SINAV HAZIRLIK
+-- SUPABASE VERİ YÜKLEME VE GÜNCELLEME BETİĞİ (SEED & SYNC)
+-- Son Güncelleme: 9 Ekim 2026
+-- Toplam: 220 Soru, 22 Konu Anlatımı, 30 Flashcard, 23 Harici Kaynak
+-- ==============================================================================
+
+-- 0. GEREKLİ KISITLAMA GÜNCELLEMELERİ (MIGRATION / ALTER)
+-- Eski tablolarda section ve source kısıtlamaları yeni bölümleri engelleyebileceği için güncellenir:
+alter table if exists public.questions drop constraint if exists questions_section_check;
+alter table if exists public.questions drop constraint if exists questions_source_check;
+alter table if exists public.questions add constraint questions_section_check 
+    check (section in ('genel-kultur', 'genel-yetenek', 'bankacilik-genel-kultur', 'oruntu-analitik', 'ingilizce', 'alan'));
+
+alter table if exists public.lectures drop constraint if exists lectures_section_check;
+alter table if exists public.lectures add constraint lectures_section_check 
+    check (section in ('alan', 'genel-kultur', 'genel-yetenek', 'bankacilik-genel-kultur', 'oruntu-analitik', 'ingilizce'));
+
+-- A. QUESTIONS (220 Soru - 80 Alan, 80 İngilizce, 40 GY, 20 GK)
+`;
+
+allQuestions.forEach(q => {
+    const id = esc(q.id);
+    const section = esc(q.section);
+    const topic = esc(q.topic);
+    const subtopic = esc(q.subtopic || null);
+    const difficulty = typeof q.difficulty === 'number' ? q.difficulty : 2;
+    const stem = esc(q.stem || q.questionText || '');
+    const options = escJson(q.options);
+    const answerIndex = q.answerIndex !== undefined ? q.answerIndex : q.correctAnswer;
+    const explanation = esc(q.explanation || '');
+    const tags = escArray(q.tags || []);
+    const source = esc(q.source || 'Ziraat 2026 Sınav Seti');
+
+    seedSql += `insert into public.questions (id, section, topic, subtopic, difficulty, stem, options, answer_index, explanation, tags, source)
+values (${id}, ${section}, ${topic}, ${subtopic}, ${difficulty}, ${stem}, ${options}, ${answerIndex}, ${explanation}, ${tags}, ${source})
+on conflict (id) do update set
+  topic = excluded.topic,
+  subtopic = excluded.subtopic,
+  difficulty = excluded.difficulty,
+  stem = excluded.stem,
+  options = excluded.options,
+  answer_index = excluded.answer_index,
+  explanation = excluded.explanation,
+  tags = excluded.tags;
+`;
+});
+
+seedSql += `\n-- B. LECTURES (22 Konu Anlatımı)\n`;
+lectures.forEach(l => {
+    const id = esc(l.id);
+    const section = esc(l.section);
+    const topic = esc(l.topic);
+    const title = esc(l.title);
+    const readTime = esc(l.readTime || '7 dk');
+    const summary = esc(l.summary || '');
+    const content = esc(l.content);
+
+    seedSql += `insert into public.lectures (id, section, topic, title, read_time, summary, content)
+values (${id}, ${section}, ${topic}, ${title}, ${readTime}, ${summary}, ${content})
+on conflict (id) do update set
+  section = excluded.section,
+  topic = excluded.topic,
+  title = excluded.title,
+  read_time = excluded.read_time,
+  summary = excluded.summary,
+  content = excluded.content;
+`;
+});
+
+seedSql += `\n-- C. FLASHCARDS (30 Bilgi Kartı)\n`;
+flashcards.forEach(f => {
+    const id = esc(f.id);
+    const category = esc(f.category);
+    const topic = esc(f.topic);
+    const front = esc(f.front);
+    const back = esc(f.back);
+    const tags = escArray(f.tags || []);
+
+    seedSql += `insert into public.flashcards (id, category, topic, front, back, tags)
+values (${id}, ${category}, ${topic}, ${front}, ${back}, ${tags})
+on conflict (id) do update set
+  category = excluded.category,
+  topic = excluded.topic,
+  front = excluded.front,
+  back = excluded.back,
+  tags = excluded.tags;
+`;
+});
+
+seedSql += `\n-- D. EXTERNAL RESOURCES (23 Harici Kaynak)\n`;
+resources.forEach(r => {
+    const id = esc(r.id);
+    const category = esc(r.category);
+    const subCategory = esc(r.subCategory || null);
+    const type = esc(r.type);
+    const title = esc(r.title);
+    const provider = esc(r.provider);
+    const url = esc(r.url);
+    const durationOrCount = esc(r.durationOrCount || null);
+    const badge = esc(r.badge || null);
+    const isRecommended = r.isRecommended ? 'true' : 'false';
+    const description = esc(r.description || null);
+
+    seedSql += `insert into public.external_resources (id, category, sub_category, type, title, provider, url, duration_or_count, badge, is_recommended, description)
+values (${id}, ${category}, ${subCategory}, ${type}, ${title}, ${provider}, ${url}, ${durationOrCount}, ${badge}, ${isRecommended}, ${description})
+on conflict (id) do update set
+  category = excluded.category,
+  sub_category = excluded.sub_category,
+  type = excluded.type,
+  title = excluded.title,
+  provider = excluded.provider,
+  url = excluded.url,
+  duration_or_count = excluded.duration_or_count,
+  badge = excluded.badge,
+  is_recommended = excluded.is_recommended,
+  description = excluded.description;
+`;
+});
+
+fs.writeFileSync('supabase_seed_data.sql', seedSql, 'utf8');
+console.log('Saved supabase_seed_data.sql');
+
+// 4. COMBINED MASTER SQL (SCHEMA + SEED)
+const masterSql = schemaSql + '\n\n' + seedSql;
+fs.writeFileSync('supabase_master_update.sql', masterSql, 'utf8');
+console.log('Saved combined supabase_master_update.sql');
