@@ -61,9 +61,14 @@ const state = {
     notes: {
         category: 'all',
         priority: 'all',
+        sort: 'smart',
+        activeTag: null,
         searchQuery: '',
         viewMode: 'cards',
-        editingNoteId: null
+        editingNoteId: null,
+        flashIndex: 0,
+        flashNotes: [],
+        editorTab: 'write'
     }
 };
 
@@ -263,6 +268,9 @@ function renderLecturesList() {
                     <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(lec.summary)}</p>
                 </div>
                 <div class="lecture-card-actions">
+                    <button class="btn-create-note-from-lecture" data-create-note-lec="${lec.id}" title="Bu konudan hap çalışma notu oluştur">
+                        <i class="fa-solid fa-pen-nib"></i> <span>Not Çıkar</span>
+                    </button>
                     <button class="btn-toggle-read ${isCompleted ? 'completed' : ''}" data-lec-id="${lec.id}">
                         <i class="fa-solid ${isCompleted ? 'fa-circle-check' : 'fa-circle'}"></i>
                         <span>${isCompleted ? 'Çalışıldı' : 'Tamamla'}</span>
@@ -280,8 +288,14 @@ function renderLecturesList() {
 
         // Başlığa tıklandığında açılır-kapanır (Accordion)
         card.querySelector('.lecture-card-header').addEventListener('click', (e) => {
-            if (e.target.closest('.btn-toggle-read')) return; // Butona tıklanmışsa katlama
+            if (e.target.closest('.btn-toggle-read') || e.target.closest('.btn-create-note-from-lecture')) return;
             card.classList.toggle('expanded');
+        });
+
+        // Bu konudan not çıkar butonu
+        card.querySelector('[data-create-note-lec]')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openNoteEditorFromLecture(lec);
         });
 
         // Tamamlandı durumunu değiştir
@@ -1276,12 +1290,16 @@ function initNotesMode() {
     const searchInput = document.getElementById('notes-search-input');
     const searchClearBtn = document.getElementById('notes-search-clear');
     const priorityFilter = document.getElementById('notes-priority-filter');
+    const sortSelect = document.getElementById('notes-sort-select');
     const categoryBtns = document.querySelectorAll('#notes-category-pills [data-note-sec]');
     const layoutBtns = document.querySelectorAll('.btn-layout-toggle');
     const btnCreate = document.getElementById('btn-create-note');
     const btnExport = document.getElementById('btn-export-notes');
+    const btnFlashReview = document.getElementById('btn-flash-review');
+    const btnPrintNotes = document.getElementById('btn-print-notes');
+    const btnImportNotes = document.getElementById('btn-import-notes-modal');
 
-    // Kategori Seçimleri
+    // 1. Kategori Seçimleri
     categoryBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             categoryBtns.forEach(b => b.classList.remove('active'));
@@ -1291,7 +1309,7 @@ function initNotesMode() {
         });
     });
 
-    // Arama Çubuğu
+    // 2. Arama Çubuğu
     searchInput?.addEventListener('input', (e) => {
         const val = e.target.value.trim().toLowerCase();
         state.notes.searchQuery = val;
@@ -1308,13 +1326,19 @@ function initNotesMode() {
         renderNotesList();
     });
 
-    // Öncelik / Sabit Filtresi
+    // 3. Öncelik Filtresi
     priorityFilter?.addEventListener('change', (e) => {
         state.notes.priority = e.target.value;
         renderNotesList();
     });
 
-    // Görünüm Değiştirici (Kartlar vs Tablo)
+    // 4. Sıralama Seçimi
+    sortSelect?.addEventListener('change', (e) => {
+        state.notes.sort = e.target.value;
+        renderNotesList();
+    });
+
+    // 5. Görünüm Değiştirici (Kartlar vs Tablo)
     layoutBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             layoutBtns.forEach(b => b.classList.remove('active'));
@@ -1324,26 +1348,81 @@ function initNotesMode() {
         });
     });
 
-    // Yeni Not Ekleme Butonu
+    // 6. Üst Çubuk Eylemleri
     btnCreate?.addEventListener('click', () => {
         openNoteEditorModal(null);
     });
 
-    // Dışa Aktarma Butonu
-    btnExport?.addEventListener('click', () => {
-        exportAllNotes();
+    btnFlashReview?.addEventListener('click', () => {
+        openFlashReviewModal();
     });
 
-    // Not Editör Modalı Etkinlikleri
+    btnPrintNotes?.addEventListener('click', () => {
+        printNotesStudySheet();
+    });
+
+    btnImportNotes?.addEventListener('click', () => {
+        openImportNotesModal();
+    });
+
+    btnExport?.addEventListener('click', () => {
+        handleExportNotesMenu();
+    });
+
+    // 7. Not Editör Modalı Sekmeleri (Yaz vs Canlı Önizle)
+    const tabBtnWrite = document.getElementById('tab-btn-write');
+    const tabBtnPreview = document.getElementById('tab-btn-preview');
+    const writePane = document.getElementById('note-editor-write-pane');
+    const previewPane = document.getElementById('note-editor-preview-pane');
+    const contentText = document.getElementById('note-form-content');
+
+    const switchEditorTab = (tab) => {
+        state.notes.editorTab = tab;
+        if (tab === 'write') {
+            tabBtnWrite?.classList.add('active');
+            tabBtnPreview?.classList.remove('active');
+            if (writePane) writePane.style.display = 'block';
+            if (previewPane) previewPane.style.display = 'none';
+        } else {
+            tabBtnPreview?.classList.add('active');
+            tabBtnWrite?.classList.remove('active');
+            if (writePane) writePane.style.display = 'none';
+            if (previewPane) {
+                previewPane.style.display = 'block';
+                const currentText = contentText ? contentText.value : '';
+                previewPane.innerHTML = formatLectureContent(currentText) || '<p class="text-muted" style="font-style: italic;">Henüz içerik yazılmadı...</p>';
+            }
+        }
+    };
+
+    tabBtnWrite?.addEventListener('click', () => switchEditorTab('write'));
+    tabBtnPreview?.addEventListener('click', () => switchEditorTab('preview'));
+
+    // Editör Şablon Seçici
+    const templateSelect = document.getElementById('note-template-select');
+    templateSelect?.addEventListener('change', (e) => {
+        const tplKey = e.target.value;
+        if (!tplKey || !contentText) return;
+        insertNoteTemplate(tplKey, contentText);
+        e.target.value = '';
+        if (state.notes.editorTab === 'preview' && previewPane) {
+            previewPane.innerHTML = formatLectureContent(contentText.value);
+        }
+    });
+
+    // Editör Etkinlikleri
     document.getElementById('btn-close-note-editor')?.addEventListener('click', closeNoteEditorModal);
     document.getElementById('btn-cancel-note-editor')?.addEventListener('click', closeNoteEditorModal);
     document.getElementById('note-editor-form')?.addEventListener('submit', handleNoteFormSubmit);
 
     // Markdown Hızlı Ekleme Araç Çubuğu
-    document.querySelectorAll('.btn-md-tool').forEach(btn => {
+    document.querySelectorAll('#note-editor-md-toolbar .btn-md-tool').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const tool = e.currentTarget.getAttribute('data-md');
             insertMarkdownToTextarea(tool);
+            if (state.notes.editorTab === 'preview' && previewPane && contentText) {
+                previewPane.innerHTML = formatLectureContent(contentText.value);
+            }
         });
     });
 
@@ -1360,6 +1439,17 @@ function initNotesMode() {
         }
     });
 
+    // Hızlı Tekrar Modalı Etkinlikleri
+    document.getElementById('btn-close-flash-review')?.addEventListener('click', closeFlashReviewModal);
+    document.getElementById('btn-flash-prev')?.addEventListener('click', () => navigateFlashReview(-1));
+    document.getElementById('btn-flash-next')?.addEventListener('click', () => navigateFlashReview(1));
+
+    // İçe Aktarma Modalı Etkinlikleri
+    document.getElementById('btn-close-import-modal')?.addEventListener('click', closeImportNotesModal);
+    document.getElementById('btn-cancel-import-notes')?.addEventListener('click', closeImportNotesModal);
+    document.getElementById('btn-submit-import-notes')?.addEventListener('click', handleImportNotesSubmit);
+    document.getElementById('import-notes-file')?.addEventListener('change', handleImportFileInput);
+
     // Sayfa Yüklendiğinde render
     document.addEventListener('view-notes-loaded', renderNotesList);
     renderNotesList();
@@ -1371,7 +1461,7 @@ function renderNotesList() {
     const tableBody = document.getElementById('notes-table-body');
     if (!cardsContainer) return;
 
-    const allNotes = db.getUserNotes();
+    const allNotes = db.getUserNotes(state.notes.sort || 'smart');
 
     // İstatistik ve Sayaçları Güncelle
     const totalCountEl = document.getElementById('notes-total-count');
@@ -1381,6 +1471,9 @@ function renderNotesList() {
     if (totalCountEl) totalCountEl.textContent = allNotes.length;
     if (pinnedCountEl) pinnedCountEl.textContent = allNotes.filter(n => n.is_pinned).length;
     if (p0CountEl) p0CountEl.textContent = allNotes.filter(n => n.priority === 'P0').length;
+
+    // Dinamik Etiket Bulutunu Güncelle
+    renderNotesTagCloud();
 
     // Filtreleri Uygula
     let filtered = [...allNotes];
@@ -1395,6 +1488,11 @@ function renderNotesList() {
         filtered = filtered.filter(n => n.priority === state.notes.priority);
     }
 
+    if (state.notes.activeTag) {
+        const tagLower = state.notes.activeTag.toLowerCase();
+        filtered = filtered.filter(n => Array.isArray(n.tags) && n.tags.some(t => t.toLowerCase() === tagLower));
+    }
+
     const query = state.notes.searchQuery;
     if (query) {
         filtered = filtered.filter(n => 
@@ -1403,6 +1501,9 @@ function renderNotesList() {
             (n.tags && n.tags.some(t => t.toLowerCase().includes(query)))
         );
     }
+
+    // Aktif filtrelenmiş listeyi hızlı tekrar ve yazdırma için sakla
+    state.notes.flashNotes = filtered;
 
     const sectionLabels = {
         'bankacilik-genel-kultur': 'Bankacılık & GK',
@@ -1452,7 +1553,7 @@ function renderNotesList() {
                 : '<span class="badge badge-p2"><i class="fa-regular fa-bookmark"></i> P2 Not</span>';
 
             const tagsHtml = (note.tags && note.tags.length > 0)
-                ? note.tags.map(t => `<span class="note-tag-chip">#${escapeHtml(t)}</span>`).join('')
+                ? note.tags.map(t => `<span class="note-tag-chip" data-click-tag="${escapeHtml(t)}">#${escapeHtml(t)}</span>`).join('')
                 : '';
 
             const updatedStr = formatNoteDate(note.updated_at || note.created_at);
@@ -1466,7 +1567,7 @@ function renderNotesList() {
                         ${priorityHtml}
                     </div>
                     <button class="note-pin-btn ${note.is_pinned ? 'active' : ''}" data-pin-id="${note.id}" title="${note.is_pinned ? 'Sabitlemeyi Kaldır' : 'Başa Tuttur'}">
-                        <i class="${note.is_pinned ? 'fa-solid fa-thumbtack' : 'fa-solid fa-thumbtack text-dim'}"></i>
+                        <i class="${note.is_pinned ? 'fa-solid fa-thumbtack text-amber' : 'fa-solid fa-thumbtack text-dim'}"></i>
                     </button>
                 </div>
 
@@ -1497,6 +1598,15 @@ function renderNotesList() {
             // Olay dinleyicileri
             card.querySelectorAll('[data-view-note]').forEach(el => {
                 el.addEventListener('click', () => openNoteDetailModal(note.id));
+            });
+
+            card.querySelectorAll('[data-click-tag]').forEach(el => {
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const tag = e.currentTarget.getAttribute('data-click-tag');
+                    state.notes.activeTag = tag;
+                    renderNotesList();
+                });
             });
 
             card.querySelector('[data-pin-id]')?.addEventListener('click', (e) => {
@@ -1608,12 +1718,425 @@ function renderNotesList() {
     }
 }
 
+// Dinamik Etiket Bulutu Çizimi
+function renderNotesTagCloud() {
+    const container = document.getElementById('notes-tag-cloud-container');
+    if (!container) return;
+
+    const tags = db.getAllUserNoteTags();
+    if (!tags || tags.length === 0) {
+        container.style.display = 'none';
+        return;
+    }
+
+    container.style.display = 'flex';
+    let html = `
+        <span class="tag-cloud-title"><i class="fa-solid fa-tags"></i> Etiketler:</span>
+        <button type="button" class="tag-cloud-chip ${!state.notes.activeTag ? 'active' : ''}" data-filter-tag="">
+            Tümü
+        </button>
+    `;
+
+    tags.forEach(t => {
+        const isActive = state.notes.activeTag && state.notes.activeTag.toLowerCase() === t.tag.toLowerCase();
+        html += `
+            <button type="button" class="tag-cloud-chip ${isActive ? 'active' : ''}" data-filter-tag="${escapeHtml(t.tag)}">
+                #${escapeHtml(t.tag)} <span class="tag-cloud-count">${t.count}</span>
+            </button>
+        `;
+    });
+
+    container.innerHTML = html;
+
+    container.querySelectorAll('[data-filter-tag]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const tag = e.currentTarget.getAttribute('data-filter-tag');
+            state.notes.activeTag = tag || null;
+            renderNotesList();
+        });
+    });
+}
+
+// Hızlı Tekrar (Flash Review) Modu
+function openFlashReviewModal() {
+    const modal = document.getElementById('notes-flash-review-modal');
+    if (!modal) return;
+
+    const notes = (state.notes.flashNotes && state.notes.flashNotes.length > 0)
+        ? state.notes.flashNotes
+        : db.getUserNotes(state.notes.sort || 'smart');
+
+    if (notes.length === 0) {
+        showToast("Tekrar edilecek kayıtlı not bulunmuyor.", "warning");
+        return;
+    }
+
+    state.notes.flashNotes = notes;
+    state.notes.flashIndex = 0;
+
+    const filterLabel = document.getElementById('flash-review-filter-label');
+    if (filterLabel) {
+        if (state.notes.category && state.notes.category !== 'all') {
+            filterLabel.textContent = `Bölüm: ${state.notes.category}`;
+        } else if (state.notes.activeTag) {
+            filterLabel.textContent = `Etiket: #${state.notes.activeTag}`;
+        } else {
+            filterLabel.textContent = `Tüm Notlar (${notes.length})`;
+        }
+    }
+
+    renderFlashReviewCard();
+    modal.classList.add('active');
+    document.addEventListener('keydown', handleFlashReviewKeydown);
+}
+
+function closeFlashReviewModal() {
+    const modal = document.getElementById('notes-flash-review-modal');
+    if (modal) modal.classList.remove('active');
+    document.removeEventListener('keydown', handleFlashReviewKeydown);
+}
+
+function handleFlashReviewKeydown(e) {
+    const modal = document.getElementById('notes-flash-review-modal');
+    if (!modal || !modal.classList.contains('active')) return;
+
+    if (e.key === 'ArrowLeft') {
+        navigateFlashReview(-1);
+    } else if (e.key === 'ArrowRight') {
+        navigateFlashReview(1);
+    } else if (e.key === 'Escape') {
+        closeFlashReviewModal();
+    }
+}
+
+function navigateFlashReview(direction) {
+    const notes = state.notes.flashNotes;
+    if (!notes || notes.length === 0) return;
+
+    let newIndex = state.notes.flashIndex + direction;
+    if (newIndex < 0) newIndex = notes.length - 1;
+    if (newIndex >= notes.length) newIndex = 0;
+
+    state.notes.flashIndex = newIndex;
+    renderFlashReviewCard();
+}
+
+function renderFlashReviewCard() {
+    const notes = state.notes.flashNotes;
+    const container = document.getElementById('flash-review-card-container');
+    const counterEl = document.getElementById('flash-review-counter');
+    if (!notes || notes.length === 0 || !container) return;
+
+    const note = notes[state.notes.flashIndex];
+    if (!note) return;
+
+    if (counterEl) {
+        counterEl.textContent = `${state.notes.flashIndex + 1} / ${notes.length}`;
+    }
+
+    const sectionLabels = {
+        'bankacilik-genel-kultur': 'Bankacılık & GK',
+        'oruntu-analitik': 'Örüntü & Mantık',
+        'ingilizce': 'İngilizce',
+        'alan': 'Bilgisayar & YZ',
+        'genel': 'Sınav Taktikleri'
+    };
+
+    const sectionBadges = {
+        'bankacilik-genel-kultur': 'badge-amber',
+        'oruntu-analitik': 'badge-purple',
+        'ingilizce': 'badge-indigo',
+        'alan': 'badge-emerald',
+        'genel': 'badge-neutral'
+    };
+
+    const priorityHtml = note.priority === 'P0' 
+        ? '<span class="badge badge-p0"><i class="fa-solid fa-fire"></i> P0 Kesin Çıkar</span>'
+        : note.priority === 'P1'
+        ? '<span class="badge badge-p1"><i class="fa-solid fa-star"></i> P1 Önemli</span>'
+        : '<span class="badge badge-p2">P2 Not</span>';
+
+    const tagsHtml = (note.tags && note.tags.length > 0)
+        ? note.tags.map(t => `<span class="note-tag-chip">#${escapeHtml(t)}</span>`).join('')
+        : '';
+
+    container.innerHTML = `
+        <div class="flash-card-surface theme-${note.color || 'indigo'}">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.4rem; align-items: center;">
+                    <span class="badge ${sectionBadges[note.section] || 'badge-indigo'}">${sectionLabels[note.section] || 'Genel'}</span>
+                    ${priorityHtml}
+                    ${note.is_pinned ? '<span class="badge badge-amber"><i class="fa-solid fa-thumbtack"></i> Sabit</span>' : ''}
+                </div>
+                <div style="display: flex; gap: 0.35rem;">
+                    <button class="btn-note-icon" id="btn-flash-copy-card" title="Kopyala"><i class="fa-regular fa-copy"></i></button>
+                    <button class="btn-note-icon" id="btn-flash-edit-card" title="Düzenle"><i class="fa-solid fa-pen-to-square"></i></button>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem; line-height: 1.3;">
+                ${escapeHtml(note.title)}
+            </h3>
+
+            ${tagsHtml ? `<div style="display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 1rem;">${tagsHtml}</div>` : ''}
+
+            <div class="lecture-content-viewer note-formatted-content" style="font-size: 0.95rem; line-height: 1.7; color: #e2e8f0;">
+                ${formatLectureContent(note.content)}
+            </div>
+        </div>
+    `;
+
+    document.getElementById('btn-flash-copy-card')?.addEventListener('click', () => copyNoteContent(note.id));
+    document.getElementById('btn-flash-edit-card')?.addEventListener('click', () => {
+        closeFlashReviewModal();
+        openNoteEditorModal(note.id);
+    });
+}
+
+// A4 Sınav Çalışma Föyü Yazdır / PDF Al
+function printNotesStudySheet() {
+    const notes = (state.notes.flashNotes && state.notes.flashNotes.length > 0)
+        ? state.notes.flashNotes
+        : db.getUserNotes('smart');
+
+    if (notes.length === 0) {
+        showToast("Yazdırılacak not bulunamadı.", "warning");
+        return;
+    }
+
+    const sectionLabels = {
+        'bankacilik-genel-kultur': 'Bankacılık & Genel Kültür',
+        'oruntu-analitik': 'Örüntü & Analitik Mantık',
+        'ingilizce': 'İngilizce',
+        'alan': 'Alan Bilgisi (Bilgisayar & YZ)',
+        'genel': 'Sınav Taktikleri'
+    };
+
+    let notesHtml = notes.map((n, idx) => `
+        <div class="sheet-card" style="break-inside: avoid; page-break-inside: avoid; border: 1px solid #cbd5e1; border-top: 3px solid #334155; border-radius: 6px; padding: 12px 14px; margin-bottom: 14px; background: #fff;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+                <h3 style="font-size: 14px; font-weight: 700; color: #0f172a; margin: 0;">${idx + 1}. ${escapeHtml(n.title)} ${n.is_pinned ? '★' : ''}</h3>
+                <span style="font-size: 11px; font-weight: 600; color: #64748b; background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">${sectionLabels[n.section] || n.section} | ${n.priority}</span>
+            </div>
+            ${n.tags && n.tags.length > 0 ? `<div style="font-size: 10px; color: #64748b; margin-bottom: 6px;">${n.tags.map(t => '#' + escapeHtml(t)).join(' ')}</div>` : ''}
+            <div style="font-size: 12px; line-height: 1.55; color: #334155;">
+                ${formatLectureContent(n.content)}
+            </div>
+        </div>
+    `).join('');
+
+    const printWin = window.open('', '_blank');
+    if (!printWin) {
+        showToast("Yazdırma penceresi tarayıcı tarafından engellendi. Lütfen açılır pencerelere izin verin.", "warning");
+        return;
+    }
+
+    printWin.document.write(`
+        <!DOCTYPE html>
+        <html lang="tr">
+        <head>
+            <meta charset="UTF-8">
+            <title>Ziraat Uzman Yardımcılığı - Çalışma Notları Föyü</title>
+            <style>
+                @page { size: A4; margin: 10mm; }
+                body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: #0f172a; margin: 0; padding: 10px; background: #fff; }
+                .sheet-header { border-bottom: 2px solid #0f172a; padding-bottom: 8px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end; }
+                .sheet-header h1 { font-size: 18px; margin: 0; font-weight: 800; color: #0f172a; }
+                .sheet-header p { font-size: 11px; color: #64748b; margin: 3px 0 0; }
+                .sheet-grid { column-count: 2; column-gap: 14px; }
+                table { width: 100%; border-collapse: collapse; margin: 6px 0; font-size: 11px; }
+                th, td { border: 1px solid #cbd5e1; padding: 4px 6px; text-align: left; }
+                th { background: #f8fafc; font-weight: 700; }
+                blockquote { border-left: 3px solid #6366f1; background: #f8fafc; padding: 4px 8px; margin: 6px 0; font-style: italic; }
+                code { background: #f1f5f9; padding: 1px 4px; border-radius: 3px; font-family: monospace; font-size: 11px; }
+                ul { margin: 4px 0 4px 18px; padding: 0; }
+                li { margin-bottom: 3px; }
+            </style>
+        </head>
+        <body>
+            <div class="sheet-header">
+                <div>
+                    <h1>Ziraat Bankası Uzman Yardımcılığı Sınavı - Kişisel Çalışma Notları Föyü</h1>
+                    <p>Tarih: ${new Date().toLocaleDateString('tr-TR')} | Toplam Not: ${notes.length}</p>
+                </div>
+            </div>
+            <div class="sheet-grid">
+                ${notesHtml}
+            </div>
+            <script>
+                window.onload = function() {
+                    window.print();
+                };
+            <\/script>
+        </body>
+        </html>
+    `);
+    printWin.document.close();
+}
+
+// İçe Aktarma Modalı Kontrolleri
+function openImportNotesModal() {
+    const modal = document.getElementById('notes-import-modal');
+    if (modal) {
+        modal.classList.add('active');
+        const ta = document.getElementById('import-notes-textarea');
+        if (ta) ta.value = '';
+    }
+}
+
+function closeImportNotesModal() {
+    const modal = document.getElementById('notes-import-modal');
+    if (modal) modal.classList.remove('active');
+}
+
+function handleImportFileInput(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+        const text = event.target?.result;
+        const ta = document.getElementById('import-notes-textarea');
+        if (ta && typeof text === 'string') {
+            ta.value = text;
+        }
+    };
+    reader.readAsText(file);
+}
+
+function handleImportNotesSubmit() {
+    const ta = document.getElementById('import-notes-textarea');
+    const content = ta?.value.trim();
+
+    if (!content) {
+        showToast("Lütfen bir JSON dosyası seçin veya JSON metnini yapıştırın.", "warning");
+        return;
+    }
+
+    const res = db.importUserNotesFromJSON(content);
+    if (res.success) {
+        showToast(`${res.count} not başarıyla içe aktarıldı ve birleştirildi! 📥`, "success", 3500);
+        closeImportNotesModal();
+        renderNotesList();
+    } else {
+        showToast(res.message || "İçe aktarma başarısız.", "error", 4000);
+    }
+}
+
+// Dışa Aktarma Menüsü
+function handleExportNotesMenu() {
+    const md = db.exportUserNotesAsMarkdown();
+    const json = db.exportUserNotesAsJSON();
+
+    showConfirmModal({
+        title: 'Notları Dışa Aktar',
+        message: 'Notlarınızı Markdown (.md) veya tam yedek JSON (.json) formatında indirebilirsiniz.',
+        confirmText: '📄 Markdown (.md) İndir',
+        cancelText: '📦 JSON Yedek İndir',
+        onConfirm: () => {
+            downloadBlob(md, `ziraat_calisma_notlarim_${new Date().toISOString().slice(0, 10)}.md`, 'text/markdown');
+            showToast("Markdown not dosyası indirildi! 📄", "success");
+        },
+        onCancel: () => {
+            downloadBlob(json, `ziraat_not_yedegi_${new Date().toISOString().slice(0, 10)}.json`, 'application/json');
+            showToast("JSON yedek dosyası indirildi! 📦", "success");
+        }
+    });
+}
+
+function downloadBlob(content, filename, type) {
+    const blob = new Blob([content], { type: `${type};charset=utf-8` });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// Konu Anlatımından Otomatik Not Çıkarma
+function openNoteEditorFromLecture(lec) {
+    if (!lec) return;
+    openNoteEditorModal(null);
+
+    const titleInput = document.getElementById('note-form-title');
+    const secSelect = document.getElementById('note-form-section');
+    const tagsInput = document.getElementById('note-form-tags');
+    const contentText = document.getElementById('note-form-content');
+    const prioSelect = document.getElementById('note-form-priority');
+
+    const sectionMap = {
+        'alan': 'alan',
+        'genel-kultur': 'bankacilik-genel-kultur',
+        'genel-yetenek': 'oruntu-analitik',
+        'ingilizce': 'ingilizce'
+    };
+
+    if (titleInput) titleInput.value = `${lec.title} - Özet Not`;
+    if (secSelect) secSelect.value = sectionMap[lec.section] || 'bankacilik-genel-kultur';
+    if (prioSelect) prioSelect.value = 'P0';
+    if (tagsInput) tagsInput.value = `${lec.topic || ''}, Konu Özeti, Sınav Hap Bilgi`;
+    if (contentText) {
+        contentText.value = `### 💡 ${lec.title} - Kritik Sınav Notu\n* **Özet:** ${lec.summary || ''}\n\n* **Anahtar Kurallar:**\n  - \n  - \n\n> 🎯 **Sınavda Dikkat Edilmesi Gereken Nokta:** `;
+    }
+
+    showToast(`"${lec.title}" konusu için not editörü hazırlandı! ✍️`, "info", 2500);
+}
+
+// Hazır Sınav Notu Şablonları
+function insertNoteTemplate(type, textarea) {
+    let tpl = '';
+    switch (type) {
+        case 'tip':
+            tpl = `### 💡 [Konu Başlığı] Sınav Taktik & Hap Bilgi\n* **Ana Kural:** \n* **Yaygın Çeldirici / Tuzak:** \n> 🎯 **Sınavda Çıkarsa:** `;
+            break;
+        case 'compare':
+            tpl = `### 📊 [Kavram A] vs [Kavram B] Karşılaştırma\n\n| Kriter / Özellik | Kavram A | Kavram B |\n| :--- | :--- | :--- |\n| Tanım | | |\n| Temel Görev | | |\n| Sınav Tuzağı | | |\n\n> 💡 **Özet Ayrım:** `;
+            break;
+        case 'timeline':
+            tpl = `### ⏳ [Konu] Kronoloji & Önemli Tarihler\n* **[Yıl 1]**: İlk gelişme / temel adım\n* **[Yıl 2]**: Yeniden yapılanma / kanun\n* **[Yıl 3]**: Günümüz teşkilat yapısı\n\n> 📌 **Ezber İpucu**: `;
+            break;
+        case 'formula':
+            tpl = `### 📐 [Soru Türü] 5 Adımlı Çözüm Metodu\n1. **1. Adım (Farklar):** \n2. **2. Adım (Kural):** \n3. **3. Adım (Test):** \n4. **4. Adım (Doğrulama):** \n\n* **Formül:** \`...\``;
+            break;
+        case 'code':
+            tpl = `### 💻 [Algoritma / SQL] Temel Mantık\n\`\`\`sql\nSELECT sutun1, COUNT(*)\nFROM tablo\nWHERE kosul\nGROUP BY sutun1\nHAVING COUNT(*) > 1;\n\`\`\`\n\n* **Zaman Karmaşıklığı:** O(...)\n* **Kullanım Alanı:** `;
+            break;
+        case 'vocab':
+            tpl = `### 🇬🇧 [Kelime]: *[Türkçe Anlamı]*\n* **Eş Anlamlılar (Synonyms):** word1, word2\n* **Zıt Anlamlılar (Antonyms):** word3\n* **Örnek Sınav Cümlesi:** *The bank implemented new policies to prevent risk.*\n> 📌 **Kullanıldığı Kalıp (Collocation):** `;
+            break;
+    }
+
+    if (tpl) {
+        const currentVal = textarea.value;
+        const prefix = currentVal && !currentVal.endsWith('\n\n') ? (currentVal.endsWith('\n') ? '\n' : '\n\n') : '';
+        textarea.value = currentVal ? (currentVal + prefix + tpl) : tpl;
+        textarea.focus();
+        showToast("Hazır sınav şablonu eklendi! ✍️", "info", 2000);
+    }
+}
+
 // Not Editör Modalı Açma
 function openNoteEditorModal(noteId = null) {
     const modal = document.getElementById('note-editor-modal');
     if (!modal) return;
 
     state.notes.editingNoteId = noteId;
+    state.notes.editorTab = 'write';
+
+    // Sekmeleri sıfırla (Yaz sekmesini aç)
+    const tabBtnWrite = document.getElementById('tab-btn-write');
+    const tabBtnPreview = document.getElementById('tab-btn-preview');
+    const writePane = document.getElementById('note-editor-write-pane');
+    const previewPane = document.getElementById('note-editor-preview-pane');
+
+    tabBtnWrite?.classList.add('active');
+    tabBtnPreview?.classList.remove('active');
+    if (writePane) writePane.style.display = 'block';
+    if (previewPane) previewPane.style.display = 'none';
+
     const modalTitle = document.getElementById('note-editor-title');
     const idInput = document.getElementById('note-form-id');
     const titleInput = document.getElementById('note-form-title');
@@ -1636,7 +2159,6 @@ function openNoteEditorModal(noteId = null) {
         if (tagsInput) tagsInput.value = (note.tags || []).join(', ');
         if (contentText) contentText.value = note.content || '';
 
-        // Renk radyo butonunu seç
         const colorRadio = document.querySelector(`input[name="note_color"][value="${note.color || 'indigo'}"]`);
         if (colorRadio) colorRadio.checked = true;
 
@@ -1768,21 +2290,6 @@ function fallbackCopyText(text) {
         showToast("Kopyalama yapılamadı.", "error");
     }
     document.body.removeChild(ta);
-}
-
-// Tüm Notları Markdown Olarak İndir / Kopyala
-function exportAllNotes() {
-    const md = db.exportUserNotesAsMarkdown();
-    const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `ziraat_uzman_calisma_notlarim_${new Date().toISOString().slice(0, 10)}.md`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    showToast("Tüm notlarınız Markdown dosyası olarak indirildi! 📥", "success", 3000);
 }
 
 // Not Detay Görüntüleme Modalı

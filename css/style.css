@@ -2529,3 +2529,150 @@ body {
         width: auto;
     }
 }
+
+/* ========================================================
+   ADVANCED NOTES MODULE UPGRADES
+   ======================================================== */
+
+/* 1. Note Editor Write / Preview Tabs */
+.editor-tab-group {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 2px;
+    gap: 2px;
+}
+.btn-editor-tab {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: calc(var(--radius-sm) - 2px);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: var(--transition-fast);
+}
+.btn-editor-tab:hover {
+    color: #ffffff;
+}
+.btn-editor-tab.active {
+    background: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.notes-template-select {
+    height: 32px;
+    padding: 0.2rem 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: rgba(99, 102, 241, 0.12);
+    border-color: rgba(99, 102, 241, 0.3);
+    color: #c7d2fe;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+.notes-template-select:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+/* 2. Dynamic Tag Cloud */
+.notes-tag-cloud-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+.tag-cloud-title {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-right: 0.25rem;
+}
+.tag-cloud-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.tag-cloud-chip:hover {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: rgba(99, 102, 241, 0.4);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+.tag-cloud-chip.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+.tag-cloud-count {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1px 5px;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    color: var(--text-dim);
+}
+.tag-cloud-chip.active .tag-cloud-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+/* 3. Flash Review Card Styling */
+.flash-card-surface {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+.flash-card-surface.theme-indigo { border-top: 5px solid #6366f1; }
+.flash-card-surface.theme-amber  { border-top: 5px solid #f59e0b; }
+.flash-card-surface.theme-emerald { border-top: 5px solid #10b981; }
+.flash-card-surface.theme-rose   { border-top: 5px solid #f43f5e; }
+.flash-card-surface.theme-purple { border-top: 5px solid #a855f7; }
+.flash-card-surface.theme-blue   { border-top: 5px solid #0ea5e9; }
+
+/* 4. Cross-Module Note creation button in lectures */
+.btn-create-note-from-lecture {
+    background: rgba(99, 102, 241, 0.12);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #c7d2fe;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: var(--transition-fast);
+}
+.btn-create-note-from-lecture:hover {
+    background: rgba(99, 102, 241, 0.25);
+    color: #ffffff;
+    border-color: rgba(99, 102, 241, 0.6);
+}

@@ -128,19 +128,51 @@
                 </div>
 
                 <div class="form-group">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
-                        <label for="note-form-content">Not İçeriği (Markdown Destekli) <span class="required" style="color: var(--danger);">*</span></label>
-                        <!-- Markdown Hızlı Araç Çubuğu -->
-                        <div class="md-toolbar">
-                            <button type="button" class="btn-md-tool" data-md="bold" title="Kalın Metin"><strong>B</strong></button>
-                            <button type="button" class="btn-md-tool" data-md="heading" title="Alt Başlık">H3</button>
-                            <button type="button" class="btn-md-tool" data-md="list" title="Madde İşareti">• Liste</button>
-                            <button type="button" class="btn-md-tool" data-md="quote" title="İpucu / Alıntı">&gt; İpucu</button>
-                            <button type="button" class="btn-md-tool" data-md="table" title="Özet Tablo">| Tablo |</button>
-                            <button type="button" class="btn-md-tool" data-md="code" title="Kod / Terim">`Kod`</button>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <label for="note-form-content" style="margin-bottom: 0;">Not İçeriği <span class="required" style="color: var(--danger);">*</span></label>
+                            <!-- Editör Sekmeleri: Yaz & Önizle -->
+                            <div class="editor-tab-group" id="note-editor-tabs">
+                                <button type="button" class="btn-editor-tab active" id="tab-btn-write" data-note-tab="write">
+                                    <i class="fa-solid fa-pen"></i> Yaz
+                                </button>
+                                <button type="button" class="btn-editor-tab" id="tab-btn-preview" data-note-tab="preview">
+                                    <i class="fa-solid fa-eye"></i> Canlı Önizle
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <!-- Hazır Şablonlar Seçici -->
+                            <select id="note-template-select" class="form-select notes-template-select" title="Hazır Sınav Notu Şablonu Ekle">
+                                <option value="">⚡ Şablon Seç...</option>
+                                <option value="tip">🎯 Sınav Hap Bilgi &amp; Tuzak</option>
+                                <option value="compare">📊 Karşılaştırma Tablosu</option>
+                                <option value="timeline">⏳ Tarihçe &amp; Kronoloji</option>
+                                <option value="formula">📐 Formül &amp; 5 Adımlı Çözüm</option>
+                                <option value="code">💻 Algoritma &amp; SQL Kod Bloğu</option>
+                                <option value="vocab">🇬🇧 Kelime &amp; Eş Anlamlılar</option>
+                            </select>
+
+                            <!-- Markdown Hızlı Araç Çubuğu -->
+                            <div class="md-toolbar" id="note-editor-md-toolbar">
+                                <button type="button" class="btn-md-tool" data-md="bold" title="Kalın Metin"><strong>B</strong></button>
+                                <button type="button" class="btn-md-tool" data-md="heading" title="Alt Başlık">H3</button>
+                                <button type="button" class="btn-md-tool" data-md="list" title="Madde İşareti">• Liste</button>
+                                <button type="button" class="btn-md-tool" data-md="quote" title="İpucu / Alıntı">&gt; İpucu</button>
+                                <button type="button" class="btn-md-tool" data-md="table" title="Özet Tablo">| Tablo |</button>
+                                <button type="button" class="btn-md-tool" data-md="code" title="Kod / Terim">`Kod`</button>
+                            </div>
                         </div>
                     </div>
-                    <textarea id="note-form-content" class="form-input" rows="8" placeholder="Notunuzu yazın... Madde imleri (*), tablolar (| a | b |) ve kalın yazılar (**metin**) kullanabilirsiniz." required></textarea>
+
+                    <div id="note-editor-write-pane">
+                        <textarea id="note-form-content" class="form-input" rows="9" placeholder="Notunuzu yazın... Madde imleri (*), tablolar (| a | b |) ve kalın yazılar (**metin**) kullanabilirsiniz." required></textarea>
+                    </div>
+
+                    <div id="note-editor-preview-pane" class="lecture-content-viewer note-formatted-content" style="display: none; min-height: 220px; max-height: 380px; overflow-y: auto; background: var(--bg-card); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                        <!-- Rendered Markdown will appear here -->
+                    </div>
                 </div>
 
                 <div class="modal-actions" style="margin-top: 1.5rem; justify-content: flex-end;">
@@ -374,6 +406,73 @@
                     </button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- 3.6 NOTES FLASH REVIEW MODAL (Hızlı Tekrar / Slayt Modu) -->
+    <div class="modal-overlay" id="notes-flash-review-modal">
+        <div class="modal-card modal-card-xl" style="max-width: 820px; text-align: left; padding: 1.5rem; display: flex; flex-direction: column;">
+            <div class="modal-card-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                    <span class="badge badge-amber" style="font-size: 0.85rem;"><i class="fa-solid fa-bolt"></i> Sınav Öncesi Hızlı Tekrar</span>
+                    <span id="flash-review-counter" style="font-size: 0.85rem; color: #ffffff; font-weight: 700; background: rgba(255,255,255,0.08); padding: 3px 8px; border-radius: 999px;">1 / 1</span>
+                    <span id="flash-review-filter-label" class="badge badge-neutral" style="font-size: 0.75rem;">Tüm Notlar</span>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-flash-review" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Flash Card Main Surface -->
+            <div id="flash-review-card-container" style="flex: 1; min-height: 320px; max-height: 60vh; overflow-y: auto; padding: 0.5rem 0.25rem 1rem;">
+                <!-- JS dynamically injects the active card with rich markdown content -->
+            </div>
+
+            <div class="modal-card-footer" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+                <button type="button" class="btn btn-secondary btn-sm" id="btn-flash-prev">
+                    <i class="fa-solid fa-arrow-left"></i> Önceki Not
+                </button>
+                <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem;">
+                    <span>Klavye:</span>
+                    <kbd style="background: rgba(255,255,255,0.1); padding: 2px 7px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.15);">←</kbd>
+                    <kbd style="background: rgba(255,255,255,0.1); padding: 2px 7px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.15);">→</kbd>
+                </div>
+                <button type="button" class="btn btn-primary btn-sm" id="btn-flash-next">
+                    Sonraki Not <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3.7 NOTES IMPORT MODAL (JSON Yedek Yükleme) -->
+    <div class="modal-overlay" id="notes-import-modal">
+        <div class="modal-card modal-card-md" style="max-width: 540px; text-align: left; padding: 1.5rem;">
+            <div class="modal-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                <div class="modal-header-title">
+                    <i class="fa-solid fa-file-import text-indigo" style="font-size: 1.3rem;"></i>
+                    <h3 style="margin: 0;">Notları İçe Aktar (JSON)</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-import-modal" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                Daha önce dışa aktardığınız not yedeği JSON dosyasını seçebilir veya JSON metnini kutuya yapıştırabilirsiniz.
+            </p>
+
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="import-notes-file">Yedek Dosyası (.json)</label>
+                <input type="file" id="import-notes-file" accept=".json" class="form-input" style="padding: 0.5rem;">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 1rem;">
+                <label for="import-notes-textarea">veya JSON Kodunu Yapıştırın</label>
+                <textarea id="import-notes-textarea" class="form-input" rows="5" placeholder='{"notes": [...]}'></textarea>
+            </div>
+
+            <div class="modal-actions" style="margin-top: 1.25rem; justify-content: flex-end;">
+                <button type="button" class="btn btn-secondary" id="btn-cancel-import-notes">Vazgeç</button>
+                <button type="button" class="btn btn-primary" id="btn-submit-import-notes">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> İçe Aktar ve Birleştir
+                </button>
+            </div>
         </div>
     </div>
 
@@ -1171,7 +1270,16 @@
                             <p class="text-muted">Önemli formülleri, kronolojileri ve stratejik hap bilgileri kaydedin; renkli kartlar veya hızlı tekrar tablosu ile tarayın.</p>
                         </div>
                         <div class="view-header-actions">
-                            <button class="btn btn-outline" id="btn-export-notes" title="Tüm notları Markdown formatında indir veya kopyala">
+                            <button class="btn btn-warning" id="btn-flash-review" title="Tüm notları kart kart tam ekranda hızlıca tekrar et">
+                                <i class="fa-solid fa-bolt"></i> Hızlı Tekrar
+                            </button>
+                            <button class="btn btn-outline" id="btn-print-notes" title="Temiz A4 Sınav Çalışma Föyü olarak yazdır / PDF al">
+                                <i class="fa-solid fa-print"></i> Yazdır / Föy
+                            </button>
+                            <button class="btn btn-outline" id="btn-import-notes-modal" title="JSON yedek dosyasından notları içe aktar">
+                                <i class="fa-solid fa-file-import"></i> İçe Aktar
+                            </button>
+                            <button class="btn btn-outline" id="btn-export-notes" title="Tüm notları Markdown veya JSON formatında indir">
                                 <i class="fa-solid fa-file-export"></i> Dışa Aktar
                             </button>
                             <button class="btn btn-primary" id="btn-create-note">
@@ -1209,12 +1317,22 @@
                         </div>
 
                         <div class="notes-filter-select-wrap">
-                            <select id="notes-priority-filter" class="form-select notes-compact-select">
+                            <select id="notes-priority-filter" class="form-select notes-compact-select" title="Önceliğe Göre Filtrele">
                                 <option value="all">Tüm Öncelikler</option>
                                 <option value="pinned">⭐ Sadece Sabitlenenler</option>
                                 <option value="P0">💥 P0 (Sınavda Kesin Çıkar)</option>
                                 <option value="P1">📌 P1 (Önemli Notlar)</option>
                                 <option value="P2">📝 P2 (Hatırlatma/Formül)</option>
+                            </select>
+                        </div>
+
+                        <div class="notes-filter-select-wrap">
+                            <select id="notes-sort-select" class="form-select notes-compact-select" title="Sıralama Ölçütü">
+                                <option value="smart">📌 Akıllı Sıralama (Sabit &amp; P0)</option>
+                                <option value="newest">🕒 En Yeni Güncellenen</option>
+                                <option value="oldest">⏳ En Eski Not</option>
+                                <option value="priority">🔥 Öncelik Sırası</option>
+                                <option value="alpha">🔤 Başlık (A-Z)</option>
                             </select>
                         </div>
 
@@ -1229,7 +1347,7 @@
                     </div>
 
                     <!-- Category Pills -->
-                    <div class="pills-scroll-container" style="margin-bottom: 1.25rem;">
+                    <div class="pills-scroll-container" style="margin-bottom: 0.75rem;">
                         <div class="filter-pills" id="notes-category-pills">
                             <button class="pill-btn active" data-note-sec="all">Tümü</button>
                             <button class="pill-btn" data-note-sec="bankacilik-genel-kultur">🏦 Bankacılık & GK</button>
@@ -1238,6 +1356,11 @@
                             <button class="pill-btn" data-note-sec="alan">💻 Bilgisayar & YZ</button>
                             <button class="pill-btn" data-note-sec="genel">💡 Sınav Taktikleri</button>
                         </div>
+                    </div>
+
+                    <!-- Dynamic Tag Cloud Bar -->
+                    <div class="notes-tag-cloud-wrapper" id="notes-tag-cloud-container" style="margin-bottom: 1.25rem;">
+                        <!-- JS renders dynamic clickable tag chips here -->
                     </div>
 
                     <!-- Layout 1: Cards Grid -->

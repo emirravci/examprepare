@@ -646,11 +646,53 @@ class DataManager {
 5. **Kare & Küp Sapmaları**: n^2 ± 1, n^3 ± 2 kalıplarını kontrol et (örn: 0, 7, 26, 63 -> n^3 - 1).`,
                 created_at: new Date().toISOString(),
                 updated_at: new Date().toISOString()
+            },
+            {
+                id: 'note_tcmb_bddk_differences',
+                title: 'TCMB ve BDDK Görev & Yetki Ayrımı (Sınav Tuzakları)',
+                section: 'bankacilik-genel-kultur',
+                priority: 'P0',
+                color: 'blue',
+                is_pinned: false,
+                tags: ['TCMB', 'BDDK', 'TMSF', 'Para Politikası', 'Bankacılık Kanunu'],
+                content: `### TCMB vs BDDK Görev Karşılaştırması
+
+| Kurum | Ana Amaç | Temel Görevleri | Düzenlediği Alan |
+| :--- | :--- | :--- | :--- |
+| **TCMB (Merkez Bankası)** | Fiyat İstikrarı & Finansal İstikrar | Para politikası araçları, faiz kararları, banknot basımı, altın/döviz rezervi yönetimi, ödeme sistemleri | Para & Makroekonomi |
+| **BDDK** | Güven & İstikrar, Tasarruf Sahibini Koruma | Bankaların kuruluşu, faaliyet izinleri, sermaye yeterlilik oranları, kredi limitleri denetimi | Bankacılık Sektörü & Finansal Kuruluşlar |
+| **TMSF** | Tasarruf Mevduatı Sigortası | Batan bankaların fon yönetimi, mevduat sigorta limitleri, tasfiye | Mevduat Güvencesi |
+
+> ⚠️ **Sınav Tuzağı**: "Bankalara faaliyet izni verme veya iptal etme yetkisi kime aittir?" sorusunun cevabı TCMB değil **BDDK**'dır! Banknot basımı ise **TCMB**'ye aittir.`,
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString()
+            },
+            {
+                id: 'note_sql_acid_joins',
+                title: 'SQL JOIN Türleri & ACID Prensipleri Hap Bilgi',
+                section: 'alan',
+                priority: 'P0',
+                color: 'emerald',
+                is_pinned: false,
+                tags: ['SQL', 'JOIN', 'ACID', 'Transaction', 'Veritabanı', 'Normalizasyon'],
+                content: `### 1. SQL JOIN Türleri Hızlı Hatırlatıcı
+* **INNER JOIN**: Her iki tabloda da eşleşen (kesişim) satırları getirir.
+* **LEFT JOIN**: Sol tablodaki tüm satırları + sağdaki eşleşenleri getirir (eşleşmeyenler NULL).
+* **RIGHT JOIN**: Sağ tablodaki tüm satırları + soldaki eşleşenleri getirir.
+* **FULL OUTER JOIN**: Her iki tablodaki tüm kayıtları getirir.
+
+### 2. ACID Prensipleri (Transaction Güvenliği)
+* **A (Atomicity - Bütünlük)**: "Ya hep ya hiç" (All or nothing). İşlem ya tamamen gerçekleşir ya geri alınır (ROLLBACK).
+* **C (Consistency - Tutarlılık)**: Veritabanı kurallarına ve kısıtlamalarına (Constraints) her zaman uyulur.
+* **I (Isolation - İzolasyon)**: Eşzamanlı yürütülen işlemler birbirini etkilemez.
+* **D (Durability - Kalıcılık)**: Başarılı olan (COMMIT) işlem elektrik kesilse bile kalıcıdır.`,
+                created_at: new Date().toISOString(),
+                updated_at: new Date().toISOString()
             }
         ];
     }
 
-    getUserNotes() {
+    getUserNotes(sortBy = 'smart') {
         try {
             const raw = localStorage.getItem('ziraat_user_notes');
             let notes = [];
@@ -665,9 +707,24 @@ class DataManager {
                 }
             }
 
-            // Sıralama: Önce Sabitlenenler (is_pinned true), sonra P0 > P1 > P2, sonra en yeni tarih
             const priorityWeight = { 'P0': 3, 'P1': 2, 'P2': 1 };
+
             notes.sort((a, b) => {
+                if (sortBy === 'newest') {
+                    return new Date(b.updated_at || b.created_at || 0) - new Date(a.updated_at || a.created_at || 0);
+                }
+                if (sortBy === 'oldest') {
+                    return new Date(a.created_at || a.updated_at || 0) - new Date(b.created_at || b.updated_at || 0);
+                }
+                if (sortBy === 'alpha') {
+                    return (a.title || '').localeCompare(b.title || '', 'tr');
+                }
+                if (sortBy === 'priority') {
+                    const pDiff = (priorityWeight[b.priority] || 1) - (priorityWeight[a.priority] || 1);
+                    if (pDiff !== 0) return pDiff;
+                    return new Date(b.updated_at || b.created_at || 0) - new Date(a.updated_at || a.created_at || 0);
+                }
+                // Default: 'smart' (Pinned first, then P0>P1>P2, then date)
                 if (a.is_pinned !== b.is_pinned) {
                     return a.is_pinned ? -1 : 1;
                 }
@@ -845,6 +902,74 @@ class DataManager {
         }).join('\n');
 
         return header + body;
+    }
+
+    getAllUserNoteTags() {
+        const notes = this.getUserNotes('newest');
+        const tagCount = new Map();
+        notes.forEach(note => {
+            if (Array.isArray(note.tags)) {
+                note.tags.forEach(t => {
+                    const clean = t.trim();
+                    if (clean) {
+                        tagCount.set(clean, (tagCount.get(clean) || 0) + 1);
+                    }
+                });
+            }
+        });
+        return Array.from(tagCount.entries())
+            .map(([tag, count]) => ({ tag, count }))
+            .sort((a, b) => b.count - a.count);
+    }
+
+    exportUserNotesAsJSON() {
+        const notes = this.getUserNotes('newest');
+        return JSON.stringify({
+            app: 'Ziraat Uzman Yardımcılığı Sınav Hazırlık',
+            version: '2.0',
+            exported_at: new Date().toISOString(),
+            total_notes: notes.length,
+            notes
+        }, null, 2);
+    }
+
+    importUserNotesFromJSON(jsonString) {
+        try {
+            const parsed = JSON.parse(jsonString);
+            const incomingNotes = Array.isArray(parsed) ? parsed : (Array.isArray(parsed.notes) ? parsed.notes : null);
+            if (!incomingNotes || incomingNotes.length === 0) {
+                return { success: false, message: 'Geçerli not verisi bulunamadı.' };
+            }
+
+            const currentNotes = this.getUserNotes();
+            const noteMap = new Map(currentNotes.map(n => [n.id, n]));
+            let importedCount = 0;
+
+            incomingNotes.forEach(item => {
+                if (item.title && item.content) {
+                    const id = item.id || `note_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+                    noteMap.set(id, {
+                        id,
+                        title: item.title,
+                        content: item.content,
+                        section: item.section || 'bankacilik-genel-kultur',
+                        priority: item.priority || 'P1',
+                        color: item.color || 'indigo',
+                        is_pinned: !!item.is_pinned,
+                        tags: Array.isArray(item.tags) ? item.tags : [],
+                        created_at: item.created_at || new Date().toISOString(),
+                        updated_at: new Date().toISOString()
+                    });
+                    importedCount++;
+                }
+            });
+
+            const merged = Array.from(noteMap.values());
+            localStorage.setItem('ziraat_user_notes', JSON.stringify(merged));
+            return { success: true, count: importedCount, total: merged.length };
+        } catch (e) {
+            return { success: false, message: 'JSON formatı hatalı: ' + e.message };
+        }
     }
 
     // 11. YOUTUBE KANALLARI VE VİDEO EĞİTİM PORTALI
