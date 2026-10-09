@@ -45,6 +45,338 @@
         </div>
     </div>
 
+    <!-- 3.1 NOTE EDITOR MODAL -->
+    <div class="modal-overlay" id="note-editor-modal">
+        <div class="modal-card modal-card-lg">
+            <div class="modal-card-header">
+                <div class="modal-header-title">
+                    <i class="fa-solid fa-pen-to-square text-indigo"></i>
+                    <h3 id="note-editor-title">Yeni Çalışma Notu</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-note-editor" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="note-editor-form">
+                <input type="hidden" id="note-form-id" value="">
+
+                <div class="form-row">
+                    <div class="form-group" style="flex: 2;">
+                        <label for="note-form-title">Not Başlığı <span class="required" style="color: var(--danger);">*</span></label>
+                        <input type="text" id="note-form-title" class="form-input" placeholder="Örn: Ziraat Tarihçesi İlkler & Mithat Paşa" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="note-form-section">Bölüm / Kategori <span class="required" style="color: var(--danger);">*</span></label>
+                        <select id="note-form-section" class="form-select" required>
+                            <option value="bankacilik-genel-kultur">Bankacılık & Genel Kültür</option>
+                            <option value="oruntu-analitik">Örüntü & Analitik Mantık</option>
+                            <option value="ingilizce">İngilizce</option>
+                            <option value="alan">Alan (Bilgisayar & YZ)</option>
+                            <option value="genel">Genel Sınav Taktikleri</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="note-form-priority">Öncelik Seviyesi</label>
+                        <select id="note-form-priority" class="form-select">
+                            <option value="P0">💥 P0: Sınavda Kesin Çıkar / Kritik Formül</option>
+                            <option value="P1" selected>📌 P1: Önemli Çalışma Notu</option>
+                            <option value="P2">📝 P2: Hatırlatma / Detay Bilgi</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>Kart Rengi</label>
+                        <div class="color-picker-row" id="note-color-picker">
+                            <label class="color-chip-radio">
+                                <input type="radio" name="note_color" value="indigo" checked>
+                                <span class="color-chip bg-color-indigo" title="İndigo Gece Mavisi"></span>
+                            </label>
+                            <label class="color-chip-radio">
+                                <input type="radio" name="note_color" value="amber">
+                                <span class="color-chip bg-color-amber" title="Amber Sarısı"></span>
+                            </label>
+                            <label class="color-chip-radio">
+                                <input type="radio" name="note_color" value="emerald">
+                                <span class="color-chip bg-color-emerald" title="Zümrüt Yeşili"></span>
+                            </label>
+                            <label class="color-chip-radio">
+                                <input type="radio" name="note_color" value="rose">
+                                <span class="color-chip bg-color-rose" title="Gül Pembesi"></span>
+                            </label>
+                            <label class="color-chip-radio">
+                                <input type="radio" name="note_color" value="purple">
+                                <span class="color-chip bg-color-purple" title="Mor"></span>
+                            </label>
+                            <label class="color-chip-radio">
+                                <input type="radio" name="note_color" value="blue">
+                                <span class="color-chip bg-color-blue" title="Okyanus Mavisi"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" style="flex: 0 0 auto; display: flex; align-items: flex-end; padding-bottom: 0.6rem;">
+                        <label class="checkbox-label" style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; user-select: none;">
+                            <input type="checkbox" id="note-form-pinned" style="width: 18px; height: 18px; cursor: pointer;">
+                            <span style="font-weight: 600;">⭐ Başa Tuttur</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="note-form-tags">Etiketler (Virgülle ayırın)</label>
+                    <input type="text" id="note-form-tags" class="form-input" placeholder="Örn: Mithat Paşa, Memleket Sandıkları, 1863, Menafi">
+                </div>
+
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.5rem;">
+                        <label for="note-form-content">Not İçeriği (Markdown Destekli) <span class="required" style="color: var(--danger);">*</span></label>
+                        <!-- Markdown Hızlı Araç Çubuğu -->
+                        <div class="md-toolbar">
+                            <button type="button" class="btn-md-tool" data-md="bold" title="Kalın Metin"><strong>B</strong></button>
+                            <button type="button" class="btn-md-tool" data-md="heading" title="Alt Başlık">H3</button>
+                            <button type="button" class="btn-md-tool" data-md="list" title="Madde İşareti">• Liste</button>
+                            <button type="button" class="btn-md-tool" data-md="quote" title="İpucu / Alıntı">&gt; İpucu</button>
+                            <button type="button" class="btn-md-tool" data-md="table" title="Özet Tablo">| Tablo |</button>
+                            <button type="button" class="btn-md-tool" data-md="code" title="Kod / Terim">`Kod`</button>
+                        </div>
+                    </div>
+                    <textarea id="note-form-content" class="form-input" rows="8" placeholder="Notunuzu yazın... Madde imleri (*), tablolar (| a | b |) ve kalın yazılar (**metin**) kullanabilirsiniz." required></textarea>
+                </div>
+
+                <div class="modal-actions" style="margin-top: 1.5rem; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-note-editor">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary" id="btn-save-note">
+                        <i class="fa-solid fa-floppy-disk"></i> Notu Kaydet
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3.2 NOTE DETAIL MODAL -->
+    <div class="modal-overlay" id="note-detail-modal">
+        <div class="modal-card modal-card-lg" style="text-align: left;">
+            <div class="modal-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.75rem;">
+                <div style="flex: 1; padding-right: 1rem;">
+                    <div id="note-detail-badges" style="display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap;"></div>
+                    <h3 id="note-detail-title" style="font-size: 1.3rem; font-weight: 800; color: #fff; margin: 0; line-height: 1.3;"></h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-note-detail" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-card-body" style="max-height: 60vh; overflow-y: auto; padding-right: 0.5rem; margin-bottom: 1rem;">
+                <div id="note-detail-tags" style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem;"></div>
+                <div id="note-detail-content" class="lecture-content-viewer note-formatted-content"></div>
+            </div>
+            <div class="modal-card-footer" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem; flex-wrap: wrap; gap: 0.75rem;">
+                <span id="note-detail-date" style="font-size: 0.8rem; color: var(--text-muted);"></span>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button type="button" class="btn btn-secondary btn-sm" id="btn-copy-note-detail">
+                        <i class="fa-regular fa-copy"></i> Panoya Kopyala
+                    </button>
+                    <button type="button" class="btn btn-primary btn-sm" id="btn-edit-note-detail">
+                        <i class="fa-solid fa-pen-to-square"></i> Düzenle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3.3 YOUTUBE VIDEO PLAYER MODAL -->
+    <div class="modal-overlay" id="video-player-modal">
+        <div class="modal-card modal-card-xl" style="text-align: left; padding: 1.25rem;">
+            <div class="modal-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <div style="flex: 1; padding-right: 1rem;">
+                    <div id="video-modal-badges" style="display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.3rem; flex-wrap: wrap;"></div>
+                    <h3 id="video-modal-title" style="font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0; line-height: 1.35;"></h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-video-modal" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="video-iframe-container" style="position: relative; width: 100%; padding-top: 56.25%; background: #000; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.75rem;">
+                <iframe id="video-modal-iframe" src="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="modal-card-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border-color);">
+                <div id="video-modal-channel" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);"></div>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <button type="button" class="btn btn-outline-success btn-sm" id="btn-modal-toggle-watched" style="display: flex; align-items: center; gap: 0.4rem;">
+                        <i class="fa-regular fa-circle-check"></i> <span id="modal-watched-label">İzlendi Olarak İşaretle</span>
+                    </button>
+                    <a id="video-modal-yt-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                        <i class="fa-brands fa-youtube"></i> YouTube'da Aç
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3.4 ADD CUSTOM VIDEO / CHANNEL MODAL -->
+    <div class="modal-overlay" id="add-channel-modal">
+        <div class="modal-card modal-card-lg" style="text-align: left;">
+            <div class="modal-card-header">
+                <div class="modal-header-title">
+                    <i class="fa-brands fa-youtube text-rose" style="font-size: 1.5rem;"></i>
+                    <h3 style="margin: 0;">Özel YouTube Videosu veya Kanal Ekle</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-add-channel" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <!-- Mod Seçiçi Sekmeler (Tek Video vs Kanal) -->
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem;" id="add-yt-type-tabs">
+                <button type="button" class="modal-tab-btn active" data-type-tab="video">
+                    <i class="fa-solid fa-play"></i> Tekil Video Linki Ekle
+                </button>
+                <button type="button" class="modal-tab-btn" data-type-tab="channel">
+                    <i class="fa-brands fa-youtube"></i> Kanal / Oynatma Listesi Ekle
+                </button>
+            </div>
+
+            <form id="add-channel-form">
+                <input type="hidden" id="add-yt-mode" value="video">
+                
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="new-channel-url" id="lbl-channel-url">YouTube Video Linki <span class="required" style="color: var(--danger);">*</span></label>
+                    <input type="url" id="new-channel-url" class="form-input" placeholder="https://www.youtube.com/watch?v=... veya https://youtu.be/..." required>
+                    <div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.35rem;" id="hint-channel-url">
+                        YouTube video bağlantısını yapıştırın (watch?v=..., youtu.be/... veya shorts/...).
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group" style="flex: 2;">
+                        <label for="new-channel-name" id="lbl-channel-name">Video Başlığı <span class="required" style="color: var(--danger);">*</span></label>
+                        <input type="text" id="new-channel-name" class="form-input" placeholder="Örn: ALES Sayısal Mantık Çıkmış Soru Çözümü" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="new-channel-category">İlgili Sınav Bölümü</label>
+                        <select id="new-channel-category" class="form-select">
+                            <option value="bankacilik-genel-kultur">Bankacılık & GK</option>
+                            <option value="genel-yetenek" selected>Örüntü & Mantık</option>
+                            <option value="ingilizce">İngilizce</option>
+                            <option value="alan">Bilgisayar & YZ</option>
+                            <option value="genel">Genel Sınav</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row" id="row-video-duration">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="new-channel-duration">Video Süresi (İsteğe Bağlı)</label>
+                        <input type="text" id="new-channel-duration" class="form-input" placeholder="Örn: 14:25 veya 20 dk">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="new-channel-desc">Açıklama / Kişisel Not</label>
+                    <textarea id="new-channel-desc" class="form-input" rows="2" placeholder="Video veya kanal hakkında hatırlatıcı notlarınız (örn: 3. dakikadaki formül çok önemli)..."></textarea>
+                </div>
+
+                <div class="modal-actions" style="margin-top: 1.25rem; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-add-channel">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary" id="btn-submit-add-yt">
+                        <i class="fa-solid fa-plus"></i> <span id="btn-submit-yt-text">Videoyu Listeme Ekle</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 3.5 WEB VIEWER MODAL (UYGULAMA İÇİ SİTE GÖRÜNTÜLEYİCİ) -->
+    <div class="modal-overlay" id="web-viewer-modal">
+        <div class="modal-card modal-card-xl" style="text-align: left; padding: 1.25rem; max-width: 1050px; width: 96%; height: 90vh; display: flex; flex-direction: column;">
+            <div class="modal-card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-shrink: 0;">
+                <div style="flex: 1; padding-right: 1rem; overflow: hidden;">
+                    <div id="web-viewer-badges" style="display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.3rem; flex-wrap: wrap;"></div>
+                    <h3 id="web-viewer-title" style="font-size: 1.15rem; font-weight: 700; color: #fff; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"></h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-web-viewer" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div style="flex: 1; position: relative; background: #0f172a; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column;">
+                <div style="padding: 0.4rem 0.75rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.8rem; color: var(--text-muted); flex-shrink: 0;">
+                    <span style="display: flex; align-items: center; gap: 0.4rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                        <i class="fa-solid fa-globe text-indigo" style="font-size: 0.8rem;"></i>
+                        <span id="web-viewer-url-bar" style="font-family: monospace; color: #94a3b8; font-size: 0.76rem;">https://...</span>
+                    </span>
+                    <span style="font-size: 0.72rem; color: #64748b; white-space: nowrap;">
+                        <i class="fa-solid fa-shield-halved"></i> Uygulama İçi Önizleme
+                    </span>
+                </div>
+                <iframe id="web-viewer-iframe" src="" style="flex: 1; width: 100%; height: 100%; border: none; background: #ffffff;" sandbox="allow-same-origin allow-scripts allow-forms allow-popups"></iframe>
+            </div>
+
+            <div class="modal-card-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; padding-top: 0.75rem; margin-top: 0.5rem; border-top: 1px solid var(--border-color); flex-shrink: 0;">
+                <div id="web-viewer-provider" style="font-size: 0.85rem; color: var(--text-muted);"></div>
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                    <button type="button" class="btn btn-outline-success btn-sm" id="btn-modal-toggle-visited">
+                        <i class="fa-regular fa-circle-check"></i> <span id="modal-visited-label">İncelendi Olarak İşaretle</span>
+                    </button>
+                    <a id="web-viewer-external-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Yeni Sekmede Aç
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3.6 ADD CUSTOM WEBSITE / RESOURCE MODAL -->
+    <div class="modal-overlay" id="add-website-modal">
+        <div class="modal-card modal-card-lg" style="text-align: left;">
+            <div class="modal-card-header">
+                <div class="modal-header-title">
+                    <i class="fa-solid fa-globe text-indigo" style="font-size: 1.5rem;"></i>
+                    <h3 style="margin: 0;">Yeni Web Sitesi / Kaynak Linki Ekle</h3>
+                </div>
+                <button type="button" class="modal-close-btn" id="btn-close-add-website" aria-label="Kapat"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="add-website-form">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="new-res-url">Web Sitesi / Doküman Linki (URL) <span class="required" style="color: var(--danger);">*</span></label>
+                    <input type="url" id="new-res-url" class="form-input" placeholder="https://www.bddk.org.tr veya https://..." required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="flex: 2;">
+                        <label for="new-res-title">Site / Kaynak Adı <span class="required" style="color: var(--danger);">*</span></label>
+                        <input type="text" id="new-res-title" class="form-input" placeholder="Örn: BKM GEÇİT Açık Bankacılık Standartları" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="new-res-provider">Kurum / Sağlayıcı</label>
+                        <input type="text" id="new-res-provider" class="form-input" placeholder="Örn: BKM, TCMB, Kişisel">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="new-res-category">İlgili Sınav Bölümü</label>
+                        <select id="new-res-category" class="form-select">
+                            <option value="bankacilik-genel-kultur" selected>Bankacılık & GK</option>
+                            <option value="genel-yetenek">Örüntü & Mantık (ALES/DGS)</option>
+                            <option value="ingilizce">İngilizce (YÖKDİL/YDS)</option>
+                            <option value="alan">Bilgisayar & BT Alanı</option>
+                            <option value="genel">Genel Sınav</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="new-res-type">Kaynak Türü</label>
+                        <select id="new-res-type" class="form-select">
+                            <option value="portal" selected>🌐 Resmi Portal / Web Sitesi</option>
+                            <option value="exam_archive">📄 Soru Arşivi / PDF</option>
+                            <option value="interactive">💻 İnteraktif Test / Alıştırma</option>
+                            <option value="video">▶️ Video / Konu Anlatımı</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="new-res-desc">Açıklama / Kişisel Not</label>
+                    <textarea id="new-res-desc" class="form-input" rows="2" placeholder="Site veya kaynak hakkında hatırlatıcı notlarınız (örn: FAST ve API mimarisi için resmi referans)..."></textarea>
+                </div>
+                <div class="modal-actions" style="margin-top: 1.25rem; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-add-website">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-plus"></i> Kaynağı Listeme Ekle
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- 4. AUTHENTICATION VIEW (Giriş Yap / Kayıt Ol) -->
     <section id="auth-view">
         <div class="auth-wrapper">
@@ -115,6 +447,18 @@
                         <button data-view-target="lectures" class="nav-btn">
                             <i class="fa-solid fa-graduation-cap"></i>
                             <span>Konu Anlatımı</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="resources" class="nav-btn">
+                            <i class="fa-solid fa-circle-play"></i>
+                            <span>Video & Kaynaklar</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button data-view-target="notes" class="nav-btn">
+                            <i class="fa-solid fa-note-sticky"></i>
+                            <span>Kişisel Notlarım</span>
                         </button>
                     </li>
                     <li class="nav-item">
@@ -210,9 +554,15 @@
                             <h2>24 Ekim Ziraat Uzman Yardımcılığı Hedefi 🎯</h2>
                             <p>Toplam 140 soru, 160 dakika: <strong>GY-GK (≥36)</strong>, <strong>İngilizce (≥24)</strong>, <strong>Alan (≥20)</strong> barajlarını aşmaya odaklan!</p>
                         </div>
-                        <div class="welcome-action">
+                        <div class="welcome-action" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                             <button class="btn btn-light" data-view-target="exam">
                                 <i class="fa-solid fa-play"></i> Deneme Başlat
+                            </button>
+                            <button class="btn btn-outline-light" data-view-target="resources">
+                                <i class="fa-solid fa-film"></i> Video & Sınavlar
+                            </button>
+                            <button class="btn btn-outline-light" data-view-target="notes">
+                                <i class="fa-solid fa-note-sticky"></i> Not Panosu
                             </button>
                         </div>
                     </div>
@@ -301,7 +651,13 @@
                                 <i class="fa-solid fa-graduation-cap text-indigo"></i>
                                 <h3>Sınav Konu Anlatımları & Hap Notlar</h3>
                             </div>
-                            <span id="lectures-progress-badge" class="badge badge-success">0 / 18 Konu Tamamlandı</span>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <span id="lectures-progress-badge" class="badge badge-success">0 / 18 Konu Tamamlandı</span>
+                                <button class="btn btn-secondary btn-sm" data-view-target="resources" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+                                    <i class="fa-solid fa-film text-indigo"></i>
+                                    <span>Video & Sınavlar</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="card-body">
                             <!-- Arama ve Kategori Filtreleri -->
@@ -321,6 +677,164 @@
 
                             <!-- Konu Listesi Grid -->
                             <div id="lectures-list-container" class="lectures-grid"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================
+                     VIEW: RESOURCES / HARİCİ VİDEO VE SINAV ARŞİV KÜTÜPHANESİ
+                     ======================================================== -->
+                <section id="resources-view" class="view-section">
+                    <div class="content-card">
+                        <div class="card-header" style="flex-wrap: wrap; gap: 0.75rem;">
+                            <div class="card-title">
+                                <i class="fa-solid fa-circle-play text-indigo"></i>
+                                <h3>Video Eğitim & Sınav Arşiv Portalı</h3>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; align-items: center; margin-left: auto;">
+                                <button class="btn btn-sm btn-primary" id="btn-open-add-channel">
+                                    <i class="fa-solid fa-plus"></i> Kanal / Video Ekle
+                                </button>
+                                <span id="resources-count-badge" class="badge badge-success">Yükleniyor...</span>
+                            </div>
+                        </div>
+
+                        <!-- Sub-tab Switcher: YouTube Kanalları vs ÖSYM Arşivleri -->
+                        <div class="resources-subnav-tabs">
+                            <button class="res-subtab-btn active" data-res-tab="youtube">
+                                <i class="fa-brands fa-youtube text-rose"></i>
+                                <span>Önerilen YouTube Kanalları & Videolar</span>
+                                <span class="badge badge-rose" style="font-size: 0.72rem; padding: 2px 7px;">Eğitim Serisi 🏦</span>
+                            </button>
+                            <button class="res-subtab-btn" data-res-tab="osym">
+                                <i class="fa-solid fa-file-pdf text-amber"></i>
+                                <span>ÖSYM Sınav Arşivleri & Portallar</span>
+                            </button>
+                        </div>
+
+                        <div class="card-body">
+                            <!-- ==========================================
+                                 TAB 1: YOUTUBE KANALLARI & VİDEO HUB
+                                 ========================================== -->
+                            <div id="resources-youtube-section">
+                                <!-- Kanal Seçici Hap Butonlar -->
+                                <div style="margin-bottom: 1.25rem;">
+                                    <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.4rem;">
+                                        <i class="fa-solid fa-tv text-indigo"></i> EĞİTİM KANALI SEÇİN:
+                                    </div>
+                                    <div class="filter-pills" id="yt-channel-pills">
+                                        <!-- JS populates channel pills here -->
+                                    </div>
+                                </div>
+
+                                <!-- Aktif Kanal Başlık & Bilgi Kutusu -->
+                                <div id="yt-active-channel-card" class="yt-channel-hero-card">
+                                    <!-- JS renders active channel info -->
+                                </div>
+
+                                <!-- Video Arama & Kategori Filtresi -->
+                                <div class="lecture-controls-bar" style="margin-top: 1.25rem;">
+                                    <div class="lecture-search-box" style="flex: 1;">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" id="yt-video-search-input" placeholder="Kanal videolarında ara (örn: Ziraat, Banka Bilgisi, Muhasebe, Genel Kültür)...">
+                                    </div>
+                                    <div class="lecture-category-pills" id="yt-video-category-pills">
+                                        <button class="pill-btn active" data-yt-cat="all">Tüm Konular</button>
+                                        <button class="pill-btn" data-yt-cat="bankacilik-genel-kultur">🏦 Bankacılık & Muhasebe</button>
+                                        <button class="pill-btn" data-yt-cat="genel-kultur">🏛️ Genel Kültür</button>
+                                        <button class="pill-btn" data-yt-cat="genel-yetenek">🎯 Mantık & ALES</button>
+                                        <button class="pill-btn" data-yt-cat="ingilizce">🇬🇧 İngilizce</button>
+                                    </div>
+                                </div>
+
+                                <!-- Video İzleme Durumu & İlerleme Çubuğu -->
+                                <div class="yt-video-status-bar">
+                                    <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;" id="yt-watch-status-pills">
+                                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted);"><i class="fa-solid fa-filter text-rose"></i> Durum:</span>
+                                        <button class="pill-btn active" data-yt-watch="all" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;">Tümü (<span id="yt-count-all">0</span>)</button>
+                                        <button class="pill-btn" data-yt-watch="unwatched" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;"><i class="fa-regular fa-circle text-warning"></i> İzlenmeyenler (<span id="yt-count-unwatched">0</span>)</button>
+                                        <button class="pill-btn" data-yt-watch="watched" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;"><i class="fa-solid fa-circle-check text-success"></i> İzlendi (<span id="yt-count-watched">0</span>)</button>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="font-size: 0.8rem; font-weight: 600; color: #cbd5e1;" id="yt-watch-progress-text">0 / 0 İzlenen (%0)</span>
+                                            <div style="width: 85px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 9999px; overflow: hidden;">
+                                                <div id="yt-watch-progress-bar" style="width: 0%; height: 100%; background: var(--success); transition: width 0.3s ease;"></div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-sm btn-primary" id="btn-open-add-video" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                                            <i class="fa-solid fa-plus"></i> Video / Link Ekle
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Video Kartları Grid -->
+                                <div id="yt-videos-grid" class="yt-videos-grid">
+                                    <!-- JS renders video cards here -->
+                                </div>
+                            </div>
+
+                            <!-- ==========================================
+                                 TAB 2: ÖSYM ARŞİV & RESMİ PORTALLAR
+                                 ========================================== -->
+                            <div id="resources-osym-section" style="display: none;">
+                                <!-- Bilgilendirme Notu -->
+                                <div class="info-box" style="margin-bottom: 1.25rem;">
+                                    <i class="fa-solid fa-circle-info text-indigo"></i>
+                                    <div>
+                                        <strong>ÖSYM Çıkmış Sorular & Resmi Portallar:</strong>
+                                        ALES sayısal/sözel mantık orijinal PDF soru kitapçıkları, YÖKDİL/YDS sınav arşivleri, TCMB ekonomi rehberleri ve BTK Akademi sertifikalı kursları. Bağlantılar doğrudan yeni sekmede açılır.
+                                    </div>
+                                </div>
+
+                                <!-- Filtre ve Arama Çubuğu -->
+                                <div class="lecture-controls-bar">
+                                    <div class="lecture-search-box">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" id="resource-search-input" placeholder="Kaynak, hoca veya konu ara (örn: ALES, YÖKDİL, Rüştü Hoca, TCMB, BTK)...">
+                                    </div>
+                                    <div class="lecture-category-pills" id="resource-category-pills">
+                                        <button class="pill-btn active" data-res-cat="all">Tümü</button>
+                                        <button class="pill-btn" data-res-cat="genel-yetenek">🎯 ALES / DGS (Mantık & Problem)</button>
+                                        <button class="pill-btn" data-res-cat="ingilizce">🇬🇧 YÖKDİL & YDS (Gramer & Sorular)</button>
+                                        <button class="pill-btn" data-res-cat="genel-kultur">🏛️ TCMB & BDDK (Bankacılık)</button>
+                                        <button class="pill-btn" data-res-cat="alan">💻 BTK & DSA (Bilgisayar Müh.)</button>
+                                    </div>
+                                </div>
+
+                                <!-- Tür Filtresi (Video, ÖSYM Arşiv, Portal, Test) -->
+                                <div class="resource-type-filters">
+                                    <button class="filter-chip active" data-res-type="all"><i class="fa-solid fa-layer-group"></i> Tüm Türler</button>
+                                    <button class="filter-chip" data-res-type="video"><i class="fa-solid fa-play"></i> Video Dersler</button>
+                                    <button class="filter-chip" data-res-type="exam_archive"><i class="fa-solid fa-file-pdf"></i> ÖSYM Sınav Arşivleri</button>
+                                    <button class="filter-chip" data-res-type="portal"><i class="fa-solid fa-globe"></i> Resmi Portallar</button>
+                                    <button class="filter-chip" data-res-type="interactive"><i class="fa-solid fa-laptop-code"></i> İnteraktif Testler</button>
+                                </div>
+
+                                <!-- Web Kaynakları İncelendi Durumu & İlerleme Çubuğu -->
+                                <div class="yt-video-status-bar" style="margin-bottom: 1.25rem;">
+                                    <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;" id="res-visit-status-pills">
+                                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--text-muted);"><i class="fa-solid fa-filter text-indigo"></i> Durum:</span>
+                                        <button class="pill-btn active" data-res-visit="all" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;">Tümü (<span id="res-count-all">0</span>)</button>
+                                        <button class="pill-btn" data-res-visit="unvisited" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;"><i class="fa-regular fa-circle text-warning"></i> İncelenmeyenler (<span id="res-count-unvisited">0</span>)</button>
+                                        <button class="pill-btn" data-res-visit="visited" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;"><i class="fa-solid fa-circle-check text-success"></i> İncelendi (<span id="res-count-visited">0</span>)</button>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap;">
+                                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                            <span style="font-size: 0.8rem; font-weight: 600; color: #cbd5e1;" id="res-visit-progress-text">0 / 0 İncelenen (%0)</span>
+                                            <div style="width: 85px; height: 8px; background: rgba(255,255,255,0.1); border-radius: 9999px; overflow: hidden;">
+                                                <div id="res-visit-progress-bar" style="width: 0%; height: 100%; background: var(--success); transition: width 0.3s ease;"></div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-sm btn-primary" id="btn-open-add-website" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                                            <i class="fa-solid fa-plus"></i> Web Sitesi / Link Ekle
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Kaynak Kartları Grid -->
+                                <div id="resources-grid-container" class="resources-grid"></div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -648,6 +1162,113 @@
                 </section>
 
                 <!-- ========================================================
+                     VIEW 5.5: KİŞİSEL NOTLARIM & BİLGİ PANOSU
+                     ======================================================== -->
+                <section id="notes-view" class="view-section">
+                    <div class="view-header-bar">
+                        <div class="view-header-info">
+                            <h2><i class="fa-solid fa-note-sticky text-indigo"></i> Kişisel Notlarım & Bilgi Panosu</h2>
+                            <p class="text-muted">Önemli formülleri, kronolojileri ve stratejik hap bilgileri kaydedin; renkli kartlar veya hızlı tekrar tablosu ile tarayın.</p>
+                        </div>
+                        <div class="view-header-actions">
+                            <button class="btn btn-outline" id="btn-export-notes" title="Tüm notları Markdown formatında indir veya kopyala">
+                                <i class="fa-solid fa-file-export"></i> Dışa Aktar
+                            </button>
+                            <button class="btn btn-primary" id="btn-create-note">
+                                <i class="fa-solid fa-plus"></i> Yeni Not Ekle
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Notes Stats & Storage Badge -->
+                    <div class="notes-stats-bar">
+                        <div class="notes-stat-pill">
+                            <span class="pill-label">Toplam Not:</span>
+                            <strong id="notes-total-count" class="pill-val">0</strong>
+                        </div>
+                        <div class="notes-stat-pill">
+                            <span class="pill-label">Sabitlenenler (Pin):</span>
+                            <strong id="notes-pinned-count" class="pill-val text-amber">0</strong>
+                        </div>
+                        <div class="notes-stat-pill">
+                            <span class="pill-label">P0 Sınavda Kesin Çıkar:</span>
+                            <strong id="notes-p0-count" class="pill-val text-rose">0</strong>
+                        </div>
+                        <div class="notes-stat-pill notes-storage-badge" style="margin-left: auto;">
+                            <span class="pill-label"><i class="fa-solid fa-cloud-arrow-up text-emerald"></i> Durum:</span>
+                            <span class="pill-val text-emerald">Çevrimdışı & Bulut Eşitlemeli</span>
+                        </div>
+                    </div>
+
+                    <!-- Controls & Search Toolbar -->
+                    <div class="notes-filter-controls">
+                        <div class="search-box-wrap" style="flex: 1; min-width: 240px;">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="notes-search-input" class="search-input" placeholder="Başlık, etiket veya not içeriğinde ara... (örn: Mithat Paşa, Big-O, Conditionals)">
+                            <button id="notes-search-clear" class="btn-clear-search" style="display: none;"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+
+                        <div class="notes-filter-select-wrap">
+                            <select id="notes-priority-filter" class="form-select notes-compact-select">
+                                <option value="all">Tüm Öncelikler</option>
+                                <option value="pinned">⭐ Sadece Sabitlenenler</option>
+                                <option value="P0">💥 P0 (Sınavda Kesin Çıkar)</option>
+                                <option value="P1">📌 P1 (Önemli Notlar)</option>
+                                <option value="P2">📝 P2 (Hatırlatma/Formül)</option>
+                            </select>
+                        </div>
+
+                        <div class="notes-layout-switch">
+                            <button class="btn-layout-toggle active" data-layout="cards" title="Kart Panosu Görünümü">
+                                <i class="fa-solid fa-table-cells-large"></i> <span>Kartlar</span>
+                            </button>
+                            <button class="btn-layout-toggle" data-layout="table" title="Hızlı Tekrar Tablosu">
+                                <i class="fa-solid fa-table-list"></i> <span>Tekrar Tablosu</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Category Pills -->
+                    <div class="pills-scroll-container" style="margin-bottom: 1.25rem;">
+                        <div class="filter-pills" id="notes-category-pills">
+                            <button class="pill-btn active" data-note-sec="all">Tümü</button>
+                            <button class="pill-btn" data-note-sec="bankacilik-genel-kultur">🏦 Bankacılık & GK</button>
+                            <button class="pill-btn" data-note-sec="oruntu-analitik">🧩 Örüntü & Mantık</button>
+                            <button class="pill-btn" data-note-sec="ingilizce">🇬🇧 İngilizce</button>
+                            <button class="pill-btn" data-note-sec="alan">💻 Bilgisayar & YZ</button>
+                            <button class="pill-btn" data-note-sec="genel">💡 Sınav Taktikleri</button>
+                        </div>
+                    </div>
+
+                    <!-- Layout 1: Cards Grid -->
+                    <div id="notes-cards-container" class="notes-cards-grid">
+                        <!-- JS renders note cards here -->
+                    </div>
+
+                    <!-- Layout 2: Cheat Sheet Table -->
+                    <div id="notes-table-container" class="notes-table-wrapper" style="display: none;">
+                        <div class="table-responsive">
+                            <table class="notes-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50px; text-align: center;">Sabit</th>
+                                        <th style="width: 90px; text-align: center;">Öncelik</th>
+                                        <th style="width: 170px;">Bölüm</th>
+                                        <th style="width: 250px;">Başlık & Etiketler</th>
+                                        <th>Özet İçerik</th>
+                                        <th style="width: 110px; text-align: center;">Tarih</th>
+                                        <th style="width: 110px; text-align: center;">İşlemler</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="notes-table-body">
+                                    <!-- JS renders table rows here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================
                      VIEW 6: STATS / İSTATİSTİKLER
                      ======================================================== -->
                 <section id="stats-view" class="view-section">
@@ -744,6 +1365,10 @@
             <button data-view-target="lectures" class="mobile-nav-btn">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <span>Konu</span>
+            </button>
+            <button data-view-target="notes" class="mobile-nav-btn">
+                <i class="fa-solid fa-note-sticky"></i>
+                <span>Notlar</span>
             </button>
             <button data-view-target="practice" class="mobile-nav-btn">
                 <i class="fa-solid fa-book-open"></i>

@@ -198,6 +198,7 @@ examprepare/
 │
 ├── data/
 │   ├── lectures.json           # 18 Kapsamlı Konu Anlatımı (Banka & GK: 4, İngilizce: 6, GY: 2, Alan: 6)
+│   ├── external_resources.json # 15 ALES/DGS, YÖKDİL/YDS, TCMB ve BTK Akademi Video & Sınav Arşivi
 │   ├── flashcards.json         # 35+ Kavram Kartı (3D Çevirmeli)
 │   └── questions/
 │       ├── bankacilik_genel_kultur.json  # 20 Soru (Bölüm 1 - Bankacılık)
@@ -234,5 +235,70 @@ Proje Supabase ile entegre çalışacak şekilde tasarlanmıştır:
   6. `user_flashcard_progress`: Kart ezberleme durumları.
   7. `lectures`: Konu anlatımı modülü ders notları.
   8. `user_lecture_progress`: Tamamlanan dersler ve yer imleri.
+  9. `external_resources`: ALES/DGS, YÖKDİL, TCMB ve BTK video & sınav arşivleri.
 
 `supabase_schema.sql` dosyası her tablo ve policy için `drop policy if exists` yapısıyla yazılmıştır; Supabase SQL Editöründe hata almadan tek seferde veya defalarca çalıştırılabilir.
+
+---
+
+## 5. ALES / DGS / YÖKDİL VE HARİCİ VİDEO EĞİTİM KAYNAKLARI REHBERİ
+
+Sürekli uzun metin okumak yerine adayın doğrudan video izleyerek veya ÖSYM çıkmış soru kitapçıklarını inceleyerek çalışabilmesi için projeye entegre edilen harici kaynaklar:
+
+### 🎯 1. ALES & DGS (Genel Yetenek - Örüntü & Mantık):
+- **Rüştü Hoca ile Türkçe / Sözel Mantık:** Hata yaptırmayan tablo kurma, öncülleri yerleştirme ve şık eleme teknikleri.
+- **Benim Hocam / İlyas Güneş (Sayısal Mantık):** Sayı dizileri, işlem tanımlama, şekil matrisleri ve modüler aritmetik çözüm videoları.
+- **ÖSYM ALES Çıkmış Sorular:** [ÖSYM ALES Arşivi](https://www.osym.gov.tr/TR,15103/ales-cikmis-sorular.html) (2018-2024 sayısal mantık kalıpları).
+- **ÖSYM DGS Çıkmış Sorular:** [ÖSYM DGS Arşivi](https://www.osym.gov.tr/TR,15105/dgs-cikmis-sorular.html) (Problem ve mantık PDF kitapçıkları).
+
+### 🇬🇧 2. YÖKDİL & YDS (İngilizce B1-B2 Düzeyi):
+- **Modadil / Hakkı Şahin (YÖKDİL Soru Çözüm Kampı):** Tenses, Modals, Conditionals ve Relative Clauses nokta atışı soru çözüm videoları.
+- **Remzi Hoca (Kritik Bağlaçlar & Cümle Tamamlama):** Although, Despite, While, Provided that gibi sınavın belkemiği bağlaç taktikleri.
+- **ÖSYM YÖKDİL Çıkmış Soru Kitapçıkları:** [ÖSYM YÖKDİL Arşivi](https://www.osym.gov.tr/TR,15107/yokdil-cikmis-sorular.html) (Özellikle Sosyal Bilimler ekonomi ve finans parçaları).
+- **BBC Learning English (English at Work):** 66 sesli bölümden oluşan ofis ve iş hayatı İngilizcesi serisi.
+- **Test-English:** B1-B2 seviyesinde anında sonuç veren 100+ ücretsiz gramer testi.
+
+### 🏛️ 3. Bankacılık, Ekonomi & Genel Kültür:
+- **Eğitim Serisi (@egitimserisi5115):** [Eğitim Serisi YouTube](https://youtube.com/@egitimserisi5115?si=nt2vfNiRU7fg-J0U) (Ziraat Bankası giriş sınavı özel soru çözümleri, banka muhasebesi, temel bilanço/gelir tablosu, Halkbank soru analizleri ve sınav genel kültürü).
+- **Sorularla Yüksel (@Sorularlayuksel) - Banka Sınavlarına Hazırlık Seti:** [Sorularla Yüksel Kanalı](https://www.youtube.com/@Sorularlayuksel)
+  - 📋 **Genel Yetenek 2 (Problemler & Mantık):** [Oynatma Listesi 1](https://www.youtube.com/watch?v=SKXeCfarcRU&list=PLgUANwY_CJ6Vz5u2HSl_Lty_JMd5EDeYD) — Yüzde, Kar-Zarar, Yaş, Faiz, Hız, İşçi-Havuz, Şekil Yeteneği, Mantıksal Akıl Yürütme (1 & 2).
+  - 📋 **Genel Kültür (Güncel Olaylar):** [Oynatma Listesi 2](https://www.youtube.com/watch?v=TX6YD134wC4&list=PLgUANwY_CJ6VinSIYIL9QF9f0VwkOxLo5) — Aylık güncel gelişmeler ve 2024 kapsamlı genel kültür sınav özeti.
+  - 📋 **Genel Yetenek (Temel Konular & Örüntü):** [Oynatma Listesi 3](https://www.youtube.com/watch?v=n_JR_p_9Vso&list=PLgUANwY_CJ6Xxw76TAz7EJOkhuVbpOGnP) — Denklem kurma, problem çözümleri, 40 soruluk Örüntü testine özel Şekil Yeteneği & Örüntü soru çözümleri 1 & 2.
+  - 📋 **Ekonomi (Temel Bankacılık & Kavramlar):** [Oynatma Listesi 4](https://www.youtube.com/watch?v=l6u3L7o0enQ&list=PLgUANwY_CJ6WJljpGMOI1AZBKgmK2umB6) — Enflasyon (deflasyon/dezenflasyon), İşsizlik türleri, Kripto/Blockchain, Kurlar, Finansal Piyasalar, Banka Türleri ve Para Talebi kuramı.
+- **TCMB 'Herkes İçin Ekonomi':** [TCMB Eğitim Portalı](https://www.tcmb.gov.tr/wps/wcm/connect/tr/tcmb+tr/main+menu/egitim-akademik/herkes-icin-ekonomi) (Enflasyon, para politikası, faiz ve piyasa animasyonları).
+- **BDDK Finansal Tüketici Rehberi:** [BDDK Rehberleri](https://www.bddk.org.tr/FinansalTuketici/) (Mevzuat, kredi ve mevduat resmi kuralları).
+- **Ziraat Bankası Resmi Kurumsal Tarihçe:** [Ziraat Tarihçesi](https://www.ziraatbank.com.tr/tr/bankamiz/hakkimizda/tarihce) (Mithat Paşa, Memleket Sandıkları, Ulus binası belgeleri).
+- **BKM GEÇİT:** [BKM Açık Bankacılık](https://gecit.bkm.com.tr/) (API standartları ve FAST altyapısı).
+
+### 💻 4. Bilgisayar Mühendisliği & BT:
+- **BTK Akademi:** [BTK Akademi Portalı](https://www.btkakademi.gov.tr/) (MEB/BTK ücretsiz sertifikalı SQL, Ağlar, Siber Güvenlik dersleri).
+- **NeetCode DSA Roadmap:** [NeetCode Yol Haritası](https://neetcode.io/roadmap) (Veri Yapıları ve Algoritma görsel şeması ve çözümleri).
+- **GeeksforGeeks:** [GeeksforGeeks CS](https://www.geeksforgeeks.org/computer-science-projects/) (İşletim sistemleri, Ağlar ve Veritabanı konu özetleri).
+- **Bilgeİş ODTÜ:** [Bilgeİş Portalı](https://bilgeis.net/) (ODTÜ destekli ücretsiz bilişim eğitimleri).
+
+---
+
+## 6. KİŞİSEL NOTLARIM & BİLGİ PANOSU MODÜLÜ (CHEAT SHEET & KANBAN)
+
+Adayın çalışırken karşılaştığı kritik formülleri, çıkması muhtemel tarihleri ve püf noktalarını tek bir yerde toplaması için geliştirilen etkileşimli modül:
+
+### 🌟 Temel Yetenekler:
+1. **Çift Görünüm Modu (Dual View):**
+   - **Kart Panosu (Sticky Grid):** Renk kodlu kartlar (İndigo, Amber, Zümrüt, Gül, Mor, Mavi), etiket rozetleri ve markdown içerik önizlemesi.
+   - **Hızlı Tekrar Tablosu (Cramming / Cheat Sheet):** Sınav sabahı veya son hafta hızlı tarama yapabilmek için satır bazlı, kompakt özet listesi.
+2. **Öncelik ve Sabitleme Sistemi:**
+   - **⭐ Sabitleme (Pin):** En kritik notları listenin en başına tutturur.
+   - **💥 P0:** Sınavda Kesin Çıkar / Kritik Formül.
+   - **📌 P1:** Önemli Çalışma Notu.
+   - **📝 P2:** Hatırlatma / Detay Bilgi.
+3. **Zengin İçerik & Markdown Araç Çubuğu:**
+   - Kalın metin (`**bold**`), Başlıklar (`###`), Madde imleri (`*`), Tablolar (`| a | b |`), Kod blokları (`` `kod` ``) ve İpucu alıntıları (`> 💡`).
+4. **Çevrimdışı (Offline-First) + Supabase Bulut Eşitlemesi:**
+   - Notlar anında `localStorage` (`ziraat_user_notes`) üzerinde saklanır; internet olmasa bile kesintisiz çalışır.
+   - Kullanıcı oturum açtığında `public.user_notes` tablosuyla iki yönlü senkronize edilir.
+5. **Tek Tıkla Dışa Aktarma & Panoya Kopyalama:**
+   - "Dışa Aktar" butonu ile tüm kişisel notlar tek tıkla `.md` formatında indirilebilir.
+   - Not kartları veya detay ekranından tek tıkla panoya kopyalama imkanı.
+6. **Başlangıç Kiti (Starter High-Yield Notes):**
+   - İlk açılışta boş ekran görmemek için 4 adet hazır sınav formülü otomatik yüklenir (Ziraat Tarihçesi 1863-1888, Conditionals Formül Tablosu, QuickSort vs MergeSort Karmaşıklık Tablosu, Sayı Dizileri Çözüm Adımları).
+

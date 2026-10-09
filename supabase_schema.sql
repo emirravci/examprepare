@@ -262,6 +262,52 @@ create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
 
+-- 8. EXTERNAL RESOURCES (Harici Video, ALES/DGS ve YÖKDİL Kaynak Havuzu)
+create table if not exists public.external_resources (
+    id text primary key,
+    category text not null,
+    sub_category text,
+    type text not null,
+    title text not null,
+    provider text not null,
+    url text not null,
+    duration_or_count text,
+    badge text,
+    is_recommended boolean default false,
+    description text,
+    created_at timestamptz default now() not null
+);
+
+alter table public.external_resources enable row level security;
+
+drop policy if exists "Herkes harici kaynakları okuyabilir" on public.external_resources;
+create policy "Herkes harici kaynakları okuyabilir"
+    on public.external_resources for select
+    using (true);
+
+-- 9. USER NOTES (Kullanıcının Kişisel Çalışma Notları ve Bilgi Panosu)
+create table if not exists public.user_notes (
+    id text primary key,
+    user_id uuid references auth.users(id) on delete cascade not null,
+    title text not null,
+    content text not null,
+    section text not null check (section in ('genel-kultur', 'genel-yetenek', 'bankacilik-genel-kultur', 'oruntu-analitik', 'ingilizce', 'alan', 'genel')),
+    tags text[] default array[]::text[],
+    priority text default 'P1' check (priority in ('P0', 'P1', 'P2')),
+    is_pinned boolean default false,
+    color text default 'indigo',
+    created_at timestamptz default now() not null,
+    updated_at timestamptz default now() not null
+);
+
+alter table public.user_notes enable row level security;
+
+drop policy if exists "Kullanıcı kendi notlarını yönetebilir" on public.user_notes;
+create policy "Kullanıcı kendi notlarını yönetebilir"
+    on public.user_notes for all
+    using (auth.uid() = user_id)
+    with check (auth.uid() = user_id);
+
 -- ==============================================================================
 -- ŞEMA TAMAMLANDI.
 -- ==============================================================================

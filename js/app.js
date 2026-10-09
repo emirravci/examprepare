@@ -44,6 +44,26 @@ const state = {
     lectures: {
         category: 'all',
         searchQuery: ''
+    },
+    // Dış Kaynaklar ve Video Hub Modu
+    resources: {
+        activeTab: 'youtube', // 'youtube' | 'osym'
+        selectedChannelId: 'channel-egitimserisi',
+        category: 'all',
+        type: 'all',
+        searchQuery: '',
+        ytCategory: 'all',
+        ytSearchQuery: '',
+        ytWatchStatus: 'all', // 'all' | 'watched' | 'unwatched'
+        resVisitStatus: 'all' // 'all' | 'visited' | 'unvisited'
+    },
+    // Kişisel Notlar & Bilgi Panosu Modu
+    notes: {
+        category: 'all',
+        priority: 'all',
+        searchQuery: '',
+        viewMode: 'cards',
+        editingNoteId: null
     }
 };
 
@@ -61,6 +81,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 3. Modülleri başlat
     initDashboard();
     initLecturesMode();
+    initResourcesMode();
+    initNotesMode();
     initPracticeMode();
     initExamMode();
     initFlashcardsMode();
@@ -252,6 +274,7 @@ function renderLecturesList() {
                 <div class="lecture-content-viewer">
                     ${formatLectureContent(lec.content)}
                 </div>
+                ${renderLectureResourcesBox(lec.resourceIds)}
             </div>
         `;
 
@@ -339,6 +362,1563 @@ function formatLectureContent(md) {
     html = html.replace(/\n/g, '<br>');
 
     return html;
+}
+
+// Konu anlatımı içindeki önerilen video ve kaynak kutucuğu
+function renderLectureResourcesBox(resourceIds) {
+    if (!resourceIds || resourceIds.length === 0) return '';
+    const resItems = resourceIds.map(id => db.getResourceById(id)).filter(Boolean);
+    if (resItems.length === 0) return '';
+
+    const itemsHtml = resItems.map(r => {
+        const iconClass = r.type === 'video' ? 'fa-brands fa-youtube text-rose' :
+                          r.type === 'exam_archive' ? 'fa-solid fa-file-pdf text-amber' :
+                          r.type === 'interactive' ? 'fa-solid fa-laptop-code text-emerald' : 'fa-solid fa-building-columns text-indigo';
+        return `
+            <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="lecture-res-link-item">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <i class="${iconClass}" style="font-size: 1.05rem;"></i>
+                    <span><strong>${escapeHtml(r.title)}</strong> <span style="font-size: 0.76rem; color: var(--text-muted);">(${escapeHtml(r.provider)})</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="resource-badge-tag">${escapeHtml(r.badge || 'Kaynak')}</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+                </div>
+            </a>
+        `;
+    }).join('');
+
+    return `
+        <div class="lecture-resources-box">
+            <div class="lecture-resources-title">
+                <i class="fa-solid fa-play-circle text-indigo"></i>
+                <span>Önerilen Video & Çıkmış Soru Kaynakları:</span>
+            </div>
+            <div class="lecture-res-links-list">
+                ${itemsHtml}
+            </div>
+        </div>
+    `;
+}
+
+// ==============================================================================
+// 2.7. HARİCİ VİDEO VE SINAV ARŞİV KÜTÜPHANESİ (YOUTUBE KANALLARI & ÖSYM)
+// ==============================================================================
+function initResourcesMode() {
+    // 1. Sekme Değiştirici (YouTube vs ÖSYM)
+    const subTabBtns = document.querySelectorAll('.res-subtab-btn');
+    subTabBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            subTabBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.resources.activeTab = e.currentTarget.getAttribute('data-res-tab');
+            switchResourcesTab();
+        });
+    });
+
+    // 2. YouTube Arama ve Kategori Filtreleri
+    const ytSearchInput = document.getElementById('yt-video-search-input');
+    const ytCatBtns = document.querySelectorAll('#yt-video-category-pills [data-yt-cat]');
+
+    ytSearchInput?.addEventListener('input', (e) => {
+        state.resources.ytSearchQuery = e.target.value.trim().toLowerCase();
+        renderYoutubeVideos();
+    });
+
+    ytCatBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            ytCatBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.resources.ytCategory = e.currentTarget.getAttribute('data-yt-cat');
+            renderYoutubeVideos();
+        });
+    });
+
+    // 3. ÖSYM Arşiv Arama ve Filtreleri
+    const osymSearchInput = document.getElementById('resource-search-input');
+    const osymCatBtns = document.querySelectorAll('#resource-category-pills [data-res-cat]');
+    const osymTypeBtns = document.querySelectorAll('[data-res-type]');
+
+    osymCatBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            osymCatBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.resources.category = e.currentTarget.getAttribute('data-res-cat');
+            renderOsymResources();
+        });
+    });
+
+    osymTypeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            osymTypeBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.resources.type = e.currentTarget.getAttribute('data-res-type');
+            renderOsymResources();
+        });
+    });
+
+    osymSearchInput?.addEventListener('input', (e) => {
+        state.resources.searchQuery = e.target.value.trim().toLowerCase();
+        renderOsymResources();
+    });
+
+    // 4. Video Oynatıcı Modalı Kapatma & İzlendi Butonu
+    document.getElementById('btn-close-video-modal')?.addEventListener('click', closeVideoPlayerModal);
+    document.getElementById('btn-modal-toggle-watched')?.addEventListener('click', handleModalToggleWatched);
+
+    // 5. Yeni Kanal / Video Ekleme Modalı
+    document.getElementById('btn-open-add-channel')?.addEventListener('click', () => openAddChannelModal('channel'));
+    document.getElementById('btn-open-add-video')?.addEventListener('click', () => openAddChannelModal('video'));
+    document.getElementById('btn-close-add-channel')?.addEventListener('click', closeAddChannelModal);
+    document.getElementById('btn-cancel-add-channel')?.addEventListener('click', closeAddChannelModal);
+    document.getElementById('add-channel-form')?.addEventListener('submit', handleAddChannelSubmit);
+
+    // Mod Seçici Sekmeler (Tekil Video vs Kanal)
+    document.querySelectorAll('#add-yt-type-tabs [data-type-tab]').forEach(tabBtn => {
+        tabBtn.addEventListener('click', (e) => {
+            const targetMode = e.currentTarget.getAttribute('data-type-tab');
+            setAddYtMode(targetMode);
+        });
+    });
+
+    // 6. İzleme Durumu Filtre Butonları (Tümü / İzlenmeyenler / İzlendi)
+    document.querySelectorAll('#yt-watch-status-pills [data-yt-watch]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('#yt-watch-status-pills [data-yt-watch]').forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.resources.ytWatchStatus = e.currentTarget.getAttribute('data-yt-watch');
+            renderYoutubeVideos();
+        });
+    });
+
+    // 7. Yeni Web Sitesi / Kaynak Ekleme Modalı
+    document.getElementById('btn-open-add-website')?.addEventListener('click', openAddWebsiteModal);
+    document.getElementById('btn-close-add-website')?.addEventListener('click', closeAddWebsiteModal);
+    document.getElementById('btn-cancel-add-website')?.addEventListener('click', closeAddWebsiteModal);
+    document.getElementById('add-website-form')?.addEventListener('submit', handleAddWebsiteSubmit);
+
+    // 8. Web Viewer (Site Görüntüleyici) Modalı
+    document.getElementById('btn-close-web-viewer')?.addEventListener('click', closeWebViewerModal);
+    document.getElementById('btn-modal-toggle-visited')?.addEventListener('click', handleModalToggleVisited);
+
+    // 9. Web Kaynakları İncelendi Durumu Filtre Butonları
+    document.querySelectorAll('#res-visit-status-pills [data-res-visit]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('#res-visit-status-pills [data-res-visit]').forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.resources.resVisitStatus = e.currentTarget.getAttribute('data-res-visit');
+            renderOsymResources();
+        });
+    });
+
+    document.addEventListener('view-resources-loaded', renderResourcesList);
+    renderResourcesList();
+}
+
+function switchResourcesTab() {
+    const ytSec = document.getElementById('resources-youtube-section');
+    const osymSec = document.getElementById('resources-osym-section');
+    if (!ytSec || !osymSec) return;
+
+    if (state.resources.activeTab === 'youtube') {
+        ytSec.style.display = 'block';
+        osymSec.style.display = 'none';
+        renderYoutubeSection();
+    } else {
+        ytSec.style.display = 'none';
+        osymSec.style.display = 'block';
+        renderOsymResources();
+    }
+}
+
+function renderResourcesList() {
+    switchResourcesTab();
+}
+
+function renderYoutubeSection() {
+    renderYoutubeChannelPills();
+    renderActiveChannelHero();
+    renderYoutubeVideos();
+}
+
+function renderYoutubeChannelPills() {
+    const pillsContainer = document.getElementById('yt-channel-pills');
+    if (!pillsContainer) return;
+
+    const channels = db.getYoutubeChannels();
+
+    let pillsHtml = `
+        <button class="pill-btn ${state.resources.selectedChannelId === 'all' ? 'active' : ''}" data-ch-id="all">
+            <i class="fa-solid fa-list-check"></i> Tüm Kanallar & Listeler
+        </button>
+    `;
+
+    channels.forEach(ch => {
+        const isSelected = ch.id === state.resources.selectedChannelId;
+        const icon = ch.isPlaylist ? '<i class="fa-solid fa-list-ul text-rose"></i>' :
+                     ch.id === 'channel-egitimserisi' ? '🎓' :
+                     ch.id === 'channel-sorularlayuksel' ? '⭐' :
+                     ch.id === 'channel-rustuhoca' ? '📖' :
+                     ch.id === 'channel-benimhocam-ilyas' ? '📐' :
+                     ch.id === 'channel-modadil' ? '🇬🇧' :
+                     ch.id === 'channel-tcmb' ? '🏛️' : '📺';
+
+        pillsHtml += `
+            <button class="pill-btn ${isSelected ? 'active' : ''}" data-ch-id="${ch.id}">
+                ${icon} ${escapeHtml(ch.name)}
+            </button>
+        `;
+    });
+
+    pillsContainer.innerHTML = pillsHtml;
+
+    pillsContainer.querySelectorAll('[data-ch-id]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const chId = e.currentTarget.getAttribute('data-ch-id');
+            state.resources.selectedChannelId = chId;
+            renderYoutubeSection();
+        });
+    });
+}
+
+function renderActiveChannelHero() {
+    const heroCard = document.getElementById('yt-active-channel-card');
+    if (!heroCard) return;
+
+    if (state.resources.selectedChannelId === 'all') {
+        heroCard.innerHTML = `
+            <div class="yt-channel-avatar" style="display: flex; align-items: center; justify-content: center; background: rgba(244, 63, 94, 0.2); font-size: 2rem; color: #f43f5e;">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="yt-channel-meta">
+                <h3>Tüm Önerilen YouTube Sınav Kanalları & Oynatma Listeleri</h3>
+                <p class="yt-channel-desc">Ziraat Bankası Uzman Yardımcılığı için özel derlenmiş YouTube kanalları (@egitimserisi5115, @Sorularlayuksel ve 4 özel oynatma listesi) ile tüm soru çözümleri.</p>
+            </div>
+            <div>
+                <button class="btn btn-sm btn-outline-light" onclick="document.getElementById('btn-open-add-channel').click()">
+                    <i class="fa-solid fa-plus"></i> Yeni Kanal Ekle
+                </button>
+            </div>
+        `;
+        return;
+    }
+
+    const channel = db.getYoutubeChannelById(state.resources.selectedChannelId);
+    if (!channel) return;
+
+    let playlistJumpHtml = '';
+    if (channel.playlists && channel.playlists.length > 0) {
+        playlistJumpHtml = `
+            <div style="margin-top: 0.75rem; width: 100%;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: #cbd5e1; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.35rem;">
+                    <i class="fa-solid fa-layer-group text-rose"></i> ÖNE ÇIKAN OYNATMA LİSTELERİ (${channel.playlists.length}):
+                </div>
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                    ${channel.playlists.map(p => {
+                        const targetId = p.id === 'PLgUANwY_CJ6Vz5u2HSl_Lty_JMd5EDeYD' ? 'playlist-sy-genel-yetenek-2' :
+                                         p.id === 'PLgUANwY_CJ6VinSIYIL9QF9f0VwkOxLo5' ? 'playlist-sy-genel-kultur' :
+                                         p.id === 'PLgUANwY_CJ6Xxw76TAz7EJOkhuVbpOGnP' ? 'playlist-sy-genel-yetenek-1' :
+                                         p.id === 'PLgUANwY_CJ6WJljpGMOI1AZBKgmK2umB6' ? 'playlist-sy-ekonomi' : p.id;
+                        return `
+                            <button class="btn btn-xs btn-outline-light yt-pl-jump-btn" data-jump-to="${targetId}" style="font-size: 0.75rem; border-radius: 9999px;">
+                                <i class="fa-solid fa-list-ul text-rose"></i> ${escapeHtml(p.name)} <span style="opacity: 0.7;">(${p.videoCount})</span>
+                            </button>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+    } else if (channel.isPlaylist) {
+        playlistJumpHtml = `
+            <div style="margin-top: 0.6rem; width: 100%;">
+                <button class="btn btn-xs btn-secondary yt-pl-jump-btn" data-jump-to="channel-sorularlayuksel" style="font-size: 0.75rem; border-radius: 9999px;">
+                    <i class="fa-solid fa-arrow-left"></i> Sorularla Yüksel (Tüm Videolar)
+                </button>
+            </div>
+        `;
+    }
+
+    heroCard.innerHTML = `
+        <img src="${channel.avatar || 'https://cdn-icons-png.flaticon.com/512/1384/1384060.png'}" alt="${escapeHtml(channel.name)}" class="yt-channel-avatar" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1384/1384060.png'">
+        <div class="yt-channel-meta" style="flex: 1;">
+            <h3>
+                <span>${escapeHtml(channel.name)}</span>
+                <span class="badge ${channel.isPlaylist ? 'badge-indigo' : 'badge-rose'}">${escapeHtml(channel.badge || 'Önerilen Kanal')}</span>
+            </h3>
+            <div class="yt-channel-handle"><i class="fa-brands fa-youtube text-rose"></i> ${escapeHtml(channel.handle || '')} • ${channel.videos?.length || 0} Video</div>
+            <p class="yt-channel-desc">${escapeHtml(channel.description || '')}</p>
+            ${playlistJumpHtml}
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: flex-start;">
+            <a href="${channel.url}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i class="fa-brands fa-youtube"></i> ${channel.isPlaylist ? 'Listeyi Aç' : 'Kanala Git'} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.72rem;"></i>
+            </a>
+        </div>
+    `;
+
+    heroCard.querySelectorAll('.yt-pl-jump-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const target = e.currentTarget.getAttribute('data-jump-to');
+            if (target) {
+                state.resources.selectedChannelId = target;
+                renderYoutubeSection();
+            }
+        });
+    });
+}
+
+function renderYoutubeVideos() {
+    const grid = document.getElementById('yt-videos-grid');
+    const badge = document.getElementById('resources-count-badge');
+    if (!grid) return;
+
+    // 1. İzleme İstatistiklerini Güncelle (Tüm / İzlenmeyen / İzlendi & İlerleme Çubuğu)
+    const stats = db.getVideoWatchStats(state.resources.selectedChannelId, state.resources.ytCategory);
+    const countAllEl = document.getElementById('yt-count-all');
+    const countUnwatchedEl = document.getElementById('yt-count-unwatched');
+    const countWatchedEl = document.getElementById('yt-count-watched');
+    const progressTextEl = document.getElementById('yt-watch-progress-text');
+    const progressBarEl = document.getElementById('yt-watch-progress-bar');
+
+    if (countAllEl) countAllEl.textContent = stats.total;
+    if (countUnwatchedEl) countUnwatchedEl.textContent = stats.unwatched;
+    if (countWatchedEl) countWatchedEl.textContent = stats.watched;
+    if (progressTextEl) progressTextEl.textContent = `${stats.watched} / ${stats.total} İzlenen (%${stats.percent})`;
+    if (progressBarEl) progressBarEl.style.width = `${stats.percent}%`;
+
+    // 2. Videoları Çek
+    let videos = db.getAllChannelVideos(state.resources.selectedChannelId, state.resources.ytCategory);
+
+    // 3. İzleme Durumuna Göre Filtrele (Tümü / İzlenmeyenler / İzlendi)
+    const watchStatus = state.resources.ytWatchStatus || 'all';
+    if (watchStatus === 'watched') {
+        videos = videos.filter(v => db.isVideoWatched(v.id));
+    } else if (watchStatus === 'unwatched') {
+        videos = videos.filter(v => !db.isVideoWatched(v.id));
+    }
+
+    // 4. Arama Sorgusu Filtresi
+    const query = state.resources.ytSearchQuery;
+    if (query) {
+        videos = videos.filter(v => 
+            v.title.toLowerCase().includes(query) ||
+            (v.description && v.description.toLowerCase().includes(query)) ||
+            (v.badge && v.badge.toLowerCase().includes(query)) ||
+            (v.playlistName && v.playlistName.toLowerCase().includes(query)) ||
+            (v.channelName && v.channelName.toLowerCase().includes(query))
+        );
+    }
+
+    if (badge) {
+        badge.textContent = `${videos.length} Video Gösteriliyor`;
+    }
+
+    if (videos.length === 0) {
+        let emptyMsg = "Aradığınız kriterde video bulunamadı.";
+        if (watchStatus === 'watched') {
+            emptyMsg = "Henüz izlendi olarak işaretlediğiniz video bulunmuyor. Bir videoyu izlediğinizde üzerindeki onay butonuna tıklayabilirsiniz.";
+        } else if (watchStatus === 'unwatched') {
+            emptyMsg = "Tebrikler! Bu kategorideki tüm videoları izlediniz 🎉";
+        }
+        grid.innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1; padding: 2.5rem 1rem;">
+                <i class="fa-brands fa-youtube text-dim" style="font-size: 2.5rem; margin-bottom: 0.75rem;"></i>
+                <h4>Video Bulunamadı</h4>
+                <p class="text-muted">${emptyMsg}</p>
+            </div>
+        `;
+        return;
+    }
+
+    grid.innerHTML = '';
+    videos.forEach(v => {
+        const isWatched = db.isVideoWatched(v.id);
+        const card = document.createElement('div');
+        card.className = `yt-video-card ${isWatched ? 'is-watched' : ''}`;
+
+        // Check if ID is a YouTube ID (11 chars)
+        const isYtId = v.id && v.id.length === 11 && !v.id.includes('-');
+        const thumbUrl = isYtId 
+            ? `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`
+            : `https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60`;
+
+        const watchUrl = v.url || (isYtId ? `https://www.youtube.com/watch?v=${v.id}` : '#');
+
+        card.innerHTML = `
+            <div class="yt-thumbnail-wrap" data-play-vid="${v.id}">
+                <img src="${thumbUrl}" alt="${escapeHtml(v.title)}" class="yt-thumbnail-img" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=60'">
+                <div class="yt-play-overlay">
+                    <div class="yt-play-btn-circle"><i class="fa-solid fa-play" style="margin-left: 3px;"></i></div>
+                </div>
+                ${isWatched ? `<div class="yt-watched-badge-top"><i class="fa-solid fa-circle-check"></i> İzlendi</div>` : ''}
+                ${v.duration ? `<span class="yt-video-duration">${escapeHtml(v.duration)}</span>` : ''}
+            </div>
+            <div class="yt-card-body">
+                <div style="display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.4rem; flex-wrap: wrap;">
+                    <span class="badge ${isWatched ? 'badge-success' : 'badge-rose'}" style="font-size: 0.72rem;">${escapeHtml(v.badge || 'Video Ders')}</span>
+                    ${v.playlistName ? `<span class="badge badge-indigo" style="font-size: 0.72rem;"><i class="fa-solid fa-list-ul"></i> ${escapeHtml(v.playlistName)}</span>` : ''}
+                    ${v.views ? `<span style="font-size: 0.75rem; color: var(--text-dim);"><i class="fa-regular fa-eye"></i> ${v.views}</span>` : ''}
+                </div>
+                <h4 class="yt-video-title" data-play-vid="${v.id}" title="${escapeHtml(v.title)}">${escapeHtml(v.title)}</h4>
+                <p class="yt-video-desc">${escapeHtml(v.description || '')}</p>
+            </div>
+            <div class="yt-card-footer">
+                <span style="font-size: 0.76rem; font-weight: 600; color: #cbd5e1; display: flex; align-items: center; gap: 0.4rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px;">
+                    <i class="fa-brands fa-youtube text-rose"></i> ${escapeHtml(v.channelName || 'Sorularla Yüksel')}
+                </span>
+                <div style="display: flex; gap: 0.35rem; align-items: center;">
+                    <button class="btn btn-sm ${isWatched ? 'btn-success' : 'btn-outline-light'} yt-toggle-watched-btn" data-watch-vid="${v.id}" title="${isWatched ? 'İzlenmedi olarak işaretlemek için tıkla' : 'İzlendi olarak işaretle'}" style="padding: 0.3rem 0.55rem; font-size: 0.78rem;">
+                        <i class="fa-solid ${isWatched ? 'fa-circle-check' : 'fa-check'}"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary" data-play-vid="${v.id}" style="padding: 0.3rem 0.65rem; font-size: 0.78rem;">
+                        <i class="fa-solid fa-play"></i> İzle
+                    </button>
+                    <a href="${watchUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" style="padding: 0.3rem 0.55rem; font-size: 0.78rem;" title="YouTube'da Aç">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    ${v.isCustom ? `
+                        <button class="btn btn-sm btn-outline-danger yt-del-custom-btn" data-del-vid="${v.id}" style="padding: 0.3rem 0.5rem; font-size: 0.78rem;" title="Listemden Sil">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+
+        card.querySelectorAll('[data-play-vid]').forEach(el => {
+            el.addEventListener('click', () => {
+                openVideoPlayerModal(v.id, v.title, v.channelName, watchUrl);
+            });
+        });
+
+        // Kart üzerinden hızlıca izlendi / izlenmedi toggle
+        card.querySelector('.yt-toggle-watched-btn')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const vidId = e.currentTarget.getAttribute('data-watch-vid');
+            const res = db.toggleVideoWatched(vidId);
+            if (res) {
+                showToast("Video 'İzlendi' olarak kaydedildi! ✅", "success", 2000);
+            } else {
+                showToast("Video 'İzlenmedi' durumuna alındı.", "info", 2000);
+            }
+            renderYoutubeVideos();
+        });
+
+        // Kullanıcının kendi eklediği videoyu silmesi
+        card.querySelector('.yt-del-custom-btn')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const vidId = e.currentTarget.getAttribute('data-del-vid');
+            if (confirm("Bu videoyu özel listenizden silmek istediğinize emin misiniz?")) {
+                db.deleteCustomYoutubeVideo(vidId);
+                showToast("Video listenizden silindi.", "info", 2000);
+                renderYoutubeSection();
+            }
+        });
+
+        grid.appendChild(card);
+    });
+}
+
+function renderOsymResources() {
+    const container = document.getElementById('resources-grid-container');
+    const badge = document.getElementById('resources-count-badge');
+    if (!container) return;
+
+    // 1. İstatistikleri Güncelle (Tüm / İncelenmeyen / İncelendi & İlerleme Çubuğu)
+    const stats = db.getResourceVisitStats(state.resources.category, state.resources.type);
+    const countAllEl = document.getElementById('res-count-all');
+    const countUnvisitedEl = document.getElementById('res-count-unvisited');
+    const countVisitedEl = document.getElementById('res-count-visited');
+    const progressTextEl = document.getElementById('res-visit-progress-text');
+    const progressBarEl = document.getElementById('res-visit-progress-bar');
+
+    if (countAllEl) countAllEl.textContent = stats.total;
+    if (countUnvisitedEl) countUnvisitedEl.textContent = stats.unvisited;
+    if (countVisitedEl) countVisitedEl.textContent = stats.visited;
+    if (progressTextEl) progressTextEl.textContent = `${stats.visited} / ${stats.total} İncelenen (%${stats.percent})`;
+    if (progressBarEl) progressBarEl.style.width = `${stats.percent}%`;
+
+    // 2. Kaynakları Çek
+    let items = db.getResources(state.resources.category, state.resources.type);
+
+    // 3. İncelendi Durumuna Göre Filtrele
+    const visitStatus = state.resources.resVisitStatus || 'all';
+    if (visitStatus === 'visited') {
+        items = items.filter(r => db.isResourceVisited(r.id));
+    } else if (visitStatus === 'unvisited') {
+        items = items.filter(r => !db.isResourceVisited(r.id));
+    }
+
+    // 4. Arama Filtresi
+    const query = state.resources.searchQuery;
+    if (query) {
+        items = items.filter(r =>
+            r.title.toLowerCase().includes(query) ||
+            r.provider.toLowerCase().includes(query) ||
+            r.description.toLowerCase().includes(query) ||
+            (r.subCategory && r.subCategory.toLowerCase().includes(query)) ||
+            (r.badge && r.badge.toLowerCase().includes(query))
+        );
+    }
+
+    if (badge) {
+        badge.textContent = `${items.length} Kaynak Gösteriliyor`;
+    }
+
+    if (items.length === 0) {
+        let emptyMsg = "Aradığınız kriterde kaynak bulunamadı.";
+        if (visitStatus === 'visited') {
+            emptyMsg = "Henüz incelendi olarak işaretlediğiniz kaynak bulunmuyor. Bir siteyi incelediğinizde onay butonuna basabilirsiniz.";
+        } else if (visitStatus === 'unvisited') {
+            emptyMsg = "Tebrikler! Bu kategorideki tüm kaynakları incelediniz 🎉";
+        }
+        container.innerHTML = `
+            <div class="empty-state" style="grid-column: 1 / -1; padding: 2.5rem 1rem;">
+                <i class="fa-solid fa-globe text-dim" style="font-size: 2.5rem; margin-bottom: 0.75rem;"></i>
+                <h4>Kaynak Bulunamadı</h4>
+                <p class="text-muted">${emptyMsg}</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = '';
+    items.forEach(r => {
+        const isVisited = db.isResourceVisited(r.id);
+        const card = document.createElement('div');
+        card.className = `resource-card ${isVisited ? 'is-visited' : ''}`;
+
+        const iconClass = r.type === 'video' ? 'fa-brands fa-youtube' :
+                          r.type === 'exam_archive' ? 'fa-solid fa-file-pdf' :
+                          r.type === 'interactive' ? 'fa-solid fa-laptop-code' : 'fa-solid fa-building-columns';
+
+        card.innerHTML = `
+            <div>
+                ${isVisited ? `<div class="res-visited-badge-top"><i class="fa-solid fa-circle-check"></i> İncelendi</div>` : ''}
+                <div class="resource-card-top">
+                    <div class="resource-icon-box res-icon-${r.type}">
+                        <i class="${iconClass}"></i>
+                    </div>
+                    <div class="resource-meta">
+                        <span class="resource-provider">${escapeHtml(r.provider || 'Kaynak')}</span>
+                        <h4 class="resource-title">${escapeHtml(r.title)}</h4>
+                    </div>
+                </div>
+                <p class="resource-desc">${escapeHtml(r.description || '')}</p>
+            </div>
+            <div class="resource-footer">
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center;">
+                    <span class="resource-badge-tag ${isVisited ? 'badge-success' : ''}">${escapeHtml(r.badge || 'Kaynak')}</span>
+                    ${r.durationOrCount ? `<span class="resource-badge-tag" style="color: #94a3b8;"><i class="fa-regular fa-clock"></i> ${escapeHtml(r.durationOrCount)}</span>` : ''}
+                </div>
+                <div style="display: flex; gap: 0.35rem; align-items: center;">
+                    <button class="btn btn-sm ${isVisited ? 'btn-success' : 'btn-outline-light'} res-toggle-visited-btn" data-visit-id="${r.id}" title="${isVisited ? 'İncelenmedi olarak işaretle' : 'İncelendi olarak işaretle'}" style="padding: 0.35rem 0.55rem; font-size: 0.78rem;">
+                        <i class="fa-solid ${isVisited ? 'fa-circle-check' : 'fa-check'}"></i>
+                    </button>
+                    <button class="btn btn-sm btn-primary res-open-preview-btn" data-res-id="${r.id}" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">
+                        <i class="fa-solid fa-eye"></i> Görüntüle
+                    </button>
+                    <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary" style="padding: 0.35rem 0.55rem; font-size: 0.8rem;" title="Yeni Sekmede Aç">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                    ${r.isCustom ? `
+                        <button class="btn btn-sm btn-outline-danger res-del-custom-btn" data-res-id="${r.id}" style="padding: 0.35rem 0.5rem; font-size: 0.78rem;" title="Listemden Sil">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+
+        // İncelendi / İncelenmedi butonu
+        card.querySelector('.res-toggle-visited-btn')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const resId = e.currentTarget.getAttribute('data-visit-id');
+            const res = db.toggleResourceVisited(resId);
+            if (res) {
+                showToast("Kaynak 'İncelendi' olarak kaydedildi! ✅", "success", 2000);
+            } else {
+                showToast("Kaynak 'İncelenmedi' durumuna alındı.", "info", 2000);
+            }
+            renderOsymResources();
+        });
+
+        // Uygulama içi web önizleme butonu
+        card.querySelector('.res-open-preview-btn')?.addEventListener('click', () => {
+            openWebViewerModal(r.id, r.title, r.url, r.provider);
+        });
+
+        // Özel kaynak silme butonu
+        card.querySelector('.res-del-custom-btn')?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const resId = e.currentTarget.getAttribute('data-res-id');
+            if (confirm("Bu web kaynağını özel listenizden silmek istediğinize emin misiniz?")) {
+                db.deleteCustomResource(resId);
+                showToast("Kaynak listenizden silindi.", "info", 2000);
+                renderOsymResources();
+            }
+        });
+
+        container.appendChild(card);
+    });
+}
+
+// ==============================================================================
+// 2.7.1. UYGULAMA İÇİ WEB VIEWER (SİTE GÖRÜNTÜLEYİCİ) KONTROLLERİ
+// ==============================================================================
+let currentViewingResource = { id: null, title: '', url: '', provider: '' };
+
+function openWebViewerModal(resourceId, title, url, provider) {
+    const modal = document.getElementById('web-viewer-modal');
+    const iframe = document.getElementById('web-viewer-iframe');
+    const titleEl = document.getElementById('web-viewer-title');
+    const urlBarEl = document.getElementById('web-viewer-url-bar');
+    const providerEl = document.getElementById('web-viewer-provider');
+    const extLinkEl = document.getElementById('web-viewer-external-link');
+
+    if (!modal || !iframe) return;
+
+    currentViewingResource = { id: resourceId, title, url, provider };
+
+    if (titleEl) titleEl.textContent = title;
+    if (urlBarEl) urlBarEl.textContent = url;
+    if (providerEl) providerEl.innerHTML = `<i class="fa-solid fa-globe text-indigo"></i> <strong>${escapeHtml(provider || 'Web Kaynağı')}</strong>`;
+    if (extLinkEl) extLinkEl.href = url;
+
+    const isVisited = db.isResourceVisited(resourceId);
+    updateModalVisitedUI(isVisited);
+
+    iframe.src = url;
+    modal.classList.add('active');
+}
+
+function updateModalVisitedUI(isVisited) {
+    const badgesWrap = document.getElementById('web-viewer-badges');
+    const toggleVisitedBtn = document.getElementById('btn-modal-toggle-visited');
+
+    if (badgesWrap) {
+        badgesWrap.innerHTML = isVisited 
+            ? `<span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> İncelendi Olarak Kayıtlı</span>`
+            : `<span class="badge badge-indigo"><i class="fa-solid fa-globe"></i> Web Kaynağı Açık</span>`;
+    }
+
+    if (toggleVisitedBtn) {
+        if (isVisited) {
+            toggleVisitedBtn.className = 'btn btn-success btn-sm';
+            toggleVisitedBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>İncelendi</span>`;
+            toggleVisitedBtn.title = "İncelenmedi olarak işaretlemek için tıkla";
+        } else {
+            toggleVisitedBtn.className = 'btn btn-outline-success btn-sm';
+            toggleVisitedBtn.innerHTML = `<i class="fa-regular fa-circle-check"></i> <span>İncelendi Olarak İşaretle</span>`;
+            toggleVisitedBtn.title = "İncelendi olarak işaretle";
+        }
+    }
+}
+
+function handleModalToggleVisited() {
+    if (!currentViewingResource.id) return;
+    const nextState = db.toggleResourceVisited(currentViewingResource.id);
+    updateModalVisitedUI(nextState);
+    if (nextState) {
+        showToast("Kaynak 'İncelendi' olarak kaydedildi! ✅", "success", 2500);
+    } else {
+        showToast("Kaynak 'İncelenmedi' durumuna alındı.", "info", 2500);
+    }
+    renderOsymResources();
+}
+
+function closeWebViewerModal() {
+    const modal = document.getElementById('web-viewer-modal');
+    const iframe = document.getElementById('web-viewer-iframe');
+    if (iframe) iframe.src = 'about:blank';
+    if (modal) modal.classList.remove('active');
+}
+
+// ==============================================================================
+// 2.7.2. ÖZEL WEB SİTESİ EKLEME MODAL KONTROLLERİ
+// ==============================================================================
+function openAddWebsiteModal() {
+    const modal = document.getElementById('add-website-modal');
+    if (modal) {
+        document.getElementById('add-website-form')?.reset();
+        modal.classList.add('active');
+        setTimeout(() => document.getElementById('new-res-url')?.focus(), 150);
+    }
+}
+
+function closeAddWebsiteModal() {
+    const modal = document.getElementById('add-website-modal');
+    if (modal) modal.classList.remove('active');
+}
+
+function handleAddWebsiteSubmit(e) {
+    e.preventDefault();
+    const url = document.getElementById('new-res-url').value.trim();
+    const title = document.getElementById('new-res-title').value.trim();
+    const provider = document.getElementById('new-res-provider').value.trim();
+    const category = document.getElementById('new-res-category').value;
+    const type = document.getElementById('new-res-type').value;
+    const desc = document.getElementById('new-res-desc').value.trim();
+
+    if (!url || !title) {
+        showToast("Lütfen site linki ve başlığını girin.", "warning");
+        return;
+    }
+
+    try {
+        const added = db.addCustomResource({
+            title,
+            url,
+            provider: provider || 'Özel Kaynak',
+            category,
+            type,
+            description: desc,
+            badge: 'Özel Site ⭐'
+        });
+
+        showToast(`"${title}" kaynağı listenize eklendi! 🌐`, "success", 3000);
+        closeAddWebsiteModal();
+        state.resources.activeTab = 'osym';
+        renderResourcesList();
+    } catch (err) {
+        showToast(err.message || "Ekleme sırasında hata oluştu.", "error", 4000);
+    }
+}
+
+// In-App Video Player Modal Controls & Watched State
+let currentPlayingVideo = { id: null, title: '', channelName: '', url: '' };
+
+function openVideoPlayerModal(videoId, title, channelName, url) {
+    const modal = document.getElementById('video-player-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    const titleEl = document.getElementById('video-modal-title');
+    const channelEl = document.getElementById('video-modal-channel');
+    const linkEl = document.getElementById('video-modal-yt-link');
+
+    if (!modal || !iframe) return;
+
+    currentPlayingVideo = { id: videoId, title, channelName, url };
+
+    if (titleEl) titleEl.textContent = title;
+    if (channelEl) channelEl.innerHTML = `<i class="fa-brands fa-youtube text-rose"></i> <strong>${escapeHtml(channelName || 'YouTube')}</strong>`;
+    if (linkEl) linkEl.href = url || `https://www.youtube.com/watch?v=${videoId}`;
+    
+    // İzleme durumunu modala yansıt
+    const isWatched = db.isVideoWatched(videoId);
+    updateModalWatchedUI(isWatched);
+
+    // Embed URL
+    const isYtId = videoId && videoId.length === 11 && !videoId.includes('-');
+    if (isYtId) {
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+    } else if (url && url.includes('youtube.com/watch?v=')) {
+        const extractedId = url.split('watch?v=')[1]?.split('&')[0];
+        iframe.src = `https://www.youtube-nocookie.com/embed/${extractedId}?autoplay=1&rel=0`;
+    } else {
+        window.open(url, '_blank');
+        return;
+    }
+
+    modal.classList.add('active');
+}
+
+function updateModalWatchedUI(isWatched) {
+    const badgesWrap = document.getElementById('video-modal-badges');
+    const toggleWatchedBtn = document.getElementById('btn-modal-toggle-watched');
+
+    if (badgesWrap) {
+        badgesWrap.innerHTML = isWatched 
+            ? `<span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> İzlendi Olarak Kayıtlı</span>`
+            : `<span class="badge badge-rose"><i class="fa-solid fa-play"></i> Video Oynatılıyor</span>`;
+    }
+
+    if (toggleWatchedBtn) {
+        if (isWatched) {
+            toggleWatchedBtn.className = 'btn btn-success btn-sm';
+            toggleWatchedBtn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>İzlendi</span>`;
+            toggleWatchedBtn.title = "İzlenmedi olarak işaretlemek için tıkla";
+        } else {
+            toggleWatchedBtn.className = 'btn btn-outline-success btn-sm';
+            toggleWatchedBtn.innerHTML = `<i class="fa-regular fa-circle-check"></i> <span>İzlendi Olarak İşaretle</span>`;
+            toggleWatchedBtn.title = "İzlendi olarak işaretle";
+        }
+    }
+}
+
+function handleModalToggleWatched() {
+    if (!currentPlayingVideo.id) return;
+    const nextState = db.toggleVideoWatched(currentPlayingVideo.id);
+    updateModalWatchedUI(nextState);
+    if (nextState) {
+        showToast("Video 'İzlendi' olarak kaydedildi! ✅", "success", 2500);
+    } else {
+        showToast("Video 'İzlenmedi' durumuna alındı.", "info", 2500);
+    }
+    renderYoutubeVideos();
+}
+
+function closeVideoPlayerModal() {
+    const modal = document.getElementById('video-player-modal');
+    const iframe = document.getElementById('video-modal-iframe');
+    if (iframe) iframe.src = 'about:blank'; // Stop video playback
+    if (modal) modal.classList.remove('active');
+}
+
+// Custom Video & Channel Modal Controls
+function openAddChannelModal(mode = 'video') {
+    const modal = document.getElementById('add-channel-modal');
+    if (modal) {
+        document.getElementById('add-channel-form')?.reset();
+        setAddYtMode(mode);
+        modal.classList.add('active');
+        setTimeout(() => document.getElementById('new-channel-url')?.focus(), 150);
+    }
+}
+
+function setAddYtMode(mode) {
+    const modeInput = document.getElementById('add-yt-mode');
+    const tabs = document.querySelectorAll('#add-yt-type-tabs [data-type-tab]');
+    const lblUrl = document.getElementById('lbl-channel-url');
+    const inputUrl = document.getElementById('new-channel-url');
+    const hintUrl = document.getElementById('hint-channel-url');
+    const lblName = document.getElementById('lbl-channel-name');
+    const inputName = document.getElementById('new-channel-name');
+    const rowDuration = document.getElementById('row-video-duration');
+    const btnSubmitText = document.getElementById('btn-submit-yt-text');
+
+    if (modeInput) modeInput.value = mode;
+
+    tabs.forEach(t => {
+        if (t.getAttribute('data-type-tab') === mode) {
+            t.classList.add('active');
+        } else {
+            t.classList.remove('active');
+        }
+    });
+
+    if (mode === 'video') {
+        if (lblUrl) lblUrl.innerHTML = `YouTube Video Linki <span class="required" style="color: var(--danger);">*</span>`;
+        if (inputUrl) inputUrl.placeholder = "https://www.youtube.com/watch?v=... veya https://youtu.be/...";
+        if (hintUrl) hintUrl.textContent = "YouTube video bağlantısını yapıştırın (watch?v=..., youtu.be/... veya shorts/...).";
+        if (lblName) lblName.innerHTML = `Video Başlığı <span class="required" style="color: var(--danger);">*</span>`;
+        if (inputName) inputName.placeholder = "Örn: ALES Sayısal Mantık Çıkmış Soru Çözümü";
+        if (rowDuration) rowDuration.style.display = 'flex';
+        if (btnSubmitText) btnSubmitText.textContent = "Videoyu Listeme Ekle";
+    } else {
+        if (lblUrl) lblUrl.innerHTML = `YouTube Kanalı veya Liste Linki <span class="required" style="color: var(--danger);">*</span>`;
+        if (inputUrl) inputUrl.placeholder = "https://youtube.com/@egitimserisi5115 veya https://youtube.com/playlist?list=...";
+        if (hintUrl) hintUrl.textContent = "Kanal kullanıcı adı (@kanal) veya oynatma listesi URL'sini girin.";
+        if (lblName) lblName.innerHTML = `Kanal / Liste Adı <span class="required" style="color: var(--danger);">*</span>`;
+        if (inputName) inputName.placeholder = "Örn: Sorularla Yüksel - Bankacılık";
+        if (rowDuration) rowDuration.style.display = 'none';
+        if (btnSubmitText) btnSubmitText.textContent = "Kanalı Listeme Ekle";
+    }
+}
+
+function closeAddChannelModal() {
+    const modal = document.getElementById('add-channel-modal');
+    if (modal) modal.classList.remove('active');
+}
+
+function handleAddChannelSubmit(e) {
+    e.preventDefault();
+    const mode = document.getElementById('add-yt-mode')?.value || 'video';
+    const url = document.getElementById('new-channel-url').value.trim();
+    const name = document.getElementById('new-channel-name').value.trim();
+    const category = document.getElementById('new-channel-category').value;
+    const desc = document.getElementById('new-channel-desc').value.trim();
+    const duration = document.getElementById('new-channel-duration')?.value.trim();
+
+    if (!url || !name) {
+        showToast("Lütfen link ve başlık alanlarını doldurun.", "warning");
+        return;
+    }
+
+    try {
+        if (mode === 'video') {
+            const added = db.addCustomYoutubeVideo({
+                title: name,
+                url,
+                category,
+                description: desc,
+                duration: duration || 'Video'
+            });
+            showToast(`"${name}" videonuz başarıyla eklendi! 🎬`, "success", 3000);
+            closeAddChannelModal();
+            state.resources.selectedChannelId = 'channel-custom-my-videos';
+            state.resources.activeTab = 'youtube';
+            renderResourcesList();
+        } else {
+            const added = db.addCustomYoutubeChannel({
+                name,
+                url,
+                category,
+                description: desc,
+                badge: 'Öğrenci Ekledi ⭐'
+            });
+            showToast(`"${name}" kanalı başarıyla eklendi! 📺`, "success", 3000);
+            closeAddChannelModal();
+            state.resources.selectedChannelId = added.id;
+            state.resources.activeTab = 'youtube';
+            renderResourcesList();
+        }
+    } catch (err) {
+        showToast(err.message || "Ekleme sırasında hata oluştu.", "error", 4000);
+    }
+}
+
+// ==============================================================================
+// 2.8. KİŞİSEL NOTLARIM & BİLGİ PANOSU MODÜLÜ
+// ==============================================================================
+let currentDetailNoteId = null;
+
+function initNotesMode() {
+    const searchInput = document.getElementById('notes-search-input');
+    const searchClearBtn = document.getElementById('notes-search-clear');
+    const priorityFilter = document.getElementById('notes-priority-filter');
+    const categoryBtns = document.querySelectorAll('#notes-category-pills [data-note-sec]');
+    const layoutBtns = document.querySelectorAll('.btn-layout-toggle');
+    const btnCreate = document.getElementById('btn-create-note');
+    const btnExport = document.getElementById('btn-export-notes');
+
+    // Kategori Seçimleri
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.notes.category = e.currentTarget.getAttribute('data-note-sec');
+            renderNotesList();
+        });
+    });
+
+    // Arama Çubuğu
+    searchInput?.addEventListener('input', (e) => {
+        const val = e.target.value.trim().toLowerCase();
+        state.notes.searchQuery = val;
+        if (searchClearBtn) {
+            searchClearBtn.style.display = val ? 'block' : 'none';
+        }
+        renderNotesList();
+    });
+
+    searchClearBtn?.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        state.notes.searchQuery = '';
+        searchClearBtn.style.display = 'none';
+        renderNotesList();
+    });
+
+    // Öncelik / Sabit Filtresi
+    priorityFilter?.addEventListener('change', (e) => {
+        state.notes.priority = e.target.value;
+        renderNotesList();
+    });
+
+    // Görünüm Değiştirici (Kartlar vs Tablo)
+    layoutBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            layoutBtns.forEach(b => b.classList.remove('active'));
+            e.currentTarget.classList.add('active');
+            state.notes.viewMode = e.currentTarget.getAttribute('data-layout');
+            renderNotesList();
+        });
+    });
+
+    // Yeni Not Ekleme Butonu
+    btnCreate?.addEventListener('click', () => {
+        openNoteEditorModal(null);
+    });
+
+    // Dışa Aktarma Butonu
+    btnExport?.addEventListener('click', () => {
+        exportAllNotes();
+    });
+
+    // Not Editör Modalı Etkinlikleri
+    document.getElementById('btn-close-note-editor')?.addEventListener('click', closeNoteEditorModal);
+    document.getElementById('btn-cancel-note-editor')?.addEventListener('click', closeNoteEditorModal);
+    document.getElementById('note-editor-form')?.addEventListener('submit', handleNoteFormSubmit);
+
+    // Markdown Hızlı Ekleme Araç Çubuğu
+    document.querySelectorAll('.btn-md-tool').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const tool = e.currentTarget.getAttribute('data-md');
+            insertMarkdownToTextarea(tool);
+        });
+    });
+
+    // Not Detay Modalı Etkinlikleri
+    document.getElementById('btn-close-note-detail')?.addEventListener('click', closeNoteDetailModal);
+    document.getElementById('btn-copy-note-detail')?.addEventListener('click', () => {
+        if (currentDetailNoteId) copyNoteContent(currentDetailNoteId);
+    });
+    document.getElementById('btn-edit-note-detail')?.addEventListener('click', () => {
+        if (currentDetailNoteId) {
+            const id = currentDetailNoteId;
+            closeNoteDetailModal();
+            openNoteEditorModal(id);
+        }
+    });
+
+    // Sayfa Yüklendiğinde render
+    document.addEventListener('view-notes-loaded', renderNotesList);
+    renderNotesList();
+}
+
+function renderNotesList() {
+    const cardsContainer = document.getElementById('notes-cards-container');
+    const tableContainer = document.getElementById('notes-table-container');
+    const tableBody = document.getElementById('notes-table-body');
+    if (!cardsContainer) return;
+
+    const allNotes = db.getUserNotes();
+
+    // İstatistik ve Sayaçları Güncelle
+    const totalCountEl = document.getElementById('notes-total-count');
+    const pinnedCountEl = document.getElementById('notes-pinned-count');
+    const p0CountEl = document.getElementById('notes-p0-count');
+
+    if (totalCountEl) totalCountEl.textContent = allNotes.length;
+    if (pinnedCountEl) pinnedCountEl.textContent = allNotes.filter(n => n.is_pinned).length;
+    if (p0CountEl) p0CountEl.textContent = allNotes.filter(n => n.priority === 'P0').length;
+
+    // Filtreleri Uygula
+    let filtered = [...allNotes];
+
+    if (state.notes.category && state.notes.category !== 'all') {
+        filtered = filtered.filter(n => n.section === state.notes.category);
+    }
+
+    if (state.notes.priority === 'pinned') {
+        filtered = filtered.filter(n => n.is_pinned);
+    } else if (state.notes.priority && state.notes.priority !== 'all') {
+        filtered = filtered.filter(n => n.priority === state.notes.priority);
+    }
+
+    const query = state.notes.searchQuery;
+    if (query) {
+        filtered = filtered.filter(n => 
+            (n.title && n.title.toLowerCase().includes(query)) ||
+            (n.content && n.content.toLowerCase().includes(query)) ||
+            (n.tags && n.tags.some(t => t.toLowerCase().includes(query)))
+        );
+    }
+
+    const sectionLabels = {
+        'bankacilik-genel-kultur': 'Bankacılık & GK',
+        'oruntu-analitik': 'Örüntü & Mantık',
+        'ingilizce': 'İngilizce',
+        'alan': 'Bilgisayar & YZ',
+        'genel': 'Sınav Taktikleri'
+    };
+
+    const sectionBadges = {
+        'bankacilik-genel-kultur': 'badge-amber',
+        'oruntu-analitik': 'badge-purple',
+        'ingilizce': 'badge-indigo',
+        'alan': 'badge-emerald',
+        'genel': 'badge-neutral'
+    };
+
+    // 1. KART GÖRÜNÜMÜ
+    if (state.notes.viewMode === 'cards') {
+        cardsContainer.style.display = 'grid';
+        if (tableContainer) tableContainer.style.display = 'none';
+
+        if (filtered.length === 0) {
+            cardsContainer.innerHTML = `
+                <div class="empty-state" style="grid-column: 1 / -1; padding: 3rem 1.5rem;">
+                    <i class="fa-solid fa-note-sticky text-dim" style="font-size: 2.75rem; margin-bottom: 0.85rem;"></i>
+                    <h4>Kriterlerinize uygun not bulunamadı</h4>
+                    <p class="text-muted" style="margin-bottom: 1.25rem;">Filtrelerinizi sıfırlayabilir veya hemen yeni bir çalışma notu ekleyebilirsiniz.</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('btn-create-note').click()">
+                        <i class="fa-solid fa-plus"></i> Yeni Not Oluştur
+                    </button>
+                </div>
+            `;
+            return;
+        }
+
+        cardsContainer.innerHTML = '';
+        filtered.forEach(note => {
+            const card = document.createElement('div');
+            card.className = `note-card note-theme-${note.color || 'indigo'} ${note.is_pinned ? 'is-pinned' : ''}`;
+            card.id = `note-card-${note.id}`;
+
+            const priorityHtml = note.priority === 'P0' 
+                ? '<span class="badge badge-p0"><i class="fa-solid fa-fire"></i> P0 Kesin Çıkar</span>'
+                : note.priority === 'P1'
+                ? '<span class="badge badge-p1"><i class="fa-solid fa-star"></i> P1 Önemli</span>'
+                : '<span class="badge badge-p2"><i class="fa-regular fa-bookmark"></i> P2 Not</span>';
+
+            const tagsHtml = (note.tags && note.tags.length > 0)
+                ? note.tags.map(t => `<span class="note-tag-chip">#${escapeHtml(t)}</span>`).join('')
+                : '';
+
+            const updatedStr = formatNoteDate(note.updated_at || note.created_at);
+
+            card.innerHTML = `
+                <div class="note-card-header">
+                    <div class="note-badges-wrap">
+                        <span class="badge ${sectionBadges[note.section] || 'badge-indigo'}">
+                            ${sectionLabels[note.section] || 'Genel'}
+                        </span>
+                        ${priorityHtml}
+                    </div>
+                    <button class="note-pin-btn ${note.is_pinned ? 'active' : ''}" data-pin-id="${note.id}" title="${note.is_pinned ? 'Sabitlemeyi Kaldır' : 'Başa Tuttur'}">
+                        <i class="${note.is_pinned ? 'fa-solid fa-thumbtack' : 'fa-solid fa-thumbtack text-dim'}"></i>
+                    </button>
+                </div>
+
+                <div class="note-card-body">
+                    <h3 class="note-card-title" data-view-note="${note.id}">${escapeHtml(note.title)}</h3>
+                    ${tagsHtml ? `<div class="note-tags-wrap">${tagsHtml}</div>` : ''}
+                    <div class="note-content-preview" data-view-note="${note.id}">
+                        ${formatLectureContent(note.content)}
+                    </div>
+                </div>
+
+                <div class="note-card-footer">
+                    <span class="note-date-text"><i class="fa-regular fa-clock"></i> ${updatedStr}</span>
+                    <div class="note-actions-wrap">
+                        <button class="btn-note-icon" data-copy-note="${note.id}" title="İçeriği Kopyala">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <button class="btn-note-icon" data-edit-note="${note.id}" title="Düzenle">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                        <button class="btn-note-icon btn-note-danger" data-delete-note="${note.id}" title="Sil">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            // Olay dinleyicileri
+            card.querySelectorAll('[data-view-note]').forEach(el => {
+                el.addEventListener('click', () => openNoteDetailModal(note.id));
+            });
+
+            card.querySelector('[data-pin-id]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleNotePinToggle(note.id);
+            });
+
+            card.querySelector('[data-copy-note]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                copyNoteContent(note.id);
+            });
+
+            card.querySelector('[data-edit-note]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openNoteEditorModal(note.id);
+            });
+
+            card.querySelector('[data-delete-note]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleNoteDelete(note.id);
+            });
+
+            cardsContainer.appendChild(card);
+        });
+
+    } else {
+        // 2. HIZLI TEKRAR TABLOSU (CHEAT SHEET)
+        cardsContainer.style.display = 'none';
+        if (tableContainer) tableContainer.style.display = 'block';
+        if (!tableBody) return;
+
+        if (filtered.length === 0) {
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="7" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
+                        Aradığınız kriterde not bulunamadı.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+
+        tableBody.innerHTML = '';
+        filtered.forEach(note => {
+            const tr = document.createElement('tr');
+            if (note.is_pinned) tr.className = 'is-pinned-row';
+
+            const priorityBadge = note.priority === 'P0' 
+                ? '<span class="badge badge-p0">P0</span>'
+                : note.priority === 'P1'
+                ? '<span class="badge badge-p1">P1</span>'
+                : '<span class="badge badge-p2">P2</span>';
+
+            const summaryText = note.content.replace(/[#*`>|]/g, '').replace(/\n+/g, ' ').trim().substring(0, 85) + '...';
+            const updatedStr = formatNoteDate(note.updated_at || note.created_at);
+
+            tr.innerHTML = `
+                <td style="text-align: center;">
+                    <button class="note-pin-btn ${note.is_pinned ? 'active' : ''}" data-pin-id="${note.id}" style="font-size: 0.95rem;">
+                        <i class="${note.is_pinned ? 'fa-solid fa-thumbtack text-amber' : 'fa-solid fa-thumbtack text-dim'}"></i>
+                    </button>
+                </td>
+                <td style="text-align: center;">${priorityBadge}</td>
+                <td>
+                    <span class="badge ${sectionBadges[note.section] || 'badge-neutral'}">
+                        ${sectionLabels[note.section] || 'Genel'}
+                    </span>
+                </td>
+                <td>
+                    <div class="notes-table-title" data-view-note="${note.id}">${escapeHtml(note.title)}</div>
+                    ${note.tags && note.tags.length > 0 ? `<div style="font-size: 0.73rem; color: var(--text-muted); margin-top: 2px;">${note.tags.map(t => `#${escapeHtml(t)}`).join(' ')}</div>` : ''}
+                </td>
+                <td style="color: #94a3b8; font-size: 0.83rem; cursor: pointer;" data-view-note="${note.id}">
+                    ${escapeHtml(summaryText)}
+                </td>
+                <td style="text-align: center; font-size: 0.78rem; color: var(--text-dim); white-space: nowrap;">
+                    ${updatedStr}
+                </td>
+                <td style="text-align: center; white-space: nowrap;">
+                    <div style="display: inline-flex; gap: 4px;">
+                        <button class="btn-note-icon" data-view-note="${note.id}" title="İncele"><i class="fa-solid fa-eye"></i></button>
+                        <button class="btn-note-icon" data-edit-note="${note.id}" title="Düzenle"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="btn-note-icon btn-note-danger" data-delete-note="${note.id}" title="Sil"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </td>
+            `;
+
+            tr.querySelectorAll('[data-view-note]').forEach(el => {
+                el.addEventListener('click', () => openNoteDetailModal(note.id));
+            });
+
+            tr.querySelector('[data-pin-id]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleNotePinToggle(note.id);
+            });
+
+            tr.querySelector('[data-edit-note]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openNoteEditorModal(note.id);
+            });
+
+            tr.querySelector('[data-delete-note]')?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleNoteDelete(note.id);
+            });
+
+            tableBody.appendChild(tr);
+        });
+    }
+}
+
+// Not Editör Modalı Açma
+function openNoteEditorModal(noteId = null) {
+    const modal = document.getElementById('note-editor-modal');
+    if (!modal) return;
+
+    state.notes.editingNoteId = noteId;
+    const modalTitle = document.getElementById('note-editor-title');
+    const idInput = document.getElementById('note-form-id');
+    const titleInput = document.getElementById('note-form-title');
+    const secSelect = document.getElementById('note-form-section');
+    const prioSelect = document.getElementById('note-form-priority');
+    const pinnedCheck = document.getElementById('note-form-pinned');
+    const tagsInput = document.getElementById('note-form-tags');
+    const contentText = document.getElementById('note-form-content');
+
+    if (noteId) {
+        const note = db.getUserNoteById(noteId);
+        if (!note) return;
+
+        if (modalTitle) modalTitle.textContent = 'Çalışma Notunu Düzenle';
+        if (idInput) idInput.value = note.id;
+        if (titleInput) titleInput.value = note.title;
+        if (secSelect) secSelect.value = note.section || 'bankacilik-genel-kultur';
+        if (prioSelect) prioSelect.value = note.priority || 'P1';
+        if (pinnedCheck) pinnedCheck.checked = !!note.is_pinned;
+        if (tagsInput) tagsInput.value = (note.tags || []).join(', ');
+        if (contentText) contentText.value = note.content || '';
+
+        // Renk radyo butonunu seç
+        const colorRadio = document.querySelector(`input[name="note_color"][value="${note.color || 'indigo'}"]`);
+        if (colorRadio) colorRadio.checked = true;
+
+    } else {
+        if (modalTitle) modalTitle.textContent = 'Yeni Çalışma Notu Ekle';
+        if (idInput) idInput.value = '';
+        if (titleInput) titleInput.value = '';
+        if (secSelect) secSelect.value = state.notes.category !== 'all' ? state.notes.category : 'bankacilik-genel-kultur';
+        if (prioSelect) prioSelect.value = 'P1';
+        if (pinnedCheck) pinnedCheck.checked = false;
+        if (tagsInput) tagsInput.value = '';
+        if (contentText) contentText.value = '';
+
+        const defaultRadio = document.querySelector('input[name="note_color"][value="indigo"]');
+        if (defaultRadio) defaultRadio.checked = true;
+    }
+
+    modal.classList.add('active');
+    setTimeout(() => titleInput?.focus(), 150);
+}
+
+function closeNoteEditorModal() {
+    const modal = document.getElementById('note-editor-modal');
+    if (modal) modal.classList.remove('active');
+    state.notes.editingNoteId = null;
+}
+
+// Not Formu Kaydetme
+function handleNoteFormSubmit(e) {
+    e.preventDefault();
+    const id = document.getElementById('note-form-id').value.trim();
+    const title = document.getElementById('note-form-title').value.trim();
+    const section = document.getElementById('note-form-section').value;
+    const priority = document.getElementById('note-form-priority').value;
+    const is_pinned = document.getElementById('note-form-pinned').checked;
+    const rawTags = document.getElementById('note-form-tags').value.trim();
+    const content = document.getElementById('note-form-content').value.trim();
+    const checkedColor = document.querySelector('input[name="note_color"]:checked')?.value || 'indigo';
+
+    if (!title || !content) {
+        showToast("Lütfen not başlığı ve içeriğini doldurun.", "warning");
+        return;
+    }
+
+    const tags = rawTags ? rawTags.split(',').map(t => t.trim()).filter(Boolean) : [];
+
+    const notePayload = {
+        title,
+        section,
+        priority,
+        is_pinned,
+        color: checkedColor,
+        tags,
+        content
+    };
+
+    if (id) {
+        notePayload.id = id;
+    }
+
+    db.saveUserNote(notePayload);
+    showToast(id ? "Not başarıyla güncellendi! 📝" : "Yeni not panoya eklendi! ✨", "success");
+
+    closeNoteEditorModal();
+    renderNotesList();
+}
+
+// Not Silme
+function handleNoteDelete(noteId) {
+    const note = db.getUserNoteById(noteId);
+    if (!note) return;
+
+    showConfirmModal({
+        title: 'Notu Sil',
+        message: `"${note.title}" başlıklı notu silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.`,
+        confirmText: 'Evet, Sil',
+        cancelText: 'Vazgeç',
+        isDanger: true,
+        onConfirm: () => {
+            db.deleteUserNote(noteId);
+            showToast("Not silindi.", "info");
+            if (currentDetailNoteId === noteId) {
+                closeNoteDetailModal();
+            }
+            renderNotesList();
+        }
+    });
+}
+
+// Sabitleme Değiştirme
+function handleNotePinToggle(noteId) {
+    const updated = db.togglePinUserNote(noteId);
+    if (updated) {
+        if (updated.is_pinned) {
+            showToast(`"${updated.title}" başa sabitlendi ⭐`, "success", 2000);
+        } else {
+            showToast("Sabitleme kaldırıldı.", "info", 1800);
+        }
+        renderNotesList();
+    }
+}
+
+// Panoya Kopyalama
+function copyNoteContent(noteId) {
+    const note = db.getUserNoteById(noteId);
+    if (!note) return;
+
+    const copyText = `## ${note.title}\n${note.content}`;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(copyText).then(() => {
+            showToast("Not içeriği panoya kopyalandı! 📋", "success", 2500);
+        }).catch(() => {
+            fallbackCopyText(copyText);
+        });
+    } else {
+        fallbackCopyText(copyText);
+    }
+}
+
+function fallbackCopyText(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+        document.execCommand('copy');
+        showToast("Not içeriği panoya kopyalandı! 📋", "success", 2500);
+    } catch {
+        showToast("Kopyalama yapılamadı.", "error");
+    }
+    document.body.removeChild(ta);
+}
+
+// Tüm Notları Markdown Olarak İndir / Kopyala
+function exportAllNotes() {
+    const md = db.exportUserNotesAsMarkdown();
+    const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `ziraat_uzman_calisma_notlarim_${new Date().toISOString().slice(0, 10)}.md`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast("Tüm notlarınız Markdown dosyası olarak indirildi! 📥", "success", 3000);
+}
+
+// Not Detay Görüntüleme Modalı
+function openNoteDetailModal(noteId) {
+    const note = db.getUserNoteById(noteId);
+    if (!note) return;
+
+    currentDetailNoteId = noteId;
+    const modal = document.getElementById('note-detail-modal');
+    const badgesWrap = document.getElementById('note-detail-badges');
+    const titleEl = document.getElementById('note-detail-title');
+    const tagsWrap = document.getElementById('note-detail-tags');
+    const contentEl = document.getElementById('note-detail-content');
+    const dateEl = document.getElementById('note-detail-date');
+
+    const sectionLabels = {
+        'bankacilik-genel-kultur': 'Bankacılık & GK',
+        'oruntu-analitik': 'Örüntü & Mantık',
+        'ingilizce': 'İngilizce',
+        'alan': 'Bilgisayar & YZ',
+        'genel': 'Sınav Taktikleri'
+    };
+
+    const sectionBadges = {
+        'bankacilik-genel-kultur': 'badge-amber',
+        'oruntu-analitik': 'badge-purple',
+        'ingilizce': 'badge-indigo',
+        'alan': 'badge-emerald',
+        'genel': 'badge-neutral'
+    };
+
+    const priorityHtml = note.priority === 'P0' 
+        ? '<span class="badge badge-p0"><i class="fa-solid fa-fire"></i> P0 Kesin Çıkar</span>'
+        : note.priority === 'P1'
+        ? '<span class="badge badge-p1"><i class="fa-solid fa-star"></i> P1 Önemli</span>'
+        : '<span class="badge badge-p2"><i class="fa-regular fa-bookmark"></i> P2 Not</span>';
+
+    if (badgesWrap) {
+        badgesWrap.innerHTML = `
+            <span class="badge ${sectionBadges[note.section] || 'badge-neutral'}">${sectionLabels[note.section] || 'Genel'}</span>
+            ${priorityHtml}
+            ${note.is_pinned ? '<span class="badge badge-amber"><i class="fa-solid fa-thumbtack"></i> Sabitlendi</span>' : ''}
+        `;
+    }
+
+    if (titleEl) titleEl.textContent = note.title;
+
+    if (tagsWrap) {
+        if (note.tags && note.tags.length > 0) {
+            tagsWrap.innerHTML = note.tags.map(t => `<span class="note-tag-chip">#${escapeHtml(t)}</span>`).join('');
+            tagsWrap.style.display = 'flex';
+        } else {
+            tagsWrap.innerHTML = '';
+            tagsWrap.style.display = 'none';
+        }
+    }
+
+    if (contentEl) {
+        contentEl.innerHTML = formatLectureContent(note.content);
+    }
+
+    if (dateEl) {
+        const fullDate = new Date(note.updated_at || note.created_at).toLocaleDateString('tr-TR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+        dateEl.textContent = `Son Güncelleme: ${fullDate}`;
+    }
+
+    if (modal) modal.classList.add('active');
+}
+
+function closeNoteDetailModal() {
+    const modal = document.getElementById('note-detail-modal');
+    if (modal) modal.classList.remove('active');
+    currentDetailNoteId = null;
+}
+
+// Markdown Hızlı Ekleme Yardımcısı
+function insertMarkdownToTextarea(tool) {
+    const textarea = document.getElementById('note-form-content');
+    if (!textarea) return;
+
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selected = textarea.value.substring(start, end);
+    let before = textarea.value.substring(0, start);
+    let after = textarea.value.substring(end);
+    let insert = '';
+    let newCursorPos = start;
+
+    switch (tool) {
+        case 'bold':
+            insert = selected ? `**${selected}**` : '**kalın metin**';
+            newCursorPos = start + (selected ? selected.length + 4 : 2);
+            break;
+        case 'heading':
+            insert = selected ? `\n### ${selected}\n` : '\n### Yeni Başlık\n';
+            newCursorPos = start + insert.length;
+            break;
+        case 'list':
+            insert = selected ? `\n* ${selected}\n` : '\n* Madde 1\n* Madde 2\n';
+            newCursorPos = start + insert.length;
+            break;
+        case 'quote':
+            insert = selected ? `\n> 💡 ${selected}\n` : '\n> 💡 Sınav İpucu Notu...\n';
+            newCursorPos = start + insert.length;
+            break;
+        case 'table':
+            insert = '\n| Parametre | Özellik / Değer |\n| :--- | :--- |\n| Konu A | Açıklama A |\n| Konu B | Açıklama B |\n';
+            newCursorPos = start + insert.length;
+            break;
+        case 'code':
+            insert = selected ? `\`${selected}\`` : '`kod/terim`';
+            newCursorPos = start + (selected ? selected.length + 2 : 1);
+            break;
+        default:
+            return;
+    }
+
+    textarea.value = before + insert + after;
+    textarea.focus();
+    textarea.setSelectionRange(newCursorPos, newCursorPos);
+}
+
+function formatNoteDate(isoString) {
+    if (!isoString) return '';
+    try {
+        const d = new Date(isoString);
+        return d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short' });
+    } catch {
+        return '';
+    }
 }
 
 // ==============================================================================

@@ -25,7 +25,7 @@ if (!isSupabaseConfigured()) {
 }
 
 // Global Supabase Client
-export const supabase = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
+export const supabase = (typeof window !== 'undefined' && window.supabase) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
     auth: {
         persistSession: true,
         autoRefreshToken: true,
@@ -194,10 +194,12 @@ export async function showView(viewId, extraData = null) {
         const titles = {
             'dashboard': 'Genel Bakış',
             'lectures': 'Konu Anlatımı & Notlar',
+            'resources': 'Video & Sınav Arşivleri',
             'practice': 'Konu Alıştırması',
             'exam': 'Tam Deneme Sınavı',
             'review': 'Yanlış Defteri',
             'flashcards': 'Hap Bilgi Kartları',
+            'notes': 'Kişisel Notlarım & Bilgi Panosu',
             'stats': 'İstatistik & Baraj',
             'profile': 'Profil & Ayarlar'
         };
