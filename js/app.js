@@ -1102,12 +1102,21 @@ function handleAddWebsiteSubmit(e) {
 // In-App Video Player Modal Controls & Watched State
 let currentPlayingVideo = { id: null, title: '', channelName: '', url: '' };
 
+function extractYoutubeVideoId(input) {
+    if (!input) return null;
+    input = input.trim();
+    if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
+    const match = input.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : null;
+}
+
 function openVideoPlayerModal(videoId, title, channelName, url) {
     const modal = document.getElementById('video-player-modal');
     const iframe = document.getElementById('video-modal-iframe');
     const titleEl = document.getElementById('video-modal-title');
     const channelEl = document.getElementById('video-modal-channel');
     const linkEl = document.getElementById('video-modal-yt-link');
+    const fallbackBtn = document.getElementById('video-embed-fallback-btn');
 
     if (!modal || !iframe) return;
 
@@ -1115,20 +1124,21 @@ function openVideoPlayerModal(videoId, title, channelName, url) {
 
     if (titleEl) titleEl.textContent = title;
     if (channelEl) channelEl.innerHTML = `<i class="fa-brands fa-youtube text-rose"></i> <strong>${escapeHtml(channelName || 'YouTube')}</strong>`;
-    if (linkEl) linkEl.href = url || `https://www.youtube.com/watch?v=${videoId}`;
+
+    const cleanId = extractYoutubeVideoId(videoId) || extractYoutubeVideoId(url);
+    const directWatchUrl = cleanId ? `https://www.youtube.com/watch?v=${cleanId}` : (url || '#');
+
+    if (linkEl) linkEl.href = directWatchUrl;
+    if (fallbackBtn) fallbackBtn.href = directWatchUrl;
     
     // İzleme durumunu modala yansıt
     const isWatched = db.isVideoWatched(videoId);
     updateModalWatchedUI(isWatched);
 
     // Embed URL
-    const isYtId = videoId && videoId.length === 11 && !videoId.includes('-');
-    if (isYtId) {
-        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
-    } else if (url && url.includes('youtube.com/watch?v=')) {
-        const extractedId = url.split('watch?v=')[1]?.split('&')[0];
-        iframe.src = `https://www.youtube-nocookie.com/embed/${extractedId}?autoplay=1&rel=0`;
-    } else {
+    if (cleanId) {
+        iframe.src = `https://www.youtube.com/embed/${cleanId}?autoplay=1&rel=0&enablejsapi=1`;
+    } else if (url) {
         window.open(url, '_blank');
         return;
     }

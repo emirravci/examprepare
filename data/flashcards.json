@@ -5,7 +5,11 @@
     "topic": "Veri Tabanı ve SQL",
     "front": "ACID Prensipleri Nelerdir?",
     "back": "• Atomicity: Ya hep ya hiç (bölünemezlik).\n• Consistency: Tutarlılık kurallarının korunması.\n• Isolation: Eşzamanlı işlemlerin birbirinden yalıtılması.\n• Durability: İşlem tamamlandığında diske kalıcı yazılması.",
-    "tags": ["acid", "database", "transaction"]
+    "tags": [
+      "acid",
+      "database",
+      "transaction"
+    ]
   },
   {
     "id": "fc-002",
@@ -13,7 +17,11 @@
     "topic": "Yazılım Mühendisliği",
     "front": "SOLID Prensipleri Nelerdir?",
     "back": "• S (Single Responsibility): Tek bir sorumluluk.\n• O (Open/Closed): Gelişime açık, değişime kapalı.\n• L (Liskov Substitution): Alt sınıflar üst sınıf yerine geçebilmeli.\n• I (Interface Segregation): İstemciye özel küçük arayüzler.\n• D (Dependency Inversion): Üst modüller alt modüllere değil, soyutlamalara bağımlı olmalı.",
-    "tags": ["solid", "oop", "yazilim"]
+    "tags": [
+      "solid",
+      "oop",
+      "yazilim"
+    ]
   },
   {
     "id": "fc-003",
@@ -21,7 +29,11 @@
     "topic": "Bilgisayar Ağları",
     "front": "OSI 7 Katmanı (Aşağıdan Yukarıya)",
     "back": "1. Fiziksel (Physical) - Bitler, kablolar\n2. Veri Bağlantısı (Data Link) - Çerçeveler, MAC, Switch\n3. Ağ (Network) - Paketler, IP, Router\n4. Taşıma (Transport) - Segmentler, TCP/UDP, Portlar\n5. Oturum (Session) - Oturum yönetimi\n6. Sunum (Presentation) - Şifreleme, sıkıştırma, format (JSON/TLS)\n7. Uygulama (Application) - HTTP, DNS, SMTP, FTP",
-    "tags": ["osi", "network", "protokol"]
+    "tags": [
+      "osi",
+      "network",
+      "protokol"
+    ]
   },
   {
     "id": "fc-004",
@@ -29,7 +41,11 @@
     "topic": "İşletim Sistemleri",
     "front": "Deadlock (Kilitlenme) İçin 4 Coffman Şartı",
     "back": "1. Mutual Exclusion (Karşılıklı Dışlama)\n2. Hold and Wait (Tut ve Bekle)\n3. No Preemption (Kesinti / Zorla Alma Yok)\n4. Circular Wait (Dairesel Bekleme)\n* Bu 4 şart aynı anda gerçekleştiğinde Deadlock oluşur; biri engellenirse deadlock önlenir.",
-    "tags": ["deadlock", "os", "coffman"]
+    "tags": [
+      "deadlock",
+      "os",
+      "coffman"
+    ]
   },
   {
     "id": "fc-005",
@@ -37,7 +53,11 @@
     "topic": "Ziraat Bankası Tarihi",
     "front": "Ziraat Bankası Ne Zaman ve Nasıl Kurulmuştur?",
     "back": "• 1863 yılında Niş Valisi Mithat Paşa tarafından 'Memleket Sandıkları' adıyla kuruldu.\n• Amaç çiftçileri tefecilerden koruyup uygun maliyetli tarımsal kredi sağlamaktı.\n• 1888 yılında günümüz modern Ziraat Bankası'na dönüştürüldü.\n• Türkiye'nin ilk kamu bankasıdır.",
-    "tags": ["ziraat", "mithat-pasa", "tarih"]
+    "tags": [
+      "ziraat",
+      "mithat-pasa",
+      "tarih"
+    ]
   },
   {
     "id": "fc-006",
@@ -45,6 +65,310 @@
     "topic": "Finans Kelimeleri",
     "front": "Assets vs. Liabilities Farkı Nedir?",
     "back": "• Assets: Bir şirketin veya kişinin sahip olduğu ekonomik varlıklar/alacaklar (nakit, mülk, menkul kıymet).\n• Liabilities: Borçlar ve yükümlülükler (krediler, ödenecek borçlar, tahviller).",
-    "tags": ["english", "finance", "vocabulary"]
+    "tags": [
+      "english",
+      "finance",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "fc-007",
+    "category": "alan",
+    "topic": "Bilgi Güvenliği Temelleri",
+    "front": "CIA Triad (Bilgi Güvenliği Üçlüsü) Nedir?",
+    "back": "• Confidentiality (Gizlilik): Veriye sadece yetkili kişilerin erişmesi (Şifreleme, Yetkilendirme).\n• Integrity (Bütünlük): Verinin yetkisiz kişilerce değiştirilmemesi (Hash, Dijital İmza).\n• Availability (Erişilebilirlik): Sistemin ve verinin ihtiyaç duyulduğunda hazır olması (Yedeklilik, DDoS koruması).",
+    "tags": [
+      "cia",
+      "guvenlik",
+      "security"
+    ]
+  },
+  {
+    "id": "fc-008",
+    "category": "alan",
+    "topic": "Veri Yapıları ve Problem Çözme",
+    "front": "Temel Arama ve Sıralama Algoritmalarının Big-O Değerleri",
+    "back": "• Binary Search: O(log n) - Dizi sıralı olmalıdır.\n• Hash Table Erişim/Arama: Ortalama O(1), en kötü O(n).\n• Merge Sort / Quick Sort (Ortalama): O(n log n).\n• Bubble / Selection / Insertion Sort: O(n²).",
+    "tags": [
+      "big-o",
+      "veri-yapilari",
+      "algoritma"
+    ]
+  },
+  {
+    "id": "fc-009",
+    "category": "alan",
+    "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi",
+    "front": "Precision vs. Recall (Hassasiyet vs. Duyarlılık) Farkı Nedir?",
+    "back": "• Precision (TP / (TP + FP)): Pozitif tahmin edilenlerin kaçı gerçekten pozitif? Yanlış alarmları (FP) cezalandırır.\n• Recall (TP / (TP + FN)): Gerçekteki tüm pozitiflerin kaçı yakalandı? Kaçırılan vakaları (FN) cezalandırır.\n* Bankacılıkta sahtekarlık (Fraud) ve hastalık teşhisinde RECALL önceliklidir (kaçırma lüksü yoktur).",
+    "tags": [
+      "makine-ogrenmesi",
+      "precision",
+      "recall",
+      "confusion-matrix"
+    ]
+  },
+  {
+    "id": "fc-010",
+    "category": "alan",
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "front": "HTTP Durum Kodları (Status Codes) Aileleri",
+    "back": "• 2xx Success: 200 OK, 201 Created (Kaynak oluşturuldu).\n• 3xx Redirection: 301 Moved Permanently, 302 Found.\n• 4xx Client Error: 400 Bad Request, 401 Unauthorized (Kimliksiz), 403 Forbidden (Yetkisiz), 404 Not Found.\n• 5xx Server Error: 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable, 504 Gateway Timeout.",
+    "tags": [
+      "http",
+      "api",
+      "rest",
+      "web"
+    ]
+  },
+  {
+    "id": "fc-eng-01",
+    "category": "ingilizce",
+    "topic": "Phrasal Verbs",
+    "front": "Phrasal Verb: 'Account for' Anlamları Nelerdir?",
+    "back": "1. Açıklamak, gerekçelendirmek (He could not account for the discrepancy).\n2. Bir orana/miktara tekabül etmek, oluşturmak (SME loans account for 45% of total lending).",
+    "tags": [
+      "phrasal-verb",
+      "account-for",
+      "english"
+    ]
+  },
+  {
+    "id": "fc-eng-02",
+    "category": "ingilizce",
+    "topic": "Phrasal Verbs",
+    "front": "Phrasal Verb: 'Carry out' Ne Demektir?",
+    "back": "Bir planı, araştırmayı, denetimi veya testi yürütmek / uygulamak (Eş anlamlı: execute, conduct, implement).\nÖrn: The audit committee carried out an internal investigation.",
+    "tags": [
+      "phrasal-verb",
+      "carry-out",
+      "english"
+    ]
+  },
+  {
+    "id": "fc-eng-03",
+    "category": "ingilizce",
+    "topic": "Phrasal Verbs",
+    "front": "Phrasal Verb: 'Cope with' Eş Anlamlısı ve Kullanımı Nedir?",
+    "back": "Zor bir durumla veya krizle başa çıkmak, üstesinden gelmek (Eş anlamlı: deal with, overcome, manage).\nÖrn: Central banks struggle to cope with rising inflation.",
+    "tags": [
+      "phrasal-verb",
+      "cope-with",
+      "english"
+    ]
+  },
+  {
+    "id": "fc-eng-04",
+    "category": "ingilizce",
+    "topic": "Phrasal Verbs",
+    "front": "'Neden olmak / Yol açmak' Anlamına Gelen 3 Kritik Phrasal Verb / Fiil?",
+    "back": "1. Bring about (yol açmak)\n2. Lead to (sebep olmak)\n3. Give rise to (ortaya çıkarmak, tetiklemek)\nÖrn: The sudden interest rate hike brought about rapid currency appreciation.",
+    "tags": [
+      "phrasal-verb",
+      "bring-about",
+      "lead-to",
+      "english"
+    ]
+  },
+  {
+    "id": "fc-eng-05",
+    "category": "ingilizce",
+    "topic": "Phrasal Verbs",
+    "front": "Phrasal Verb: 'Stem from' Ne Demektir?",
+    "back": "Bir durumdan kaynaklanmak, ileri gelmek (Eş anlamlı: originate from, derive from).\nÖrn: The financial liquidity crisis stemmed from poor risk management.",
+    "tags": [
+      "phrasal-verb",
+      "stem-from",
+      "english"
+    ]
+  },
+  {
+    "id": "fc-eng-06",
+    "category": "ingilizce",
+    "topic": "Phrasal Verbs",
+    "front": "'Turn down' ve 'Call off' Farkı Nedir?",
+    "back": "• Turn down: Bir teklifi, krediyi veya başvuruyu REDDETMEK (The bank turned down his mortgage application).\n• Call off: Bir toplantıyı, planı veya etkinliği İPTAL ETMEK (The board called off the emergency meeting).",
+    "tags": [
+      "phrasal-verb",
+      "turn-down",
+      "call-off",
+      "english"
+    ]
+  },
+  {
+    "id": "fc-eng-07",
+    "category": "ingilizce",
+    "topic": "Bağlaçlar (Conjunctions)",
+    "front": "Zıtlık Bağlaçları: Cümle Alanlar vs. İsim (Noun Phrase) Alanlar",
+    "back": "• Tam Cümle (+ Özne + Fiil): Although, Even though, Though, Whereas, While.\n• İsim / Noun Phrase (+ İsim / V-ing): Despite, In spite of, Notwithstanding.\n* Sınav Tuzağı: 'Despite the fact that...' kalıbı arkasından tam cümle alır!",
+    "tags": [
+      "baglac",
+      "although",
+      "despite",
+      "conjunction"
+    ]
+  },
+  {
+    "id": "fc-eng-08",
+    "category": "ingilizce",
+    "topic": "Bağlaçlar (Conjunctions)",
+    "front": "Neden-Sonuç Bağlaçları: Cümle Alanlar vs. İsim (Noun Phrase) Alanlar",
+    "back": "• Tam Cümle (+ Özne + Fiil): Because, Since, As, Inasmuch as.\n• İsim / Noun Phrase (+ İsim / V-ing): Due to, Owing to, Because of, On account of.\n* İpucu: Due to the fact that... arkasından tam cümle alır.",
+    "tags": [
+      "baglac",
+      "because",
+      "due-to",
+      "conjunction"
+    ]
+  },
+  {
+    "id": "fc-eng-09",
+    "category": "ingilizce",
+    "topic": "Bağlaçlar (Conjunctions)",
+    "front": "Geçiş Kelimeleri: 'Ancak / Ne var ki' (Transitions)",
+    "back": "• However, Nevertheless, Nonetheless, Even so.\nGenellikle iki nokta veya noktalı virgülden sonra cümle başında gelir:\n'Profits decreased; however, the bank retained its solvency.'",
+    "tags": [
+      "baglac",
+      "however",
+      "nevertheless",
+      "conjunction"
+    ]
+  },
+  {
+    "id": "fc-eng-10",
+    "category": "ingilizce",
+    "topic": "Kelime Bilgisi",
+    "front": "'Deteriorate' ve 'Facilitate' Ne Demektir?",
+    "back": "• Deteriorate: Kötüleşmek, bozulmak (Eş anlamlı: worsen, degrade, decline).\n• Facilitate: Kolaylaştırmak, olanak sağlamak (Eş anlamlı: ease, promote, assist).",
+    "tags": [
+      "kelime",
+      "deteriorate",
+      "facilitate",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "fc-eng-11",
+    "category": "ingilizce",
+    "topic": "Kelime Bilgisi",
+    "front": "'Hamper', 'Hinder' ve 'Impede' Ne Demektir?",
+    "back": "Engellemek, köstek olmak, güçleştirmek (Eş anlamlı: obstruct, inhibit, block).\nÖrn: High interest rates hampered private sector investments.",
+    "tags": [
+      "kelime",
+      "hamper",
+      "hinder",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "fc-eng-12",
+    "category": "ingilizce",
+    "topic": "Kelime Bilgisi",
+    "front": "'Vulnerable to' ve 'Susceptible to' Ne Demektir?",
+    "back": "Bir tehlikeye, şoka veya saldırıya karşı savunmasız / hassas / yatkın olmak.\nÖrn: Developing markets are vulnerable to global interest rate volatility.",
+    "tags": [
+      "kelime",
+      "vulnerable",
+      "collocation"
+    ]
+  },
+  {
+    "id": "fc-eng-13",
+    "category": "ingilizce",
+    "topic": "Kelime Bilgisi",
+    "front": "'Inevitable' ve 'Reluctant' Kelimeleri Ne Anlama Gelir?",
+    "back": "• Inevitable: Kaçınılmaz, önlenemez (Unavoidable).\n• Reluctant: İsteksiz, tereddütlü (Hesitant, unwilling).\nÖrn: Commercial banks were reluctant to extend long-term unsecured loans.",
+    "tags": [
+      "kelime",
+      "inevitable",
+      "reluctant",
+      "vocabulary"
+    ]
+  },
+  {
+    "id": "fc-eng-14",
+    "category": "ingilizce",
+    "topic": "Finans Terimleri",
+    "front": "'Collateral' ve 'Default' Terimleri Ne Anlama Gelir?",
+    "back": "• Collateral: Kredi karşılığı gösterilen teminat, ipotek, rehin.\n• Default: Temerrüde düşme, borcunu vadesinde ödeyememe hali (Örn: default on corporate debt).",
+    "tags": [
+      "finans",
+      "collateral",
+      "default",
+      "banking"
+    ]
+  },
+  {
+    "id": "fc-eng-15",
+    "category": "ingilizce",
+    "topic": "Finans Terimleri",
+    "front": "'Solvency' ile 'Liquidity' Arasındaki Temel Fark Nedir?",
+    "back": "• Liquidity: Varlıkların hızla nakde çevrilebilme yeteneği (kısa vadeli ödeme kapasitesi).\n• Solvency: Toplam varlıkların toplam borçlardan fazla olması hali (uzun vadeli finansal ayakta kalma gücü).",
+    "tags": [
+      "finans",
+      "liquidity",
+      "solvency",
+      "banking"
+    ]
+  },
+  {
+    "id": "fc-eng-16",
+    "category": "ingilizce",
+    "topic": "Edat Eşleşmeleri (Collocations)",
+    "front": "Sınavda En Çok Çıkan 4 Fiil-Edat (Preposition) Eşleşmesi",
+    "back": "1. Comply with: Kanunlara / kurallara uymak\n2. Deprive of: Bir haktan/kaynaktan mahrum bırakmak\n3. Refrain from: Bir davranıştan kaçınmak, çekinmek\n4. Attribute to: Bir duruma atfetmek / -den kaynaklandığını söylemek",
+    "tags": [
+      "edat",
+      "preposition",
+      "collocation"
+    ]
+  },
+  {
+    "id": "fc-eng-17",
+    "category": "ingilizce",
+    "topic": "Gramer Kısayolları",
+    "front": "Sınavların En Sevdiği Tense Kuralı: 'SINCE' Formülü",
+    "back": "Since + Simple Past (V2) , Present Perfect (have/has + V3)\nÖrn: Since the central bank lowered (V2) policy rates, credit volumes have expanded (has/have V3).\n* Since geçmiş başlangıcı, ana cümle günümüze kadarki etkiyi gösterir.",
+    "tags": [
+      "gramer",
+      "since",
+      "tense"
+    ]
+  },
+  {
+    "id": "fc-eng-18",
+    "category": "ingilizce",
+    "topic": "Gramer Kısayolları",
+    "front": "Zaman Bağlaçlarında 'Will / Would' Yasağı",
+    "back": "When, As soon as, Before, After, Until, Once, By the time gibi zaman bağlaçlarının bulunduğu yan cümlede ASLA 'will' veya 'would' kullanılmaz!\n• Yanlış: When inflation will decline...\n• Doğru: When inflation declines...",
+    "tags": [
+      "gramer",
+      "time-clauses",
+      "will-kurali"
+    ]
+  },
+  {
+    "id": "fc-eng-19",
+    "category": "ingilizce",
+    "topic": "Gramer Kısayolları",
+    "front": "Conditionals: Devrik Cümle (Inversion) Kısayolları",
+    "back": "If atıldığında cümle devrik yapılır:\n• Type 1: Should you require further assistance... (= If you require)\n• Type 2: Were the board to approve the proposal... (= If the board approved)\n• Type 3: Had the borrower repaid on time... (= If the borrower had repaid)",
+    "tags": [
+      "gramer",
+      "conditionals",
+      "inversion"
+    ]
+  },
+  {
+    "id": "fc-eng-20",
+    "category": "ingilizce",
+    "topic": "Sınav Taktikleri",
+    "front": "Çeviri Sorularında 2 Adımda Şık Eleme Yöntemi",
+    "back": "1. Adım: Cümlenin en sonundaki ANA YÜKLEMİ (Tense ve Etken/Edilgen yapısıyla) bul ve Türkçe yüklemle eşleştir (3-4 şık anında elenir).\n2. Adım: Cümlenin ÖZNESİNİ bul ve doğrula. Kalan 1 veya 2 şık arasından doğru cevaba 20 saniyede ulaşılır.",
+    "tags": [
+      "taktik",
+      "translation",
+      "soru-cozumu"
+    ]
   }
 ]

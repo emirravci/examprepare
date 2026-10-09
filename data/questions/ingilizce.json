@@ -1127,5 +1127,1121 @@
       "banking-regulations"
     ],
     "source": "original"
+  },
+  {
+    "id": "eng-041",
+    "examQuestionNo": 61,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "The internal audit team was instructed to ________ a thorough investigation into the unauthorized transactions reported last month.",
+    "questionText": "The internal audit team was instructed to ________ a thorough investigation into the unauthorized transactions reported last month.",
+    "options": [
+      "carry out",
+      "call off",
+      "turn down",
+      "give up",
+      "hold back"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Carry out' bir araştırmayı, görevi, denetimi veya planı 'yürütmek, uygulamak, icra etmek' anlamına gelir. 'Call off' iptal etmek, 'turn down' reddetmek, 'give up' vazgeçmek demektir.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs",
+      "audit"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-042",
+    "examQuestionNo": 62,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "Small and medium-sized enterprises (SMEs) ________ more than 60 percent of total commercial employment in the domestic economy.",
+    "questionText": "Small and medium-sized enterprises (SMEs) ________ more than 60 percent of total commercial employment in the domestic economy.",
+    "options": [
+      "look into",
+      "account for",
+      "stem from",
+      "wipe out",
+      "break down"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Account for' bir orana, sayıya veya yüzdeye 'tekabül etmek, oluşturmak' anlamında sınavlarda en çok çıkan phrasal verb'lerden biridir. Cümlede 'KOBİ'ler toplam istihdamın %60'ından fazlasını oluşturmaktadır' denmektedir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs",
+      "economy"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-043",
+    "examQuestionNo": 63,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Academic Verbs",
+    "difficulty": 3,
+    "stem": "Persistently high interest rates and restrictive credit conditions may significantly ________ the growth of private investments.",
+    "questionText": "Persistently high interest rates and restrictive credit conditions may significantly ________ the growth of private investments.",
+    "options": [
+      "facilitate",
+      "hamper",
+      "substantiate",
+      "accelerate",
+      "clarify"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Hamper' engellemek, köstek olmak, güçleştirmek anlamına gelir (eş anlamlılar: hinder, impede). Cümle mantığında yüksek faiz oranları yatırımları kolaylaştırmaz (facilitate) veya hızlandırmaz (accelerate), aksine engeller / yavaşlatır (hamper).",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "vocabulary",
+      "academic-verbs",
+      "finance"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-044",
+    "examQuestionNo": 64,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Academic Adjectives",
+    "difficulty": 2,
+    "stem": "Because their export revenues depend predominantly on a single raw material, developing economies remain exceptionally ________ to external price shocks.",
+    "questionText": "Because their export revenues depend predominantly on a single raw material, developing economies remain exceptionally ________ to external price shocks.",
+    "options": [
+      "indifferent",
+      "vulnerable",
+      "immune",
+      "resistant",
+      "negligible"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Vulnerable to' bir tehlikeye, şoka veya olumsuzluğa karşı 'savunmasız, hassas' olmak anlamına gelir. 'Immune to' bağışık olmak, 'resistant to' dirençli olmak demektir.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "vocabulary",
+      "adjectives",
+      "preposition-collocation"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-045",
+    "examQuestionNo": 65,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Academic Adverbs",
+    "difficulty": 2,
+    "stem": "Following the implementation of digital core banking software, customer transaction processing times decreased ________.",
+    "questionText": "Following the implementation of digital core banking software, customer transaction processing times decreased ________.",
+    "options": [
+      "substantially",
+      "reluctantly",
+      "doubtfully",
+      "coincidentally",
+      "vaguely"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Substantially' (önemli ölçüde, kayda değer şekilde / eş anlamlılar: significantly, considerably, drastically) fiili niteleyen en uygun zarftır. İşlem süreleri 'önemli ölçüde azalmıştır'. 'Reluctantly' isteksizce demektir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "vocabulary",
+      "adverbs"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-046",
+    "examQuestionNo": 66,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "Analysts emphasized that the banking panic did not occur randomly; it ________ deep-rooted structural weaknesses in risk governance.",
+    "questionText": "Analysts emphasized that the banking panic did not occur randomly; it ________ deep-rooted structural weaknesses in risk governance.",
+    "options": [
+      "stemmed from",
+      "settled down",
+      "backed up",
+      "took over",
+      "passed away"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Stem from' -den kaynaklanmak, ileri gelmek anlamına gelir (originate from, derive from). Panik 'risk yönetimindeki köklü yapısal zayıflıklardan kaynaklandı'.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-047",
+    "examQuestionNo": 67,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Banking & Finance",
+    "difficulty": 2,
+    "stem": "When a commercial borrower fails to meet scheduled interest or principal payments, the credit facility is considered to be in ________.",
+    "questionText": "When a commercial borrower fails to meet scheduled interest or principal payments, the credit facility is considered to be in ________.",
+    "options": [
+      "default",
+      "surplus",
+      "parity",
+      "equilibrium",
+      "dividend"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'In default' (temerrüt hali), borçlunun kredi veya faiz ödeme yükümlülüğünü yerine getirememesi durumudur. 'Surplus' fazla, 'dividend' temettü (kâr payı) demektir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "vocabulary",
+      "finance",
+      "banking"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-048",
+    "examQuestionNo": 68,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Academic Verbs",
+    "difficulty": 3,
+    "stem": "To restore confidence in financial markets, the regulatory authority introduced stringent measures to ________ illicit money flows and tax evasion.",
+    "questionText": "To restore confidence in financial markets, the regulatory authority introduced stringent measures to ________ illicit money flows and tax evasion.",
+    "options": [
+      "curb",
+      "foster",
+      "trigger",
+      "magnify",
+      "advocate"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Curb' frenlemek, dizginlemek, sınırlamak anlamına gelir (eş anlamlılar: restrict, restrain). Yasa dışı para akışını ve vergi kaçakçılığını 'dizginlemek / engellemek' için sıkı tedbirler getirilmiştir. 'Foster' teşvik etmek, 'magnify' büyütmek demektir.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "vocabulary",
+      "academic-verbs"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-049",
+    "examQuestionNo": 69,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Contrast Conjunctions",
+    "difficulty": 2,
+    "stem": "________ severe macroeconomic headwinds and currency volatility, the national commercial bank achieved an impressive 18 percent increase in annual net profit.",
+    "questionText": "________ severe macroeconomic headwinds and currency volatility, the national commercial bank achieved an impressive 18 percent increase in annual net profit.",
+    "options": [
+      "Because of",
+      "Despite",
+      "Although",
+      "In order to",
+      "Provided that"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Boşluktan sonra bir isim öbeği (severe macroeconomic headwinds... - Noun Phrase) gelmiştir ve cümlenin ilk kısmı olumsuz (-) iken ana cümle kâr artışı ile olumludur (+). Zıtlık bildiren ve arkasından isim öbeği alan edat 'Despite'dır. 'Although' arkasından tam cümle (Özne + Yüklem) gerektirirdi.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "conjunctions",
+      "contrast",
+      "despite-vs-although"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-050",
+    "examQuestionNo": 70,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Contrast Conjunctions",
+    "difficulty": 2,
+    "stem": "________ digital banking applications offer unprecedented convenience for daily retail payments, they simultaneously expose financial institutions to sophisticated cyber threats.",
+    "questionText": "________ digital banking applications offer unprecedented convenience for daily retail payments, they simultaneously expose financial institutions to sophisticated cyber threats.",
+    "options": [
+      "While",
+      "In spite of",
+      "Consequently",
+      "Unless",
+      "Because"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'While' cümle başında kullanıldığında 'Although / -e rağmen' veya 'iken' anlamında iki durum arasındaki karşıtlığı kurar (bir yanda kolaylık sağlamasına rağmen diğer yanda siber tehditlere maruz bırakmaktadır). Arkasından tam cümle aldığı için 'In spite of' (isim alır) elenir.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "conjunctions",
+      "while",
+      "contrast"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-051",
+    "examQuestionNo": 71,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Cause & Effect",
+    "difficulty": 2,
+    "stem": "The executive management decided to suspend the overseas branch expansion ________ deteriorating geopolitical conditions in the region.",
+    "questionText": "The executive management decided to suspend the overseas branch expansion ________ deteriorating geopolitical conditions in the region.",
+    "options": [
+      "due to",
+      "even though",
+      "as long as",
+      "so that",
+      "whereas"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Boşluktan sonra 'deteriorating geopolitical conditions' (kötüleşen jeopolitik koşullar) isim öbeği gelmektedir. Şubenin askıya alınmasının 'sebebi' anlatılmaktadır. İsim öbeği ile kullanılan sebep bağlacı 'Due to'dur (-den dolayı). 'Even though' ve 'Whereas' tam cümle ister.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "conjunctions",
+      "due-to",
+      "cause-effect"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-052",
+    "examQuestionNo": 72,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Conditionals & Conjunctions",
+    "difficulty": 2,
+    "stem": "Cross-border payment settlements cannot be finalized ________ all participating correspondent banks fully verify the authenticity of the transaction credentials.",
+    "questionText": "Cross-border payment settlements cannot be finalized ________ all participating correspondent banks fully verify the authenticity of the transaction credentials.",
+    "options": [
+      "unless",
+      "despite",
+      "in case of",
+      "in order that",
+      "although"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Unless' (= if not / -medikçe, -madıkça) şart bildirir. 'Katılımcı muhabir bankalar kimlik bilgilerini tam olarak doğrulamadıkça ödemeler tamamlanamaz'. Anlamsal olarak 'unless' gereklidir.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "conjunctions",
+      "unless",
+      "conditionals"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-053",
+    "examQuestionNo": 73,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Transitions",
+    "difficulty": 3,
+    "stem": "The fintech startup struggled to obtain venture capital funding during its initial two years; ________, its innovative credit scoring algorithm eventually gained widespread market adoption.",
+    "questionText": "The fintech startup struggled to obtain venture capital funding during its initial two years; ________, its innovative credit scoring algorithm eventually gained widespread market adoption.",
+    "options": [
+      "nevertheless",
+      "therefore",
+      "for instance",
+      "moreover",
+      "as a result"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Noktalı virgül (;) ve virgül (,) arasında zıtlık geçişi aranmaktadır. İlk cümlede fon bulmakta zorlandığı (-) söylenirken, ikinci cümlede algoritmasının geniş kabul gördüğü (+) belirtilmiştir. Bu zıtlığı 'nevertheless' (yine de, buna rağmen / eş anlamlı: however, nonetheless) sağlar. 'Therefore' ve 'as a result' sonuç bildirir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "conjunctions",
+      "transitions",
+      "nevertheless"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-054",
+    "examQuestionNo": 74,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Tenses & Since Rule",
+    "difficulty": 2,
+    "stem": "Since the banking regulatory authority ________ mandatory multi-factor authentication rules in 2021, online identity theft incidents ________ by nearly 45 percent.",
+    "questionText": "Since the banking regulatory authority ________ mandatory multi-factor authentication rules in 2021, online identity theft incidents ________ by nearly 45 percent.",
+    "options": [
+      "introduced / have declined",
+      "introduces / declined",
+      "has introduced / decline",
+      "had introduced / will decline",
+      "was introducing / had declined"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Klasik ve değişmez SINCE kuralı: 'Since + Simple Past (V2), Present Perfect (have/has + V3)'. Otorite 2021'de kuralı getirdiğinden beri (introduced), olaylar azalmıştır (have declined).",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "grammar",
+      "tenses",
+      "since-rule"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-055",
+    "examQuestionNo": 75,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Time Clauses & Will Prohibition",
+    "difficulty": 2,
+    "stem": "As soon as the monetary policy committee ________ its benchmark interest rate decision tomorrow, commercial lenders ________ their deposit yields accordingly.",
+    "questionText": "As soon as the monetary policy committee ________ its benchmark interest rate decision tomorrow, commercial lenders ________ their deposit yields accordingly.",
+    "options": [
+      "will announce / adjust",
+      "announces / will adjust",
+      "announced / have adjusted",
+      "has announced / adjusted",
+      "is announcing / had adjusted"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Zaman bağlaçları (as soon as, when, after, before) yan cümlesinde ASLA 'will' almaz! Cümle yarını (future) anlattığı için: Yan cümle Present Simple ('announces'), ana cümle Future ('will adjust') olur.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "grammar",
+      "time-clauses",
+      "tenses"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-056",
+    "examQuestionNo": 76,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Passive Voice & Modals",
+    "difficulty": 2,
+    "stem": "Confidential financial records ________ on unencrypted portable storage devices under any circumstances, as specified in banking data compliance policies.",
+    "questionText": "Confidential financial records ________ on unencrypted portable storage devices under any circumstances, as specified in banking data compliance policies.",
+    "options": [
+      "must not be stored",
+      "do not need to store",
+      "might have stored",
+      "ought to store",
+      "would have been stored"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Özne 'Confidential financial records' (gizli finansal kayıtlar) cansız bir nesnedir ve depolayan değil depolanandır, yani EDİLGEN (Passive: be + V3) olmalıdır. Ayrıca kesin bir yasaklama ('under any circumstances') anlatıldığı için 'must not be stored' (saklanmamalıdır / saklanması yasaktır) doğru yapıdır.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "grammar",
+      "passive-voice",
+      "modals"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-057",
+    "examQuestionNo": 77,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Conditionals & Inversion",
+    "difficulty": 3,
+    "stem": "________ the senior risk auditor identified the fraudulent transactions earlier, the substantial financial loss could easily have been prevented.",
+    "questionText": "________ the senior risk auditor identified the fraudulent transactions earlier, the substantial financial loss could easily have been prevented.",
+    "options": [
+      "Had",
+      "Should",
+      "Were",
+      "Unless",
+      "If only"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Ana cümlede 'could have been prevented' (Type 3 Conditional) kullanılmıştır. Şart cümlesi 'If the auditor had identified...' yerine 'If' kaldırılarak DEVRİK (Inversion) yapılmıştır: 'Had the auditor identified...'. Cümle başında 'Had + Özne + V3' yapısı Type 3 devrik şart cümlesidir.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "grammar",
+      "conditionals",
+      "inversion"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-058",
+    "examQuestionNo": 78,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Relative Clauses",
+    "difficulty": 2,
+    "stem": "The supervisory committee summoned the chief executive, ________ strategic decisions during the acquisition process had raised serious regulatory concerns.",
+    "questionText": "The supervisory committee summoned the chief executive, ________ strategic decisions during the acquisition process had raised serious regulatory concerns.",
+    "options": [
+      "whom",
+      "whose",
+      "which",
+      "where",
+      "that"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Whose' bir ismin sahipliğini belirtmek için kullanılır (chief executive's strategic decisions ➔ CEO'nun stratejik kararları). 'Kişi + whose + isim' kalıbı doğrudan 'whose' gerektirir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "grammar",
+      "relative-clauses",
+      "whose"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-059",
+    "examQuestionNo": 79,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Past Modals & Deductions",
+    "difficulty": 3,
+    "stem": "The cyber attackers ________ valid administrative credentials to bypass the core firewall; otherwise, the automated security intrusion alarm would have gone off immediately.",
+    "questionText": "The cyber attackers ________ valid administrative credentials to bypass the core firewall; otherwise, the automated security intrusion alarm would have gone off immediately.",
+    "options": [
+      "must have used",
+      "should have used",
+      "cannot use",
+      "could not have used",
+      "would rather use"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Geçmişe dair güçlü bir çıkarım (strong deduction) vardır: 'Saldırganlar güvenlik duvarını aşmak için geçerli yönetici kimlik bilgilerini KULLANMIŞ OLMALILAR (must have used); aksi takdirde alarm çalardı'. 'Should have used' kullanmalıydı ama kullanmadı anlamına gelir ve anlama uymaz.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "past-modals",
+      "deduction"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-060",
+    "examQuestionNo": 80,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Conjunction Logic",
+    "difficulty": 2,
+    "stem": "Although modern algorithmic trading systems execute high-frequency orders in mere microseconds, ________.",
+    "questionText": "Although modern algorithmic trading systems execute high-frequency orders in mere microseconds, ________.",
+    "options": [
+      "they can occasionally amplify sudden market volatility when unexpected systemic shocks occur",
+      "they have completely eliminated the risk of financial loss for retail investors",
+      "because computerized trading models are infallible and guarantee continuous profits",
+      "so financial regulatory bodies encourage unmonitored flash order operations",
+      "which proves that human traders are no longer needed under any circumstances"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Cümle 'Although' (Zıtlık) ile başlamaktadır. İlk kısım sistemin hızı ve gelişmişliğiyle olumludur (+). Virgülden sonraki ana cümlenin olumsuz (-) bir yönü veya riski anlatması gerekir: 'beklenmedik şoklarda ani piyasa oynaklığını büyütebilmektedirler'. A şıkkı bu zıtlığı kusursuz biçimde tamamlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "sentence-completion",
+      "although",
+      "contrast"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-061",
+    "examQuestionNo": 81,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Cause & Effect",
+    "difficulty": 2,
+    "stem": "Unless a commercial enterprise maintains a sufficient buffer of high-quality liquid assets, ________.",
+    "questionText": "Unless a commercial enterprise maintains a sufficient buffer of high-quality liquid assets, ________.",
+    "options": [
+      "it may find itself unable to honor short-term obligations during unexpected credit contractions",
+      "it would have enjoyed record high profitability throughout the fiscal year",
+      "which guarantees smooth cross-border settlement processing without delays",
+      "therefore institutional investors immediately injected surplus equity capital",
+      "it easily secured long-term funding at below-market interest rates"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Unless' (-medikçe / if not) şartı olumsuz bir durum uyarısı içerir. Yeterli likit varlık tamponu tutmadıkça ➔ 'beklenmedik kredi daralmalarında kısa vadeli yükümlülüklerini yerine getiremez hale gelebilir'. A şıkkı hem zaman (Present/May) hem anlam açısından tam uyumludur.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "sentence-completion",
+      "unless",
+      "finance"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-062",
+    "examQuestionNo": 82,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Subject & Pronoun Reference",
+    "difficulty": 3,
+    "stem": "Because credit rating agencies downgraded the sovereign bond ratings of several emerging nations, ________.",
+    "questionText": "Because credit rating agencies downgraded the sovereign bond ratings of several emerging nations, ________.",
+    "options": [
+      "international lenders immediately raised risk premiums on future loans extended to those countries",
+      "in order that foreign direct investment would pour in without any regulatory restraint",
+      "despite the unprecedented resilience of domestic capital market infrastructures",
+      "so that commercial banks could easily lower their capital adequacy reserves",
+      "which had already repaid their outstanding foreign currency sovereign debts"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Because' (Sebep) cümlesinde kredi notlarının düşürüldüğü belirtilmiştir. Bunun mantıksal sonucu: Uluslararası borç verenlerin o ülkelere açılacak kredilerdeki risk primlerini artırmasıdır (A şıkkı).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "sentence-completion",
+      "because",
+      "cause-effect"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-063",
+    "examQuestionNo": 83,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Purpose Clauses",
+    "difficulty": 2,
+    "stem": "Central banks conduct routine stress test simulations on systemically important financial institutions in order to ________.",
+    "questionText": "Central banks conduct routine stress test simulations on systemically important financial institutions in order to ________.",
+    "options": [
+      "assess whether their capital cushions can withstand extreme macroeconomic recessions",
+      "guarantee that no financial institution will ever record an operational loss",
+      "owing to the complete deregulation of international cross-border fund flows",
+      "although commercial banks had already distributed all their surplus dividends",
+      "so that speculative cryptocurrency trades could be incorporated into reserve assets"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'In order to + Fiil' (amaç bildirir - yapmak amacıyla). Merkez bankaları stres testlerini 'sermaye tamponlarının aşırı makroekonomik durgunluklara dayanıp dayanamayacağını değerlendirmek amacıyla' yapar.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "sentence-completion",
+      "in-order-to",
+      "banking"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-064",
+    "examQuestionNo": 84,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Translation",
+    "subtopic": "English to Turkish",
+    "difficulty": 2,
+    "stem": "The newly adopted artificial intelligence guidelines require financial institutions to maintain full transparency in their automated credit scoring decisions.\n\nVerilen İngilizce cümlenin en uygun Türkçe karşılığını bulunuz:",
+    "questionText": "The newly adopted artificial intelligence guidelines require financial institutions to maintain full transparency in their automated credit scoring decisions.\n\nVerilen İngilizce cümlenin en uygun Türkçe karşılığını bulunuz:",
+    "options": [
+      "Yeni kabul edilen yapay zekâ yönergeleri, finans kuruluşlarının otomatik kredi skorlama kararlarında tam şeffaflık sağlamasını zorunlu kılmaktadır.",
+      "Finans kuruluşları, otomatik kredi kararlarında şeffaf olmak amacıyla yeni yapay zekâ kurallarını benimsemiştir.",
+      "Yeni yapay zekâ kurallarına göre finans kuruluşlarının otomatik kredi kararlarında şeffaflık sağlaması tavsiye edilmektedir.",
+      "Otomatik kredi skorlamasında tam şeffaflık sağlayan finans kuruluşları, yeni yapay zekâ yönergelerini kabul etmiştir.",
+      "Yeni kabul edilen yapay zekâ ilkeleri sayesinde finans kuruluşları kredi skorlamasında şeffaflığı artıracaktır."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Taktik: Cümlenin yüklemi 'require' (zorunlu kılmaktadır / şart koşmaktadır). Özne: 'The newly adopted artificial intelligence guidelines' (Yeni kabul edilen yapay zekâ yönergeleri). A şıkkında özne ve yüklem eksiksiz ve birebir karşılanmıştır. C'de 'tavsiye edilmektedir', B'de 'benimsemiştir', E'de 'artıracaktır' diyerek yüklem bozulmuştur.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "translation",
+      "eng-to-tr",
+      "tactic-verb-hunting"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-065",
+    "examQuestionNo": 85,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Translation",
+    "subtopic": "Turkish to English",
+    "difficulty": 2,
+    "stem": "Merkez bankası faiz oranlarını düşürdüğünde, ticari kredilere olan talep genellikle önemli ölçüde artar.\n\nVerilen Türkçe cümlenin en uygun İngilizce karşılığını bulunuz:",
+    "questionText": "Merkez bankası faiz oranlarını düşürdüğünde, ticari kredilere olan talep genellikle önemli ölçüde artar.\n\nVerilen Türkçe cümlenin en uygun İngilizce karşılığını bulunuz:",
+    "options": [
+      "When the central bank lowers interest rates, demand for commercial loans generally increases substantially.",
+      "If the central bank had lowered interest rates, demand for commercial loans would increase remarkably.",
+      "Although the central bank lowered interest rates, demand for commercial loans remained unchanged.",
+      "Commercial loans generally increase when the central bank is forced to lower lending rates.",
+      "Since the central bank lowers interest rates, the volume of commercial loans has increased dramatically."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Taktik: Yan cümle 'düşürdüğünde' ➔ 'When the central bank lowers interest rates'. Ana cümlenin yüklemi: 'genellikle önemli ölçüde artar' ➔ 'generally increases substantially'. A şıkkı tam ve hatasız çeviridir.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "translation",
+      "tr-to-eng",
+      "tactic-verb-hunting"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-066",
+    "examQuestionNo": 86,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Translation",
+    "subtopic": "English to Turkish",
+    "difficulty": 3,
+    "stem": "Unless internal audit reports are reviewed regularly by executive directors, operational vulnerabilities cannot be detected in a timely manner.\n\nVerilen İngilizce cümlenin en uygun Türkçe karşılığını bulunuz:",
+    "questionText": "Unless internal audit reports are reviewed regularly by executive directors, operational vulnerabilities cannot be detected in a timely manner.\n\nVerilen İngilizce cümlenin en uygun Türkçe karşılığını bulunuz:",
+    "options": [
+      "İç denetim raporları icra direktörleri tarafından düzenli olarak incelenmedikçe, operasyonel zafiyetler zamanında tespit edilemez.",
+      "İcra direktörleri iç denetim raporlarını düzenli olarak incelese bile operasyonel riskler zamanında tespit edilemeyebilir.",
+      "Operasyonel zafiyetlerin zamanında tespit edilmesi, iç denetim raporlarının direktörler tarafından onaylanmasına bağlıdır.",
+      "İç denetim raporları düzenli incelenmediği için operasyonel açıkların zamanında belirlenmesi mümkün olmamıştır.",
+      "İcra direktörleri iç denetim raporlarını zamanında incelemediği takdirde operasyonel sorunlar ortaya çıkacaktır."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Unless ... reviewed' (-incelenmedikçe / incelenmezse). Ana yüklem: 'cannot be detected in a timely manner' (zamanında tespit edilemez). A şıkkı cümlenin birebir ve doğru çevirisidir.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "translation",
+      "eng-to-tr",
+      "unless"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-067",
+    "examQuestionNo": 87,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Reading Comprehension",
+    "subtopic": "Main Idea",
+    "difficulty": 2,
+    "stem": "Read the passage and answer the question:\n\n'In recent years, the rapid proliferation of decentralized finance (DeFi) platforms has challenged traditional banking paradigms. Proponents argue that smart contracts eliminate intermediaries, drastically reducing transaction fees and processing delays. However, international regulatory authorities warn that the absence of centralized oversight creates severe vulnerabilities to money laundering and automated protocol exploits. Consequently, leading global central banks are now developing Central Bank Digital Currencies (CBDCs) to combine the speed of blockchain architecture with the safety of sovereign legal backing.'\n\nWhat is the primary objective of central banks in developing CBDCs according to the passage?",
+    "questionText": "What is the primary objective of central banks in developing CBDCs according to the passage?",
+    "options": [
+      "To merge the technological efficiency of blockchain with the legal security and trust of sovereign money.",
+      "To completely abolish traditional commercial bank branches within the next decade.",
+      "To encourage unmonitored speculative transactions across decentralized financial networks.",
+      "To eliminate all legal regulations governing cross-border commercial transactions.",
+      "To replace physical cash exclusively with volatile private cryptocurrencies."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Metnin son cümlesinde: 'combine the speed of blockchain architecture with the safety of sovereign legal backing' (blokzincir hızını egemen devlet güvencesiyle birleştirmek) açıkça belirtilmiştir. A şıkkı bu cümlenin doğrudan karşılığıdır.",
+    "estimatedTimeSeconds": 70,
+    "tags": [
+      "reading-comprehension",
+      "main-idea",
+      "cbdc"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-068",
+    "examQuestionNo": 88,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Reading Comprehension",
+    "subtopic": "Detail & Inference",
+    "difficulty": 2,
+    "stem": "According to the passage on decentralized finance (DeFi), what is a major concern raised by international regulatory authorities?",
+    "questionText": "According to the passage on decentralized finance (DeFi), what is a major concern raised by international regulatory authorities?",
+    "options": [
+      "The lack of centralized supervision makes these platforms susceptible to illicit activities and protocol exploits.",
+      "Smart contracts execute financial transactions much too slowly compared to legacy wire systems.",
+      "Decentralized platforms demand excessively high intermediary commissions from retail users.",
+      "Governments have completely banned all computer programming languages used in finance.",
+      "Centralized banks refuse to employ automated IT infrastructure for daily operations."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Metinde 'absence of centralized oversight creates severe vulnerabilities to money laundering and automated protocol exploits' denilmiştir. Bu da A şıkkındaki 'merkezi denetim eksikliğinin yasadışı faaliyetlere ve protokole yönelik istismarlara zemin hazırlaması' endişesini doğrudan açıklar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "reading-comprehension",
+      "inference",
+      "defi"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-069",
+    "examQuestionNo": 89,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Collocations & Prepositions",
+    "difficulty": 2,
+    "stem": "Commercial banks are strictly legally required to comply ________ international anti-money laundering (AML) standards established by FATF.",
+    "questionText": "Commercial banks are strictly legally required to comply ________ international anti-money laundering (AML) standards established by FATF.",
+    "options": [
+      "with",
+      "for",
+      "at",
+      "from",
+      "against"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Comply with' (kurallara, standartlara uymak) sınavın en klasik edat eşleşmesidir (prepositional verb). 'Comply' her zaman 'with' edatı ile kullanılır.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "vocabulary",
+      "preposition",
+      "comply-with"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-070",
+    "examQuestionNo": 90,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Collocations & Prepositions",
+    "difficulty": 2,
+    "stem": "The regulatory body decided to deprive the unlicensed broker ________ its operating permission following serious consumer fraud allegations.",
+    "questionText": "The regulatory body decided to deprive the unlicensed broker ________ its operating permission following serious consumer fraud allegations.",
+    "options": [
+      "of",
+      "with",
+      "to",
+      "by",
+      "over"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Deprive somebody of something' (birini bir şeyden mahrum bırakmak / elinden almak) yapısıdır. 'Deprive' fiili 'of' edatı ile eşleşir.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "vocabulary",
+      "preposition",
+      "collocation"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-071",
+    "examQuestionNo": 91,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Academic Verbs",
+    "difficulty": 2,
+    "stem": "The board of directors met on Friday to ________ the proposed merger agreement with the foreign retail bank.",
+    "questionText": "The board of directors met on Friday to ________ the proposed merger agreement with the foreign retail bank.",
+    "options": [
+      "endorse",
+      "deteriorate",
+      "deplete",
+      "relinquish",
+      "violate"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Endorse' onaylamak, desteklemek, tasdik etmek anlamına gelir (eş anlamlılar: approve, sanction, support). Yönetim kurulu birleşme anlaşmasını 'onaylamak' için toplanmıştır. 'Deteriorate' kötüleşmek, 'deplete' tüketmek, 'violate' ihlal etmek demektir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "vocabulary",
+      "academic-verbs"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-072",
+    "examQuestionNo": 92,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "Due to unforeseen scheduling conflicts among executive board members, the quarterly financial audit meeting was ________ until next Tuesday.",
+    "questionText": "Due to unforeseen scheduling conflicts among executive board members, the quarterly financial audit meeting was ________ until next Tuesday.",
+    "options": [
+      "put off",
+      "put out",
+      "looked up",
+      "taken after",
+      "run out"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Put off' ertelemek (postpone, delay) anlamına gelir. Toplantı gelecek salıya kadar ertelenmiştir. 'Put out' yangın söndürmek, 'take after' birine benzemek demektir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs",
+      "put-off"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-073",
+    "examQuestionNo": 93,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Gerund & Infinitive",
+    "difficulty": 2,
+    "stem": "Financial institutions must refrain from ________ misleading statements concerning the expected returns of complex derivative products.",
+    "questionText": "Financial institutions must refrain from ________ misleading statements concerning the expected returns of complex derivative products.",
+    "options": [
+      "making",
+      "to make",
+      "make",
+      "having made",
+      "to have made"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "İngilizcede edatlardan (preposition: in, on, at, from, by vb.) sonra fiil her zaman -ING (Gerund) alır. 'Refrain from + V-ing' (bir şey yapmaktan kaçınmak / çekinmek) kuralı gereği doğru cevap 'making'dir.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "grammar",
+      "gerund-infinitive",
+      "prepositions"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-074",
+    "examQuestionNo": 94,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Tenses & Time Markers",
+    "difficulty": 2,
+    "stem": "By the time the new banking regulation comes into full statutory effect next December, most financial firms ________ their compliance protocols.",
+    "questionText": "By the time the new banking regulation comes into full statutory effect next December, most financial firms ________ their compliance protocols.",
+    "options": [
+      "will have completed",
+      "completed",
+      "had completed",
+      "are completing",
+      "have completed"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'By the time + Present Simple' gelecekte bir ana kadar bir işin bitmiş olacağını ifade eder ve ana cümlede mutlaka FUTURE PERFECT (will have + V3) yapısını gerektirir: 'will have completed' (tamamlamış olacaklar).",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "grammar",
+      "by-the-time",
+      "future-perfect"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-075",
+    "examQuestionNo": 95,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Contrast Conjunctions",
+    "difficulty": 2,
+    "stem": "Gold is traditionally considered a reliable hedge against currency depreciation; ________, corporate bonds offer regular periodic coupon payments.",
+    "questionText": "Gold is traditionally considered a reliable hedge against currency depreciation; ________, corporate bonds offer regular periodic coupon payments.",
+    "options": [
+      "on the other hand",
+      "consequently",
+      "in addition to",
+      "because",
+      "for example"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'On the other hand' (öte yandan / diğer taraftan) iki farklı yatırım aracının (altın vs şirket tahvili) farklı niteliklerini karşılaştırmak için kullanılan geçiş ifadesidir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "conjunctions",
+      "transitions",
+      "on-the-other-hand"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-076",
+    "examQuestionNo": 96,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Conjunctions",
+    "subtopic": "Conditionals",
+    "difficulty": 2,
+    "stem": "The loan facility will be disbursed immediately ________ the applicant submits the legally certified land title as collateral.",
+    "questionText": "The loan facility will be disbursed immediately ________ the applicant submits the legally certified land title as collateral.",
+    "options": [
+      "provided that",
+      "in spite of",
+      "despite",
+      "unless",
+      "whereas"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Provided that' (= on condition that / if / -mesi şartıyla) koşul bağlacıdır. Kredi, başvuru sahibinin tapuyu teminat olarak ibraz etmesi 'şartıyla' derhal kullandırılacaktır.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "conjunctions",
+      "provided-that",
+      "conditionals"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-077",
+    "examQuestionNo": 97,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Academic Adjectives",
+    "difficulty": 3,
+    "stem": "Before embarking on a multimillion-dollar core banking transformation, executive management must conduct a rigorous study to ensure the project is financially ________.",
+    "questionText": "Before embarking on a multimillion-dollar core banking transformation, executive management must conduct a rigorous study to ensure the project is financially ________.",
+    "options": [
+      "feasible",
+      "obsolete",
+      "reluctant",
+      "arbitrary",
+      "vague"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Feasible' uygulanabilir, yapılabilir, fizıbıl (financially viable) demektir. Projenin finansal olarak 'uygulanabilir' olduğundan emin olmak için fizibilite çalışması yapılır. 'Obsolete' modası geçmiş, 'arbitrary' keyfi demektir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "vocabulary",
+      "academic-adjectives",
+      "feasible"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-078",
+    "examQuestionNo": 98,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "The internal audit committee could not completely ________ the possibility of senior management involvement in the accounting irregular transactions.",
+    "questionText": "The internal audit committee could not completely ________ the possibility of senior management involvement in the accounting irregular transactions.",
+    "options": [
+      "rule out",
+      "give in",
+      "look forward to",
+      "put up with",
+      "run out of"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Rule out' ihtimal dışı bırakmak, dışlamak, göz ardı etmek demektir (exclude, eliminate). Denetim komitesi üst yönetimin dahil olma ihtimalini tamamen 'dışlayamadı / göz ardı edemedi'.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs",
+      "rule-out"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-079",
+    "examQuestionNo": 99,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Causative & Passive",
+    "difficulty": 3,
+    "stem": "Due to growing cyber fraud risks, the board resolved to have their core network infrastructure ________ by an external cybersecurity consultancy.",
+    "questionText": "Due to growing cyber fraud risks, the board resolved to have their core network infrastructure ________ by an external cybersecurity consultancy.",
+    "options": [
+      "audited",
+      "audit",
+      "to audit",
+      "auditing",
+      "have audited"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Ettirgen çatı (Causative): 'Have something done (V3)'. Bir şeyi birine yaptırmak / denetletmek. Özne 'network infrastructure' cansız olduğundan 'have + object + V3' kalıbı ile 'audited' kullanılır.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "grammar",
+      "causative",
+      "passive"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-080",
+    "examQuestionNo": 100,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Reading Comprehension",
+    "subtopic": "Vocabulary in Context",
+    "difficulty": 2,
+    "stem": "In academic economic literature, the term 'liquidity squeeze' most closely refers to a situation in which ________.",
+    "questionText": "In academic economic literature, the term 'liquidity squeeze' most closely refers to a situation in which ________.",
+    "options": [
+      "cash and readily convertible assets become extremely scarce, making it difficult for institutions to fulfill immediate payment liabilities",
+      "interest rates fall to zero and commercial banks refuse to accept customer deposit accounts",
+      "companies experience a massive surplus of uninvested capital and pay out record dividends",
+      "international trade barriers are eliminated and foreign capital pours uncontrollably into domestic banks",
+      "gold reserves increase so fast that the domestic currency experiences sharp deflationary pressures"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Liquidity squeeze' (likidite sıkışıklığı), piyasada nakit ve hızla paraya çevrilebilir varlıkların aşırı derecede kıtlaşması ve kurumların acil nakit yükümlülüklerini karşılamakta zorlanması halidir. A şıkkı bu terimin kesin ekonomik tanımıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "reading-comprehension",
+      "finance-terminology",
+      "liquidity"
+    ],
+    "source": "original"
   }
 ]
