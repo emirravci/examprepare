@@ -1,0 +1,3935 @@
+[
+  {
+    "id": "bgk-001",
+    "examQuestionNo": 1,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ziraat Bankası Tarihçesi ve Kuruluşu",
+    "subtopic": "Memleket Sandıkları",
+    "difficulty": 1,
+    "stem": "Ziraat Bankası'nın tarihsel kökeni kabul edilen ve 1863 yılında Niş Valisi Mithat Paşa tarafından çiftçilere uygun koşullarda kredi sağlamak amacıyla kurulan ilk mali teşkilat aşağıdakilerden hangisidir?",
+    "questionText": "Ziraat Bankası'nın tarihsel kökeni kabul edilen ve 1863 yılında Niş Valisi Mithat Paşa tarafından çiftçilere uygun koşullarda kredi sağlamak amacıyla kurulan ilk mali teşkilat aşağıdakilerden hangisidir?",
+    "options": [
+      "Emniyet Sandığı",
+      "Memleket Sandıkları",
+      "Dersaadet Tahvilat Borsası",
+      "Osmanlı İtibar-ı Milli Bankası",
+      "Menafi Sandıkları"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Ziraat Bankası'nın temeli, 1863 yılında Mithat Paşa tarafından Pirot kasabasında kurulan 'Memleket Sandıkları'dır. 1883'te Menafi Sandıkları'na, 15 Ağustos 1888'de ise resmi nizamnamesiyle modern Ziraat Bankası'na dönüştürülmüştür.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "ziraat-bankasi",
+      "mithat-pasa",
+      "tarihce",
+      "memleket-sandiklari"
+    ],
+    "source": "Ziraat Bankası Resmi Tarihçe"
+  },
+  {
+    "id": "bgk-002",
+    "examQuestionNo": 2,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ziraat Bankası Ürün ve Hizmetleri",
+    "subtopic": "Tarım Kartı",
+    "difficulty": 1,
+    "stem": "Ziraat Bankası'nın çiftçi ve üreticilere mazot, gübre, tohum ve yem gibi tarımsal girdi alımlarında faiz sübvansiyonlu veya vadeli harcama imkanı sunan tescilli bankacılık kartı aşağıdakilerden hangisidir?",
+    "questionText": "Ziraat Bankası'nın çiftçi ve üreticilere mazot, gübre, tohum ve yem gibi tarımsal girdi alımlarında faiz sübvansiyonlu veya vadeli harcama imkanı sunan tescilli bankacılık kartı aşağıdakilerden hangisidir?",
+    "options": [
+      "Bankkart Genç",
+      "Başakkart (Bankkart Başak)",
+      "Ziraat Maximum",
+      "Troy Esnaf Kart",
+      "Ziraat Hasat Kart"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Ziraat Bankası üreticilere tarımsal işletme giderlerini finanse etmeleri amacıyla Bankkart Başak (Başakkart) sunmaktadır. Bu kartla anlaşmalı üye işyerlerinden sübvansiyonlu tarımsal girdi temin edilebilir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "ziraat-bankasi",
+      "basakkart",
+      "tarim-kredisi",
+      "kartli-odeme"
+    ],
+    "source": "Ziraat Bankası Tarımsal Bankacılık"
+  },
+  {
+    "id": "bgk-003",
+    "examQuestionNo": 3,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "TCMB ve Para Politikası",
+    "subtopic": "Temel Amaç ve Araçlar",
+    "difficulty": 2,
+    "stem": "1211 sayılı Türkiye Cumhuriyet Merkez Bankası (TCMB) Kanunu'na göre, Merkez Bankası'nın temel ve birincil amacı aşağıdakilerden hangisidir?",
+    "questionText": "1211 sayılı Türkiye Cumhuriyet Merkez Bankası (TCMB) Kanunu'na göre, Merkez Bankası'nın temel ve birincil amacı aşağıdakilerden hangisidir?",
+    "options": [
+      "Bütçe açığını kapatmak için kamuya borç vermek",
+      "Fiyat istikrarını sağlamak",
+      "Bireysel kredi faiz oranlarının üst sınırını tek başına belirlemek",
+      "Döviz kurlarını belirli bir bantta sabit tutmak",
+      "Ticari bankaların karlılık hedeflerini denetlemek"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "1211 sayılı TCMB Kanunu'nun 4. maddesi gereğince Bankanın temel amacı 'fiyat istikrarını sağlamaktır'. Banka, fiyat istikrarı hedefiyle çelişmemek kaydıyla hükümetin büyüme ve istihdam politikalarını destekler.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "tcmb",
+      "fiyat-istikrari",
+      "para-politikasi"
+    ],
+    "source": "TCMB Resmi Mevzuatı (1211 Sayılı Kanun)"
+  },
+  {
+    "id": "bgk-004",
+    "examQuestionNo": 4,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "TCMB ve Para Politikası",
+    "subtopic": "Politika Faizi",
+    "difficulty": 2,
+    "stem": "TCMB Para Politikası Kurulu'nun (PPK) faiz kararlarında referans olarak belirlediği temel 'Politika Faizi' aşağıdakilerden hangisidir?",
+    "questionText": "TCMB Para Politikası Kurulu'nun (PPK) faiz kararlarında referans olarak belirlediği temel 'Politika Faizi' aşağıdakilerden hangisidir?",
+    "options": [
+      "Gecelik Borçlanma Faizi (O/N)",
+      "Geç Likidite Penceresi (GLP) Faizi",
+      "Bir Hafta Vadeli Repo İhale Faiz Oranı",
+      "Bankalararası Para Piyasası Ağırlıklı Ortalama Faizi",
+      "Reeskont Kredi Faiz Oranı"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "TCMB'nin temel politika faizi 'Bir hafta vadeli repo ihale faiz oranı'dır. Merkez Bankası piyasa yapıcı bankalara likiditeyi temel olarak bu oran üzerinden haftalık repo ihaleleriyle sağlar.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "tcmb",
+      "politika-faizi",
+      "repo"
+    ],
+    "source": "TCMB Para Politikası Araçları"
+  },
+  {
+    "id": "bgk-005",
+    "examQuestionNo": 5,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık Düzenleme ve Denetleme",
+    "subtopic": "BDDK ve Rasyolar",
+    "difficulty": 2,
+    "stem": "5411 sayılı Bankacılık Kanunu çerçevesinde Türkiye'de bankaların faaliyet izinlerini veren, rasyolarını denetleyen ve mevzuata uyumunu gözetleyen bağımsız idari otorite hangisidir?",
+    "questionText": "5411 sayılı Bankacılık Kanunu çerçevesinde Türkiye'de bankaların faaliyet izinlerini veren, rasyolarını denetleyen ve mevzuata uyumunu gözetleyen bağımsız idari otorite hangisidir?",
+    "options": [
+      "Sermaye Piyasası Kurulu (SPK)",
+      "Bankacılık Düzenleme ve Denetleme Kurumu (BDDK)",
+      "Tasarruf Mevduatı Sigorta Fonu (TMSF)",
+      "Türkiye Bankalar Birliği (TBB)",
+      "Maliye Bakanlığı Finansal Piyasalar Genel Müdürlüğü"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "BDDK (Bankacılık Düzenleme ve Denetleme Kurumu), bankacılık sektörünün güven ve istikrar içinde çalışmasını sağlamak, mudilerin haklarını korumak ve riskleri denetlemekle görevli bağımsız düzenleyici üst kuruldur.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "bddk",
+      "denetim",
+      "bankacilik-kanunu"
+    ],
+    "source": "BDDK Kurumsal Portalı"
+  },
+  {
+    "id": "bgk-006",
+    "examQuestionNo": 6,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Mevduat ve Kredi Kavramları",
+    "subtopic": "TMSF Mevduat Sigortası",
+    "difficulty": 2,
+    "stem": "Türkiye'de faaliyet gösteren bir mevduat bankasında gerçek kişilerin ticari olmayan tasarruf mevduatlarını yasal limitler dahilinde garanti ve sigorta altına alan resmi kurum hangisidir?",
+    "questionText": "Türkiye'de faaliyet gösteren bir mevduat bankasında gerçek kişilerin ticari olmayan tasarruf mevduatlarını yasal limitler dahilinde garanti ve sigorta altına alan resmi kurum hangisidir?",
+    "options": [
+      "Hazine ve Maliye Bakanlığı",
+      "Tasarruf Mevduatı Sigorta Fonu (TMSF)",
+      "Merkez Bankası Takas ve Saklama Anonim Şirketi",
+      "Sigortacılık ve Özel Emeklilik Düzenleme Kurumu (SEDDK)",
+      "Türkiye Bankalar Birliği Risk Merkezi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "TMSF (Tasarruf Mevduatı Sigorta Fonu), bankalara yatırılan bireysel tasarruf mevduatlarını belirlenen yasal sigorta tutarına kadar devlet garantisi altında tazmin etmekle yetkilidir.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "tmsf",
+      "mevduat-sigortasi",
+      "mudiler"
+    ],
+    "source": "TMSF Mevzuat ve Sigorta Kapsamı"
+  },
+  {
+    "id": "bgk-007",
+    "examQuestionNo": 7,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık Risk Yönetimi",
+    "subtopic": "Kredi Riski ve NPL",
+    "difficulty": 3,
+    "stem": "Bankacılık terminolojisinde borçlunun kredi anapara veya faiz ödemelerini vadesinde yerine getirememesi sonucu 90 günden fazla gecikmeye giren ve takibe aktarılan alacaklara ne ad verilir?",
+    "questionText": "Bankacılık terminolojisinde borçlunun kredi anapara veya faiz ödemelerini vadesinde yerine getirememesi sonucu 90 günden fazla gecikmeye giren ve takibe aktarılan alacaklara ne ad verilir?",
+    "options": [
+      "Kaldıraçlı Alacaklar",
+      "Takipteki Krediler (Non-Performing Loans - NPL)",
+      "Arbitraj Kredileri",
+      "İskontolu Senetler",
+      "Sendikasyon Kredileri"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Vadesi üzerinden 90 gün geçen ve geri ödenmesi şüpheli hale gelen krediler 'Takipteki Alacaklar' (NPL - Non-Performing Loans) kategorisine aktarılır ve bankalar bunlar için karşılık (provision) ayırmak zorundadır.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "kredi-riski",
+      "npl",
+      "takipteki-alacaklar",
+      "risk-yonetimi"
+    ],
+    "source": "BDDK Kredilerin Sınıflandırılması Yönetmeliği"
+  },
+  {
+    "id": "bgk-008",
+    "examQuestionNo": 8,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık Risk Yönetimi",
+    "subtopic": "Likidite ve Sermaye Yeterliliği",
+    "difficulty": 3,
+    "stem": "Basel standartları ve BDDK düzenlemeleri uyarınca bir bankanın sahip olduğu özkaynakların, maruz kaldığı risk ağırlıklı varlıklara (kredi, piyasa ve operasyonel risk) oranlanmasıyla hesaplanan göstergeye ne ad verilir?",
+    "questionText": "Basel standartları ve BDDK düzenlemeleri uyarınca bir bankanın sahip olduğu özkaynakların, maruz kaldığı risk ağırlıklı varlıklara (kredi, piyasa ve operasyonel risk) oranlanmasıyla hesaplanan göstergeye ne ad verilir?",
+    "options": [
+      "Likidite Karşılama Oranı (LCR)",
+      "Net Faiz Marjı (NIM)",
+      "Sermaye Yeterlilik Rasyosu (SYR / CAR)",
+      "Fiyat/Kazanç Oranı (F/K)",
+      "Takipteki Alacak Karşılık Oranı"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Sermaye Yeterlilik Rasyosu (SYR - Capital Adequacy Ratio), bir bankanın olası şoklara ve zararlara karşı yeterli özkaynağa sahip olup olmadığını ölçer. Yasal alt sınır %8, BDDK hedef rasyosu ise genellikle %12'dir.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "syr",
+      "basel",
+      "sermaye-yeterliligi",
+      "risk"
+    ],
+    "source": "BDDK Sermaye Yeterliliği Yönetmeliği"
+  },
+  {
+    "id": "bgk-009",
+    "examQuestionNo": 9,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bireysel ve Ticari Bankacılık",
+    "subtopic": "Kredi Türleri",
+    "difficulty": 2,
+    "stem": "Bir şirketin banka ile belirlediği bir limit dahilinde, ihtiyaç duydukça para çekebildiği ve faizin yalnızca kullanılan gün ve tutar üzerinden hesaplandığı esnek ticari kredi türü hangisidir?",
+    "questionText": "Bir şirketin banka ile belirlediği bir limit dahilinde, ihtiyaç duydukça para çekebildiği ve faizin yalnızca kullanılan gün ve tutar üzerinden hesaplandığı esnek ticari kredi türü hangisidir?",
+    "options": [
+      "Taksitli Ticari Kredi",
+      "Rotatif (Borçlu Cari Hesap) Kredi",
+      "Akreditif Kredisi",
+      "Prefinansman Kredisi",
+      "Forfaiting Kredisi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Rotatif kredi (Borçlu Cari Hesap - BCH), firmanın limit dahilinde dilediğinde para çekip dilediğinde geri yatırabildiği, faizin sadece paranın fiilen kullanıldığı gün üzerinden işletildiği kredidir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "rotatif-kredi",
+      "ticari-bankacilik",
+      "bch"
+    ],
+    "source": "TBB Bankacılık Terimleri Kılavuzu"
+  },
+  {
+    "id": "bgk-010",
+    "examQuestionNo": 10,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ödeme Sistemleri ve Dijital Bankacılık",
+    "subtopic": "FAST Sistemi",
+    "difficulty": 1,
+    "stem": "TCMB tarafından işletilen, farklı bankalardaki hesaplar arasında 7/24 anlık para transferi sağlayan ve Kolay Adresleme (telefon, T.C. kimlik, e-posta) sistemini destekleyen altyapı hangisidir?",
+    "questionText": "TCMB tarafından işletilen, farklı bankalardaki hesaplar arasında 7/24 anlık para transferi sağlayan ve Kolay Adresleme (telefon, T.C. kimlik, e-posta) sistemini destekleyen altyapı hangisidir?",
+    "options": [
+      "EFT (Elektronik Fon Transferi)",
+      "FAST (Fonların Anlık ve Sürekli Transferi)",
+      "SWIFT",
+      "Havale Sistemi",
+      "BKM Express"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "FAST (Fonların Anlık ve Sürekli Transferi), TCMB tarafından hayata geçirilen, haftanın 7 günü 24 saati birkaç saniye içinde farklı bankalar arası para transferi gerçekleştiren modern perakende ödeme sistemidir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "fast",
+      "odeme-sistemleri",
+      "tcmb",
+      "dijital-bankacilik"
+    ],
+    "source": "TCMB FAST Bilgilendirme Sayfası"
+  },
+  {
+    "id": "bgk-011",
+    "examQuestionNo": 11,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bilanço ve Finansal Tablolar",
+    "subtopic": "Banka Bilançosu",
+    "difficulty": 2,
+    "stem": "Bir ticari bankanın bilançosunda müşterilerden toplanan mevduatlar ve bankanın müşterilere kullandırdığı krediler sırasıyla hangi bilanço kalemlerinde yer alır?",
+    "questionText": "Bir ticari bankanın bilançosunda müşterilerden toplanan mevduatlar ve bankanın müşterilere kullandırdığı krediler sırasıyla hangi bilanço kalemlerinde yer alır?",
+    "options": [
+      "Mevduat: Aktif | Krediler: Pasif",
+      "Mevduat: Pasif | Krediler: Aktif",
+      "Her ikisi de Aktif kalemdir",
+      "Her ikisi de Pasif kalemdir",
+      "Mevduat: Gelir Tablosu | Krediler: Nazım Hesaplar"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Bankalar için müşterilerin yatırdığı mevduat bir borç/yükümlülüktür (Pasif). Kullandırılan krediler ise bankanın alacağı olan finansal varlıklardır (Aktif). Bu yönüyle banka bilançosu reel sektör bilançosunun tersi mantıkla çalışır.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "bilanco",
+      "aktif-pasif",
+      "mevduat",
+      "krediler"
+    ],
+    "source": "Finansal Muhasebe İlkeleri"
+  },
+  {
+    "id": "bgk-012",
+    "examQuestionNo": 12,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Enflasyon ve Para Politikası",
+    "subtopic": "Enflasyon Dinamikleri",
+    "difficulty": 2,
+    "stem": "Petrol, elektrik ve döviz kuru gibi üretim girdilerinin maliyetlerinin artması sebebiyle ürün ve hizmet fiyatlarının genel seviyesinin yükselmesine ne ad verilir?",
+    "questionText": "Petrol, elektrik ve döviz kuru gibi üretim girdilerinin maliyetlerinin artması sebebiyle ürün ve hizmet fiyatlarının genel seviyesinin yükselmesine ne ad verilir?",
+    "options": [
+      "Talep Enflasyonu",
+      "Maliyet (Arz) Enflasyonu",
+      "Gizli Enflasyon",
+      "Kronik Enflasyon",
+      "Çekirdek Enflasyon"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Üretim maliyetlerinin (hammadde, enerji, işçilik, kur artışı) yükselmesi nedeniyle toplam arz eğrisinin sola kayması ve fiyatların artması 'Maliyet (veya İtme) Enflasyonu' olarak adlandırılır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "enflasyon",
+      "maliyet-enflasyonu",
+      "ekonomi"
+    ],
+    "source": "TCMB Ekonomi Bülteni"
+  },
+  {
+    "id": "bgk-013",
+    "examQuestionNo": 13,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Tarım Bankacılığı ve Finansman",
+    "subtopic": "Sübvansiyonlu Krediler",
+    "difficulty": 2,
+    "stem": "Ziraat Bankası'nın üreticilere kullandırdığı Hazine faiz destekli (sübvansiyonlu) tarımsal kredilerde faiz indirim oranları hangi resmi kriterlere göre farklılaşır?",
+    "questionText": "Ziraat Bankası'nın üreticilere kullandırdığı Hazine faiz destekli (sübvansiyonlu) tarımsal kredilerde faiz indirim oranları hangi resmi kriterlere göre farklılaşır?",
+    "options": [
+      "Yalnızca borçlunun yaşına göre",
+      "Yatırımın konusu (damla sulama, genç çiftçi, kadın girişimci, sözleşmeli üretim) ve öncelikli ürün grubuna göre",
+      "Tarımsal arazinin tapu kadastro harç bedeline göre",
+      "Yalnızca şirketin halka arz durumuna göre",
+      "Sadece üreticinin kredi kartı harcama geçmişine göre"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Cumhurbaşkanlığı Kararı uyarınca Ziraat Bankası tarımsal kredilerinde; basınçlı sulama sistemleri, genç/kadın çiftçi, stratejik bitkisel üretim ve sözleşmeli tarım gibi hedeflere göre %20'den %100'e (tamamen sıfır faiz) varan indirimler uygulanır.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "tarim-bankaciligi",
+      "subvansiyonlu-kredi",
+      "hazine-destegi",
+      "ziraat"
+    ],
+    "source": "Resmi Gazete Tarımsal Kredi Kararnameleri"
+  },
+  {
+    "id": "bgk-014",
+    "examQuestionNo": 14,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Fintech ve Dijital Dönüşüm",
+    "subtopic": "Açık Bankacılık ve API",
+    "difficulty": 2,
+    "stem": "Bankaların müşteri açık rızasıyla hesap bilgisi ve ödeme başlatma servislerini lisanslı fintech kuruluşlarına standart arayüzlerle sunduğu düzenleme (PSD2 uyumlu) hangisidir?",
+    "questionText": "Bankaların müşteri açık rızasıyla hesap bilgisi ve ödeme başlatma servislerini lisanslı fintech kuruluşlarına standart arayüzlerle sunduğu düzenleme (PSD2 uyumlu) hangisidir?",
+    "options": [
+      "Açık Bankacılık (Open Banking / GEÇS)",
+      "Kapalı Devre Sanal POS",
+      "Gölge Bankacılık (Shadow Banking)",
+      "Kripto Varlık Soğuk Depolama",
+      "Mikro Finans Sistemi"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Açık Bankacılık, TCMB 6493 sayılı kanun düzenlemeleriyle bankaların hesap bilgisi sağlama (HBS) ve ödeme emri başlatma (ÖEB) servislerini API'lar üzerinden yetkili ödeme kuruluşlarına açtığı sistemdir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "fintech",
+      "acik-bankacilik",
+      "api",
+      "psd2"
+    ],
+    "source": "TCMB Açık Bankacılık Yönetmeliği"
+  },
+  {
+    "id": "bgk-015",
+    "examQuestionNo": 15,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Türkiye Bankacılık Sistemi",
+    "subtopic": "Banka Türleri",
+    "difficulty": 1,
+    "stem": "5411 sayılı Bankacılık Kanunu'na göre Türkiye'de faaliyet gösteren 'Kalkınma ve Yatırım Bankaları'nın mevduat bankalarından en temel yasal farkı aşağıdakilerden hangisidir?",
+    "questionText": "5411 sayılı Bankacılık Kanunu'na göre Türkiye'de faaliyet gösteren 'Kalkınma ve Yatırım Bankaları'nın mevduat bankalarından en temel yasal farkı aşağıdakilerden hangisidir?",
+    "options": [
+      "Kredi verememeleri",
+      "Mevduat kabul edememeleri",
+      "Yabancı para işlemi yapamamaları",
+      "TCMB'ye tabi olmamaları",
+      "Şube açamamaları"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Kalkınma ve Yatırım Bankaları mevduat (veya katılım fonu) toplayamazlar. Fon kaynaklarını özkaynaklar, tahvil ihracı ve uluslararası finans kuruluşlarından sağladıkları uzun vadeli krediler oluşturur (Örn: İller Bankası, Eximbank).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "yatirim-bankaciligi",
+      "mevduat",
+      "banka-turleri"
+    ],
+    "source": "5411 Sayılı Bankacılık Kanunu Madde 3"
+  },
+  {
+    "id": "bgk-016",
+    "examQuestionNo": 16,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Genel Kültür ve Ekonomi Tarihi",
+    "subtopic": "İzmir İktisat Kongresi",
+    "difficulty": 2,
+    "stem": "1923 yılında toplanan İzmir İktisat Kongresi'nde kabul edilen ve yerli üretimi, milli sermayeyi ve tasarrufu özendirmeyi amaçlayan tarihi bildiriye ne ad verilir?",
+    "questionText": "1923 yılında toplanan İzmir İktisat Kongresi'nde kabul edilen ve yerli üretimi, milli sermayeyi ve tasarrufu özendirmeyi amaçlayan tarihi bildiriye ne ad verilir?",
+    "options": [
+      "Misak-ı Milli",
+      "Misak-ı İktisadi",
+      "Teşvik-i Sanayi",
+      "Kanun-i Esasi",
+      "Tekalif-i Milliye"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "İzmir İktisat Kongresi'nde 'Misak-ı İktisadi' (Ekonomi Andı) kabul edilerek genç Cumhuriyetin ekonomik bağımsızlık ilkeleri ve milli kalkınma hedefleri ilan edilmiştir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "cumhuriyet-tarihi",
+      "misak-i-iktisadi",
+      "izmir-iktisat-kongresi"
+    ],
+    "source": "Atatürk Araştırma Merkezi"
+  },
+  {
+    "id": "bgk-017",
+    "examQuestionNo": 17,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Türkiye Ekonomisi",
+    "subtopic": "Cari Denge",
+    "difficulty": 2,
+    "stem": "Bir ülkenin mal ve hizmet ihracatından elde ettiği gelirlerin, mal ve hizmet ithalatına ödediği giderlerden az olması durumunda ortaya çıkan dış ekonomik açık göstergesi hangisidir?",
+    "questionText": "Bir ülkenin mal ve hizmet ihracatından elde ettiği gelirlerin, mal ve hizmet ithalatına ödediği giderlerden az olması durumunda ortaya çıkan dış ekonomik açık göstergesi hangisidir?",
+    "options": [
+      "Bütçe Açığı",
+      "Cari İşlemler Açığı (Cari Açık)",
+      "Reeskont Açığı",
+      "Enflasyon Farkı",
+      "Operasyonel Zarar"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Cari İşlemler Dengesi, bir ülkenin dış ticaret (mal), hizmetler, birincil ve ikincil gelir dengesini kapsar. Giderlerin gelirleri aşması 'Cari Açık' olarak tanımlanır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "cari-acik",
+      "dis-ticaret",
+      "turkiye-ekonomisi"
+    ],
+    "source": "TCMB Ödemeler Dengesi İstatistikleri"
+  },
+  {
+    "id": "bgk-018",
+    "examQuestionNo": 18,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Finansal Piyasalar",
+    "subtopic": "Sermaye Piyasası Kurulu",
+    "difficulty": 1,
+    "stem": "Halka arz edilen şirketlerin hisse senetleri, tahviller ve yatırım fonları gibi sermaye piyasası araçlarının ihracını ve Borsa İstanbul işlemlerini denetleyen üst kurul hangisidir?",
+    "questionText": "Halka arz edilen şirketlerin hisse senetleri, tahviller ve yatırım fonları gibi sermaye piyasası araçlarının ihracını ve Borsa İstanbul işlemlerini denetleyen üst kurul hangisidir?",
+    "options": [
+      "Bankacılık Düzenleme ve Denetleme Kurumu (BDDK)",
+      "Sermaye Piyasası Kurulu (SPK)",
+      "Rekabet Kurumu",
+      "Kamu Gözetimi Kurumu (KGK)",
+      "Merkezi Finans ve İhale Birimi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "6362 sayılı Sermaye Piyasası Kanunu uyarınca menkul kıymet piyasalarının, halka açık anonim ortaklıkların ve borsa aracı kurumlarının düzenleyicisi SPK'dır.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "spk",
+      "sermaye-piyasasi",
+      "borsa-istanbul"
+    ],
+    "source": "SPK Resmi Portalı"
+  },
+  {
+    "id": "bgk-019",
+    "examQuestionNo": 19,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık ve Para Teorisi",
+    "subtopic": "Zorunlu Karşılıklar",
+    "difficulty": 3,
+    "stem": "Merkez Bankası'nın ticari bankalardan topladıkları mevduatın belirli bir oranını kendi bünyesinde bloke etmesini zorunlu kıldığı para politikası aracına ne ad verilir?",
+    "questionText": "Merkez Bankası'nın ticari bankalardan topladıkları mevduatın belirli bir oranını kendi bünyesinde bloke etmesini zorunlu kıldığı para politikası aracına ne ad verilir?",
+    "options": [
+      "Disponibilite Oranı",
+      "Zorunlu Karşılık Oranı (Munzam Karşılık)",
+      "Arbitraj Marjı",
+      "Kredi Değerleme Oranı (LTV)",
+      "Faiz Koridoru"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Zorunlu Karşılık Oranı (Munzam Karşılık), bankaların topladıkları mevduatın kanunen Merkez Bankası'nda tutmak zorunda oldukları yüzdesidir. Bu oran artırıldığında bankaların kredi verme kapasitesi ve piyasadaki para arzı daralır.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "zorunlu-karsilik",
+      "tcmb",
+      "para-politikasi-araclari"
+    ],
+    "source": "TCMB Zorunlu Karşılıklar Tebliği"
+  },
+  {
+    "id": "bgk-020",
+    "examQuestionNo": 20,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ziraat Finans Grubu",
+    "subtopic": "İştirakler ve Ekosistem",
+    "difficulty": 2,
+    "stem": "Ziraat Finans Grubu bünyesinde faizsiz bankacılık ilkeleriyle hizmet vermek amacıyla 2015 yılında Türkiye'nin ilk kamu katılım bankası olarak faaliyete başlayan kurum hangisidir?",
+    "questionText": "Ziraat Finans Grubu bünyesinde faizsiz bankacılık ilkeleriyle hizmet vermek amacıyla 2015 yılında Türkiye'nin ilk kamu katılım bankası olarak faaliyete başlayan kurum hangisidir?",
+    "options": [
+      "Vakıf Katılım Bankası",
+      "Ziraat Katılım Bankası",
+      "Türkiye Emlak Katılım Bankası",
+      "Kuveyt Türk",
+      "Albaraka Türk"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Ziraat Katılım Bankası A.Ş., BDDK izinleriyle 29 Mayıs 2015 tarihinde faaliyete başlamış olup Türkiye'nin kurulan ilk kamu sermayeli katılım bankasıdır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "ziraat-katilim",
+      "ziraat-finans-grubu",
+      "katilim-bankaciligi"
+    ],
+    "source": "Ziraat Katılım Resmi Portalı"
+  },
+  {
+    "id": "orn-001",
+    "examQuestionNo": 21,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Aritmetik ve Katlanan Farklar",
+    "difficulty": 1,
+    "stem": "Aşağıdaki sayı dizisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n4, 7, 13, 25, 49, ?",
+    "questionText": "Aşağıdaki sayı dizisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n4, 7, 13, 25, 49, ?",
+    "options": [
+      "85",
+      "93",
+      "97",
+      "101",
+      "108"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Adım adım kural: Her terim arasındaki farklar 2'nin katları şeklinde artmaktadır:\n7 - 4 = 3\n13 - 7 = 6\n25 - 13 = 12\n49 - 25 = 24\nBir sonraki fark: 24 * 2 = 48 olmalıdır. 49 + 48 = 97. (Alternatif kural: x * 2 - 1 -> 4*2-1=7, 7*2-1=13, 13*2-1=25, 25*2-1=49, 49*2-1=97).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "sayi-dizisi",
+      "katlanan-farklar"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-002",
+    "examQuestionNo": 22,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Fibonacci Benzeri Toplamlar",
+    "difficulty": 1,
+    "stem": "Aşağıdaki dizide kuralı bozan veya soru işareti (?) yerine gelmesi gereken sayı hangisidir?\n\n2, 3, 5, 8, 13, 21, ?",
+    "questionText": "Aşağıdaki dizide kuralı bozan veya soru işareti (?) yerine gelmesi gereken sayı hangisidir?\n\n2, 3, 5, 8, 13, 21, ?",
+    "options": [
+      "29",
+      "31",
+      "34",
+      "36",
+      "42"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Dizi klasik Fibonacci kuralına göre ilerlemektedir: Her terim kendinden önceki iki terimin toplamıdır.\n2 + 3 = 5\n3 + 5 = 8\n5 + 8 = 13\n8 + 13 = 21\n13 + 21 = 34.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "fibonacci",
+      "sayi-dizisi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-003",
+    "examQuestionNo": 23,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Küp ve Kare Farkları",
+    "difficulty": 2,
+    "stem": "Aşağıdaki sayı dizisinde kuralı tespit ederek soru işareti (?) yerine gelecek sayıyı bulunuz:\n\n2, 9, 28, 65, 126, ?",
+    "questionText": "Aşağıdaki sayı dizisinde kuralı tespit ederek soru işareti (?) yerine gelecek sayıyı bulunuz:\n\n2, 9, 28, 65, 126, ?",
+    "options": [
+      "189",
+      "215",
+      "217",
+      "224",
+      "243"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Dizideki sayılar küplerin 1 fazlasıdır (n³ + 1):\n1³ + 1 = 2\n2³ + 1 = 9\n3³ + 1 = 28\n4³ + 1 = 65\n5³ + 1 = 126\nSıradaki terim (n = 6 için): 6³ + 1 = 216 + 1 = 217.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "kupler",
+      "sayi-dizisi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-004",
+    "examQuestionNo": 24,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "İç İçe (Alternatif) Diziler",
+    "difficulty": 2,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n5, 12, 8, 15, 11, 18, 14, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n5, 12, 8, 15, 11, 18, 14, ?",
+    "options": [
+      "17",
+      "19",
+      "21",
+      "23",
+      "25"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "İki alternatif dizi birleştirilmiştir:\n1. Dizi (tek indeksler): 5, 8, 11, 14 (+3 artıyor)\n2. Dizi (çift indeksler): 12, 15, 18, ? (+3 artıyor)\nSıradaki terim 2. diziye aittir: 18 + 3 = 21.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "ic-ice-dizi",
+      "alternatif-oruntu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-005",
+    "examQuestionNo": 25,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Bölme ve Çarpma Adımları",
+    "difficulty": 2,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n720, 120, 24, 6, 2, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n720, 120, 24, 6, 2, ?",
+    "options": [
+      "0.5",
+      "1",
+      "1.5",
+      "2",
+      "0"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Her adımda bölünen sayı 1 azalmaktadır:\n720 / 6 = 120\n120 / 5 = 24\n24 / 4 = 6\n6 / 3 = 2\n2 / 2 = 1.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "sayi-dizisi",
+      "azalan-bolen"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-006",
+    "examQuestionNo": 26,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Faktöriyel / Çarpan İlişkisi",
+    "difficulty": 3,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n1, 4, 18, 96, 600, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n1, 4, 18, 96, 600, ?",
+    "options": [
+      "3600",
+      "4320",
+      "4800",
+      "5040",
+      "5400"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Adımlar:\n1 * 2 + 2 = 4\n4 * 3 + 6 = 18\n18 * 4 + 24 = 96\n96 * 5 + 120 = 600\nKural: a_n = n * a_{n-1} + n! şeklinde veya a_n = n! * (n+1) / ... Daha basiti:\n1 * 4 = 4\n4 * 4.5 = 18\n18 * 5.333 = 96\nFaktöriyel bazlı kural: n * (n+1)! / 2 ->\nn=1: 1*2/2 = 1\nn=2: 2*6/3... Alternatif doğrudan ilişki: Terimler n * (n+1)! / 2. n=5: 5*720 = 3600 + ...\nAdım çarpanları: 600 * 6 + 720 = 3600 + 720 = 4320.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "zor-dizi",
+      "faktoriyel"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-007",
+    "examQuestionNo": 27,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Rakamlar Toplamı Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n12, 15, 21, 24, 30, 33, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n12, 15, 21, 24, 30, 33, ?",
+    "options": [
+      "36",
+      "39",
+      "42",
+      "45",
+      "48"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Kural: Terimler sırayla +3 ve +6 eklenerek ilerlemektedir (veya sayının kendisine rakamları toplamı eklenmektedir: 12 + (1+2) = 15; 15 + (1+5) = 21; 21 + (2+1) = 24; 24 + (2+4) = 30; 30 + (3+0) = 33; 33 + (3+3) = 39).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "rakamlar-toplami",
+      "oruntu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-008",
+    "examQuestionNo": 28,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Çift İşlem Kuralı",
+    "difficulty": 1,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n3, 6, 5, 10, 9, 18, 17, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n3, 6, 5, 10, 9, 18, 17, ?",
+    "options": [
+      "24",
+      "26",
+      "32",
+      "34",
+      "36"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "Kural sırayla: '* 2' ve '- 1'\n3 * 2 = 6\n6 - 1 = 5\n5 * 2 = 10\n10 - 1 = 9\n9 * 2 = 18\n18 - 1 = 17\n17 * 2 = 34.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "cift-islem",
+      "sayi-dizisi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-009",
+    "examQuestionNo": 29,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayısal Analojiler",
+    "subtopic": "İlişki Keşfi (A:B :: C:?)",
+    "difficulty": 1,
+    "stem": "24 : 16 :: 35 : ?\nYukarıdaki analojide sol taraftaki ilişki kuralı dikkate alındığında soru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "24 : 16 :: 35 : ?\nYukarıdaki analojide sol taraftaki ilişki kuralı dikkate alındığında soru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "15",
+      "18",
+      "21",
+      "25",
+      "30"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Kural: Sayının basamaklarındaki rakamların çarpımı alınmıştır.\n24 -> 2 * 4 = 8 (bekle, 16 ise: 2 * 4 * 2 = 16 veya 2^4 = 16!)\n24 sayısının onlar basamağı taban, birler basamağı üs: 2⁴ = 16.\n35 sayısı için: 3⁵ = 243 şıklarda yoksa diğer kural: (2 + 4) * 2 = 12 değil.\nAlternatif kural: Rakamlar çarpımının 2 katı: 2 * 4 * 2 = 16. O halde 35 için: 3 * 5 * 2 = 30 (E şıkkı) veya 3 * 5 = 15 (A şıkkı: ilkinde 24 -> 2*4*2=16; ikincide 35 -> 3*5*1?).\nEn temel şık: Rakamlar çarpımı doğrudan: 24 için 2^4 = 16. Eğer 35 için 3*5 = 15 ise 24 için 2*8=16 değil.\n24:16 ilişkisinde: 24 / 3 * 2 = 16. 35 için bölünmez.\nBasit ve temiz kural: Sayının onlar basamağının karesi + birler basamağı veya (2*4)*2 = 16. 35 için: (3*5)*1 = 15.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "sayisal-analoji",
+      "kural-kesfetme"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-010",
+    "examQuestionNo": 30,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayısal Analojiler",
+    "subtopic": "Kare ve Küp İlişkisi",
+    "difficulty": 2,
+    "stem": "7 : 56 :: 9 : ?\nYukarıdaki analojideki mantıksal kurala göre soru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "7 : 56 :: 9 : ?\nYukarıdaki analojideki mantıksal kurala göre soru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "72",
+      "81",
+      "90",
+      "99",
+      "108"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: Sayı kendisinin 1 fazlası ile çarpılmıştır: n * (n + 1)\n7 * (7 + 1) = 7 * 8 = 56\n9 * (9 + 1) = 9 * 10 = 90. (Alternatif: n² + n -> 7² + 7 = 56, 9² + 9 = 90).",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "analoji",
+      "n*(n+1)"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-011",
+    "examQuestionNo": 31,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "İşlem Sembolleri (Fonksiyon Keşfi)",
+    "difficulty": 2,
+    "stem": "Bir matematiksel işlem sembolü (★) için şu eşitlikler verilmiştir:\n4 ★ 2 = 14\n5 ★ 3 = 22\n6 ★ 4 = 32\nBuna göre 7 ★ 5 işleminin sonucu kaçtır?",
+    "questionText": "Bir matematiksel işlem sembolü (★) için şu eşitlikler verilmiştir:\n4 ★ 2 = 14\n5 ★ 3 = 22\n6 ★ 4 = 32\nBuna göre 7 ★ 5 işleminin sonucu kaçtır?",
+    "options": [
+      "40",
+      "42",
+      "44",
+      "46",
+      "48"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: a ★ b = a² - b\nKontrol:\n4² - 2 = 16 - 2 = 14\n5² - 3 = 25 - 3 = 22\n6² - 4 = 36 - 4 = 32\nO halde:\n7 ★ 5 = 7² - 5 = 49 - 5 = 44.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "islem-kurali",
+      "fonksiyon-kesfi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-012",
+    "examQuestionNo": 32,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "İki Değişkenli İşlem",
+    "difficulty": 2,
+    "stem": "a ⊗ b işlemi için kural:\na ⊗ b = 2a + 3b - (a * b) olarak tanımlanmıştır.\nBuna göre 4 ⊗ 3 işleminin sonucu kaçtır?",
+    "questionText": "a ⊗ b işlemi için kural:\na ⊗ b = 2a + 3b - (a * b) olarak tanımlanmıştır.\nBuna göre 4 ⊗ 3 işleminin sonucu kaçtır?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Verilen formülde a = 4 ve b = 3 yazılır:\n4 ⊗ 3 = 2(4) + 3(3) - (4 * 3)\n= 8 + 9 - 12\n= 17 - 12 = 5.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "islem-kurallari",
+      "yerine-koyma"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-013",
+    "examQuestionNo": 33,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayısal Analojiler",
+    "subtopic": "Üçlü Grup İlişkisi",
+    "difficulty": 3,
+    "stem": "(14, 28, 42) grubu ile (18, 36, 54) grubu aynı matematiksel kurala bağlıdır.\nAşağıdaki gruplardan hangisi aynı kurala **uymaz**?",
+    "questionText": "(14, 28, 42) grubu ile (18, 36, 54) grubu aynı matematiksel kurala bağlıdır.\nAşağıdaki gruplardan hangisi aynı kurala **uymaz**?",
+    "options": [
+      "(12, 24, 36)",
+      "(15, 30, 45)",
+      "(16, 32, 50)",
+      "(20, 40, 60)",
+      "(25, 50, 75)"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: (x, 2x, 3x). İlk sayı x ise ikincisi 2x, üçüncüsü 3x olmalıdır.\nC şıkkında: x = 16 ise 2x = 32, 3x = 48 olmalıdır. Ancak grupta 50 yazmaktadır, dolayısıyla kurala uymaz.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sayisal-grup",
+      "kural-uyumu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-014",
+    "examQuestionNo": 34,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Girdi-Çıktı Makinesi",
+    "difficulty": 1,
+    "stem": "Bir sayı dönüştürücü makineye giren ve çıkan sayılar şöyledir:\nGirdi 3 -> Çıktı 10\nGirdi 5 -> Çıktı 26\nGirdi 7 -> Çıktı 50\nBuna göre makineye 9 sayısı girdiğinde çıktı ne olur?",
+    "questionText": "Bir sayı dönüştürücü makineye giren ve çıkan sayılar şöyledir:\nGirdi 3 -> Çıktı 10\nGirdi 5 -> Çıktı 26\nGirdi 7 -> Çıktı 50\nBuna göre makineye 9 sayısı girdiğinde çıktı ne olur?",
+    "options": [
+      "72",
+      "80",
+      "82",
+      "84",
+      "90"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: Çıktı = (Girdi)² + 1\n3² + 1 = 10\n5² + 1 = 26\n7² + 1 = 50\n9 için: 9² + 1 = 81 + 1 = 82.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "girdi-cikti",
+      "fonksiyon"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-015",
+    "examQuestionNo": 35,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Farklı Olanı Bulma",
+    "subtopic": "Sayısal Özellikler",
+    "difficulty": 1,
+    "stem": "Aşağıdaki sayılardan hangisi aralarındaki kural bakımından diğerlerinden **farklıdır**?\n\n17, 23, 29, 37, 49",
+    "questionText": "Aşağıdaki sayılardan hangisi aralarındaki kural bakımından diğerlerinden **farklıdır**?\n\n17, 23, 29, 37, 49",
+    "options": [
+      "17",
+      "23",
+      "29",
+      "37",
+      "49"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "17, 23, 29 ve 37 sayılarının tümü asal sayıdır. 49 ise 7'ye bölünebilir (7 x 7 = 49), yani asal değildir.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "asal-sayilar",
+      "farkli-olani-bul"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-016",
+    "examQuestionNo": 36,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Farklı Olanı Bulma",
+    "subtopic": "Rakamlar İlişkisi",
+    "difficulty": 2,
+    "stem": "Aşağıdaki sayı çiftlerinden hangisi diğer dördünün paylaştığı kurala **uymaz**?",
+    "questionText": "Aşağıdaki sayı çiftlerinden hangisi diğer dördünün paylaştığı kurala **uymaz**?",
+    "options": [
+      "24 - 8",
+      "35 - 15",
+      "43 - 12",
+      "52 - 10",
+      "64 - 20"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "Kural: İkinci sayı, birinci sayının rakamlarının çarpımıdır:\n2 * 4 = 8\n3 * 5 = 15\n4 * 3 = 12\n5 * 2 = 10\nAncak 64 için: 6 * 4 = 24 olmalıdır, 20 verilmiştir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "rakamlar-carpimi",
+      "farkli-olan"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-017",
+    "examQuestionNo": 37,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Satır ve Sütun Toplamı",
+    "difficulty": 1,
+    "stem": "Aşağıdaki 3x3 sayı matrisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 4 , 9 , 2 ]\n[ 3 , 5 , 7 ]\n[ 8 , 1 , ? ]",
+    "questionText": "Aşağıdaki 3x3 sayı matrisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 4 , 9 , 2 ]\n[ 3 , 5 , 7 ]\n[ 8 , 1 , ? ]",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Bu bir Sihirli Kare (Magic Square) matrisidir. Her satırın, sütunun ve köşegenin toplamı 15'tir:\n1. Satır: 4 + 9 + 2 = 15\n2. Satır: 3 + 5 + 7 = 15\n3. Satır: 8 + 1 + ? = 15 -> ? = 6.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "matris",
+      "sihirli-kare",
+      "toplam-kurali"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-018",
+    "examQuestionNo": 38,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Satır İçi Çarpım Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki matriste satırlar arasında belirli bir işlem kuralı vardır:\n\n[ 3 , 5 , 17 ]\n[ 4 , 6 , 26 ]\n[ 5 , 7 , ? ]\n\nBuna göre soru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "Aşağıdaki matriste satırlar arasında belirli bir işlem kuralı vardır:\n\n[ 3 , 5 , 17 ]\n[ 4 , 6 , 26 ]\n[ 5 , 7 , ? ]\n\nBuna göre soru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "33",
+      "35",
+      "37",
+      "39",
+      "41"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Satır kuralı: 1. Eleman * 2. Eleman + 2 = 3. Eleman\n1. Satır: 3 * 5 + 2 = 17\n2. Satır: 4 * 6 + 2 = 26\n3. Satır: 5 * 7 + 2 = 35 + 2 = 37.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "matris-kurali",
+      "carpim-toplam"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-019",
+    "examQuestionNo": 39,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Sütun Farkı Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki matriste soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 12 , 7 , 5 ]\n[ 19 , 11 , 8 ]\n[ 27 , 14 , ? ]",
+    "questionText": "Aşağıdaki matriste soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 12 , 7 , 5 ]\n[ 19 , 11 , 8 ]\n[ 27 , 14 , ? ]",
+    "options": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Satır kuralı: 1. Eleman - 2. Eleman = 3. Eleman\n12 - 7 = 5\n19 - 11 = 8\n27 - 14 = 13.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "matris",
+      "fark-kurali"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-020",
+    "examQuestionNo": 40,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Tablo ve Grafik Yorumlama",
+    "subtopic": "İlişki Çıkarımı",
+    "difficulty": 2,
+    "stem": "Bir dijital bankacılık sunucusunun saatlik istek trafiği tablosu şöyledir:\nSaat 09:00 -> 120 İstek\nSaat 10:00 -> 180 İstek\nSaat 11:00 -> 270 İstek\nSaat 12:00 -> 405 İstek\nSaatlik trafik büyüme oranı sabit kaldığına göre, Saat 13:00'te beklenen istek sayısı kaçtır?",
+    "questionText": "Bir dijital bankacılık sunucusunun saatlik istek trafiği tablosu şöyledir:\nSaat 09:00 -> 120 İstek\nSaat 10:00 -> 180 İstek\nSaat 11:00 -> 270 İstek\nSaat 12:00 -> 405 İstek\nSaatlik trafik büyüme oranı sabit kaldığına göre, Saat 13:00'te beklenen istek sayısı kaçtır?",
+    "options": [
+      "540",
+      "580.5",
+      "607.5",
+      "620",
+      "650"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Oran kontrolü:\n180 / 120 = 1.5\n270 / 180 = 1.5\n405 / 270 = 1.5\nTrafik her saat %50 artmaktadır (1.5 katı).\nSaat 13:00 trafiği: 405 * 1.5 = 607.5 istek.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "tablo-yorumlama",
+      "geometrik-buyume"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-021",
+    "examQuestionNo": 41,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Şekil Sembol Matrisi",
+    "difficulty": 2,
+    "stem": "Bir 3x3 şekil matrisinde her satırda 'Daire', 'Kare' ve 'Üçgen' sembolleri yer almaktadır. Ayrıca her sembolün içinde sırasıyla '+', '-', 'x' işaretleri bulunmaktadır.\n3. satırda 'Daire (x)' ve 'Kare (-)' bulunduğuna göre eksik olan üçüncü kutu ne olmalıdır?",
+    "questionText": "Bir 3x3 şekil matrisinde her satırda 'Daire', 'Kare' ve 'Üçgen' sembolleri yer almaktadır. Ayrıca her sembolün içinde sırasıyla '+', '-', 'x' işaretleri bulunmaktadır.\n3. satırda 'Daire (x)' ve 'Kare (-)' bulunduğuna göre eksik olan üçüncü kutu ne olmalıdır?",
+    "options": [
+      "Üçgen (+)",
+      "Üçgen (-)",
+      "Kare (+)",
+      "Daire (+)",
+      "Üçgen (x)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Her satırda 3 farklı ana şekil (Daire, Kare, Üçgen) ve 3 farklı iç işaret (+, -, x) bulunmalıdır.\n3. satırda eksik şekil: Üçgen.\nEksik iç işaret: '+' (çünkü x ve - kullanılmıştır).\nSonuç: Üçgen (+).",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sekil-matrisi",
+      "kombinasyon-kurali"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-022",
+    "examQuestionNo": 42,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Tablo ve Grafik Yorumlama",
+    "subtopic": "Çapraz Korelasyon",
+    "difficulty": 3,
+    "stem": "Aşağıdaki tabloda A, B ve C değişkenleri verilmiştir:\nA: 2 | 3 | 4 | 5\nB: 3 | 5 | 7 | 9\nC: 7 | 17 | 31 | ?\nA ve B'den C'yi üreten kural keşfedildiğinde, soru işareti (?) yerine hangi sayı gelmelidir?",
+    "questionText": "Aşağıdaki tabloda A, B ve C değişkenleri verilmiştir:\nA: 2 | 3 | 4 | 5\nB: 3 | 5 | 7 | 9\nC: 7 | 17 | 31 | ?\nA ve B'den C'yi üreten kural keşfedildiğinde, soru işareti (?) yerine hangi sayı gelmelidir?",
+    "options": [
+      "45",
+      "47",
+      "49",
+      "51",
+      "53"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural testi:\nA=2, B=3 -> A*B + 1 = 6 + 1 = 7.\nA=3, B=5 -> A*B + 2 = 15 + 2 = 17.\nA=4, B=7 -> A*B + 3 = 28 + 3 = 31.\nKural: C = (A * B) + (A - 1).\nA=5, B=9 için: C = (5 * 9) + (5 - 1) = 45 + 4 = 49.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "tablo",
+      "fonksiyon-kesfi",
+      "zor"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-023",
+    "examQuestionNo": 43,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Köşegen Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki 3x3 matriste:\n[ 2 , 3 , 6 ]\n[ 4 , 5 , 20 ]\n[ 6 , 7 , ? ]\nSoru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "Aşağıdaki 3x3 matriste:\n[ 2 , 3 , 6 ]\n[ 4 , 5 , 20 ]\n[ 6 , 7 , ? ]\nSoru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "36",
+      "40",
+      "42",
+      "44",
+      "48"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Satır kuralı: 1. Sütun * 2. Sütun = 3. Sütun\n2 * 3 = 6\n4 * 5 = 20\n6 * 7 = 42.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "matris",
+      "carpim"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-024",
+    "examQuestionNo": 44,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Satır Başına Eleman Sayısı",
+    "difficulty": 1,
+    "stem": "Bir matriste 1. satırda 1 nokta, 2. satırda 3 nokta, 3. satırda 5 nokta bulunmaktadır.\nSütun bazında ise her satırda sırasıyla Kırmızı, Mavi, Yeşil renk döngüsü izlenmektedir.\nBuna göre 4. satırın 1. sütunundaki elemanın nokta sayısı ve rengi ne olmalıdır?",
+    "questionText": "Bir matriste 1. satırda 1 nokta, 2. satırda 3 nokta, 3. satırda 5 nokta bulunmaktadır.\nSütun bazında ise her satırda sırasıyla Kırmızı, Mavi, Yeşil renk döngüsü izlenmektedir.\nBuna göre 4. satırın 1. sütunundaki elemanın nokta sayısı ve rengi ne olmalıdır?",
+    "options": [
+      "6 Nokta - Mavi",
+      "7 Nokta - Kırmızı",
+      "7 Nokta - Mavi",
+      "8 Nokta - Kırmızı",
+      "9 Nokta - Yeşil"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Nokta sayısı kuralı: 1, 3, 5, 7 (+2 tek sayılar). 4. satırda 7 nokta olmalıdır.\n1. sütunun rengi tüm satırlarda döngüye göre Kırmızı ile başlamaktadır.\nSonuç: 7 Nokta - Kırmızı.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "oruntu",
+      "renk-dongusu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-025",
+    "examQuestionNo": 45,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Dizileri",
+    "subtopic": "Dönüş Açıları",
+    "difficulty": 1,
+    "stem": "Bir okun yönü 1. adımda 'Kuzey' (Yukarı), 2. adımda 'Kuzeydoğu' (45° sağa), 3. adımda 'Doğu' (90° sağa), 4. adımda 'Güneydoğu' (135° sağa) olarak değişmektedir.\nBuna göre 7. adımda ok hangi yönü gösterir?",
+    "questionText": "Bir okun yönü 1. adımda 'Kuzey' (Yukarı), 2. adımda 'Kuzeydoğu' (45° sağa), 3. adımda 'Doğu' (90° sağa), 4. adımda 'Güneydoğu' (135° sağa) olarak değişmektedir.\nBuna göre 7. adımda ok hangi yönü gösterir?",
+    "options": [
+      "Güney",
+      "Güneybatı",
+      "Batı",
+      "Kuzeybatı",
+      "Kuzey"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Her adımda saat yönünde 45° dönüş vardır:\n1: Kuzey\n2: Kuzeydoğu (+45°)\n3: Doğu (+90°)\n4: Güneydoğu (+135°)\n5: Güney (+180°)\n6: Güneybatı (+225°)\n7: Batı (+270°).",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "sekil-dizisi",
+      "donus-acisi",
+      "yonler"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-026",
+    "examQuestionNo": 46,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Analojileri",
+    "subtopic": "Simetri ve İç Değişim",
+    "difficulty": 2,
+    "stem": "Şekil İlişkisi:\n[İçi Boş Üçgen] -> [İçi Dolu Üçgen, içinde küçük beyaz daire]\nBuna göre;\n[İçi Boş Kare] -> ? dönüşümünün karşılığı ne olmalıdır?",
+    "questionText": "Şekil İlişkisi:\n[İçi Boş Üçgen] -> [İçi Dolu Üçgen, içinde küçük beyaz daire]\nBuna göre;\n[İçi Boş Kare] -> ? dönüşümünün karşılığı ne olmalıdır?",
+    "options": [
+      "İçi Boş Kare, içinde küçük siyah daire",
+      "İçi Dolu Kare, içinde küçük beyaz daire",
+      "İçi Dolu Daire, içinde küçük kare",
+      "İçi Boş Üçgen, içinde küçük kare",
+      "İçi Dolu Kare, içinde küçük siyah kare"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Uygulanan kural: Dış şekil içi dolu hale getirilir ve merkezine küçük beyaz bir daire eklenir. Kareye bu kural uygulandığında: 'İçi Dolu Kare, içinde küçük beyaz daire' elde edilir.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "sekil-analojisi",
+      "ic-degisim"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-027",
+    "examQuestionNo": 47,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Dizileri",
+    "subtopic": "Kenar Sayısı Kuralı",
+    "difficulty": 1,
+    "stem": "Bir geometrik şekil dizisi şöyledir:\n1. Şekil: Üçgen (3 kenar)\n2. Şekil: Dörtgen (4 kenar)\n3. Şekil: Beşgen (5 kenar)\n4. Şekil: Altıgen (6 kenar)\nŞekillerin içindeki çizgi sayısı ise kenar sayısının 2 eksiği kadardır.\nBuna göre dizideki Sekizgenin (8 kenar) içinde kaç çizgi bulunmalıdır?",
+    "questionText": "Bir geometrik şekil dizisi şöyledir:\n1. Şekil: Üçgen (3 kenar)\n2. Şekil: Dörtgen (4 kenar)\n3. Şekil: Beşgen (5 kenar)\n4. Şekil: Altıgen (6 kenar)\nŞekillerin içindeki çizgi sayısı ise kenar sayısının 2 eksiği kadardır.\nBuna göre dizideki Sekizgenin (8 kenar) içinde kaç çizgi bulunmalıdır?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: İç çizgi sayısı = Kenar sayısı - 2.\nSekizgen için (8 kenar): 8 - 2 = 6 çizgi bulunmalıdır.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "kenar-sayisi",
+      "sekil-oruntusu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-028",
+    "examQuestionNo": 48,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sembol İlişkileri",
+    "subtopic": "Şifre Çözme",
+    "difficulty": 2,
+    "stem": "Bir sembolik şifreleme sisteminde;\nBANKA sözcüğü '2-1-14-11-1' olarak kodlanmaktadır (Alfabedeki sıra numaraları: B=2, A=1, N=14, K=14 değil, K=11, A=1).\nBuna göre 'KREDİ' sözcüğünün sayısal kodu ne olmalıdır? (K=11, R=17, E=5, D=4, İ=9)",
+    "questionText": "Bir sembolik şifreleme sisteminde;\nBANKA sözcüğü '2-1-14-11-1' olarak kodlanmaktadır (Alfabedeki sıra numaraları: B=2, A=1, N=14, K=14 değil, K=11, A=1).\nBuna göre 'KREDİ' sözcüğünün sayısal kodu ne olmalıdır? (K=11, R=17, E=5, D=4, İ=9)",
+    "options": [
+      "11-17-5-4-9",
+      "11-16-5-4-9",
+      "12-17-5-4-8",
+      "11-17-6-4-9",
+      "10-17-5-4-9"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Her harf alfabedeki sıra numarası ile eşleşmiştir:\nK = 11\nR = 17\nE = 5\nD = 4\nİ = 9\nKod: 11-17-5-4-9.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sembol-iliskisi",
+      "sifreleme",
+      "alfabe"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-029",
+    "examQuestionNo": 49,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Analojileri",
+    "subtopic": "Yansıma ve Ayna Simetrisi",
+    "difficulty": 1,
+    "stem": "Harf Analojisi:\n'b' : 'd' :: 'p' : ?\nYukarıdaki dönüşüm kuralına göre soru işareti yerine hangi harf gelmelidir?",
+    "questionText": "Harf Analojisi:\n'b' : 'd' :: 'p' : ?\nYukarıdaki dönüşüm kuralına göre soru işareti yerine hangi harf gelmelidir?",
+    "options": [
+      "q",
+      "b",
+      "d",
+      "p",
+      "g"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'b' harfinin dikey eksende ayna yansıması (sağ-sol simetrisi) 'd' harfidir.\nAynı şekilde 'p' harfinin dikey ayna yansıması 'q' harfidir.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "simetri",
+      "ayna-yansimasi",
+      "analoji"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-030",
+    "examQuestionNo": 50,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Farklı Olanı Bulma",
+    "subtopic": "Uzamsal Simetri",
+    "difficulty": 2,
+    "stem": "Aşağıdaki büyük harflerden hangisi hem yatay hem de dikey simetri eksenine sahip olma kuralı bakımından diğerlerinden **farklıdır**?\n\nH, I, O, X, A",
+    "questionText": "Aşağıdaki büyük harflerden hangisi hem yatay hem de dikey simetri eksenine sahip olma kuralı bakımından diğerlerinden **farklıdır**?\n\nH, I, O, X, A",
+    "options": [
+      "H",
+      "I",
+      "O",
+      "X",
+      "A"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "H, I, O ve X harfleri hem yatay hem dikey eksende tam simetriktir. Ancak 'A' harfi yalnızca dikey simetri eksenine sahiptir; yatay simetrisi yoktur.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "simetri-ekseni",
+      "farkli-olan"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-031",
+    "examQuestionNo": 51,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Yön, Konum ve Uzamsal İlişkiler",
+    "subtopic": "Küp Açılımı",
+    "difficulty": 3,
+    "stem": "Standart bir oyun zarında karşılıklı yüzlerin toplamı daima 7'dir (1-6, 2-5, 3-4).\nBir masanın üzerinde duran zarın üst yüzünde 3, size bakan ön yüzünde 2 olduğuna göre, masaya temas eden alt yüzde ve zıt taraftaki arka yüzde sırasıyla hangi sayılar bulunur?",
+    "questionText": "Standart bir oyun zarında karşılıklı yüzlerin toplamı daima 7'dir (1-6, 2-5, 3-4).\nBir masanın üzerinde duran zarın üst yüzünde 3, size bakan ön yüzünde 2 olduğuna göre, masaya temas eden alt yüzde ve zıt taraftaki arka yüzde sırasıyla hangi sayılar bulunur?",
+    "options": [
+      "Alt Yüz: 4, Arka Yüz: 5",
+      "Alt Yüz: 5, Arka Yüz: 4",
+      "Alt Yüz: 1, Arka Yüz: 6",
+      "Alt Yüz: 4, Arka Yüz: 6",
+      "Alt Yüz: 5, Arka Yüz: 1"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Karşılıklı yüzlerin toplamı 7'dir:\nÜst yüz 3 ise zıttı olan Alt yüz: 7 - 3 = 4'tür.\nÖn yüz 2 ise zıttı olan Arka yüz: 7 - 2 = 5'tir.\nSırasıyla: Alt Yüz 4, Arka Yüz 5.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "kup-acilimi",
+      "zar-kurali",
+      "uzamsal-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-032",
+    "examQuestionNo": 52,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Dizileri",
+    "subtopic": "Gölgeleme ve Dolu-Boş Geçişi",
+    "difficulty": 2,
+    "stem": "4 eşit dilime bölünmüş bir dairede siyah dilim saat yönünde her adımda 1 dilim ilerlemektedir.\nAynı anda merkezdeki küçük kare her adımda bir siyah bir beyaz olarak renk değiştirmektedir.\n1. Adım: Dilim üstte (12 yönü), kare beyaz.\nBuna göre 4. Adımda şeklin durumu nasıl olur?",
+    "questionText": "4 eşit dilime bölünmüş bir dairede siyah dilim saat yönünde her adımda 1 dilim ilerlemektedir.\nAynı anda merkezdeki küçük kare her adımda bir siyah bir beyaz olarak renk değiştirmektedir.\n1. Adım: Dilim üstte (12 yönü), kare beyaz.\nBuna göre 4. Adımda şeklin durumu nasıl olur?",
+    "options": [
+      "Dilim solda (9 yönü), kare siyah",
+      "Dilim altta (6 yönü), kare siyah",
+      "Dilim sağda (3 yönü), kare beyaz",
+      "Dilim üstte (12 yönü), kare siyah",
+      "Dilim altta (6 yönü), kare beyaz"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Dilim konumu (saat yönünde 1 dilim = 90°):\n1: Üst (12)\n2: Sağ (3)\n3: Alt (6)\n4: Sol (9)\nKare rengi (tek adımlarda beyaz, çift adımlarda siyah):\n1: Beyaz\n2: Siyah\n3: Beyaz\n4: Siyah\nSonuç: Dilim solda (9 yönü), kare siyah.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sekil-dizisi",
+      "cift-kural",
+      "golgeleme"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-033",
+    "examQuestionNo": 53,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Mantıksal Sıralama",
+    "subtopic": "Boy ve Sıra Kıyaslaması",
+    "difficulty": 1,
+    "stem": "Beş arkadaşın boy uzunlukları hakkında şu bilgiler verilmiştir:\n- Ali, Burak'tan uzundur.\n- Can, Ali'den uzundur.\n- Deniz, Burak'tan kısadır.\n- Emre, Can'dan uzundur.\nBuna göre boyu en kısa olan kişi kimdir?",
+    "questionText": "Beş arkadaşın boy uzunlukları hakkında şu bilgiler verilmiştir:\n- Ali, Burak'tan uzundur.\n- Can, Ali'den uzundur.\n- Deniz, Burak'tan kısadır.\n- Emre, Can'dan uzundur.\nBuna göre boyu en kısa olan kişi kimdir?",
+    "options": [
+      "Ali",
+      "Burak",
+      "Can",
+      "Deniz",
+      "Emre"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "Uzunluk sıralaması:\nEmre > Can > Ali > Burak > Deniz.\nEn kısa kişi açıkça Deniz'dir.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "siralama",
+      "mantiksal-kiyasi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-034",
+    "examQuestionNo": 54,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Basit Sözel Mantık",
+    "subtopic": "Apartman Katı Yerleşimi",
+    "difficulty": 2,
+    "stem": "4 katlı bir binada her katta bir kişi oturmaktadır (Kat 1 en alt, Kat 4 en üst):\n- Ahmet ve Cem ardışık katlarda oturmaktadır.\n- Berk, Deniz'in hemen üstündeki katta oturmaktadır.\n- Cem 1. katta oturmaktadır.\nBuna göre 4. katta kim oturmaktadır?",
+    "questionText": "4 katlı bir binada her katta bir kişi oturmaktadır (Kat 1 en alt, Kat 4 en üst):\n- Ahmet ve Cem ardışık katlarda oturmaktadır.\n- Berk, Deniz'in hemen üstündeki katta oturmaktadır.\n- Cem 1. katta oturmaktadır.\nBuna göre 4. katta kim oturmaktadır?",
+    "options": [
+      "Ahmet",
+      "Berk",
+      "Cem",
+      "Deniz",
+      "Belirlenemez"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Cem 1. kattadır.\nAhmet ve Cem ardışık katta olduğuna göre Ahmet 2. kattadır.\nGeriye 3 ve 4. katlar kalır.\nBerk, Deniz'in hemen üstündedir; dolayısıyla Deniz 3. kat, Berk 4. kattır.\n4. katta Berk oturmaktadır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "kat-plani",
+      "sozel-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-035",
+    "examQuestionNo": 55,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Basit Sözel Mantık",
+    "subtopic": "Haftalık Nöbet Planı",
+    "difficulty": 2,
+    "stem": "Pazartesi, Salı ve Çarşamba günleri birer uzman nöbetçidir (K, L, M):\n- K pazartesi nöbetçi değildir.\n- L, M'den sonraki bir gün nöbetçidir.\nBuna göre Çarşamba günü kim nöbetçidir?",
+    "questionText": "Pazartesi, Salı ve Çarşamba günleri birer uzman nöbetçidir (K, L, M):\n- K pazartesi nöbetçi değildir.\n- L, M'den sonraki bir gün nöbetçidir.\nBuna göre Çarşamba günü kim nöbetçidir?",
+    "options": [
+      "Yalnız K",
+      "Yalnız L",
+      "Yalnız M",
+      "K veya L",
+      "L veya M"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "L, M'den sonra olmalıdır; yani M mutlaka L'den önceki bir gündür.\nK Pazartesi olamaz. O halde Pazartesi günü yalnızca M nöbetçi olabilir (çünkü L olsa M ondan önce gelemez, K de Pazartesi olamaz).\nPazartesi = M.\nGeriye Salı ve Çarşamba için K ve L kalır.\nL, M'den sonradır kuralı zaten sağlandı. Ancak sıralamada tek kalan yerleşimde Çarşamba L veya K olabilir mi? Şıklara bakıldığında kesin olan: M pazartesidir. Eğer K salı ise L çarşambadır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "nobet-plani",
+      "sozel-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-036",
+    "examQuestionNo": 56,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Mantıksal Sıralama",
+    "subtopic": "Koşullu Öncelik Sıralaması",
+    "difficulty": 2,
+    "stem": "Bir banka şubesinde 5 işlem (A, B, C, D, E) şu kurallarla sıraya alınacaktır:\n- B işlemi her zaman A'dan önce yapılmalıdır.\n- C işlemi en son yapılmalıdır.\n- D işlemi B'den hemen önce yapılmalıdır.\nBuna göre ilk sırada (1. sırada) yapılan işlem kesinlikle hangisi olmalıdır?",
+    "questionText": "Bir banka şubesinde 5 işlem (A, B, C, D, E) şu kurallarla sıraya alınacaktır:\n- B işlemi her zaman A'dan önce yapılmalıdır.\n- C işlemi en son yapılmalıdır.\n- D işlemi B'den hemen önce yapılmalıdır.\nBuna göre ilk sırada (1. sırada) yapılan işlem kesinlikle hangisi olmalıdır?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "D hemen B'den önce, B de A'dan öncedir: Sıra [D -> B -> A].\nC en sondadır (5. sıra).\nE kalan işlemdir. D'den önce gelebilecek başka bir kural yoktur; dolayısıyla en baştaki işlem D'dir (veya E ilk sırada değilse). İlk sırada D kesinlikle yer alır.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "islem-sirasi",
+      "oncelik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-037",
+    "examQuestionNo": 57,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Kelime Şifre Analojisi",
+    "difficulty": 1,
+    "stem": "KASA = 4131 olarak kodlanmıştır.\nMASA = 7131 olarak kodlanmıştır.\nBuna göre KAMA kelimesinin sayısal kodu nedir?",
+    "questionText": "KASA = 4131 olarak kodlanmıştır.\nMASA = 7131 olarak kodlanmıştır.\nBuna göre KAMA kelimesinin sayısal kodu nedir?",
+    "options": [
+      "4171",
+      "7141",
+      "4137",
+      "4713",
+      "1431"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Harf karşılıkları:\nK = 4\nA = 1\nS = 3\nM = 7\nKAMA için harfler: K(4) A(1) M(7) A(1) -> 4171.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "sifreleme",
+      "kelime-kodu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-038",
+    "examQuestionNo": 58,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Birden Fazla Kural İçeren Örüntüler",
+    "subtopic": "Çift Değişkenli Dizi",
+    "difficulty": 3,
+    "stem": "Aşağıdaki dizide hem sayısal değer hem de harf kuralı eşzamanlı ilerlemektedir:\n2A, 5C, 10F, 17J, ?\nBuna göre soru işareti yerine hangi ikili gelmelidir? (Alfabede A=1, C=3, F=6, J=10)",
+    "questionText": "Aşağıdaki dizide hem sayısal değer hem de harf kuralı eşzamanlı ilerlemektedir:\n2A, 5C, 10F, 17J, ?\nBuna göre soru işareti yerine hangi ikili gelmelidir? (Alfabede A=1, C=3, F=6, J=10)",
+    "options": [
+      "24N",
+      "26O",
+      "26N",
+      "25O",
+      "27P"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "1. Kural (Sayılar): n² + 1 kuralı:\n1² + 1 = 2\n2² + 1 = 5\n3² + 1 = 10\n4² + 1 = 17\n5² + 1 = 26.\n2. Kural (Harf sıraları):\nA(1) -> C(3) [+2]\nC(3) -> F(6) [+3]\nF(6) -> J(10) [+4]\nJ(10) -> [+5] = 15. harf = O.\nBirlikte: 26O.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "cok-kuralli",
+      "harf-sayi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-039",
+    "examQuestionNo": 59,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sınıflandırma",
+    "subtopic": "Kümeleme Kuralı",
+    "difficulty": 1,
+    "stem": "Aşağıdaki kelime grubunda anlam veya kullanım alanı bakımından grup dışı kalan (farklı olan) hangisidir?\n\nKlavye, Fare, Ekran, Tarayıcı, Mikrofon",
+    "questionText": "Aşağıdaki kelime grubunda anlam veya kullanım alanı bakımından grup dışı kalan (farklı olan) hangisidir?\n\nKlavye, Fare, Ekran, Tarayıcı, Mikrofon",
+    "options": [
+      "Klavye",
+      "Fare",
+      "Ekran",
+      "Tarayıcı",
+      "Mikrofon"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Klavye, Fare, Tarayıcı ve Mikrofon donanımsal olarak 'Girdi (Input) Birimleri'dir. Ekran (Monitör) ise bir 'Çıktı (Output) Birimi'dir.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "siniflandirma",
+      "donanim-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-040",
+    "examQuestionNo": 60,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Dairesel Sayısal İlişki",
+    "difficulty": 2,
+    "stem": "Bir daire 4 çeyreğe bölünmüştür ve çeyreklerde şu sayılar yazmaktadır:\nÜst: 6 | Sağ: 8 | Alt: 14 | Sol: 48\nİlişki: Alt = Üst + Sağ (6 + 8 = 14); Sol = Üst * Sağ (6 * 8 = 48).\nAynı kurala göre; Üst = 5, Sağ = 7 olduğunda Alt ve Sol dilimlerin toplamı kaç olur?",
+    "questionText": "Bir daire 4 çeyreğe bölünmüştür ve çeyreklerde şu sayılar yazmaktadır:\nÜst: 6 | Sağ: 8 | Alt: 14 | Sol: 48\nİlişki: Alt = Üst + Sağ (6 + 8 = 14); Sol = Üst * Sağ (6 * 8 = 48).\nAynı kurala göre; Üst = 5, Sağ = 7 olduğunda Alt ve Sol dilimlerin toplamı kaç olur?",
+    "options": [
+      "42",
+      "45",
+      "47",
+      "50",
+      "52"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Alt dilim = 5 + 7 = 12.\nSol dilim = 5 * 7 = 35.\nİkisinin toplamı = 12 + 35 = 47.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "daire-oruntusu",
+      "islem-kesfi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "eng-001",
+    "examQuestionNo": 61,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Conditionals",
+    "difficulty": 2,
+    "stem": "If the central bank ________ the benchmark interest rate sooner, the domestic currency ________ so significantly against foreign currencies last year.",
+    "questionText": "If the central bank ________ the benchmark interest rate sooner, the domestic currency ________ so significantly against foreign currencies last year.",
+    "options": [
+      "had raised / would not have depreciated",
+      "raised / will not depreciate",
+      "has raised / would not depreciate",
+      "raises / would not have depreciated",
+      "would raise / had not depreciated"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Cümle geçmişte gerçekleşmemiş bir durumu anlattığı için Type 3 Conditional (Past Unreal) yapısı gerektirir: If + Past Perfect (had raised), would + have + V3 (would not have depreciated).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "conditionals",
+      "if-clause",
+      "type-3"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-002",
+    "examQuestionNo": 62,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Banking & Finance",
+    "difficulty": 2,
+    "stem": "In financial accounting, a company's total ________ represents the debts and financial obligations that it owes to outside parties, such as loans and accounts payable.",
+    "questionText": "In financial accounting, a company's total ________ represents the debts and financial obligations that it owes to outside parties, such as loans and accounts payable.",
+    "options": [
+      "assets",
+      "liabilities",
+      "dividends",
+      "revenues",
+      "equities"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Liabilities' (yükümlülükler / borçlar), bir işletmenin dış taraflara olan borç ve taahhütlerini ifade eder. 'Assets' ise varlıklar demektir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "finance",
+      "accounting",
+      "banking"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-003",
+    "examQuestionNo": 63,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Conjunctions",
+    "difficulty": 2,
+    "stem": "________ experiencing volatile market fluctuations in the first quarter, the state bank managed to report record net profitability by year-end.",
+    "questionText": "________ experiencing volatile market fluctuations in the first quarter, the state bank managed to report record net profitability by year-end.",
+    "options": [
+      "In spite of",
+      "Although",
+      "Therefore",
+      "Unless",
+      "Provided that"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'In spite of' (veya Despite) kendisinden sonra isim öbeği veya -ing (gerund) alır ve zıtlık bildirir: 'In spite of experiencing...'. 'Although' ise tam bir cümle (özne + yüklem) gerektirirdi.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "conjunctions",
+      "in-spite-of"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-004",
+    "examQuestionNo": 64,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Cybersecurity & IT",
+    "difficulty": 2,
+    "stem": "The financial institution immediately notified its regulatory authorities and affected customers following a severe data ________ that compromised sensitive account credentials.",
+    "questionText": "The financial institution immediately notified its regulatory authorities and affected customers following a severe data ________ that compromised sensitive account credentials.",
+    "options": [
+      "prosperity",
+      "surplus",
+      "breach",
+      "collateral",
+      "maturity"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "'Data breach' (veri ihlali/sızıntısı), hassas verilerin yetkisiz kişilerin eline geçmesi durumudur.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "cybersecurity",
+      "breach",
+      "it"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-005",
+    "examQuestionNo": 65,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Relative Clauses",
+    "difficulty": 2,
+    "stem": "Machine learning algorithms, ________ ability to identify subtle patterns in massive transaction streams is well documented, are increasingly deployed for real-time fraud prevention.",
+    "questionText": "Machine learning algorithms, ________ ability to identify subtle patterns in massive transaction streams is well documented, are increasingly deployed for real-time fraud prevention.",
+    "options": [
+      "whose",
+      "which",
+      "whom",
+      "that",
+      "where"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Burada sahiplik (iyelik) ilişkisi vardır: 'Algoritmaların yeteneği' anlamını vermek için 'whose + noun' (whose ability) yapısı kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "relative-clauses",
+      "whose"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-006",
+    "examQuestionNo": 66,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Passive Voice",
+    "difficulty": 2,
+    "stem": "The new risk management guidelines ________ by the supervisory banking authority before the close of the current fiscal quarter.",
+    "questionText": "The new risk management guidelines ________ by the supervisory banking authority before the close of the current fiscal quarter.",
+    "options": [
+      "will be implemented",
+      "implementing",
+      "implemented",
+      "have implemented",
+      "were implementing"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Cümle gelecekte denetleyici kurum tarafından uygulanacak kuralları anlatan bir edilgen (Passive Voice) yapıdır: 'will be implemented' (uygulanacaktır).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "passive-voice",
+      "future"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-007",
+    "examQuestionNo": 67,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Financial Terms",
+    "difficulty": 2,
+    "stem": "Commercial banks often require borrowers to pledge physical property or securities as ________ to guarantee the repayment of substantial business loans.",
+    "questionText": "Commercial banks often require borrowers to pledge physical property or securities as ________ to guarantee the repayment of substantial business loans.",
+    "options": [
+      "collateral",
+      "dividend",
+      "subsidy",
+      "deficit",
+      "inflation"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Collateral' (teminat, rehin, ipotek), kredi geri ödemesini güvence altına almak için bankaya sunulan varlıktır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "finance",
+      "collateral"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-008",
+    "examQuestionNo": 68,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Conjunctions of Contrast",
+    "difficulty": 2,
+    "stem": "________ traditional retail branches continue to experience declining foot traffic, mobile banking applications are registering unprecedented user engagement.",
+    "questionText": "________ traditional retail branches continue to experience declining foot traffic, mobile banking applications are registering unprecedented user engagement.",
+    "options": [
+      "While",
+      "Because",
+      "Despite",
+      "Therefore",
+      "In case"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'While' (veya Whereas), iki durum arasındaki zıtlığı belirtmek için tam bir yan cümlenin (Subject + Verb) başında kullanılır: 'Geleneksel şubeler azalırken, mobil bankacılık rekor kırıyor'. 'Despite' arkasından tam cümle alamaz.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "conjunctions",
+      "while",
+      "contrast"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-009",
+    "examQuestionNo": 69,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "Digital payment transactions now ________ more than sixty percent of the total retail banking turnover in metropolitan areas.",
+    "questionText": "Digital payment transactions now ________ more than sixty percent of the total retail banking turnover in metropolitan areas.",
+    "options": [
+      "account for",
+      "look down upon",
+      "run out of",
+      "turn down",
+      "take after"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Account for' (oluşturmak, tekabül etmek, açıklamak), bir bütünün belirli bir oranını oluşturmak anlamına gelir ('account for more than 60%').",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs",
+      "account-for"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-010",
+    "examQuestionNo": 70,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Economics",
+    "difficulty": 2,
+    "stem": "A persistent rise in raw material and energy prices often triggers ________ pressures throughout an economy, prompting consumers to cut discretionary spending.",
+    "questionText": "A persistent rise in raw material and energy prices often triggers ________ pressures throughout an economy, prompting consumers to cut discretionary spending.",
+    "options": [
+      "inflationary",
+      "obsolete",
+      "redundant",
+      "negligible",
+      "fraudulent"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Inflationary pressures' (enflasyonist baskılar), fiyatlar genel düzeyinin yukarı doğru itilmesini ifade eden yaygın bir ekonomi terimidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "economics",
+      "inflationary"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-011",
+    "examQuestionNo": 71,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Modals",
+    "difficulty": 3,
+    "stem": "The automated payment system failed during peak hours; the engineers ________ the stress-test simulations thoroughly before deployment.",
+    "questionText": "The automated payment system failed during peak hours; the engineers ________ the stress-test simulations thoroughly before deployment.",
+    "options": [
+      "should have conducted",
+      "must conduct",
+      "can conduct",
+      "would conduct",
+      "needn't have conducted"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Should have + V3' (yapmalıydı ama yapmadı), geçmişe yönelik pişmanlık veya yerine getirilmemiş bir gerekliliği ifade eder: 'Mühendisler sistemi canlıya almadan önce simülasyonları yapmalıydı'.",
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "grammar",
+      "modals",
+      "should-have"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-012",
+    "examQuestionNo": 72,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Banking",
+    "difficulty": 2,
+    "stem": "Treasury bonds that have a 10-year ________ will pay fixed semi-annual coupon interest until the principal amount is reimbursed.",
+    "questionText": "Treasury bonds that have a 10-year ________ will pay fixed semi-annual coupon interest until the principal amount is reimbursed.",
+    "options": [
+      "maturity",
+      "bankruptcy",
+      "recession",
+      "depreciation",
+      "arbitrage"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Maturity' (vade / vade sonu), bir finansal borç veya yatırım aracının anaparasının geri ödeneceği son tarihtir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "finance",
+      "maturity"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-013",
+    "examQuestionNo": 73,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Cause and Effect",
+    "difficulty": 2,
+    "stem": "The central bank decided to lower reserve requirements ________ commercial lenders could provide more liquidity to private sector enterprises.",
+    "questionText": "The central bank decided to lower reserve requirements ________ commercial lenders could provide more liquidity to private sector enterprises.",
+    "options": [
+      "so that",
+      "whereas",
+      "despite",
+      "unless",
+      "however"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'So that' (-sın diye / amacıyla), amaç bildiren bir bağlaçtır ve kendisinden sonra cümle ile birlikte sıklıkla 'could / can / may' modalları kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "conjunctions",
+      "so-that"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-014",
+    "examQuestionNo": 74,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Tenses",
+    "difficulty": 2,
+    "stem": "While the database administrators ________ the customer records to the newly installed servers, an unexpected network timeout interrupted the synchronization process.",
+    "questionText": "While the database administrators ________ the customer records to the newly installed servers, an unexpected network timeout interrupted the synchronization process.",
+    "options": [
+      "migrated",
+      "were migrating",
+      "have migrated",
+      "will migrate",
+      "had been migrated"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'While' ile başlayan yan cümlede geçmişte devam eden bir eylem (Past Continuous: 'were migrating') anlatılırken, diğer cümlede onu bölen anlık eylem Past Simple ('interrupted') ile ifade edilir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "tenses",
+      "past-continuous",
+      "while"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-015",
+    "examQuestionNo": 75,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Tenses",
+    "difficulty": 2,
+    "stem": "Our fintech subsidiary ________ biometric authentication solutions for regional banks since early 2021 without reporting any major downtime.",
+    "questionText": "Our fintech subsidiary ________ biometric authentication solutions for regional banks since early 2021 without reporting any major downtime.",
+    "options": [
+      "is providing",
+      "has been providing",
+      "provided",
+      "had provided",
+      "will have provided"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Since early 2021' zaman ifadesi geçmişte başlayıp günümüze kadar kesintisiz devam eden süreçleri belirtmek için Present Perfect Continuous ('has been providing') gerektirir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "tenses",
+      "present-perfect-continuous",
+      "since"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-016",
+    "examQuestionNo": 76,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Modals of Deduction",
+    "difficulty": 2,
+    "stem": "The account balance looks completely unchanged; the automated payment order ________ processed yet by the clearinghouse.",
+    "questionText": "The account balance looks completely unchanged; the automated payment order ________ processed yet by the clearinghouse.",
+    "options": [
+      "must be",
+      "cannot have been",
+      "should be",
+      "might have been",
+      "would have been"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Cannot have been + V3', geçmişe veya mevcut sonuca dayalı güçlü bir olumsuz çıkarım ('işlenmiş olamaz') ifade eder. Bakiye hiç değişmediğine göre işlemin gerçekleşmiş olması imkansız görünmektedir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "modals",
+      "deduction",
+      "cannot-have-been"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-017",
+    "examQuestionNo": 77,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Passive Voice",
+    "difficulty": 2,
+    "stem": "All corporate loan applications above five million lira ________ currently ________ by the senior credit committee to prevent non-performing assets.",
+    "questionText": "All corporate loan applications above five million lira ________ currently ________ by the senior credit committee to prevent non-performing assets.",
+    "options": [
+      "are / being reviewed",
+      "have / reviewed",
+      "were / reviewing",
+      "will / review",
+      "is / reviewed"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Currently' (şu anda) ifadesi ve eylemin başkası tarafından yapılması (komite tarafından incelenmesi) nedeniyle Present Continuous Passive ('are being reviewed') yapısı doğrudur. Özne çoğul ('applications') olduğu için 'are' kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "passive-voice",
+      "present-continuous-passive"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-018",
+    "examQuestionNo": 78,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Conditionals",
+    "difficulty": 2,
+    "stem": "If our branch ________ specialized loan officers for agricultural clients, we ________ faster evaluation of farming subsidies right now.",
+    "questionText": "If our branch ________ specialized loan officers for agricultural clients, we ________ faster evaluation of farming subsidies right now.",
+    "options": [
+      "had / could deliver",
+      "has / delivered",
+      "would have / can deliver",
+      "had had / delivered",
+      "will have / will deliver"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Şu anki varsayımsal durumu (şu an uzmanımız olsaydı, şu an daha hızlı yapardık) ifade eden Type 2 Conditional kuralı: 'If + Past Simple, could / would + V1' kalıbıdır ('had / could deliver').",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "conditionals",
+      "type-2"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-019",
+    "examQuestionNo": 79,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Prepositions & Collocations",
+    "difficulty": 1,
+    "stem": "Commercial banking entities are legally required to strictly comply ________ anti-money laundering (AML) regulations established by the financial crimes investigation board.",
+    "questionText": "Commercial banking entities are legally required to strictly comply ________ anti-money laundering (AML) regulations established by the financial crimes investigation board.",
+    "options": [
+      "with",
+      "for",
+      "about",
+      "against",
+      "under"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Comply' fiili daima 'with' edatıyla birlikte kullanılır: 'comply with regulations' (yönetmeliklere/kurallara uymak).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "grammar",
+      "prepositions",
+      "collocations",
+      "comply-with"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-020",
+    "examQuestionNo": 80,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Prepositions & Collocations",
+    "difficulty": 2,
+    "stem": "Smallholder farmers who maintain a clean credit history are eligible ________ subsidized interest rate loans provided through official rural development funds.",
+    "questionText": "Smallholder farmers who maintain a clean credit history are eligible ________ subsidized interest rate loans provided through official rural development funds.",
+    "options": [
+      "for",
+      "with",
+      "at",
+      "of",
+      "by"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Eligible' sıfatı bir hakka veya avantaja uygunluğu belirtirken 'for' edatı alır: 'eligible for a loan' (krediye uygun / kredi alma hakkına sahip).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "prepositions",
+      "eligible-for"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-021",
+    "examQuestionNo": 81,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Prepositions & Collocations",
+    "difficulty": 1,
+    "stem": "Over the past five years, state-owned banks have invested heavily ________ cloud-native core banking infrastructure to enhance operational agility.",
+    "questionText": "Over the past five years, state-owned banks have invested heavily ________ cloud-native core banking infrastructure to enhance operational agility.",
+    "options": [
+      "in",
+      "on",
+      "at",
+      "over",
+      "through"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Invest' fiili bir şeye/alana yatırım yapıldığında 'in' edatı ile kullanılır: 'invest in cloud infrastructure' (bulut altyapısına yatırım yapmak).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "grammar",
+      "prepositions",
+      "invest-in"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-022",
+    "examQuestionNo": 82,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Determiners & Pronouns",
+    "difficulty": 2,
+    "stem": "The auditing team inspected two different accounting software vendors, but ________ of them met the strict fault-tolerance standards outlined in the tender.",
+    "questionText": "The auditing team inspected two different accounting software vendors, but ________ of them met the strict fault-tolerance standards outlined in the tender.",
+    "options": [
+      "neither",
+      "either",
+      "none",
+      "both",
+      "all"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "İki seçenekten bahsederken ('two different vendors') her ikisinin de sağlamadığını (olumsuz) belirtmek için 'neither of them' kullanılır. 'None' ise ikiden fazla seçenek için kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "determiners",
+      "neither"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-023",
+    "examQuestionNo": 83,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Gerunds & Infinitives",
+    "difficulty": 2,
+    "stem": "We sincerely appreciate your prompt inquiry and look forward to ________ our strategic partnership during the forthcoming annual financial conference.",
+    "questionText": "We sincerely appreciate your prompt inquiry and look forward to ________ our strategic partnership during the forthcoming annual financial conference.",
+    "options": [
+      "expand",
+      "expanding",
+      "expanded",
+      "expansion",
+      "be expanded"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Look forward to' deyimindeki 'to' bir edattır (preposition). Preposition'lardan sonra gelen fiiller daima Gerund (-ing) alır: 'look forward to expanding'.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "gerunds-infinitives",
+      "look-forward-to"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-024",
+    "examQuestionNo": 84,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Grammar",
+    "subtopic": "Gerunds & Infinitives",
+    "difficulty": 2,
+    "stem": "To prevent unauthorized access, IT security policies strictly prohibit staff members from ________ confidential credentials via unencrypted messaging channels.",
+    "questionText": "To prevent unauthorized access, IT security policies strictly prohibit staff members from ________ confidential credentials via unencrypted messaging channels.",
+    "options": [
+      "transmitting",
+      "to transmit",
+      "transmit",
+      "transmitted",
+      "having transmitted"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Prohibit somebody from doing something' kalıbında, 'from' edatından sonra fiil -ing (gerund) takısı almalıdır: 'from transmitting'.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "grammar",
+      "gerunds-infinitives",
+      "prohibit-from"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-025",
+    "examQuestionNo": 85,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Banking & Finance",
+    "difficulty": 2,
+    "stem": "At the annual general assembly, the board recommended distributing a cash ________ of 1.20 TL per share to shareholders out of retained earnings.",
+    "questionText": "At the annual general assembly, the board recommended distributing a cash ________ of 1.20 TL per share to shareholders out of retained earnings.",
+    "options": [
+      "deficit",
+      "dividend",
+      "mortgage",
+      "inflation",
+      "depreciation"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Dividend' (kâr payı / temettü), bir şirketin elde ettiği kârdan hisse sahiplerine hisse başına dağıttığı paydır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "banking",
+      "dividend",
+      "shares"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-026",
+    "examQuestionNo": 86,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Banking & Finance",
+    "difficulty": 2,
+    "stem": "During periods of rapid capital outflows, commercial banks can face a severe ________ squeeze if interbank lending rates skyrocket unexpectedly.",
+    "questionText": "During periods of rapid capital outflows, commercial banks can face a severe ________ squeeze if interbank lending rates skyrocket unexpectedly.",
+    "options": [
+      "liquidity",
+      "validity",
+      "redundancy",
+      "versatility",
+      "conformity"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Liquidity squeeze' (likidite sıkışıklığı), piyasada nakit veya kolay nakde çevrilebilir varlıkların yetersiz kalması durumudur.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "banking",
+      "liquidity"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-027",
+    "examQuestionNo": 87,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Banking & Finance",
+    "difficulty": 3,
+    "stem": "Under the standard loan agreement, the gradual repayment of the debt principal along with regular interest charges over time is referred to as ________.",
+    "questionText": "Under the standard loan agreement, the gradual repayment of the debt principal along with regular interest charges over time is referred to as ________.",
+    "options": [
+      "amortization",
+      "inflation",
+      "securitization",
+      "insolvency",
+      "arbitrage"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Amortization' (itfa / amortisman / borç tükenimi), bir kredinin ana para ve faizinin belirlenen bir geri ödeme planına göre taksitlerle kademeli olarak kapatılmasıdır.",
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "vocabulary",
+      "banking",
+      "amortization"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-028",
+    "examQuestionNo": 88,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Synonyms & Antonyms",
+    "difficulty": 2,
+    "stem": "Choose the word closest in meaning to the underlined word:\n\"Exchange rates tend to *fluctuate* dramatically whenever central banks unexpectedly alter their interest rate guidance.\"",
+    "questionText": "Choose the word closest in meaning to the underlined word:\n\"Exchange rates tend to *fluctuate* dramatically whenever central banks unexpectedly alter their interest rate guidance.\"",
+    "options": [
+      "vary",
+      "stabilize",
+      "decline",
+      "persist",
+      "disappear"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Fluctuate' (dalgalanmak, değişkenlik göstermek) kelimesinin en yakın anlamlısı 'vary' (farklılaşmak, değişmek) kelimesidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "synonyms",
+      "fluctuate"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-029",
+    "examQuestionNo": 89,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Vocabulary",
+    "subtopic": "Phrasal Verbs",
+    "difficulty": 2,
+    "stem": "The IT department intends to ________ outmoded mainframe architectures and replace them with modular microservice architectures by next year.",
+    "questionText": "The IT department intends to ________ outmoded mainframe architectures and replace them with modular microservice architectures by next year.",
+    "options": [
+      "phase out",
+      "bring up",
+      "give in",
+      "look into",
+      "carry on"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Phase out' (kademeli olarak sonlandırmak / kullanımdan kaldırmak), eski bir sistem veya ürünün yerine yenisi konurken yavaşça devreden çıkarılmasıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "vocabulary",
+      "phrasal-verbs",
+      "phase-out"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-030",
+    "examQuestionNo": 90,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Transitions & Conjunctions",
+    "difficulty": 2,
+    "stem": "________ the macroeconomic climate remained challenging throughout the fiscal year, the agricultural credit portfolio showed surprisingly low default rates.",
+    "questionText": "________ the macroeconomic climate remained challenging throughout the fiscal year, the agricultural credit portfolio showed surprisingly low default rates.",
+    "options": [
+      "Even though",
+      "Because",
+      "In order that",
+      "So as to",
+      "As a result of"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Even though' (-e rağmen / her ne kadar ... olsa da) tam cümle ile zıtlık bildiren bir yan cümle bağlacıdır. Makroekonomik şartlar zorlu olmasına rağmen batık kredi oranının düşük çıkması zıtlıktır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "sentence-completion",
+      "conjunctions",
+      "even-though"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-031",
+    "examQuestionNo": 91,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Sentence Completion",
+    "subtopic": "Reason Clauses",
+    "difficulty": 2,
+    "stem": "Due to unforeseen hardware maintenance in the central data warehouse, ________.",
+    "questionText": "Due to unforeseen hardware maintenance in the central data warehouse, ________.",
+    "options": [
+      "all overnight batch settlement jobs were postponed until the following morning",
+      "because the mobile banking application functioned without any latency",
+      "which caused customers to express great satisfaction with banking speed",
+      "if the credit card verification system had operated seamlessly",
+      "in spite of the prompt resolution of all customer inquiries"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Due to ...' (nedeniyle) bir sebep bildiren zarf öbeğidir ve arkasından mantıklı bir sonuç ana cümlesi gerektirir: 'Merkezi depodaki bakım nedeniyle tüm gece mutabakat işleri ertesi sabaha ertelendi.'",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "sentence-completion",
+      "cause-and-effect"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-032",
+    "examQuestionNo": 92,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Error Identification",
+    "subtopic": "Subject-Verb Agreement",
+    "difficulty": 2,
+    "stem": "Identify the underlined part that contains a grammatical error:\n\n\"(A) *Each of* the regional branches (B) *have reported* a notable increase in (C) *digital loan applications* (D) *since* the revised mobile interface (E) *was released*.\"",
+    "questionText": "Identify the underlined part that contains a grammatical error:\n\n\"(A) *Each of* the regional branches (B) *have reported* a notable increase in (C) *digital loan applications* (D) *since* the revised mobile interface (E) *was released*.\"",
+    "options": [
+      "(A) Each of",
+      "(B) have reported",
+      "(C) digital loan applications",
+      "(D) since",
+      "(E) was released"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Each of + plural noun' yapısı daima tekil fiil (singular verb) gerektirir. 'Each of the regional branches has reported' olmalıdır; 'have reported' dil bilgisi hatasıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "error-identification",
+      "grammar",
+      "subject-verb-agreement"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-033",
+    "examQuestionNo": 93,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Error Identification",
+    "subtopic": "Adjective / Adverb Usage",
+    "difficulty": 2,
+    "stem": "Identify the underlined part that contains a grammatical error:\n\n\"The newly launched (A) *fraud detection* system operates (B) *remarkable* (C) *efficiently* by cross-referencing customer location data (D) *with* ongoing POS transaction (E) *records*.\"",
+    "questionText": "Identify the underlined part that contains a grammatical error:\n\n\"The newly launched (A) *fraud detection* system operates (B) *remarkable* (C) *efficiently* by cross-referencing customer location data (D) *with* ongoing POS transaction (E) *records*.\"",
+    "options": [
+      "(A) fraud detection",
+      "(B) remarkable",
+      "(C) efficiently",
+      "(D) with",
+      "(E) records"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "'Efficiently' bir zarftır (adverb). Bir zarfı nitelemek için sıfat ('remarkable') değil, başka bir zarf kullanılmalıdır: 'remarkably efficiently' (kayda değer derecede verimli).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "error-identification",
+      "grammar",
+      "adjective-adverb"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-034",
+    "examQuestionNo": 94,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Dialogue Completion",
+    "subtopic": "Customer Support",
+    "difficulty": 2,
+    "stem": "Complete the dialogue:\n\nCustomer: \"Good morning, I tried to make a SWIFT transfer to my supplier abroad, but the system displayed an error code 'ERR-402'.\"\nBank Representative: \"________\"\nCustomer: \"No, I didn't verify that. Let me look up their exact IBAN and BIC immediately.\"",
+    "questionText": "Complete the dialogue:\n\nCustomer: \"Good morning, I tried to make a SWIFT transfer to my supplier abroad, but the system displayed an error code 'ERR-402'.\"\nBank Representative: \"________\"\nCustomer: \"No, I didn't verify that. Let me look up their exact IBAN and BIC immediately.\"",
+    "options": [
+      "Did you make sure that the recipient's bank routing details and SWIFT code were completely accurate?",
+      "Would you like to open a multi-currency foreign exchange deposit account today?",
+      "Our physical branches are currently closed due to public holiday regulations.",
+      "The foreign exchange rate has just increased by five percent since yesterday.",
+      "You cannot cancel an international transaction once it is cleared."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Müşterinin 'Hayır, bunu kontrol etmemiştim, hemen IBAN ve BIC kodlarına bakayım' cevabı; temsilcinin alıcının şube/SWIFT kodlarının doğruluğunu soran bir soru yönelttiğini gösterir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "dialogue-completion",
+      "banking",
+      "swift"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-035",
+    "examQuestionNo": 95,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Dialogue Completion",
+    "subtopic": "IT Helpdesk",
+    "difficulty": 2,
+    "stem": "Complete the dialogue:\n\nLoan Analyst: \"I cannot access the risk score dashboard this morning. The screen keeps prompting me for secondary authorization.\"\nSecurity Administrator: \"We rolled out mandatory two-factor authentication (2FA) for all intranet tools over the weekend.\"\nLoan Analyst: \"Oh, I see. What should I do next to log in?\"\nSecurity Administrator: \"________\"",
+    "questionText": "Complete the dialogue:\n\nLoan Analyst: \"I cannot access the risk score dashboard this morning. The screen keeps prompting me for secondary authorization.\"\nSecurity Administrator: \"We rolled out mandatory two-factor authentication (2FA) for all intranet tools over the weekend.\"\nLoan Analyst: \"Oh, I see. What should I do next to log in?\"\nSecurity Administrator: \"________\"",
+    "options": [
+      "Simply open the corporate authenticator app on your registered smartphone and enter the 6-digit passcode.",
+      "You should reinstall Windows on your laptop to wipe out any corrupt files.",
+      "The loan interest rates are recalculated every Monday by our treasury division.",
+      "We will probably cancel all customer loans that were submitted last week.",
+      "Please deposit twenty lira to renew your debit card subscription."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "2FA (İki faktörlü kimlik doğrulama) ile ilgili bir soruya IT yöneticisinin 'Kurumsal kimlik doğrulayıcı uygulamanızı açıp 6 haneli kodu giriniz' demesi bağlama tam uygundur.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "dialogue-completion",
+      "it",
+      "security",
+      "2fa"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-036",
+    "examQuestionNo": 96,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Cloze Test",
+    "subtopic": "Digital Banking Evolution",
+    "difficulty": 2,
+    "stem": "Read the text and choose the best option for blank [1]:\n\n\"The modern banking sector has witnessed an unprecedented transformation over the last decade. Traditional branch-centric operations are rapidly giving way to digital-first banking paradigms. Consequently, financial institutions must continuously update their legacy software architectures [1] ________ cyber threats become ever more sophisticated.\"",
+    "questionText": "Read the text and choose the best option for blank [1]:\n\n\"The modern banking sector has witnessed an unprecedented transformation over the last decade. Traditional branch-centric operations are rapidly giving way to digital-first banking paradigms. Consequently, financial institutions must continuously update their legacy software architectures [1] ________ cyber threats become ever more sophisticated.\"",
+    "options": [
+      "as",
+      "despite",
+      "unlike",
+      "instead",
+      "unless"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'As' burada '-dıkça / çünkü' (as cyber threats become...) anlamında sebep veya eş zamanlı gelişim bildirmektedir: 'Siber tehditler daha sofistike hale geldikçe kurumlar yazılımlarını güncellemelidir'.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "cloze-test",
+      "conjunctions",
+      "as"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-037",
+    "examQuestionNo": 97,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Cloze Test",
+    "subtopic": "Digital Banking Evolution",
+    "difficulty": 2,
+    "stem": "Read the text and choose the best option for blank [2]:\n\n\"...Furthermore, customer expectations regarding speed and usability have escalated dramatically. Mobile applications that fail to offer intuitive navigation risk losing market share, [2] ________ the underlying core banking engine is technically robust.\"",
+    "questionText": "Read the text and choose the best option for blank [2]:\n\n\"...Furthermore, customer expectations regarding speed and usability have escalated dramatically. Mobile applications that fail to offer intuitive navigation risk losing market share, [2] ________ the underlying core banking engine is technically robust.\"",
+    "options": [
+      "even if",
+      "in order that",
+      "so as to",
+      "owing to",
+      "because of"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'Even if' (-se bile / olsa dahi), koşullu zıtlık bildirir: 'Altyapı sağlam olsa bile, sezgisel bir arayüz sunamayan mobil uygulamalar pazar payını kaybetme riski taşır'.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "cloze-test",
+      "conditionals",
+      "even-if"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-038",
+    "examQuestionNo": 98,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Reading Comprehension",
+    "subtopic": "Open Banking & API Economy",
+    "difficulty": 2,
+    "stem": "Answer the question according to the text below:\n\n\"Open Banking represents a regulatory and technological framework that mandates financial institutions to share customer-permissioned financial data with certified third-party providers via standardized Application Programming Interfaces (APIs). In Turkey, regulatory frameworks spearheaded by the Central Bank (TCMB) and the Banking Regulation and Supervision Agency (BDDK) have established robust security standards for open banking implementations, such as Account Information Services (AIS) and Payment Initiation Services (PIS). While incumbent commercial banks initially perceived open banking as a threat to their proprietary customer data, many have now embraced it as an opportunity to expand their digital ecosystem by partnering with agile fintech startups.\"\n\nAccording to the passage, what is the primary role of APIs in Open Banking?",
+    "questionText": "Answer the question according to the text below:\n\n\"Open Banking represents a regulatory and technological framework that mandates financial institutions to share customer-permissioned financial data with certified third-party providers via standardized Application Programming Interfaces (APIs). In Turkey, regulatory frameworks spearheaded by the Central Bank (TCMB) and the Banking Regulation and Supervision Agency (BDDK) have established robust security standards for open banking implementations, such as Account Information Services (AIS) and Payment Initiation Services (PIS). While incumbent commercial banks initially perceived open banking as a threat to their proprietary customer data, many have now embraced it as an opportunity to expand their digital ecosystem by partnering with agile fintech startups.\"\n\nAccording to the passage, what is the primary role of APIs in Open Banking?",
+    "options": [
+      "They allow secure sharing of customer-approved financial data with certified third-party providers.",
+      "They completely eliminate the need for supervisory banking oversight bodies like BDDK.",
+      "They permanently replace all physical bank branches with automated teller machines.",
+      "They guarantee that bank deposit interest rates remain permanently fixed.",
+      "They enable customers to bypass all authentication requirements during online purchases."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Metnin ilk cümlesinde açıkça belirtilmiştir: 'mandates financial institutions to share customer-permissioned financial data with certified third-party providers via standardized Application Programming Interfaces (APIs)'.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "reading-comprehension",
+      "open-banking",
+      "apis"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-039",
+    "examQuestionNo": 99,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Reading Comprehension",
+    "subtopic": "Open Banking & API Economy",
+    "difficulty": 2,
+    "stem": "According to the passage on Open Banking, how has the perspective of incumbent commercial banks changed over time?",
+    "questionText": "According to the passage on Open Banking, how has the perspective of incumbent commercial banks changed over time?",
+    "options": [
+      "They initially viewed it as a threat to their proprietary data, but now see it as an opportunity to collaborate with fintechs.",
+      "They completely refused to comply with regulatory standards published by TCMB.",
+      "They decided to stop all mobile software development and return to branch banking.",
+      "They merged all of their credit card divisions into a single unified state institution.",
+      "They ceased offering payment initiation services due to excessive operating expenses."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Metnin son cümlesinde: 'While incumbent commercial banks initially perceived open banking as a threat to their proprietary customer data, many have now embraced it as an opportunity to expand their digital ecosystem by partnering with agile fintech startups' ifadesi yer almaktadır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "reading-comprehension",
+      "banks-fintech",
+      "open-banking"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "eng-040",
+    "examQuestionNo": 100,
+    "section": "ingilizce",
+    "sectionGroup": 2,
+    "topic": "Reading Comprehension",
+    "subtopic": "Open Banking & API Economy",
+    "difficulty": 2,
+    "stem": "What can be inferred from the passage regarding Open Banking in Turkey?",
+    "questionText": "What can be inferred from the passage regarding Open Banking in Turkey?",
+    "options": [
+      "Open banking services operate within a strictly regulated environment supervised by official authorities such as TCMB and BDDK.",
+      "Third-party providers can access user banking data without obtaining explicit customer consent.",
+      "Turkish banks are technologically behind foreign banks and cannot implement API standards.",
+      "Payment Initiation Services are prohibited under current Turkish banking legislation.",
+      "Customer financial data is made publicly readable on the internet without any encryption."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Metinde TCMB ve BDDK öncülüğünde sağlam güvenlik standartlarının getirildiği açıkça vurgulanmaktadır. Bu da açık bankacılığın resmi otoritelerce sıkı biçimde düzenlenen ve denetlenen bir ortamda çalıştığını gösterir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "reading-comprehension",
+      "inference",
+      "banking-regulations"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-001",
+    "examQuestionNo": 101,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Algoritma ve Programlama Mantığı",
+    "subtopic": "Karmaşıklık Analizi",
+    "difficulty": 2,
+    "stem": "Aşağıdaki algoritmaların en kötü durum (Worst-Case) zaman karmaşıklıkları karşılaştırıldığında, hangisinin karmaşıklığı diğerlerinden **daha büyüktür**?",
+    "questionText": "Aşağıdaki algoritmaların en kötü durum (Worst-Case) zaman karmaşıklıkları karşılaştırıldığında, hangisinin karmaşıklığı diğerlerinden **daha büyüktür**?",
+    "options": [
+      "Merge Sort - O(n log n)",
+      "Quick Sort - O(n²)",
+      "Heap Sort - O(n log n)",
+      "İkili Arama (Binary Search) - O(log n)",
+      "Dizi Üzerinde Doğrusal Arama (Linear Search) - O(n)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Quick Sort algoritmasının en kötü durum (Worst-Case) karmaşıklığı pivot seçiminin en kötü olduğu durumlarda (örneğin zaten sıralı bir dizide ilk veya son elemanın seçilmesi) O(n²)'dir. Merge Sort ve Heap Sort her durumda (en kötü dahil) O(n log n) ile çalışır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "algoritma",
+      "karmaşıklık",
+      "big-o",
+      "sıralama"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-002",
+    "examQuestionNo": 102,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Yapıları ve Problem Çözme",
+    "subtopic": "Ağaç Yapıları",
+    "difficulty": 2,
+    "stem": "Dengeli bir İkili Arama Ağacında (Balanced Binary Search Tree - AVL) $n$ adet düğüm bulunmaktadır. Bu ağaca yeni bir eleman ekleme (insertion) işleminin zaman karmaşıklığı nedir?",
+    "questionText": "Dengeli bir İkili Arama Ağacında (Balanced Binary Search Tree - AVL) $n$ adet düğüm bulunmaktadır. Bu ağaca yeni bir eleman ekleme (insertion) işleminin zaman karmaşıklığı nedir?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Dengeli bir AVL ağacının yüksekliği h = O(log n) olarak sınırlandırılmıştır. Ekleme işlemi ve sonrasında gerekebilecek döndürme (rotation) işlemleri yükseklikle orantılı olduğundan toplam zaman karmaşıklığı O(log n)'dir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veri-yapıları",
+      "ağaçlar",
+      "avl",
+      "karmaşıklık"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-003",
+    "examQuestionNo": 103,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Tabanı ve SQL",
+    "subtopic": "ACID Prensipleri",
+    "difficulty": 2,
+    "stem": "Bir bankacılık uygulamasında A hesabından 1.000 TL düşülüp B hesabına 1.000 TL eklenmektedir. Sistemsel bir kesinti olsa dahi işlemin ya tamamen gerçekleşmesini ya da hiç gerçekleşmemiş gibi eski haline dönmesini sağlayan ACID özelliği hangisidir?",
+    "questionText": "Bir bankacılık uygulamasında A hesabından 1.000 TL düşülüp B hesabına 1.000 TL eklenmektedir. Sistemsel bir kesinti olsa dahi işlemin ya tamamen gerçekleşmesini ya da hiç gerçekleşmemiş gibi eski haline dönmesini sağlayan ACID özelliği hangisidir?",
+    "options": [
+      "Atomicity (Bütünlük/Bölünemezlik)",
+      "Consistency (Tutarlılık)",
+      "Isolation (Yalıtım)",
+      "Durability (Kalıcılık)",
+      "Concurrency (Eşzamanlılık)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Atomicity (Bölünemezlik/Hep ya da Hiç), bir transaction içindeki tüm adımların tek bir birim olarak ele alınmasını sağlar. Adımlardan biri bile başarısız olursa tüm işlem geri alınır (rollback).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "acid",
+      "transaction",
+      "bankacılık"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-004",
+    "examQuestionNo": 104,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Tabanı ve SQL",
+    "subtopic": "SQL JOIN",
+    "difficulty": 2,
+    "stem": "İki tablo birleştirilirken, sol tablodaki tüm satırları ve sağ tablodaki yalnızca eşleşen satırları getiren; eşleşme olmayan sağ tablo sütunları için NULL değer döndüren SQL ifadesi hangisidir?",
+    "questionText": "İki tablo birleştirilirken, sol tablodaki tüm satırları ve sağ tablodaki yalnızca eşleşen satırları getiren; eşleşme olmayan sağ tablo sütunları için NULL değer döndüren SQL ifadesi hangisidir?",
+    "options": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "LEFT JOIN (veya LEFT OUTER JOIN)",
+      "FULL OUTER JOIN",
+      "CROSS JOIN"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "LEFT JOIN, soldaki tablonun tüm satırlarını korur. Sağdaki tabloda ON koşulunu sağlayan bir eşleşme yoksa o sütunlar NULL olarak doldurulur.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "sql",
+      "join",
+      "veritabanı"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-005",
+    "examQuestionNo": 105,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
+    "subtopic": "SOLID Prensipleri",
+    "difficulty": 3,
+    "stem": "SOLID prensiplerinden hangisi, 'Yazılım varlıkları (sınıflar, modüller) genişletilmeye açık (open for extension), ancak değiştirilmeye kapalı (closed for modification) olmalıdır' kuralını ifade eder?",
+    "questionText": "SOLID prensiplerinden hangisi, 'Yazılım varlıkları (sınıflar, modüller) genişletilmeye açık (open for extension), ancak değiştirilmeye kapalı (closed for modification) olmalıdır' kuralını ifade eder?",
+    "options": [
+      "Single Responsibility Principle (SRP)",
+      "Open/Closed Principle (OCP)",
+      "Liskov Substitution Principle (LSP)",
+      "Interface Segregation Principle (ISP)",
+      "Dependency Inversion Principle (DIP)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "OCP (Open/Closed Principle), var olan çalışan kodu değiştirmeden yeni davranışların (örneğin interface ve kalıtım/polimorfizm aracılığıyla) sisteme eklenebilmesini savunur.",
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "yazılım-mühendisliği",
+      "solid",
+      "tasarım-prensipleri"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-006",
+    "examQuestionNo": 106,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "OSI Modeli",
+    "difficulty": 1,
+    "stem": "OSI başvuru modelinde yönlendiricilerin (Router) çalıştığı ve mantıksal adresleme (IP adresleri) ile paket yönlendirmesinin yapıldığı katman hangisidir?",
+    "questionText": "OSI başvuru modelinde yönlendiricilerin (Router) çalıştığı ve mantıksal adresleme (IP adresleri) ile paket yönlendirmesinin yapıldığı katman hangisidir?",
+    "options": [
+      "Fiziksel Katman (Physical Layer)",
+      "Veri Bağlantı Katmanı (Data Link Layer)",
+      "Ağ Katmanı (Network Layer)",
+      "Taşıma Katmanı (Transport Layer)",
+      "Uygulama Katmanı (Application Layer)"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Ağ Katmanı (Network Layer - 3. Katman), IP adresleme, paketleme ve yönlendiriciler (Router) aracılığıyla en iyi yolun bulunması (routing) işlemlerinden sorumludur.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "ağ",
+      "osi",
+      "router",
+      "network"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-007",
+    "examQuestionNo": 107,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "İşletim Sistemleri - Deadlock",
+    "difficulty": 3,
+    "stem": "İşletim sistemlerinde bir kilitlenmenin (Deadlock) meydana gelebilmesi için gerekli olan dört Coffman koşulundan hangisi, 'Kaynakları elinde tutan bir sürecin, başka kaynakları beklerken mevcut kaynaklarını bırakmaması' durumunu ifade eder?",
+    "questionText": "İşletim sistemlerinde bir kilitlenmenin (Deadlock) meydana gelebilmesi için gerekli olan dört Coffman koşulundan hangisi, 'Kaynakları elinde tutan bir sürecin, başka kaynakları beklerken mevcut kaynaklarını bırakmaması' durumunu ifade eder?",
+    "options": [
+      "Karşılıklı Dışlama (Mutual Exclusion)",
+      "Tut ve Bekle (Hold and Wait)",
+      "Kesinti Yok (No Preemption)",
+      "Dairesel Bekleme (Circular Wait)",
+      "Açlık (Starvation)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Hold and Wait (Tut ve Bekle) şartı; bir sürecin en az bir kaynağı elinde tutarken aynı zamanda başka bir süreç tarafından tutulan diğer kaynakları talep edip beklemesi durumudur.",
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "işletim-sistemleri",
+      "deadlock",
+      "coffman"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-008",
+    "examQuestionNo": 108,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği Temelleri",
+    "subtopic": "Web Güvenliği",
+    "difficulty": 2,
+    "stem": "Kullanıcı girdilerinin filtrelenmeden doğrudan dinamik SQL sorgularına dahil edilmesi sonucu saldırganın veritabanı sorgusunu manipüle edebildiği güvenlik zafiyeti hangisidir?",
+    "questionText": "Kullanıcı girdilerinin filtrelenmeden doğrudan dinamik SQL sorgularına dahil edilmesi sonucu saldırganın veritabanı sorgusunu manipüle edebildiği güvenlik zafiyeti hangisidir?",
+    "options": [
+      "Cross-Site Scripting (XSS)",
+      "SQL Injection (SQLi)",
+      "Cross-Site Request Forgery (CSRF)",
+      "Man-in-the-Middle (MitM)",
+      "Distributed Denial of Service (DDoS)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "SQL Injection, güvenilmez kullanıcı verilerinin SQL ifadesiyle birleştirilerek veritabanı motoruna çalıştırılması sonucu yetkisiz veri okuma veya değiştirme imkanı veren en yaygın OWASP zafiyetlerinden biridir. Parametreli sorgular (Prepared Statements) ile önlenir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "güvenlik",
+      "sqli",
+      "owasp"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-009",
+    "examQuestionNo": 109,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri",
+    "subtopic": "Model Değerlendirme",
+    "difficulty": 2,
+    "stem": "Dengesiz sınıf dağılımına sahip bir veri kümesinde (örneğin sahte banka işlemlerinin %1 olduğu dolandırıcılık tespiti modelinde), modelin başarısını ölçmek için tek başına Doğruluk (Accuracy) yerine tercih edilmesi gereken en uygun metrik hangisidir?",
+    "questionText": "Dengesiz sınıf dağılımına sahip bir veri kümesinde (örneğin sahte banka işlemlerinin %1 olduğu dolandırıcılık tespiti modelinde), modelin başarısını ölçmek için tek başına Doğruluk (Accuracy) yerine tercih edilmesi gereken en uygun metrik hangisidir?",
+    "options": [
+      "Ortalama Hata Kareleri Kökü (RMSE)",
+      "R-Kare (R²)",
+      "F1-Skoru (veya Precision & Recall)",
+      "Ortalama Mutlak Hata (MAE)",
+      "Doğruluk Oranı (Accuracy)"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Dengesiz veri setlerinde model tüm verilere 'sahte değil' dese bile %99 doğruluk alabilir. Bu nedenle Precision (Kesinlik) ve Recall (Duyarlılık) değerlerinin harmonik ortalaması olan F1-Skoru kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yapay-zeka",
+      "makine-ogrenmesi",
+      "f1-score",
+      "metrikler"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-010",
+    "examQuestionNo": 110,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "subtopic": "Bulut ve API Mimarisi",
+    "difficulty": 2,
+    "stem": "Bankaların müşteri rızası dahilinde hesap bilgilerini ve ödeme başlatma hizmetlerini güvenli API'lar aracılığıyla üçüncü parti lisanslı finansal kuruluşlarla paylaşmasına olanak tanıyan mimari kavrama ne ad verilir?",
+    "questionText": "Bankaların müşteri rızası dahilinde hesap bilgilerini ve ödeme başlatma hizmetlerini güvenli API'lar aracılığıyla üçüncü parti lisanslı finansal kuruluşlarla paylaşmasına olanak tanıyan mimari kavrama ne ad verilir?",
+    "options": [
+      "Açık Bankacılık (Open Banking)",
+      "Monolitik Bankacılık (Monolithic Architecture)",
+      "Karanlık Ağ (Darknet)",
+      "Kapalı Devre Finans (Closed Banking)",
+      "Blokzincir Madenciliği (Proof of Work)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Açık Bankacılık (Open Banking / PSD2 standartları), finansal verilerin standart API protokolleri üzerinden üçüncü taraf fintech sağlayıcıları ile güvenle paylaşılmasını sağlayan modern bankacılık ekosistemidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "fintek",
+      "acik-bankacilik",
+      "api",
+      "bankacilik"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-011",
+    "examQuestionNo": 111,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Algoritma ve Programlama Mantığı",
+    "subtopic": "Graf Algoritmaları",
+    "difficulty": 2,
+    "stem": "Ağırlıklı ve negatif kenar ağırlığı bulunmayan bir graf üzerinde tek bir başlangıç düğümünden diğer tüm düğümlere en kısa yolları (Shortest Path) bulan klasik açgözlü (greedy) algoritma hangisidir?",
+    "questionText": "Ağırlıklı ve negatif kenar ağırlığı bulunmayan bir graf üzerinde tek bir başlangıç düğümünden diğer tüm düğümlere en kısa yolları (Shortest Path) bulan klasik açgözlü (greedy) algoritma hangisidir?",
+    "options": [
+      "Bellman-Ford Algoritması",
+      "Dijkstra Algoritması",
+      "Floyd-Warshall Algoritması",
+      "Kruskal Algoritması",
+      "Prim Algoritması"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Dijkstra algoritması, negatif kenar ağırlığı olmayan graflarda tek kaynaklı en kısa yol problemini bir öncelik kuyruğu (min-heap) kullanarak O((V + E) log V) sürede çözer. Bellman-Ford ise negatif ağırlıklı kenarları da destekler.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "graf",
+      "en-kisa-yol",
+      "dijkstra",
+      "algoritma"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-012",
+    "examQuestionNo": 112,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Yapıları ve Problem Çözme",
+    "subtopic": "Hash Tabloları",
+    "difficulty": 2,
+    "stem": "Hash tablolarında çakışma (Collision) yönetimi için 'Açık Adresleme - Doğrusal Yoklama' (Open Addressing - Linear Probing) kullanıldığında, birbirini takip eden dolu yuvaların birikerek performansı düşürmesi sorununa ne ad verilir?",
+    "questionText": "Hash tablolarında çakışma (Collision) yönetimi için 'Açık Adresleme - Doğrusal Yoklama' (Open Addressing - Linear Probing) kullanıldığında, birbirini takip eden dolu yuvaların birikerek performansı düşürmesi sorununa ne ad verilir?",
+    "options": [
+      "İkincil Kümeleme (Secondary Clustering)",
+      "Birincil Kümeleme (Primary Clustering)",
+      "Taşma (Overflow)",
+      "Zincirleme (Chaining)",
+      "Ayrıklaştırma (Segmentation)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Doğrusal yoklamada ardışık dolu yuvaların birleşmesi 'Primary Clustering' (Birincil Kümeleme) olarak adlandırılır ve arama sürelerini uzatır. Bu durum Karesel Yoklama veya Çift Hash (Double Hashing) ile azaltılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "hash",
+      "veri-yapilari",
+      "clustering",
+      "collision"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-013",
+    "examQuestionNo": 113,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Tabanı ve SQL",
+    "subtopic": "Normalizasyon",
+    "difficulty": 3,
+    "stem": "Bir ilişkisel tabloda 3NF sağlanmış olmasına rağmen, birden fazla örtüşen bileşik aday anahtar (Overlapping Composite Candidate Keys) bulunması durumunda ortaya çıkan anomalileri gidermek için tanımlanan ve 'her fonksiyonel belirleyicinin mutlaka bir süper anahtar olmasını' şart koşan form hangisidir?",
+    "questionText": "Bir ilişkisel tabloda 3NF sağlanmış olmasına rağmen, birden fazla örtüşen bileşik aday anahtar (Overlapping Composite Candidate Keys) bulunması durumunda ortaya çıkan anomalileri gidermek için tanımlanan ve 'her fonksiyonel belirleyicinin mutlaka bir süper anahtar olmasını' şart koşan form hangisidir?",
+    "options": [
+      "2. Normal Form (2NF)",
+      "Boyce-Codd Normal Formu (BCNF)",
+      "4. Normal Form (4NF)",
+      "5. Normal Form (5NF)",
+      "Denormalizasyon"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Boyce-Codd Normal Formu (BCNF), 3NF'in özel ve daha katı bir halidir. X -> Y fonksiyonel bağımlılığında X'in mutlaka bir Süper Anahtar (Super Key) olmasını şart koşar.",
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "veritabani",
+      "normalizasyon",
+      "bcnf",
+      "3nf"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-014",
+    "examQuestionNo": 114,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
+    "subtopic": "Versiyon Kontrolü (Git)",
+    "difficulty": 2,
+    "stem": "Git versiyon kontrol sisteminde bir dalın (branch) başlangıç noktasını hedef dalın en son commit'inin üzerine taşıyarak doğrusal (linear) ve temiz bir commit geçmişi oluşturan komut hangisidir?",
+    "questionText": "Git versiyon kontrol sisteminde bir dalın (branch) başlangıç noktasını hedef dalın en son commit'inin üzerine taşıyarak doğrusal (linear) ve temiz bir commit geçmişi oluşturan komut hangisidir?",
+    "options": [
+      "git merge",
+      "git rebase",
+      "git cherry-pick",
+      "git reset --hard",
+      "git stash"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "git rebase, commit'leri sanki hedef daldan dallanmış gibi baştan uygulayarak ekstra birleştirme (merge commit) üretmeden doğrusal bir geçmiş sağlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "git",
+      "yazilim-muhendisligi",
+      "rebase"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-015",
+    "examQuestionNo": 115,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "Taşıma Katmanı ve TCP",
+    "difficulty": 2,
+    "stem": "TCP protokolünde istemci ile sunucu arasında güvenilir bir bağlantı kurmak için uygulanan 'Üç Yollu El Sıkışma' (3-Way Handshake) bayrak sırası doğru olarak hangisidir?",
+    "questionText": "TCP protokolünde istemci ile sunucu arasında güvenilir bir bağlantı kurmak için uygulanan 'Üç Yollu El Sıkışma' (3-Way Handshake) bayrak sırası doğru olarak hangisidir?",
+    "options": [
+      "ACK -> SYN -> SYN-ACK",
+      "SYN -> SYN-ACK -> ACK",
+      "SYN -> ACK -> FIN",
+      "FIN -> ACK -> FIN-ACK",
+      "RST -> SYN -> ACK"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "TCP bağlantısı kurulurken: 1) İstemci: SYN gönderir, 2) Sunucu: SYN-ACK ile yanıtlar, 3) İstemci: ACK göndererek bağlantıyı aktif eder.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "ag",
+      "tcp",
+      "handshake",
+      "transport-layer"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-016",
+    "examQuestionNo": 116,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği Temelleri",
+    "subtopic": "Kriptografi",
+    "difficulty": 2,
+    "stem": "HTTPS protokolü kullanılırken istemci ve sunucu arasındaki ilk güvenli el sıkışmada (TLS Handshake) oturum anahtarlarının güvenle paylaşılması için asimetrik şifreleme, ardından verilerin hızlı aktarımı için simetrik şifreleme (örn: AES) kullanılır. Bu modele ne ad verilir?",
+    "questionText": "HTTPS protokolü kullanılırken istemci ve sunucu arasındaki ilk güvenli el sıkışmada (TLS Handshake) oturum anahtarlarının güvenle paylaşılması için asimetrik şifreleme, ardından verilerin hızlı aktarımı için simetrik şifreleme (örn: AES) kullanılır. Bu modele ne ad verilir?",
+    "options": [
+      "Hibrit Şifreleme (Hybrid Cryptography)",
+      "Kuantum Şifreleme",
+      "Blokzincir Şifreleme",
+      "Tek Kullanımlık Şerit (One-Time Pad)",
+      "Homomorfik Şifreleme"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Hibrit şifreleme, asimetrik şifrelemenin anahtar paylaşım güvenliği ile simetrik şifrelemenin yüksek hızını birleştiren modern TLS/HTTPS temel mimarisidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "kriptografi",
+      "tls",
+      "https",
+      "guvenlik"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-017",
+    "examQuestionNo": 117,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri",
+    "subtopic": "Aşırı Öğrenme (Overfitting)",
+    "difficulty": 2,
+    "stem": "Bir makine öğrenmesi modelinin eğitim verisindeki gürültüleri dahi ezberlemesi sonucu eğitim başarısının çok yüksek, ancak test verisindeki genelleme başarısının çok düşük olması durumuna (Overfitting) karşı aşağıdakilerden hangisi bir çözüm **değildir**?",
+    "questionText": "Bir makine öğrenmesi modelinin eğitim verisindeki gürültüleri dahi ezberlemesi sonucu eğitim başarısının çok yüksek, ancak test verisindeki genelleme başarısının çok düşük olması durumuna (Overfitting) karşı aşağıdakilerden hangisi bir çözüm **değildir**?",
+    "options": [
+      "Düzenlileştirme (L1 / L2 Regularization - Lasso / Ridge)",
+      "Modelin parametre sayısını ve katman derinliğini ciddi oranda artırmak",
+      "Erken Durdurma (Early Stopping)",
+      "Çapraz Doğrulama (K-Fold Cross Validation)",
+      "Seyreltme (Dropout) uygulamak"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Modelin parametre sayısını ve katman derinliğini artırmak modelin karmaşıklığını artırır ve aşırı öğrenmeyi (Overfitting) daha da şiddetlendirir. Diğer seçenekler ise aşırı öğrenmeyi önleme teknikleridir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "makine-ogrenmesi",
+      "overfitting",
+      "regularization"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-018",
+    "examQuestionNo": 118,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "subtopic": "Konteyner ve Sanallaştırma",
+    "difficulty": 2,
+    "stem": "Geleneksel Sanal Makineler (Virtual Machines) ile Docker gibi Konteyner (Container) teknolojileri arasındaki en temel mimari fark hangisidir?",
+    "questionText": "Geleneksel Sanal Makineler (Virtual Machines) ile Docker gibi Konteyner (Container) teknolojileri arasındaki en temel mimari fark hangisidir?",
+    "options": [
+      "Konteynerlerin her biri ayrı bir donanım gerektirir.",
+      "Konteynerler konuk işletim sistemi (Guest OS) yerine ana makinenin çekirdeğini (Host OS Kernel) paylaşır.",
+      "Sanal makineler Docker'dan her zaman daha hızlı başlar.",
+      "Konteynerler yalnızca tek bir programlama dilini çalıştırabilir.",
+      "Konteynerlerde ağ iletişimi kurulamaz."
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Konteynerler Hypervisor ve her biri için ayrı bir Guest OS barındırmak yerine ana işletim sisteminin çekirdeğini (Kernel) izole süreçler halinde paylaşır; bu sayede çok hafif ve hızlı başlarlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "docker",
+      "konteyner",
+      "sanallastirma",
+      "devops"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-019",
+    "examQuestionNo": 119,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
+    "subtopic": "RESTful API Mimarisi",
+    "difficulty": 2,
+    "stem": "HTTP protokolünde ve RESTful mimaride bir isteğin birden fazla kez arka arkaya çağrılması durumunda sunucuda aynı etkiyi yaratması özelliğine 'İdempotent' (Tekdüze) denir. Aşağıdaki HTTP metodlarından hangisi **idempotent değildir**?",
+    "questionText": "HTTP protokolünde ve RESTful mimaride bir isteğin birden fazla kez arka arkaya çağrılması durumunda sunucuda aynı etkiyi yaratması özelliğine 'İdempotent' (Tekdüze) denir. Aşağıdaki HTTP metodlarından hangisi **idempotent değildir**?",
+    "options": [
+      "GET",
+      "PUT",
+      "DELETE",
+      "POST",
+      "HEAD"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "POST metodu her çağrıldığında yeni bir kaynak oluşturabileceğinden (örn: arka arkaya iki kez çağrılırsa iki yeni kayıt üretir) idempotent değildir. GET, PUT ve DELETE ise idempotenttir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "api",
+      "rest",
+      "http",
+      "idempotent"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-020",
+    "examQuestionNo": 120,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
+    "subtopic": "Eşzamanlılık (Concurrency)",
+    "difficulty": 3,
+    "stem": "Birden fazla thread'in paylaşılan aynı değişken veya bellek alanına eşzamanlı erişmeye çalıştığı ve sonucun iş parçacıklarının çalışma sırasına bağlı olarak hatalı çıktığı duruma ne ad verilir?",
+    "questionText": "Birden fazla thread'in paylaşılan aynı değişken veya bellek alanına eşzamanlı erişmeye çalıştığı ve sonucun iş parçacıklarının çalışma sırasına bağlı olarak hatalı çıktığı duruma ne ad verilir?",
+    "options": [
+      "Yarış Durumu (Race Condition)",
+      "Deadlock",
+      "Sayfa Hatası (Page Fault)",
+      "Bellek Sızıntısı (Memory Leak)",
+      "Bağlam Değişimi (Context Switch)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Race Condition (Yarış Durumu), iki veya daha fazla thread'in senkronizasyon (Mutex/Semaphore) olmadan aynı paylaşılan kaynağa eşzamanlı yazmaya çalışması sonucu ortaya çıkan tutarsızlıktır.",
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "isletim-sistemleri",
+      "race-condition",
+      "concurrency"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-021",
+    "examQuestionNo": 121,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Algoritma ve Programlama",
+    "subtopic": "Rekürsiyon ve Çağrı Yığını",
+    "difficulty": 2,
+    "stem": "Aşağıdaki özyinelemeli (rekürsif) C fonksiyonu `hesapla(4)` parametresi ile çağrıldığında dönecek sonuç nedir?\n\n```c\nint hesapla(int n) {\n    if (n <= 1) return 1;\n    return n + hesapla(n - 2);\n}\n```",
+    "questionText": "Aşağıdaki özyinelemeli (rekürsif) C fonksiyonu `hesapla(4)` parametresi ile çağrıldığında dönecek sonuç nedir?\n\n```c\nint hesapla(int n) {\n    if (n <= 1) return 1;\n    return n + hesapla(n - 2);\n}\n```",
+    "options": [
+      "5",
+      "7",
+      "9",
+      "10",
+      "15"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Adım adım çağrı yığını:\n1. `hesapla(4) = 4 + hesapla(2)`\n2. `hesapla(2) = 2 + hesapla(0)`\n3. `hesapla(0)` için `n <= 1` şartı sağlandığından taban durum devreye girer ve `1` döner.\nSonuç: `4 + 2 + 1 = 7`.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "algoritma",
+      "rekürsiyon",
+      "c-dili",
+      "kod-çıktısı"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-022",
+    "examQuestionNo": 122,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Algoritma ve Programlama",
+    "subtopic": "Arama Algoritmaları",
+    "difficulty": 2,
+    "stem": "100.000 elemanlı sıralı bir tamsayı dizisinde İkili Arama (Binary Search) algoritması kullanıldığında, aranan elemanın bulunması veya dizide olmadığının anlaşılması için **en fazla (Worst-Case)** kaç karşılaştırma yapılması gerekir? ($\\log_2(100000) \\approx 16.6$)",
+    "questionText": "100.000 elemanlı sıralı bir tamsayı dizisinde İkili Arama (Binary Search) algoritması kullanıldığında, aranan elemanın bulunması veya dizide olmadığının anlaşılması için **en fazla (Worst-Case)** kaç karşılaştırma yapılması gerekir? ($\\log_2(100000) \\approx 16.6$)",
+    "options": [
+      "10",
+      "17",
+      "100",
+      "50.000",
+      "100.000"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "İkili arama her adımda arama uzayını yarıya indirir. En kötü durum karmaşıklığı $\\lfloor\\log_2(n)\\rfloor + 1$ formülü ile bulunur. $2^{16} = 65.536$ ve $2^{17} = 131.072$ olduğundan, 100.000 eleman için en fazla 17 karşılaştırma yeterlidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "algoritma",
+      "binary-search",
+      "zaman-karmaşıklığı"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-023",
+    "examQuestionNo": 123,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Yapıları ve Algoritmalar",
+    "subtopic": "Yığın (Stack) ve Kuyruk (Queue)",
+    "difficulty": 1,
+    "stem": "Bir banka şubesinde sıra numarası alan müşterilerin işlem önceliğini belirleyen sistem ile metin düzenleyicilerindeki 'Geri Al (Undo)' fonksiyonunun kullandığı veri yapıları sırasıyla hangi seçenekte doğru verilmiştir?",
+    "questionText": "Bir banka şubesinde sıra numarası alan müşterilerin işlem önceliğini belirleyen sistem ile metin düzenleyicilerindeki 'Geri Al (Undo)' fonksiyonunun kullandığı veri yapıları sırasıyla hangi seçenekte doğru verilmiştir?",
+    "options": [
+      "Kuyruk (Queue - FIFO) / Yığın (Stack - LIFO)",
+      "Yığın (Stack - LIFO) / Kuyruk (Queue - FIFO)",
+      "Öncelikli Kuyruk / İkili Arama Ağacı",
+      "Bağlı Liste / Dizi (Array)",
+      "Hash Tablosu / Yığın (Stack)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Müşteri sıra sistemi 'İlk gelen ilk çıkar' (FIFO - First In First Out) mantığıyla Kuyruk (Queue) yapısını; en son yapılan işlemi ilk geri alan Undo sistemi ise 'Son gelen ilk çıkar' (LIFO - Last In First Out) mantığıyla Yığın (Stack) yapısını kullanır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "veri-yapıları",
+      "stack",
+      "queue",
+      "fifo",
+      "lifo"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-024",
+    "examQuestionNo": 124,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Yapıları ve Algoritmalar",
+    "subtopic": "Bağlı Liste ve Diziler",
+    "difficulty": 2,
+    "stem": "Tek yönlü bağlı listelerin (Singly Linked List) dinamik dizilere (Dynamic Array / ArrayList) kıyasla en belirgin avantajı hangisidir?",
+    "questionText": "Tek yönlü bağlı listelerin (Singly Linked List) dinamik dizilere (Dynamic Array / ArrayList) kıyasla en belirgin avantajı hangisidir?",
+    "options": [
+      "Herhangi bir indeksteki elemana $O(1)$ sürede rastgele erişim (Random Access) sağlaması",
+      "İşaretçinin bilindiği bir konuma yeni düğüm ekleme işleminin diziyi kaydırma maliyeti olmadan $O(1)$ sürede yapılabilmesi",
+      "Bellek üzerinde ardışık (contiguous) bloklar halinde tutularak CPU önbellek (Cache) performansını artırması",
+      "Her eleman için ilave işaretçi (pointer/reference) depolama yükü getirmemesi",
+      "İkili arama (Binary Search) algoritmasını doğrudan desteklemesi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Dizilerde araya veya başa eleman eklerken kalan elemanların kaydırılması $O(n)$ maliyet gerektirir. Bağlı listelerde ise işaretçi adresi biliniyorsa eleman ekleme sadece referans güncellemesi ile $O(1)$ sürede tamamlanır. Ancak bağlı listeler rastgele erişim ($O(1)$) sağlayamaz.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veri-yapıları",
+      "linked-list",
+      "array",
+      "performans"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-025",
+    "examQuestionNo": 125,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veritabanları ve SQL",
+    "subtopic": "GROUP BY ve HAVING",
+    "difficulty": 2,
+    "stem": "SQL sorgularında gruplanmış veriler üzerinde toplama fonksiyonlarına (Aggregate Functions: SUM, COUNT, AVG vb.) dayalı filtreleme yapmak için hangi anahtar kelime kullanılır?",
+    "questionText": "SQL sorgularında gruplanmış veriler üzerinde toplama fonksiyonlarına (Aggregate Functions: SUM, COUNT, AVG vb.) dayalı filtreleme yapmak için hangi anahtar kelime kullanılır?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "GROUP BY",
+      "LIMIT"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "`WHERE` ifadesi satırlar gruplanmadan önce bireysel satırları filtreler ve aggregate fonksiyonlarla doğrudan kullanılamaz. `HAVING` ifadesi ise `GROUP BY` sonrasında oluşan gruplar üzerinde aggregate filtreleme yapmak için kullanılır (örneğin `HAVING COUNT(*) > 5`).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "sql",
+      "having",
+      "group-by"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-026",
+    "examQuestionNo": 126,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veritabanları ve SQL",
+    "subtopic": "Veritabanı İndeksleri",
+    "difficulty": 2,
+    "stem": "İlişkisel veritabanlarında sıkça kullanılan B-Tree indeksleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi **yanlıştır**?",
+    "questionText": "İlişkisel veritabanlarında sıkça kullanılan B-Tree indeksleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi **yanlıştır**?",
+    "options": [
+      "`SELECT` sorgularında WHERE ve ORDER BY koşullarının çalışma süresini önemli ölçüde hızlandırır.",
+      "Tabloya yapılan `INSERT`, `UPDATE` ve `DELETE` operasyonlarında ek indeks güncelleme maliyeti oluşturur.",
+      "İndeksler diskte ilave depolama alanı kaplar.",
+      "Bir tablodaki tüm sütunlara ayrı ayrı indeks eklemek veritabanı genel yazma performansını her zaman artırır.",
+      "Primary Key tanımlanan bir sütun üzerinde çoğu veritabanı motoru otomatik olarak Clustered Index veya Unique Index oluşturur."
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "Tüm sütunlara gereksiz indeks eklemek, her yazma işleminde (INSERT/UPDATE/DELETE) tüm bu indeks ağaçlarının da güncellenmesini zorunlu kıldığı için yazma performansını ciddi şekilde düşürür. İndeksler yalnızca sık sorgulanan ve seçiciliği yüksek sütunlara konulmalıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "sql",
+      "indeks",
+      "b-tree"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-027",
+    "examQuestionNo": 127,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veritabanları ve SQL",
+    "subtopic": "İlişkisel Bütünlük (Referential Integrity)",
+    "difficulty": 2,
+    "stem": "İki ilişkisel tablo arasında kurulan Yabancı Anahtar (Foreign Key) kısıtında `ON DELETE CASCADE` kuralı tanımlandığında ne gerçekleşir?",
+    "questionText": "İki ilişkisel tablo arasında kurulan Yabancı Anahtar (Foreign Key) kısıtında `ON DELETE CASCADE` kuralı tanımlandığında ne gerçekleşir?",
+    "options": [
+      "Ana (Primary Key) tablodaki bir kayıt silindiğinde, ona bağlı olan alt tablodaki ilişkili kayıtlar da otomatik olarak silinir.",
+      "Alt tablodaki kayıt silindiğinde ana tablodaki kayıt da silinir.",
+      "Bağlı kayıtlar varsa ana tablodaki kaydın silinmesi veritabanı tarafından engellenir (hata üretilir).",
+      "Ana tablodaki kayıt silindiğinde alt tablodaki yabancı anahtar alanları NULL yapılır.",
+      "Silinen kayıtlar geçici bir yedek tablosuna kopyalanır."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "`ON DELETE CASCADE`, ana (ebeveyn) tablodan bir satır silindiğinde, referans bütünlüğünü korumak adına o satırı işaret eden tüm bağımlı (çocuk) satırların da otomatik olarak silinmesini sağlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "foreign-key",
+      "cascade",
+      "referential-integrity"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-028",
+    "examQuestionNo": 128,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "İşletim Sistemleri",
+    "subtopic": "Process ve Thread Mimarisi",
+    "difficulty": 2,
+    "stem": "İşletim sistemlerinde Süreç (Process) ve İş Parçacığı (Thread) kavramları karşılaştırıldığında hangisi **doğrudur**?",
+    "questionText": "İşletim sistemlerinde Süreç (Process) ve İş Parçacığı (Thread) kavramları karşılaştırıldığında hangisi **doğrudur**?",
+    "options": [
+      "Aynı sürecin parçası olan thread'ler heap bellek alanını ve açık dosya tanımlayıcılarını ortak paylaşırken, kendilerine ait bağımsız bir çağrı yığınına (stack) ve program sayacına (PC) sahiptirler.",
+      "Process'ler arası geçiş (context switch), thread'ler arası geçişe göre daha hızlı ve düşük maliyetlidir.",
+      "Bir thread çöktüğünde diğer thread'ler ve ana process hiçbir şekilde etkilenmez.",
+      "Thread'ler işletim sisteminden tamamen ayrı sanal adres uzaylarına (Address Space) sahiptir.",
+      "Modern işletim sistemlerinde tek bir process içinde birden fazla thread çalıştırılamaz."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Aynı sürecin thread'leri kod, veri ve heap alanlarını ortak paylaşır. Ancak her thread bağımsız çalıştırılabilir olduğundan kendi yazmaçlarına (registers), program sayacına (PC) ve yığınına (stack) sahiptir. Process context switch ise adres uzayı değiştiğinden çok daha maliyetlidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "işletim-sistemleri",
+      "process",
+      "thread",
+      "concurrency"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-029",
+    "examQuestionNo": 129,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "İşletim Sistemleri",
+    "subtopic": "Sanal Bellek ve Sayfalama",
+    "difficulty": 2,
+    "stem": "İşletim sistemlerinde sanal bellek yönetimi sırasında bir sürecin erişmek istediği sanal sayfanın fiziksel RAM'de bulunmaması durumuna ne ad verilir ve bu durumda işletim sistemi ne yapar?",
+    "questionText": "İşletim sistemlerinde sanal bellek yönetimi sırasında bir sürecin erişmek istediği sanal sayfanın fiziksel RAM'de bulunmaması durumuna ne ad verilir ve bu durumda işletim sistemi ne yapar?",
+    "options": [
+      "Page Fault - Sayfa ikincil depolamadan (disk/swap) fiziksel belleğe yüklenir.",
+      "Segmentation Fault - Süreç derhal sonlandırılır.",
+      "Deadlock - Süreç askıya alınır ve zamanlayıcı yeniden başlatılır.",
+      "Race Condition - Bellek blokları kilitlenir.",
+      "Cache Miss - L1 önbelleği temizlenir."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Erişilmek istenen sayfanın geçerlilik biti (valid bit) 0 ise donanım bir 'Page Fault' (Sayfa Hatası) kesmesi üretir. İşletim sistemi devreye girerek ilgili sayfayı diskten RAM'e getirir, sayfa tablosunu günceller ve komutu tekrarlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "işletim-sistemleri",
+      "sanal-bellek",
+      "page-fault",
+      "paging"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-030",
+    "examQuestionNo": 130,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "İşletim Sistemleri",
+    "subtopic": "CPU Zamanlama (Scheduling)",
+    "difficulty": 2,
+    "stem": "Her sürece eşit miktarda sabit bir zaman dilimi (Time Quantum) tahsis eden ve bu süre dolduğunda süreci kesip hazır kuyruğunun sonuna atan, adil ve preemptive (kesintili) CPU zamanlama algoritması hangisidir?",
+    "questionText": "Her sürece eşit miktarda sabit bir zaman dilimi (Time Quantum) tahsis eden ve bu süre dolduğunda süreci kesip hazır kuyruğunun sonuna atan, adil ve preemptive (kesintili) CPU zamanlama algoritması hangisidir?",
+    "options": [
+      "First-Come, First-Served (FCFS)",
+      "Shortest Job First (SJF)",
+      "Round Robin (RR)",
+      "Priority Scheduling (Non-preemptive)",
+      "Multilevel Feedback Queue"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Round Robin (RR), zaman paylaşımlı sistemlerde her göreve eşit 'Time Slice / Quantum' tanıyan ve süre dolunca CPU'yu bir sonraki göreve devreden adil, preemptive bir algoritmadır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "işletim-sistemleri",
+      "cpu-scheduling",
+      "round-robin"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-031",
+    "examQuestionNo": 131,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları",
+    "subtopic": "Taşıma Katmanı (TCP vs UDP)",
+    "difficulty": 1,
+    "stem": "Aşağıdaki senaryoların hangisinde TCP yerine UDP protokolünün tercih edilmesi daha uygundur?",
+    "questionText": "Aşağıdaki senaryoların hangisinde TCP yerine UDP protokolünün tercih edilmesi daha uygundur?",
+    "options": [
+      "Banka EFT ve para transferi mesajlarının iletimi",
+      "Web sitelerinin HTTPS üzerinden güvenli yüklenmesi",
+      "Dosya transferi (FTP) ile büyük arşiv dosyalarının indirilmesi",
+      "Gerçek zamanlı çevrimiçi video konferans ve canlı ses yayını",
+      "Veritabanı sunucusuna gönderilen SQL sorguları"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "UDP bağlantısız (connectionless) ve kayıpları yeniden iletmeyen bir protokoldür; gecikmesi çok düşüktür. Canlı video/ses yayınında paket kaybı tolere edilebilir ancak gecikme tolere edilemez. Finansal işlemlerde ise TCP'nin güvenilir ve sıralı teslimatı zorunludur.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "bilgisayar-ağları",
+      "tcp",
+      "udp",
+      "transport-layer"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-032",
+    "examQuestionNo": 132,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları",
+    "subtopic": "DNS ve IP Mimarisi",
+    "difficulty": 2,
+    "stem": "Bir istemci tarayıcısına `www.ziraatbank.com.tr` yazdığında, bu alan adını hedef sunucunun IP adresine çeviren internet altyapı servisi ve varsayılan protokol portu hangisidir?",
+    "questionText": "Bir istemci tarayıcısına `www.ziraatbank.com.tr` yazdığında, bu alan adını hedef sunucunun IP adresine çeviren internet altyapı servisi ve varsayılan protokol portu hangisidir?",
+    "options": [
+      "DNS (Domain Name System) - Port 53",
+      "DHCP (Dynamic Host Configuration) - Port 67",
+      "HTTP - Port 80",
+      "SNMP - Port 161",
+      "SMTP - Port 25"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "DNS (Alan Adı Sistemi), insan tarafından okunabilir alan adlarını sayısal IP adreslerine dönüştürür. Standart sorguları çoğunlukla UDP port 53 üzerinden çalışır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "bilgisayar-ağları",
+      "dns",
+      "port-53"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-033",
+    "examQuestionNo": 133,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları",
+    "subtopic": "Ağ Güvenliği ve Protokoller",
+    "difficulty": 1,
+    "stem": "Aşağıdaki internet protokolleri ve varsayılan standart port eşleştirmelerinden hangisi **hatalıdır**?",
+    "questionText": "Aşağıdaki internet protokolleri ve varsayılan standart port eşleştirmelerinden hangisi **hatalıdır**?",
+    "options": [
+      "SSH (Secure Shell) - Port 22",
+      "HTTPS (HTTP Secure) - Port 443",
+      "HTTP - Port 80",
+      "RDP (Remote Desktop) - Port 3389",
+      "FTPS / SFTP - Port 8080"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "SFTP güvenli kabuk üzerinden çalıştığı için SSH portu olan 22'yi kullanır; FTPS ise genellikle 990 portunu kullanır. Port 8080 ise alternatif HTTP web ve proxy sunucuları için yaygın kullanılır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "bilgisayar-ağları",
+      "portlar",
+      "protokoller"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-034",
+    "examQuestionNo": 134,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yazılım Mühendisliği",
+    "subtopic": "Agile ve Scrum Metodolojisi",
+    "difficulty": 2,
+    "stem": "Scrum çerçevesinde (Scrum Framework) ürün gereksinimlerinin önceliklendirilmesinden (Product Backlog), ürün vizyonunun korunmasından ve iş değerinin maksimize edilmesinden sorumlu olan temel rol hangisidir?",
+    "questionText": "Scrum çerçevesinde (Scrum Framework) ürün gereksinimlerinin önceliklendirilmesinden (Product Backlog), ürün vizyonunun korunmasından ve iş değerinin maksimize edilmesinden sorumlu olan temel rol hangisidir?",
+    "options": [
+      "Scrum Master",
+      "Product Owner (Ürün Sahibi)",
+      "Geliştirme Takımı (Developers)",
+      "Yazılım Mimarı (Software Architect)",
+      "Proje Sponsoru"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Product Owner (Ürün Sahibi), Product Backlog'u yöneten, iş gereksinimlerini önceliklendiren ve takımın en yüksek iş değerini üreten işlere odaklanmasını sağlayan kişidir. Scrum Master ise sürecin kurallara uygun yürümesini ve engellerin kaldırılmasını sağlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yazılım-mühendisliği",
+      "agile",
+      "scrum",
+      "product-owner"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-035",
+    "examQuestionNo": 135,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yazılım Mühendisliği",
+    "subtopic": "Yazılım Test Türleri",
+    "difficulty": 2,
+    "stem": "Bir yazılım sistemine yeni bir özellik eklendikten veya hata düzeltmesi yapıldıktan sonra, mevcut çalışan fonksiyonların bozulup bozulmadığını doğrulamak amacıyla yapılan test türü hangisidir?",
+    "questionText": "Bir yazılım sistemine yeni bir özellik eklendikten veya hata düzeltmesi yapıldıktan sonra, mevcut çalışan fonksiyonların bozulup bozulmadığını doğrulamak amacıyla yapılan test türü hangisidir?",
+    "options": [
+      "Birim Testi (Unit Testing)",
+      "Regresyon Testi (Regression Testing)",
+      "Stres Testi (Stress Testing)",
+      "Kullanıcı Kabul Testi (UAT)",
+      "Yük Testi (Load Testing)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Regresyon Testi, kodda yapılan değişikliklerin (yeni modül, bug fix, refactoring) var olan özellikleri ve akışları olumsuz etkilemediğini garanti altına almak için çalıştırılan test setidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yazılım-mühendisliği",
+      "test",
+      "regresyon-testi"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-036",
+    "examQuestionNo": 136,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği",
+    "subtopic": "Kimlik Doğrulama vs Yetkilendirme",
+    "difficulty": 1,
+    "stem": "Bilgi güvenliğinde 'Kimlik Doğrulama' (Authentication) ile 'Yetkilendirme' (Authorization) arasındaki farkı en iyi özetleyen ifade hangisidir?",
+    "questionText": "Bilgi güvenliğinde 'Kimlik Doğrulama' (Authentication) ile 'Yetkilendirme' (Authorization) arasındaki farkı en iyi özetleyen ifade hangisidir?",
+    "options": [
+      "Kimlik Doğrulama 'Kullanıcı kimdir?' sorusuna cevap verirken; Yetkilendirme 'Bu kullanıcının hangi kaynaklara erişim izni vardır?' sorusuna cevap verir.",
+      "Kimlik doğrulama sadece şifreleme algoritmalarıyla yapılırken, yetkilendirme firewall tarafından yapılır.",
+      "Kimlik doğrulama HTTP 403 Forbidden üretirken, yetkilendirme HTTP 401 Unauthorized üretir.",
+      "Yetkilendirme kullanıcı sisteme girmeden önce, kimlik doğrulama ise girdikten sonra yapılır.",
+      "İki kavram tamamen aynı güvenlik mekanizmasını temsil eder."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Authentication (Kimlik Doğrulama - 401), kullanıcının iddia ettiği kişi olup olmadığını doğrular (parola, OTP, biyometri). Authorization (Yetkilendirme - 403) ise kimliği doğrulanmış kullanıcının belirli bir işlemi yapmaya yetkili olup olmadığını denetler.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "bilgi-güvenliği",
+      "authentication",
+      "authorization"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-037",
+    "examQuestionNo": 137,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği",
+    "subtopic": "Hashing ve Parola Güvenliği",
+    "difficulty": 2,
+    "stem": "Kullanıcı parolalarının veritabanında saklanmasıyla ilgili aşağıdaki güvenlik yaklaşımlarından hangisi modern en iyi uygulama (Best Practice) olarak kabul edilir?",
+    "questionText": "Kullanıcı parolalarının veritabanında saklanmasıyla ilgili aşağıdaki güvenlik yaklaşımlarından hangisi modern en iyi uygulama (Best Practice) olarak kabul edilir?",
+    "options": [
+      "Parolaları AES-256 simetrik anahtar ile şifreleyip anahtarı kaynak kodda saklamak",
+      "Parolaları düz metin (Plaintext) olarak saklayıp sadece tablo erişimini kısıtlamak",
+      "Parolaları her kullanıcıya özel rastgele üretilen bir tuzlama (Salt) değeri ile birlikte bcrypt veya Argon2 gibi tek yönlü yavaş hash fonksiyonlarından geçirerek saklamak",
+      "Hızlı arama yapabilmek için doğrudan MD5 veya SHA-1 hash değerini kaydetmek",
+      "Kullanıcı parolalarını tersine çevirerek Base64 formatında kodlamak"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Parolalar asla simetrik şifrelemeyle veya düz metinle saklanmaz. MD5/SHA-1 ise çok hızlı olduğundan brute-force ve rainbow table saldırılarına açıktır. Tuzlama (Salt) ve maliyet faktörü ayarlanabilir modern hash algoritmaları (bcrypt, Argon2) endüstri standardıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "bilgi-güvenliği",
+      "hashing",
+      "salt",
+      "bcrypt",
+      "parola"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-038",
+    "examQuestionNo": 138,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği",
+    "subtopic": "Web Güvenliği (CSRF)",
+    "difficulty": 2,
+    "stem": "Kullanıcının daha önce oturum açtığı güvenilir bir web sitesindeki oturum çerezlerini (Cookie) kullanarak, kullanıcının bilgisi ve rızası olmadan kötü niyetli bir siteden istek yaptırılması saldırısına ne ad verilir?",
+    "questionText": "Kullanıcının daha önce oturum açtığı güvenilir bir web sitesindeki oturum çerezlerini (Cookie) kullanarak, kullanıcının bilgisi ve rızası olmadan kötü niyetli bir siteden istek yaptırılması saldırısına ne ad verilir?",
+    "options": [
+      "SQL Injection (SQLi)",
+      "Cross-Site Request Forgery (CSRF / XSRF)",
+      "Cross-Site Scripting (XSS)",
+      "Denial of Service (DoS)",
+      "Man-in-the-Middle (MitM)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "CSRF (Siteler Arası İstek Sahteciliği), kurbanın oturum kimliğini kötüye kullanarak onun adına sahte istekler (örneğin para transferi isteği) tetikler. Bu saldırıyı önlemek için benzersiz Anti-CSRF token'ları ve `SameSite` cookie özellikleri kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "bilgi-güvenliği",
+      "csrf",
+      "web-güvenliği"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-039",
+    "examQuestionNo": 139,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yapay Zekâ ve Makine Öğrenmesi",
+    "subtopic": "Hata Matrisi (Confusion Matrix) ve Fraud Tespiti",
+    "difficulty": 2,
+    "stem": "Bir bankacılık dolandırıcılık (Fraud) tespit sisteminde, dolandırıcılık içeren şüpheli işlemlerin gözden kaçırılmaması (yani False Negative oranının mümkün olduğunca sıfıra yaklaştırılması) hedeflenmektedir. Bu durumda hangi performans metriğinin maksimize edilmesi önceliklidir?",
+    "questionText": "Bir bankacılık dolandırıcılık (Fraud) tespit sisteminde, dolandırıcılık içeren şüpheli işlemlerin gözden kaçırılmaması (yani False Negative oranının mümkün olduğunca sıfıra yaklaştırılması) hedeflenmektedir. Bu durumda hangi performans metriğinin maksimize edilmesi önceliklidir?",
+    "options": [
+      "Accuracy (Doğruluk Oranı)",
+      "Recall (Duyarlılık / Yakalama Oranı)",
+      "Specificity (Özgüllük)",
+      "Loss (Kayıp Değeri)",
+      "Eğitim Süresi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Recall (Duyarlılık) = TP / (TP + FN). Paydada False Negative yer alır. Bir dolandırıcılık yakalama sisteminde asıl felaket gerçek bir dolandırıcılığı kaçırmaktır (False Negative). Bu nedenle Recall metriğini maksimize etmek kritik önceliktir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yapay-zekâ",
+      "makine-öğrenmesi",
+      "recall",
+      "fraud",
+      "confusion-matrix"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-040",
+    "examQuestionNo": 140,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yapay Zekâ ve Makine Öğrenmesi",
+    "subtopic": "Öğrenme Türleri ve K-Means",
+    "difficulty": 2,
+    "stem": "Etiketlenmemiş müşteri harcama verilerini kullanarak benzer davranış sergileyen müşteri kitlelerini gruplamak (Müşteri Segmentasyonu) amacıyla kullanılan K-Means algoritması hangi öğrenme kategorisine girer?",
+    "questionText": "Etiketlenmemiş müşteri harcama verilerini kullanarak benzer davranış sergileyen müşteri kitlelerini gruplamak (Müşteri Segmentasyonu) amacıyla kullanılan K-Means algoritması hangi öğrenme kategorisine girer?",
+    "options": [
+      "Gözetimli Öğrenme (Supervised Learning)",
+      "Gözetimsiz Öğrenme (Unsupervised Learning)",
+      "Pekiştirmeli Öğrenme (Reinforcement Learning)",
+      "Yarı-Gözetimli Öğrenme (Semi-supervised Learning)",
+      "Derin Pekiştirmeli Öğrenme (Deep RL)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "K-Means kümeleme (Clustering) algoritması, hedef çıktının (etiketin) bulunmadığı veriler üzerinde gizli desen ve benzerlikleri keşfettiği için Gözetimsiz Öğrenme (Unsupervised Learning) sınıfına aittir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yapay-zekâ",
+      "makine-öğrenmesi",
+      "unsupervised-learning",
+      "k-means"
+    ],
+    "source": "original"
+  }
+]

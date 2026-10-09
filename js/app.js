@@ -279,24 +279,61 @@ function renderLecturesList() {
 function formatLectureContent(md) {
     if (!md) return '';
 
-    let html = escapeHtml(md);
+    const lines = md.split('\n');
+    const processed = [];
+    let inTable = false;
+    let tableRows = [];
+
+    for (let i = 0; i < lines.length; i++) {
+        const rawLine = lines[i];
+        const trimmed = rawLine.trim();
+
+        if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+            if (!inTable) {
+                inTable = true;
+                const headerCells = trimmed.split('|').slice(1, -1).map(c => `<th>${escapeHtml(c.trim())}</th>`).join('');
+                tableRows = [`<div style="overflow-x:auto; margin: 1rem 0;"><table class="lecture-table"><thead><tr>${headerCells}</tr></thead><tbody>`];
+            } else if (trimmed.includes('---')) {
+                // Ayırıcı satır, geç
+                continue;
+            } else {
+                const bodyCells = trimmed.split('|').slice(1, -1).map(c => `<td>${escapeHtml(c.trim())}</td>`).join('');
+                tableRows.push(`<tr>${bodyCells}</tr>`);
+            }
+        } else {
+            if (inTable) {
+                inTable = false;
+                tableRows.push('</tbody></table></div>');
+                processed.push(tableRows.join(''));
+                tableRows = [];
+            }
+            processed.push(escapeHtml(rawLine));
+        }
+    }
+    if (inTable) {
+        tableRows.push('</tbody></table></div>');
+        processed.push(tableRows.join(''));
+    }
+
+    let html = processed.join('\n');
 
     // Başlıklar
     html = html.replace(/### (.*?)(<br>|\n|$)/g, '<h3>$1</h3>');
+    html = html.replace(/## (.*?)(<br>|\n|$)/g, '<h2>$1</h2>');
 
     // Kalın ve İtalik
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
 
     // Kod etiketleri
-    html = html.replace(/`(.*?)`/g, '<code>$1</code>');
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
 
-    // Alıntı blokları (Quote)
+    // Alıntı blokları (Quote / Tip)
     html = html.replace(/&gt; (.*?)(<br>|\n|$)/g, '<blockquote>$1</blockquote>');
 
     // Liste maddeleri
     html = html.replace(/^\* (.*?)$/gm, '<li>$1</li>');
-    html = html.replace(/(<li>.*?<\/li>)/gs, '<ul>$1</ul>');
+    html = html.replace(/(<li>.*?<\/li>\n?)+/gs, '<ul>$&</ul>');
 
     // Satır sonları
     html = html.replace(/\n/g, '<br>');
@@ -417,10 +454,10 @@ function renderPracticeQuestion() {
     const current = state.practice.currentIndex + 1;
 
     document.getElementById('practice-question-counter').textContent = `Soru ${current} / ${total}`;
-    document.getElementById('practice-badge-section').textContent = q.section.toUpperCase();
+    document.getElementById('practice-badge-section').textContent = formatSectionName(q.section);
     document.getElementById('practice-badge-topic').textContent = q.topic;
-    document.getElementById('practice-badge-diff').textContent = `Zorluk: ${q.difficulty}`;
-    document.getElementById('practice-question-stem').innerHTML = escapeHtml(q.stem).replace(/\n/g, '<br>');
+    document.getElementById('practice-badge-diff').textContent = `Zorluk: ${q.difficulty === 1 ? 'Kolay' : q.difficulty === 3 ? 'Zor' : 'Orta'}`;
+    document.getElementById('practice-question-stem').innerHTML = escapeHtml(q.stem || q.questionText || '').replace(/\n/g, '<br>');
 
     const prevBtn = document.getElementById('btn-practice-prev');
     const nextBtn = document.getElementById('btn-practice-next');
@@ -585,9 +622,9 @@ function renderExamQuestion() {
     const current = state.exam.currentIndex + 1;
 
     document.getElementById('exam-question-counter').textContent = `Soru ${current} / ${total}`;
-    document.getElementById('exam-badge-section').textContent = q.section.toUpperCase();
+    document.getElementById('exam-badge-section').textContent = formatSectionName(q.section);
     document.getElementById('exam-badge-topic').textContent = q.topic;
-    document.getElementById('exam-question-stem').innerHTML = escapeHtml(q.stem).replace(/\n/g, '<br>');
+    document.getElementById('exam-question-stem').innerHTML = escapeHtml(q.stem || q.questionText || '').replace(/\n/g, '<br>');
 
     // Bayrak ikonu kontrolü
     const flagBtn = document.getElementById('btn-exam-flag');
@@ -872,14 +909,14 @@ function renderReviewList() {
         item.innerHTML = `
             <div class="card-header">
                 <div>
-                    <span class="badge badge-indigo">${q.section.toUpperCase()}</span>
+                    <span class="badge badge-indigo">${formatSectionName(q.section)}</span>
                     <span class="badge badge-neutral">${q.topic}</span>
                     <span class="badge badge-danger">${r.wrongCount} Kez Hata Yapıldı</span>
                 </div>
                 <span class="badge badge-success">Leitner Kutu: ${r.box || 1} / 5</span>
             </div>
             <div class="card-body">
-                <p style="font-weight: 600; margin-bottom: 0.75rem;">${escapeHtml(q.stem)}</p>
+                <p style="font-weight: 600; margin-bottom: 0.75rem;">${escapeHtml(q.stem || q.questionText || '')}</p>
                 <div class="info-box" style="margin-top: 0.5rem;">
                     <i class="fa-solid fa-circle-check text-success"></i>
                     <div><strong>Doğru Cevap:</strong> ${escapeHtml(q.options[q.answerIndex])}<br><em>${escapeHtml(q.explanation)}</em></div>
@@ -954,4 +991,17 @@ function escapeHtml(str) {
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
+}
+
+// Yardımcı Bölüm Başlığı Biçimlendirici
+function formatSectionName(sec) {
+    const map = {
+        'bankacilik-genel-kultur': '1. Bölüm: Bankacılık & GK',
+        'genel-kultur': '1. Bölüm: Bankacılık & GK',
+        'oruntu-analitik': '1. Bölüm: Örüntü & Analitik',
+        'genel-yetenek': '1. Bölüm: Genel Yetenek',
+        'ingilizce': '2. Bölüm: İngilizce',
+        'alan': '3. Bölüm: Bilgisayar Müh.'
+    };
+    return map[sec] || (sec ? sec.toUpperCase() : 'BÖLÜM');
 }

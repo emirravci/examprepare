@@ -1,11 +1,14 @@
 [
   {
     "id": "alan-001",
+    "examQuestionNo": 101,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Algoritma ve Programlama Mantığı",
     "subtopic": "Karmaşıklık Analizi",
     "difficulty": 2,
     "stem": "Aşağıdaki algoritmaların en kötü durum (Worst-Case) zaman karmaşıklıkları karşılaştırıldığında, hangisinin karmaşıklığı diğerlerinden **daha büyüktür**?",
+    "questionText": "Aşağıdaki algoritmaların en kötü durum (Worst-Case) zaman karmaşıklıkları karşılaştırıldığında, hangisinin karmaşıklığı diğerlerinden **daha büyüktür**?",
     "options": [
       "Merge Sort - O(n log n)",
       "Quick Sort - O(n²)",
@@ -14,17 +17,27 @@
       "Dizi Üzerinde Doğrusal Arama (Linear Search) - O(n)"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Quick Sort algoritmasının en kötü durum (Worst-Case) karmaşıklığı pivot seçiminin en kötü olduğu durumlarda (örneğin zaten sıralı bir dizide ilk veya son elemanın seçilmesi) O(n²)'dir. Merge Sort ve Heap Sort her durumda (en kötü dahil) O(n log n) ile çalışır.",
-    "tags": ["algoritma", "karmaşıklık", "big-o", "sıralama"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "algoritma",
+      "karmaşıklık",
+      "big-o",
+      "sıralama"
+    ],
     "source": "original"
   },
   {
     "id": "alan-002",
+    "examQuestionNo": 102,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Yapıları ve Problem Çözme",
     "subtopic": "Ağaç Yapıları",
     "difficulty": 2,
     "stem": "Dengeli bir İkili Arama Ağacında (Balanced Binary Search Tree - AVL) $n$ adet düğüm bulunmaktadır. Bu ağaca yeni bir eleman ekleme (insertion) işleminin zaman karmaşıklığı nedir?",
+    "questionText": "Dengeli bir İkili Arama Ağacında (Balanced Binary Search Tree - AVL) $n$ adet düğüm bulunmaktadır. Bu ağaca yeni bir eleman ekleme (insertion) işleminin zaman karmaşıklığı nedir?",
     "options": [
       "O(1)",
       "O(log n)",
@@ -33,17 +46,27 @@
       "O(n²)"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Dengeli bir AVL ağacının yüksekliği h = O(log n) olarak sınırlandırılmıştır. Ekleme işlemi ve sonrasında gerekebilecek döndürme (rotation) işlemleri yükseklikle orantılı olduğundan toplam zaman karmaşıklığı O(log n)'dir.",
-    "tags": ["veri-yapıları", "ağaçlar", "avl", "karmaşıklık"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veri-yapıları",
+      "ağaçlar",
+      "avl",
+      "karmaşıklık"
+    ],
     "source": "original"
   },
   {
     "id": "alan-003",
+    "examQuestionNo": 103,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Tabanı ve SQL",
     "subtopic": "ACID Prensipleri",
     "difficulty": 2,
     "stem": "Bir bankacılık uygulamasında A hesabından 1.000 TL düşülüp B hesabına 1.000 TL eklenmektedir. Sistemsel bir kesinti olsa dahi işlemin ya tamamen gerçekleşmesini ya da hiç gerçekleşmemiş gibi eski haline dönmesini sağlayan ACID özelliği hangisidir?",
+    "questionText": "Bir bankacılık uygulamasında A hesabından 1.000 TL düşülüp B hesabına 1.000 TL eklenmektedir. Sistemsel bir kesinti olsa dahi işlemin ya tamamen gerçekleşmesini ya da hiç gerçekleşmemiş gibi eski haline dönmesini sağlayan ACID özelliği hangisidir?",
     "options": [
       "Atomicity (Bütünlük/Bölünemezlik)",
       "Consistency (Tutarlılık)",
@@ -52,17 +75,27 @@
       "Concurrency (Eşzamanlılık)"
     ],
     "answerIndex": 0,
+    "correctAnswer": 0,
     "explanation": "Atomicity (Bölünemezlik/Hep ya da Hiç), bir transaction içindeki tüm adımların tek bir birim olarak ele alınmasını sağlar. Adımlardan biri bile başarısız olursa tüm işlem geri alınır (rollback).",
-    "tags": ["veritabanı", "acid", "transaction", "bankacılık"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "acid",
+      "transaction",
+      "bankacılık"
+    ],
     "source": "original"
   },
   {
     "id": "alan-004",
+    "examQuestionNo": 104,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Tabanı ve SQL",
     "subtopic": "SQL JOIN",
     "difficulty": 2,
     "stem": "İki tablo birleştirilirken, sol tablodaki tüm satırları ve sağ tablodaki yalnızca eşleşen satırları getiren; eşleşme olmayan sağ tablo sütunları için NULL değer döndüren SQL ifadesi hangisidir?",
+    "questionText": "İki tablo birleştirilirken, sol tablodaki tüm satırları ve sağ tablodaki yalnızca eşleşen satırları getiren; eşleşme olmayan sağ tablo sütunları için NULL değer döndüren SQL ifadesi hangisidir?",
     "options": [
       "INNER JOIN",
       "RIGHT JOIN",
@@ -71,17 +104,26 @@
       "CROSS JOIN"
     ],
     "answerIndex": 2,
+    "correctAnswer": 2,
     "explanation": "LEFT JOIN, soldaki tablonun tüm satırlarını korur. Sağdaki tabloda ON koşulunu sağlayan bir eşleşme yoksa o sütunlar NULL olarak doldurulur.",
-    "tags": ["sql", "join", "veritabanı"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "sql",
+      "join",
+      "veritabanı"
+    ],
     "source": "original"
   },
   {
     "id": "alan-005",
+    "examQuestionNo": 105,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
     "subtopic": "SOLID Prensipleri",
     "difficulty": 3,
     "stem": "SOLID prensiplerinden hangisi, 'Yazılım varlıkları (sınıflar, modüller) genişletilmeye açık (open for extension), ancak değiştirilmeye kapalı (closed for modification) olmalıdır' kuralını ifade eder?",
+    "questionText": "SOLID prensiplerinden hangisi, 'Yazılım varlıkları (sınıflar, modüller) genişletilmeye açık (open for extension), ancak değiştirilmeye kapalı (closed for modification) olmalıdır' kuralını ifade eder?",
     "options": [
       "Single Responsibility Principle (SRP)",
       "Open/Closed Principle (OCP)",
@@ -90,17 +132,26 @@
       "Dependency Inversion Principle (DIP)"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "OCP (Open/Closed Principle), var olan çalışan kodu değiştirmeden yeni davranışların (örneğin interface ve kalıtım/polimorfizm aracılığıyla) sisteme eklenebilmesini savunur.",
-    "tags": ["yazılım-mühendisliği", "solid", "tasarım-prensipleri"],
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "yazılım-mühendisliği",
+      "solid",
+      "tasarım-prensipleri"
+    ],
     "source": "original"
   },
   {
     "id": "alan-006",
+    "examQuestionNo": 106,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
     "subtopic": "OSI Modeli",
     "difficulty": 1,
     "stem": "OSI başvuru modelinde yönlendiricilerin (Router) çalıştığı ve mantıksal adresleme (IP adresleri) ile paket yönlendirmesinin yapıldığı katman hangisidir?",
+    "questionText": "OSI başvuru modelinde yönlendiricilerin (Router) çalıştığı ve mantıksal adresleme (IP adresleri) ile paket yönlendirmesinin yapıldığı katman hangisidir?",
     "options": [
       "Fiziksel Katman (Physical Layer)",
       "Veri Bağlantı Katmanı (Data Link Layer)",
@@ -109,17 +160,27 @@
       "Uygulama Katmanı (Application Layer)"
     ],
     "answerIndex": 2,
+    "correctAnswer": 2,
     "explanation": "Ağ Katmanı (Network Layer - 3. Katman), IP adresleme, paketleme ve yönlendiriciler (Router) aracılığıyla en iyi yolun bulunması (routing) işlemlerinden sorumludur.",
-    "tags": ["ağ", "osi", "router", "network"],
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "ağ",
+      "osi",
+      "router",
+      "network"
+    ],
     "source": "original"
   },
   {
     "id": "alan-007",
+    "examQuestionNo": 107,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
     "subtopic": "İşletim Sistemleri - Deadlock",
     "difficulty": 3,
     "stem": "İşletim sistemlerinde bir kilitlenmenin (Deadlock) meydana gelebilmesi için gerekli olan dört Coffman koşulundan hangisi, 'Kaynakları elinde tutan bir sürecin, başka kaynakları beklerken mevcut kaynaklarını bırakmaması' durumunu ifade eder?",
+    "questionText": "İşletim sistemlerinde bir kilitlenmenin (Deadlock) meydana gelebilmesi için gerekli olan dört Coffman koşulundan hangisi, 'Kaynakları elinde tutan bir sürecin, başka kaynakları beklerken mevcut kaynaklarını bırakmaması' durumunu ifade eder?",
     "options": [
       "Karşılıklı Dışlama (Mutual Exclusion)",
       "Tut ve Bekle (Hold and Wait)",
@@ -128,17 +189,26 @@
       "Açlık (Starvation)"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Hold and Wait (Tut ve Bekle) şartı; bir sürecin en az bir kaynağı elinde tutarken aynı zamanda başka bir süreç tarafından tutulan diğer kaynakları talep edip beklemesi durumudur.",
-    "tags": ["işletim-sistemleri", "deadlock", "coffman"],
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "işletim-sistemleri",
+      "deadlock",
+      "coffman"
+    ],
     "source": "original"
   },
   {
     "id": "alan-008",
+    "examQuestionNo": 108,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Bilgi Güvenliği Temelleri",
     "subtopic": "Web Güvenliği",
     "difficulty": 2,
     "stem": "Kullanıcı girdilerinin filtrelenmeden doğrudan dinamik SQL sorgularına dahil edilmesi sonucu saldırganın veritabanı sorgusunu manipüle edebildiği güvenlik zafiyeti hangisidir?",
+    "questionText": "Kullanıcı girdilerinin filtrelenmeden doğrudan dinamik SQL sorgularına dahil edilmesi sonucu saldırganın veritabanı sorgusunu manipüle edebildiği güvenlik zafiyeti hangisidir?",
     "options": [
       "Cross-Site Scripting (XSS)",
       "SQL Injection (SQLi)",
@@ -147,17 +217,26 @@
       "Distributed Denial of Service (DDoS)"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "SQL Injection, güvenilmez kullanıcı verilerinin SQL ifadesiyle birleştirilerek veritabanı motoruna çalıştırılması sonucu yetkisiz veri okuma veya değiştirme imkanı veren en yaygın OWASP zafiyetlerinden biridir. Parametreli sorgular (Prepared Statements) ile önlenir.",
-    "tags": ["güvenlik", "sqli", "owasp"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "güvenlik",
+      "sqli",
+      "owasp"
+    ],
     "source": "original"
   },
   {
     "id": "alan-009",
+    "examQuestionNo": 109,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri",
     "subtopic": "Model Değerlendirme",
     "difficulty": 2,
     "stem": "Dengesiz sınıf dağılımına sahip bir veri kümesinde (örneğin sahte banka işlemlerinin %1 olduğu dolandırıcılık tespiti modelinde), modelin başarısını ölçmek için tek başına Doğruluk (Accuracy) yerine tercih edilmesi gereken en uygun metrik hangisidir?",
+    "questionText": "Dengesiz sınıf dağılımına sahip bir veri kümesinde (örneğin sahte banka işlemlerinin %1 olduğu dolandırıcılık tespiti modelinde), modelin başarısını ölçmek için tek başına Doğruluk (Accuracy) yerine tercih edilmesi gereken en uygun metrik hangisidir?",
     "options": [
       "Ortalama Hata Kareleri Kökü (RMSE)",
       "R-Kare (R²)",
@@ -166,17 +245,27 @@
       "Doğruluk Oranı (Accuracy)"
     ],
     "answerIndex": 2,
+    "correctAnswer": 2,
     "explanation": "Dengesiz veri setlerinde model tüm verilere 'sahte değil' dese bile %99 doğruluk alabilir. Bu nedenle Precision (Kesinlik) ve Recall (Duyarlılık) değerlerinin harmonik ortalaması olan F1-Skoru kullanılır.",
-    "tags": ["yapay-zeka", "makine-ogrenmesi", "f1-score", "metrikler"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yapay-zeka",
+      "makine-ogrenmesi",
+      "f1-score",
+      "metrikler"
+    ],
     "source": "original"
   },
   {
     "id": "alan-010",
+    "examQuestionNo": 110,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
     "subtopic": "Bulut ve API Mimarisi",
     "difficulty": 2,
     "stem": "Bankaların müşteri rızası dahilinde hesap bilgilerini ve ödeme başlatma hizmetlerini güvenli API'lar aracılığıyla üçüncü parti lisanslı finansal kuruluşlarla paylaşmasına olanak tanıyan mimari kavrama ne ad verilir?",
+    "questionText": "Bankaların müşteri rızası dahilinde hesap bilgilerini ve ödeme başlatma hizmetlerini güvenli API'lar aracılığıyla üçüncü parti lisanslı finansal kuruluşlarla paylaşmasına olanak tanıyan mimari kavrama ne ad verilir?",
     "options": [
       "Açık Bankacılık (Open Banking)",
       "Monolitik Bankacılık (Monolithic Architecture)",
@@ -185,17 +274,27 @@
       "Blokzincir Madenciliği (Proof of Work)"
     ],
     "answerIndex": 0,
+    "correctAnswer": 0,
     "explanation": "Açık Bankacılık (Open Banking / PSD2 standartları), finansal verilerin standart API protokolleri üzerinden üçüncü taraf fintech sağlayıcıları ile güvenle paylaşılmasını sağlayan modern bankacılık ekosistemidir.",
-    "tags": ["fintek", "acik-bankacilik", "api", "bankacilik"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "fintek",
+      "acik-bankacilik",
+      "api",
+      "bankacilik"
+    ],
     "source": "original"
   },
   {
     "id": "alan-011",
+    "examQuestionNo": 111,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Algoritma ve Programlama Mantığı",
     "subtopic": "Graf Algoritmaları",
     "difficulty": 2,
     "stem": "Ağırlıklı ve negatif kenar ağırlığı bulunmayan bir graf üzerinde tek bir başlangıç düğümünden diğer tüm düğümlere en kısa yolları (Shortest Path) bulan klasik açgözlü (greedy) algoritma hangisidir?",
+    "questionText": "Ağırlıklı ve negatif kenar ağırlığı bulunmayan bir graf üzerinde tek bir başlangıç düğümünden diğer tüm düğümlere en kısa yolları (Shortest Path) bulan klasik açgözlü (greedy) algoritma hangisidir?",
     "options": [
       "Bellman-Ford Algoritması",
       "Dijkstra Algoritması",
@@ -204,17 +303,27 @@
       "Prim Algoritması"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Dijkstra algoritması, negatif kenar ağırlığı olmayan graflarda tek kaynaklı en kısa yol problemini bir öncelik kuyruğu (min-heap) kullanarak O((V + E) log V) sürede çözer. Bellman-Ford ise negatif ağırlıklı kenarları da destekler.",
-    "tags": ["graf", "en-kisa-yol", "dijkstra", "algoritma"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "graf",
+      "en-kisa-yol",
+      "dijkstra",
+      "algoritma"
+    ],
     "source": "original"
   },
   {
     "id": "alan-012",
+    "examQuestionNo": 112,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Yapıları ve Problem Çözme",
     "subtopic": "Hash Tabloları",
     "difficulty": 2,
     "stem": "Hash tablolarında çakışma (Collision) yönetimi için 'Açık Adresleme - Doğrusal Yoklama' (Open Addressing - Linear Probing) kullanıldığında, birbirini takip eden dolu yuvaların birikerek performansı düşürmesi sorununa ne ad verilir?",
+    "questionText": "Hash tablolarında çakışma (Collision) yönetimi için 'Açık Adresleme - Doğrusal Yoklama' (Open Addressing - Linear Probing) kullanıldığında, birbirini takip eden dolu yuvaların birikerek performansı düşürmesi sorununa ne ad verilir?",
     "options": [
       "İkincil Kümeleme (Secondary Clustering)",
       "Birincil Kümeleme (Primary Clustering)",
@@ -223,17 +332,27 @@
       "Ayrıklaştırma (Segmentation)"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Doğrusal yoklamada ardışık dolu yuvaların birleşmesi 'Primary Clustering' (Birincil Kümeleme) olarak adlandırılır ve arama sürelerini uzatır. Bu durum Karesel Yoklama veya Çift Hash (Double Hashing) ile azaltılır.",
-    "tags": ["hash", "veri-yapilari", "clustering", "collision"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "hash",
+      "veri-yapilari",
+      "clustering",
+      "collision"
+    ],
     "source": "original"
   },
   {
     "id": "alan-013",
+    "examQuestionNo": 113,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Tabanı ve SQL",
     "subtopic": "Normalizasyon",
     "difficulty": 3,
     "stem": "Bir ilişkisel tabloda 3NF sağlanmış olmasına rağmen, birden fazla örtüşen bileşik aday anahtar (Overlapping Composite Candidate Keys) bulunması durumunda ortaya çıkan anomalileri gidermek için tanımlanan ve 'her fonksiyonel belirleyicinin mutlaka bir süper anahtar olmasını' şart koşan form hangisidir?",
+    "questionText": "Bir ilişkisel tabloda 3NF sağlanmış olmasına rağmen, birden fazla örtüşen bileşik aday anahtar (Overlapping Composite Candidate Keys) bulunması durumunda ortaya çıkan anomalileri gidermek için tanımlanan ve 'her fonksiyonel belirleyicinin mutlaka bir süper anahtar olmasını' şart koşan form hangisidir?",
     "options": [
       "2. Normal Form (2NF)",
       "Boyce-Codd Normal Formu (BCNF)",
@@ -242,17 +361,27 @@
       "Denormalizasyon"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Boyce-Codd Normal Formu (BCNF), 3NF'in özel ve daha katı bir halidir. X -> Y fonksiyonel bağımlılığında X'in mutlaka bir Süper Anahtar (Super Key) olmasını şart koşar.",
-    "tags": ["veritabani", "normalizasyon", "bcnf", "3nf"],
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "veritabani",
+      "normalizasyon",
+      "bcnf",
+      "3nf"
+    ],
     "source": "original"
   },
   {
     "id": "alan-014",
+    "examQuestionNo": 114,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Yazılım Mühendisliği ve Sistem Geliştirme",
     "subtopic": "Versiyon Kontrolü (Git)",
     "difficulty": 2,
     "stem": "Git versiyon kontrol sisteminde bir dalın (branch) başlangıç noktasını hedef dalın en son commit'inin üzerine taşıyarak doğrusal (linear) ve temiz bir commit geçmişi oluşturan komut hangisidir?",
+    "questionText": "Git versiyon kontrol sisteminde bir dalın (branch) başlangıç noktasını hedef dalın en son commit'inin üzerine taşıyarak doğrusal (linear) ve temiz bir commit geçmişi oluşturan komut hangisidir?",
     "options": [
       "git merge",
       "git rebase",
@@ -261,17 +390,26 @@
       "git stash"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "git rebase, commit'leri sanki hedef daldan dallanmış gibi baştan uygulayarak ekstra birleştirme (merge commit) üretmeden doğrusal bir geçmiş sağlar.",
-    "tags": ["git", "yazilim-muhendisligi", "rebase"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "git",
+      "yazilim-muhendisligi",
+      "rebase"
+    ],
     "source": "original"
   },
   {
     "id": "alan-015",
+    "examQuestionNo": 115,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
     "subtopic": "Taşıma Katmanı ve TCP",
     "difficulty": 2,
     "stem": "TCP protokolünde istemci ile sunucu arasında güvenilir bir bağlantı kurmak için uygulanan 'Üç Yollu El Sıkışma' (3-Way Handshake) bayrak sırası doğru olarak hangisidir?",
+    "questionText": "TCP protokolünde istemci ile sunucu arasında güvenilir bir bağlantı kurmak için uygulanan 'Üç Yollu El Sıkışma' (3-Way Handshake) bayrak sırası doğru olarak hangisidir?",
     "options": [
       "ACK -> SYN -> SYN-ACK",
       "SYN -> SYN-ACK -> ACK",
@@ -280,17 +418,27 @@
       "RST -> SYN -> ACK"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "TCP bağlantısı kurulurken: 1) İstemci: SYN gönderir, 2) Sunucu: SYN-ACK ile yanıtlar, 3) İstemci: ACK göndererek bağlantıyı aktif eder.",
-    "tags": ["ag", "tcp", "handshake", "transport-layer"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "ag",
+      "tcp",
+      "handshake",
+      "transport-layer"
+    ],
     "source": "original"
   },
   {
     "id": "alan-016",
+    "examQuestionNo": 116,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Bilgi Güvenliği Temelleri",
     "subtopic": "Kriptografi",
     "difficulty": 2,
     "stem": "HTTPS protokolü kullanılırken istemci ve sunucu arasındaki ilk güvenli el sıkışmada (TLS Handshake) oturum anahtarlarının güvenle paylaşılması için asimetrik şifreleme, ardından verilerin hızlı aktarımı için simetrik şifreleme (örn: AES) kullanılır. Bu modele ne ad verilir?",
+    "questionText": "HTTPS protokolü kullanılırken istemci ve sunucu arasındaki ilk güvenli el sıkışmada (TLS Handshake) oturum anahtarlarının güvenle paylaşılması için asimetrik şifreleme, ardından verilerin hızlı aktarımı için simetrik şifreleme (örn: AES) kullanılır. Bu modele ne ad verilir?",
     "options": [
       "Hibrit Şifreleme (Hybrid Cryptography)",
       "Kuantum Şifreleme",
@@ -299,17 +447,27 @@
       "Homomorfik Şifreleme"
     ],
     "answerIndex": 0,
+    "correctAnswer": 0,
     "explanation": "Hibrit şifreleme, asimetrik şifrelemenin anahtar paylaşım güvenliği ile simetrik şifrelemenin yüksek hızını birleştiren modern TLS/HTTPS temel mimarisidir.",
-    "tags": ["kriptografi", "tls", "https", "guvenlik"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "kriptografi",
+      "tls",
+      "https",
+      "guvenlik"
+    ],
     "source": "original"
   },
   {
     "id": "alan-017",
+    "examQuestionNo": 117,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Veri Analitiği, Yapay Zekâ ve Makine Öğrenmesi Temelleri",
     "subtopic": "Aşırı Öğrenme (Overfitting)",
     "difficulty": 2,
     "stem": "Bir makine öğrenmesi modelinin eğitim verisindeki gürültüleri dahi ezberlemesi sonucu eğitim başarısının çok yüksek, ancak test verisindeki genelleme başarısının çok düşük olması durumuna (Overfitting) karşı aşağıdakilerden hangisi bir çözüm **değildir**?",
+    "questionText": "Bir makine öğrenmesi modelinin eğitim verisindeki gürültüleri dahi ezberlemesi sonucu eğitim başarısının çok yüksek, ancak test verisindeki genelleme başarısının çok düşük olması durumuna (Overfitting) karşı aşağıdakilerden hangisi bir çözüm **değildir**?",
     "options": [
       "Düzenlileştirme (L1 / L2 Regularization - Lasso / Ridge)",
       "Modelin parametre sayısını ve katman derinliğini ciddi oranda artırmak",
@@ -318,17 +476,26 @@
       "Seyreltme (Dropout) uygulamak"
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Modelin parametre sayısını ve katman derinliğini artırmak modelin karmaşıklığını artırır ve aşırı öğrenmeyi (Overfitting) daha da şiddetlendirir. Diğer seçenekler ise aşırı öğrenmeyi önleme teknikleridir.",
-    "tags": ["makine-ogrenmesi", "overfitting", "regularization"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "makine-ogrenmesi",
+      "overfitting",
+      "regularization"
+    ],
     "source": "original"
   },
   {
     "id": "alan-018",
+    "examQuestionNo": 118,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
     "subtopic": "Konteyner ve Sanallaştırma",
     "difficulty": 2,
     "stem": "Geleneksel Sanal Makineler (Virtual Machines) ile Docker gibi Konteyner (Container) teknolojileri arasındaki en temel mimari fark hangisidir?",
+    "questionText": "Geleneksel Sanal Makineler (Virtual Machines) ile Docker gibi Konteyner (Container) teknolojileri arasındaki en temel mimari fark hangisidir?",
     "options": [
       "Konteynerlerin her biri ayrı bir donanım gerektirir.",
       "Konteynerler konuk işletim sistemi (Guest OS) yerine ana makinenin çekirdeğini (Host OS Kernel) paylaşır.",
@@ -337,17 +504,27 @@
       "Konteynerlerde ağ iletişimi kurulamaz."
     ],
     "answerIndex": 1,
+    "correctAnswer": 1,
     "explanation": "Konteynerler Hypervisor ve her biri için ayrı bir Guest OS barındırmak yerine ana işletim sisteminin çekirdeğini (Kernel) izole süreçler halinde paylaşır; bu sayede çok hafif ve hızlı başlarlar.",
-    "tags": ["docker", "konteyner", "sanallastirma", "devops"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "docker",
+      "konteyner",
+      "sanallastirma",
+      "devops"
+    ],
     "source": "original"
   },
   {
     "id": "alan-019",
+    "examQuestionNo": 119,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Sistem Analizi ve Dijital Teknoloji Uygulamaları",
     "subtopic": "RESTful API Mimarisi",
     "difficulty": 2,
     "stem": "HTTP protokolünde ve RESTful mimaride bir isteğin birden fazla kez arka arkaya çağrılması durumunda sunucuda aynı etkiyi yaratması özelliğine 'İdempotent' (Tekdüze) denir. Aşağıdaki HTTP metodlarından hangisi **idempotent değildir**?",
+    "questionText": "HTTP protokolünde ve RESTful mimaride bir isteğin birden fazla kez arka arkaya çağrılması durumunda sunucuda aynı etkiyi yaratması özelliğine 'İdempotent' (Tekdüze) denir. Aşağıdaki HTTP metodlarından hangisi **idempotent değildir**?",
     "options": [
       "GET",
       "PUT",
@@ -356,17 +533,27 @@
       "HEAD"
     ],
     "answerIndex": 3,
+    "correctAnswer": 3,
     "explanation": "POST metodu her çağrıldığında yeni bir kaynak oluşturabileceğinden (örn: arka arkaya iki kez çağrılırsa iki yeni kayıt üretir) idempotent değildir. GET, PUT ve DELETE ise idempotenttir.",
-    "tags": ["api", "rest", "http", "idempotent"],
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "api",
+      "rest",
+      "http",
+      "idempotent"
+    ],
     "source": "original"
   },
   {
     "id": "alan-020",
+    "examQuestionNo": 120,
     "section": "alan",
+    "sectionGroup": 3,
     "topic": "Bilgisayar Ağları ve İşletim Sistemleri",
     "subtopic": "Eşzamanlılık (Concurrency)",
     "difficulty": 3,
     "stem": "Birden fazla thread'in paylaşılan aynı değişken veya bellek alanına eşzamanlı erişmeye çalıştığı ve sonucun iş parçacıklarının çalışma sırasına bağlı olarak hatalı çıktığı duruma ne ad verilir?",
+    "questionText": "Birden fazla thread'in paylaşılan aynı değişken veya bellek alanına eşzamanlı erişmeye çalıştığı ve sonucun iş parçacıklarının çalışma sırasına bağlı olarak hatalı çıktığı duruma ne ad verilir?",
     "options": [
       "Yarış Durumu (Race Condition)",
       "Deadlock",
@@ -375,9 +562,590 @@
       "Bağlam Değişimi (Context Switch)"
     ],
     "answerIndex": 0,
+    "correctAnswer": 0,
     "explanation": "Race Condition (Yarış Durumu), iki veya daha fazla thread'in senkronizasyon (Mutex/Semaphore) olmadan aynı paylaşılan kaynağa eşzamanlı yazmaya çalışması sonucu ortaya çıkan tutarsızlıktır.",
-    "tags": ["isletim-sistemleri", "race-condition", "concurrency"],
+    "estimatedTimeSeconds": 90,
+    "tags": [
+      "isletim-sistemleri",
+      "race-condition",
+      "concurrency"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-021",
+    "examQuestionNo": 121,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Algoritma ve Programlama",
+    "subtopic": "Rekürsiyon ve Çağrı Yığını",
+    "difficulty": 2,
+    "stem": "Aşağıdaki özyinelemeli (rekürsif) C fonksiyonu `hesapla(4)` parametresi ile çağrıldığında dönecek sonuç nedir?\n\n```c\nint hesapla(int n) {\n    if (n <= 1) return 1;\n    return n + hesapla(n - 2);\n}\n```",
+    "questionText": "Aşağıdaki özyinelemeli (rekürsif) C fonksiyonu `hesapla(4)` parametresi ile çağrıldığında dönecek sonuç nedir?\n\n```c\nint hesapla(int n) {\n    if (n <= 1) return 1;\n    return n + hesapla(n - 2);\n}\n```",
+    "options": [
+      "5",
+      "7",
+      "9",
+      "10",
+      "15"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Adım adım çağrı yığını:\n1. `hesapla(4) = 4 + hesapla(2)`\n2. `hesapla(2) = 2 + hesapla(0)`\n3. `hesapla(0)` için `n <= 1` şartı sağlandığından taban durum devreye girer ve `1` döner.\nSonuç: `4 + 2 + 1 = 7`.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "algoritma",
+      "rekürsiyon",
+      "c-dili",
+      "kod-çıktısı"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-022",
+    "examQuestionNo": 122,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Algoritma ve Programlama",
+    "subtopic": "Arama Algoritmaları",
+    "difficulty": 2,
+    "stem": "100.000 elemanlı sıralı bir tamsayı dizisinde İkili Arama (Binary Search) algoritması kullanıldığında, aranan elemanın bulunması veya dizide olmadığının anlaşılması için **en fazla (Worst-Case)** kaç karşılaştırma yapılması gerekir? ($\\log_2(100000) \\approx 16.6$)",
+    "questionText": "100.000 elemanlı sıralı bir tamsayı dizisinde İkili Arama (Binary Search) algoritması kullanıldığında, aranan elemanın bulunması veya dizide olmadığının anlaşılması için **en fazla (Worst-Case)** kaç karşılaştırma yapılması gerekir? ($\\log_2(100000) \\approx 16.6$)",
+    "options": [
+      "10",
+      "17",
+      "100",
+      "50.000",
+      "100.000"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "İkili arama her adımda arama uzayını yarıya indirir. En kötü durum karmaşıklığı $\\lfloor\\log_2(n)\\rfloor + 1$ formülü ile bulunur. $2^{16} = 65.536$ ve $2^{17} = 131.072$ olduğundan, 100.000 eleman için en fazla 17 karşılaştırma yeterlidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "algoritma",
+      "binary-search",
+      "zaman-karmaşıklığı"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-023",
+    "examQuestionNo": 123,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Yapıları ve Algoritmalar",
+    "subtopic": "Yığın (Stack) ve Kuyruk (Queue)",
+    "difficulty": 1,
+    "stem": "Bir banka şubesinde sıra numarası alan müşterilerin işlem önceliğini belirleyen sistem ile metin düzenleyicilerindeki 'Geri Al (Undo)' fonksiyonunun kullandığı veri yapıları sırasıyla hangi seçenekte doğru verilmiştir?",
+    "questionText": "Bir banka şubesinde sıra numarası alan müşterilerin işlem önceliğini belirleyen sistem ile metin düzenleyicilerindeki 'Geri Al (Undo)' fonksiyonunun kullandığı veri yapıları sırasıyla hangi seçenekte doğru verilmiştir?",
+    "options": [
+      "Kuyruk (Queue - FIFO) / Yığın (Stack - LIFO)",
+      "Yığın (Stack - LIFO) / Kuyruk (Queue - FIFO)",
+      "Öncelikli Kuyruk / İkili Arama Ağacı",
+      "Bağlı Liste / Dizi (Array)",
+      "Hash Tablosu / Yığın (Stack)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Müşteri sıra sistemi 'İlk gelen ilk çıkar' (FIFO - First In First Out) mantığıyla Kuyruk (Queue) yapısını; en son yapılan işlemi ilk geri alan Undo sistemi ise 'Son gelen ilk çıkar' (LIFO - Last In First Out) mantığıyla Yığın (Stack) yapısını kullanır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "veri-yapıları",
+      "stack",
+      "queue",
+      "fifo",
+      "lifo"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-024",
+    "examQuestionNo": 124,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veri Yapıları ve Algoritmalar",
+    "subtopic": "Bağlı Liste ve Diziler",
+    "difficulty": 2,
+    "stem": "Tek yönlü bağlı listelerin (Singly Linked List) dinamik dizilere (Dynamic Array / ArrayList) kıyasla en belirgin avantajı hangisidir?",
+    "questionText": "Tek yönlü bağlı listelerin (Singly Linked List) dinamik dizilere (Dynamic Array / ArrayList) kıyasla en belirgin avantajı hangisidir?",
+    "options": [
+      "Herhangi bir indeksteki elemana $O(1)$ sürede rastgele erişim (Random Access) sağlaması",
+      "İşaretçinin bilindiği bir konuma yeni düğüm ekleme işleminin diziyi kaydırma maliyeti olmadan $O(1)$ sürede yapılabilmesi",
+      "Bellek üzerinde ardışık (contiguous) bloklar halinde tutularak CPU önbellek (Cache) performansını artırması",
+      "Her eleman için ilave işaretçi (pointer/reference) depolama yükü getirmemesi",
+      "İkili arama (Binary Search) algoritmasını doğrudan desteklemesi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Dizilerde araya veya başa eleman eklerken kalan elemanların kaydırılması $O(n)$ maliyet gerektirir. Bağlı listelerde ise işaretçi adresi biliniyorsa eleman ekleme sadece referans güncellemesi ile $O(1)$ sürede tamamlanır. Ancak bağlı listeler rastgele erişim ($O(1)$) sağlayamaz.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veri-yapıları",
+      "linked-list",
+      "array",
+      "performans"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-025",
+    "examQuestionNo": 125,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veritabanları ve SQL",
+    "subtopic": "GROUP BY ve HAVING",
+    "difficulty": 2,
+    "stem": "SQL sorgularında gruplanmış veriler üzerinde toplama fonksiyonlarına (Aggregate Functions: SUM, COUNT, AVG vb.) dayalı filtreleme yapmak için hangi anahtar kelime kullanılır?",
+    "questionText": "SQL sorgularında gruplanmış veriler üzerinde toplama fonksiyonlarına (Aggregate Functions: SUM, COUNT, AVG vb.) dayalı filtreleme yapmak için hangi anahtar kelime kullanılır?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "GROUP BY",
+      "LIMIT"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "`WHERE` ifadesi satırlar gruplanmadan önce bireysel satırları filtreler ve aggregate fonksiyonlarla doğrudan kullanılamaz. `HAVING` ifadesi ise `GROUP BY` sonrasında oluşan gruplar üzerinde aggregate filtreleme yapmak için kullanılır (örneğin `HAVING COUNT(*) > 5`).",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "sql",
+      "having",
+      "group-by"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-026",
+    "examQuestionNo": 126,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veritabanları ve SQL",
+    "subtopic": "Veritabanı İndeksleri",
+    "difficulty": 2,
+    "stem": "İlişkisel veritabanlarında sıkça kullanılan B-Tree indeksleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi **yanlıştır**?",
+    "questionText": "İlişkisel veritabanlarında sıkça kullanılan B-Tree indeksleme mekanizması ile ilgili aşağıdaki ifadelerden hangisi **yanlıştır**?",
+    "options": [
+      "`SELECT` sorgularında WHERE ve ORDER BY koşullarının çalışma süresini önemli ölçüde hızlandırır.",
+      "Tabloya yapılan `INSERT`, `UPDATE` ve `DELETE` operasyonlarında ek indeks güncelleme maliyeti oluşturur.",
+      "İndeksler diskte ilave depolama alanı kaplar.",
+      "Bir tablodaki tüm sütunlara ayrı ayrı indeks eklemek veritabanı genel yazma performansını her zaman artırır.",
+      "Primary Key tanımlanan bir sütun üzerinde çoğu veritabanı motoru otomatik olarak Clustered Index veya Unique Index oluşturur."
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "Tüm sütunlara gereksiz indeks eklemek, her yazma işleminde (INSERT/UPDATE/DELETE) tüm bu indeks ağaçlarının da güncellenmesini zorunlu kıldığı için yazma performansını ciddi şekilde düşürür. İndeksler yalnızca sık sorgulanan ve seçiciliği yüksek sütunlara konulmalıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "sql",
+      "indeks",
+      "b-tree"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-027",
+    "examQuestionNo": 127,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Veritabanları ve SQL",
+    "subtopic": "İlişkisel Bütünlük (Referential Integrity)",
+    "difficulty": 2,
+    "stem": "İki ilişkisel tablo arasında kurulan Yabancı Anahtar (Foreign Key) kısıtında `ON DELETE CASCADE` kuralı tanımlandığında ne gerçekleşir?",
+    "questionText": "İki ilişkisel tablo arasında kurulan Yabancı Anahtar (Foreign Key) kısıtında `ON DELETE CASCADE` kuralı tanımlandığında ne gerçekleşir?",
+    "options": [
+      "Ana (Primary Key) tablodaki bir kayıt silindiğinde, ona bağlı olan alt tablodaki ilişkili kayıtlar da otomatik olarak silinir.",
+      "Alt tablodaki kayıt silindiğinde ana tablodaki kayıt da silinir.",
+      "Bağlı kayıtlar varsa ana tablodaki kaydın silinmesi veritabanı tarafından engellenir (hata üretilir).",
+      "Ana tablodaki kayıt silindiğinde alt tablodaki yabancı anahtar alanları NULL yapılır.",
+      "Silinen kayıtlar geçici bir yedek tablosuna kopyalanır."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "`ON DELETE CASCADE`, ana (ebeveyn) tablodan bir satır silindiğinde, referans bütünlüğünü korumak adına o satırı işaret eden tüm bağımlı (çocuk) satırların da otomatik olarak silinmesini sağlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "veritabanı",
+      "foreign-key",
+      "cascade",
+      "referential-integrity"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-028",
+    "examQuestionNo": 128,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "İşletim Sistemleri",
+    "subtopic": "Process ve Thread Mimarisi",
+    "difficulty": 2,
+    "stem": "İşletim sistemlerinde Süreç (Process) ve İş Parçacığı (Thread) kavramları karşılaştırıldığında hangisi **doğrudur**?",
+    "questionText": "İşletim sistemlerinde Süreç (Process) ve İş Parçacığı (Thread) kavramları karşılaştırıldığında hangisi **doğrudur**?",
+    "options": [
+      "Aynı sürecin parçası olan thread'ler heap bellek alanını ve açık dosya tanımlayıcılarını ortak paylaşırken, kendilerine ait bağımsız bir çağrı yığınına (stack) ve program sayacına (PC) sahiptirler.",
+      "Process'ler arası geçiş (context switch), thread'ler arası geçişe göre daha hızlı ve düşük maliyetlidir.",
+      "Bir thread çöktüğünde diğer thread'ler ve ana process hiçbir şekilde etkilenmez.",
+      "Thread'ler işletim sisteminden tamamen ayrı sanal adres uzaylarına (Address Space) sahiptir.",
+      "Modern işletim sistemlerinde tek bir process içinde birden fazla thread çalıştırılamaz."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Aynı sürecin thread'leri kod, veri ve heap alanlarını ortak paylaşır. Ancak her thread bağımsız çalıştırılabilir olduğundan kendi yazmaçlarına (registers), program sayacına (PC) ve yığınına (stack) sahiptir. Process context switch ise adres uzayı değiştiğinden çok daha maliyetlidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "işletim-sistemleri",
+      "process",
+      "thread",
+      "concurrency"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-029",
+    "examQuestionNo": 129,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "İşletim Sistemleri",
+    "subtopic": "Sanal Bellek ve Sayfalama",
+    "difficulty": 2,
+    "stem": "İşletim sistemlerinde sanal bellek yönetimi sırasında bir sürecin erişmek istediği sanal sayfanın fiziksel RAM'de bulunmaması durumuna ne ad verilir ve bu durumda işletim sistemi ne yapar?",
+    "questionText": "İşletim sistemlerinde sanal bellek yönetimi sırasında bir sürecin erişmek istediği sanal sayfanın fiziksel RAM'de bulunmaması durumuna ne ad verilir ve bu durumda işletim sistemi ne yapar?",
+    "options": [
+      "Page Fault - Sayfa ikincil depolamadan (disk/swap) fiziksel belleğe yüklenir.",
+      "Segmentation Fault - Süreç derhal sonlandırılır.",
+      "Deadlock - Süreç askıya alınır ve zamanlayıcı yeniden başlatılır.",
+      "Race Condition - Bellek blokları kilitlenir.",
+      "Cache Miss - L1 önbelleği temizlenir."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Erişilmek istenen sayfanın geçerlilik biti (valid bit) 0 ise donanım bir 'Page Fault' (Sayfa Hatası) kesmesi üretir. İşletim sistemi devreye girerek ilgili sayfayı diskten RAM'e getirir, sayfa tablosunu günceller ve komutu tekrarlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "işletim-sistemleri",
+      "sanal-bellek",
+      "page-fault",
+      "paging"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-030",
+    "examQuestionNo": 130,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "İşletim Sistemleri",
+    "subtopic": "CPU Zamanlama (Scheduling)",
+    "difficulty": 2,
+    "stem": "Her sürece eşit miktarda sabit bir zaman dilimi (Time Quantum) tahsis eden ve bu süre dolduğunda süreci kesip hazır kuyruğunun sonuna atan, adil ve preemptive (kesintili) CPU zamanlama algoritması hangisidir?",
+    "questionText": "Her sürece eşit miktarda sabit bir zaman dilimi (Time Quantum) tahsis eden ve bu süre dolduğunda süreci kesip hazır kuyruğunun sonuna atan, adil ve preemptive (kesintili) CPU zamanlama algoritması hangisidir?",
+    "options": [
+      "First-Come, First-Served (FCFS)",
+      "Shortest Job First (SJF)",
+      "Round Robin (RR)",
+      "Priority Scheduling (Non-preemptive)",
+      "Multilevel Feedback Queue"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Round Robin (RR), zaman paylaşımlı sistemlerde her göreve eşit 'Time Slice / Quantum' tanıyan ve süre dolunca CPU'yu bir sonraki göreve devreden adil, preemptive bir algoritmadır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "işletim-sistemleri",
+      "cpu-scheduling",
+      "round-robin"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-031",
+    "examQuestionNo": 131,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları",
+    "subtopic": "Taşıma Katmanı (TCP vs UDP)",
+    "difficulty": 1,
+    "stem": "Aşağıdaki senaryoların hangisinde TCP yerine UDP protokolünün tercih edilmesi daha uygundur?",
+    "questionText": "Aşağıdaki senaryoların hangisinde TCP yerine UDP protokolünün tercih edilmesi daha uygundur?",
+    "options": [
+      "Banka EFT ve para transferi mesajlarının iletimi",
+      "Web sitelerinin HTTPS üzerinden güvenli yüklenmesi",
+      "Dosya transferi (FTP) ile büyük arşiv dosyalarının indirilmesi",
+      "Gerçek zamanlı çevrimiçi video konferans ve canlı ses yayını",
+      "Veritabanı sunucusuna gönderilen SQL sorguları"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "UDP bağlantısız (connectionless) ve kayıpları yeniden iletmeyen bir protokoldür; gecikmesi çok düşüktür. Canlı video/ses yayınında paket kaybı tolere edilebilir ancak gecikme tolere edilemez. Finansal işlemlerde ise TCP'nin güvenilir ve sıralı teslimatı zorunludur.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "bilgisayar-ağları",
+      "tcp",
+      "udp",
+      "transport-layer"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-032",
+    "examQuestionNo": 132,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları",
+    "subtopic": "DNS ve IP Mimarisi",
+    "difficulty": 2,
+    "stem": "Bir istemci tarayıcısına `www.ziraatbank.com.tr` yazdığında, bu alan adını hedef sunucunun IP adresine çeviren internet altyapı servisi ve varsayılan protokol portu hangisidir?",
+    "questionText": "Bir istemci tarayıcısına `www.ziraatbank.com.tr` yazdığında, bu alan adını hedef sunucunun IP adresine çeviren internet altyapı servisi ve varsayılan protokol portu hangisidir?",
+    "options": [
+      "DNS (Domain Name System) - Port 53",
+      "DHCP (Dynamic Host Configuration) - Port 67",
+      "HTTP - Port 80",
+      "SNMP - Port 161",
+      "SMTP - Port 25"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "DNS (Alan Adı Sistemi), insan tarafından okunabilir alan adlarını sayısal IP adreslerine dönüştürür. Standart sorguları çoğunlukla UDP port 53 üzerinden çalışır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "bilgisayar-ağları",
+      "dns",
+      "port-53"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-033",
+    "examQuestionNo": 133,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgisayar Ağları",
+    "subtopic": "Ağ Güvenliği ve Protokoller",
+    "difficulty": 1,
+    "stem": "Aşağıdaki internet protokolleri ve varsayılan standart port eşleştirmelerinden hangisi **hatalıdır**?",
+    "questionText": "Aşağıdaki internet protokolleri ve varsayılan standart port eşleştirmelerinden hangisi **hatalıdır**?",
+    "options": [
+      "SSH (Secure Shell) - Port 22",
+      "HTTPS (HTTP Secure) - Port 443",
+      "HTTP - Port 80",
+      "RDP (Remote Desktop) - Port 3389",
+      "FTPS / SFTP - Port 8080"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "SFTP güvenli kabuk üzerinden çalıştığı için SSH portu olan 22'yi kullanır; FTPS ise genellikle 990 portunu kullanır. Port 8080 ise alternatif HTTP web ve proxy sunucuları için yaygın kullanılır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "bilgisayar-ağları",
+      "portlar",
+      "protokoller"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-034",
+    "examQuestionNo": 134,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yazılım Mühendisliği",
+    "subtopic": "Agile ve Scrum Metodolojisi",
+    "difficulty": 2,
+    "stem": "Scrum çerçevesinde (Scrum Framework) ürün gereksinimlerinin önceliklendirilmesinden (Product Backlog), ürün vizyonunun korunmasından ve iş değerinin maksimize edilmesinden sorumlu olan temel rol hangisidir?",
+    "questionText": "Scrum çerçevesinde (Scrum Framework) ürün gereksinimlerinin önceliklendirilmesinden (Product Backlog), ürün vizyonunun korunmasından ve iş değerinin maksimize edilmesinden sorumlu olan temel rol hangisidir?",
+    "options": [
+      "Scrum Master",
+      "Product Owner (Ürün Sahibi)",
+      "Geliştirme Takımı (Developers)",
+      "Yazılım Mimarı (Software Architect)",
+      "Proje Sponsoru"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Product Owner (Ürün Sahibi), Product Backlog'u yöneten, iş gereksinimlerini önceliklendiren ve takımın en yüksek iş değerini üreten işlere odaklanmasını sağlayan kişidir. Scrum Master ise sürecin kurallara uygun yürümesini ve engellerin kaldırılmasını sağlar.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yazılım-mühendisliği",
+      "agile",
+      "scrum",
+      "product-owner"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-035",
+    "examQuestionNo": 135,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yazılım Mühendisliği",
+    "subtopic": "Yazılım Test Türleri",
+    "difficulty": 2,
+    "stem": "Bir yazılım sistemine yeni bir özellik eklendikten veya hata düzeltmesi yapıldıktan sonra, mevcut çalışan fonksiyonların bozulup bozulmadığını doğrulamak amacıyla yapılan test türü hangisidir?",
+    "questionText": "Bir yazılım sistemine yeni bir özellik eklendikten veya hata düzeltmesi yapıldıktan sonra, mevcut çalışan fonksiyonların bozulup bozulmadığını doğrulamak amacıyla yapılan test türü hangisidir?",
+    "options": [
+      "Birim Testi (Unit Testing)",
+      "Regresyon Testi (Regression Testing)",
+      "Stres Testi (Stress Testing)",
+      "Kullanıcı Kabul Testi (UAT)",
+      "Yük Testi (Load Testing)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Regresyon Testi, kodda yapılan değişikliklerin (yeni modül, bug fix, refactoring) var olan özellikleri ve akışları olumsuz etkilemediğini garanti altına almak için çalıştırılan test setidir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yazılım-mühendisliği",
+      "test",
+      "regresyon-testi"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-036",
+    "examQuestionNo": 136,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği",
+    "subtopic": "Kimlik Doğrulama vs Yetkilendirme",
+    "difficulty": 1,
+    "stem": "Bilgi güvenliğinde 'Kimlik Doğrulama' (Authentication) ile 'Yetkilendirme' (Authorization) arasındaki farkı en iyi özetleyen ifade hangisidir?",
+    "questionText": "Bilgi güvenliğinde 'Kimlik Doğrulama' (Authentication) ile 'Yetkilendirme' (Authorization) arasındaki farkı en iyi özetleyen ifade hangisidir?",
+    "options": [
+      "Kimlik Doğrulama 'Kullanıcı kimdir?' sorusuna cevap verirken; Yetkilendirme 'Bu kullanıcının hangi kaynaklara erişim izni vardır?' sorusuna cevap verir.",
+      "Kimlik doğrulama sadece şifreleme algoritmalarıyla yapılırken, yetkilendirme firewall tarafından yapılır.",
+      "Kimlik doğrulama HTTP 403 Forbidden üretirken, yetkilendirme HTTP 401 Unauthorized üretir.",
+      "Yetkilendirme kullanıcı sisteme girmeden önce, kimlik doğrulama ise girdikten sonra yapılır.",
+      "İki kavram tamamen aynı güvenlik mekanizmasını temsil eder."
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Authentication (Kimlik Doğrulama - 401), kullanıcının iddia ettiği kişi olup olmadığını doğrular (parola, OTP, biyometri). Authorization (Yetkilendirme - 403) ise kimliği doğrulanmış kullanıcının belirli bir işlemi yapmaya yetkili olup olmadığını denetler.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "bilgi-güvenliği",
+      "authentication",
+      "authorization"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-037",
+    "examQuestionNo": 137,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği",
+    "subtopic": "Hashing ve Parola Güvenliği",
+    "difficulty": 2,
+    "stem": "Kullanıcı parolalarının veritabanında saklanmasıyla ilgili aşağıdaki güvenlik yaklaşımlarından hangisi modern en iyi uygulama (Best Practice) olarak kabul edilir?",
+    "questionText": "Kullanıcı parolalarının veritabanında saklanmasıyla ilgili aşağıdaki güvenlik yaklaşımlarından hangisi modern en iyi uygulama (Best Practice) olarak kabul edilir?",
+    "options": [
+      "Parolaları AES-256 simetrik anahtar ile şifreleyip anahtarı kaynak kodda saklamak",
+      "Parolaları düz metin (Plaintext) olarak saklayıp sadece tablo erişimini kısıtlamak",
+      "Parolaları her kullanıcıya özel rastgele üretilen bir tuzlama (Salt) değeri ile birlikte bcrypt veya Argon2 gibi tek yönlü yavaş hash fonksiyonlarından geçirerek saklamak",
+      "Hızlı arama yapabilmek için doğrudan MD5 veya SHA-1 hash değerini kaydetmek",
+      "Kullanıcı parolalarını tersine çevirerek Base64 formatında kodlamak"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Parolalar asla simetrik şifrelemeyle veya düz metinle saklanmaz. MD5/SHA-1 ise çok hızlı olduğundan brute-force ve rainbow table saldırılarına açıktır. Tuzlama (Salt) ve maliyet faktörü ayarlanabilir modern hash algoritmaları (bcrypt, Argon2) endüstri standardıdır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "bilgi-güvenliği",
+      "hashing",
+      "salt",
+      "bcrypt",
+      "parola"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-038",
+    "examQuestionNo": 138,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Bilgi Güvenliği",
+    "subtopic": "Web Güvenliği (CSRF)",
+    "difficulty": 2,
+    "stem": "Kullanıcının daha önce oturum açtığı güvenilir bir web sitesindeki oturum çerezlerini (Cookie) kullanarak, kullanıcının bilgisi ve rızası olmadan kötü niyetli bir siteden istek yaptırılması saldırısına ne ad verilir?",
+    "questionText": "Kullanıcının daha önce oturum açtığı güvenilir bir web sitesindeki oturum çerezlerini (Cookie) kullanarak, kullanıcının bilgisi ve rızası olmadan kötü niyetli bir siteden istek yaptırılması saldırısına ne ad verilir?",
+    "options": [
+      "SQL Injection (SQLi)",
+      "Cross-Site Request Forgery (CSRF / XSRF)",
+      "Cross-Site Scripting (XSS)",
+      "Denial of Service (DoS)",
+      "Man-in-the-Middle (MitM)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "CSRF (Siteler Arası İstek Sahteciliği), kurbanın oturum kimliğini kötüye kullanarak onun adına sahte istekler (örneğin para transferi isteği) tetikler. Bu saldırıyı önlemek için benzersiz Anti-CSRF token'ları ve `SameSite` cookie özellikleri kullanılır.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "bilgi-güvenliği",
+      "csrf",
+      "web-güvenliği"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-039",
+    "examQuestionNo": 139,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yapay Zekâ ve Makine Öğrenmesi",
+    "subtopic": "Hata Matrisi (Confusion Matrix) ve Fraud Tespiti",
+    "difficulty": 2,
+    "stem": "Bir bankacılık dolandırıcılık (Fraud) tespit sisteminde, dolandırıcılık içeren şüpheli işlemlerin gözden kaçırılmaması (yani False Negative oranının mümkün olduğunca sıfıra yaklaştırılması) hedeflenmektedir. Bu durumda hangi performans metriğinin maksimize edilmesi önceliklidir?",
+    "questionText": "Bir bankacılık dolandırıcılık (Fraud) tespit sisteminde, dolandırıcılık içeren şüpheli işlemlerin gözden kaçırılmaması (yani False Negative oranının mümkün olduğunca sıfıra yaklaştırılması) hedeflenmektedir. Bu durumda hangi performans metriğinin maksimize edilmesi önceliklidir?",
+    "options": [
+      "Accuracy (Doğruluk Oranı)",
+      "Recall (Duyarlılık / Yakalama Oranı)",
+      "Specificity (Özgüllük)",
+      "Loss (Kayıp Değeri)",
+      "Eğitim Süresi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Recall (Duyarlılık) = TP / (TP + FN). Paydada False Negative yer alır. Bir dolandırıcılık yakalama sisteminde asıl felaket gerçek bir dolandırıcılığı kaçırmaktır (False Negative). Bu nedenle Recall metriğini maksimize etmek kritik önceliktir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yapay-zekâ",
+      "makine-öğrenmesi",
+      "recall",
+      "fraud",
+      "confusion-matrix"
+    ],
+    "source": "original"
+  },
+  {
+    "id": "alan-040",
+    "examQuestionNo": 140,
+    "section": "alan",
+    "sectionGroup": 3,
+    "topic": "Yapay Zekâ ve Makine Öğrenmesi",
+    "subtopic": "Öğrenme Türleri ve K-Means",
+    "difficulty": 2,
+    "stem": "Etiketlenmemiş müşteri harcama verilerini kullanarak benzer davranış sergileyen müşteri kitlelerini gruplamak (Müşteri Segmentasyonu) amacıyla kullanılan K-Means algoritması hangi öğrenme kategorisine girer?",
+    "questionText": "Etiketlenmemiş müşteri harcama verilerini kullanarak benzer davranış sergileyen müşteri kitlelerini gruplamak (Müşteri Segmentasyonu) amacıyla kullanılan K-Means algoritması hangi öğrenme kategorisine girer?",
+    "options": [
+      "Gözetimli Öğrenme (Supervised Learning)",
+      "Gözetimsiz Öğrenme (Unsupervised Learning)",
+      "Pekiştirmeli Öğrenme (Reinforcement Learning)",
+      "Yarı-Gözetimli Öğrenme (Semi-supervised Learning)",
+      "Derin Pekiştirmeli Öğrenme (Deep RL)"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "K-Means kümeleme (Clustering) algoritması, hedef çıktının (etiketin) bulunmadığı veriler üzerinde gizli desen ve benzerlikleri keşfettiği için Gözetimsiz Öğrenme (Unsupervised Learning) sınıfına aittir.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "yapay-zekâ",
+      "makine-öğrenmesi",
+      "unsupervised-learning",
+      "k-means"
+    ],
     "source": "original"
   }
 ]
-

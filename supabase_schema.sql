@@ -38,7 +38,7 @@ create policy "Kullanıcı kendi profilini güncelleyebilir"
 -- 2. QUESTIONS (Soru Havuzu - Çoktan Seçmeli Sorular)
 create table if not exists public.questions (
     id text primary key,
-    section text not null check (section in ('genel-kultur', 'genel-yetenek', 'ingilizce', 'alan')),
+    section text not null check (section in ('genel-kultur', 'genel-yetenek', 'bankacilik-genel-kultur', 'oruntu-analitik', 'ingilizce', 'alan')),
     topic text not null,
     subtopic text,
     difficulty int not null check (difficulty in (1, 2, 3)), -- 1: Kolay, 2: Orta, 3: Zor
@@ -47,7 +47,7 @@ create table if not exists public.questions (
     answer_index int not null check (answer_index between 0 and 4),
     explanation text not null, -- Neden doğru, çeldiriciler neden yanlış
     tags text[] default array[]::text[],
-    source text default 'original' check (source in ('original', 'user')),
+    source text default 'original',
     created_at timestamptz default now() not null
 );
 
@@ -211,7 +211,7 @@ create policy "Kullanıcı kendi kart ilerlemesini yönetebilir"
 -- 6. LECTURES (Konu Anlatımları ve Hap Notlar)
 create table if not exists public.lectures (
     id text primary key,
-    section text not null check (section in ('alan', 'genel-kultur', 'genel-yetenek', 'ingilizce')),
+    section text not null check (section in ('alan', 'genel-kultur', 'genel-yetenek', 'bankacilik-genel-kultur', 'oruntu-analitik', 'ingilizce')),
     topic text not null,
     title text not null,
     read_time text,

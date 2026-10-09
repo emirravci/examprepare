@@ -18,16 +18,18 @@ class DataManager {
 
         try {
             // Local JSON dosyalarından verileri yükle
-            const [alanRes, gkRes, gyRes, engRes, fcRes, lecRes] = await Promise.all([
+            const [alanRes, bgkRes, ornRes, engRes, masterRes, fcRes, lecRes] = await Promise.all([
                 fetch('./data/questions/alan_bilgisayar.json').then(r => r.json()).catch(() => []),
-                fetch('./data/questions/genel_kultur.json').then(r => r.json()).catch(() => []),
-                fetch('./data/questions/genel_yetenek.json').then(r => r.json()).catch(() => []),
+                fetch('./data/questions/bankacilik_genel_kultur.json').then(r => r.json()).catch(() => []),
+                fetch('./data/questions/oruntu_analitik.json').then(r => r.json()).catch(() => []),
                 fetch('./data/questions/ingilizce.json').then(r => r.json()).catch(() => []),
+                fetch('./data/questions/ziraat_140_tam_deneme.json').then(r => r.json()).catch(() => []),
                 fetch('./data/flashcards.json').then(r => r.json()).catch(() => []),
                 fetch('./data/lectures.json').then(r => r.json()).catch(() => [])
             ]);
 
-            this.questions = [...alanRes, ...gkRes, ...gyRes, ...engRes];
+            this.masterExamQuestions = masterRes.length === 140 ? masterRes : [];
+            this.questions = masterRes.length > 0 ? masterRes : [...bgkRes, ...ornRes, ...engRes, ...alanRes];
             this.flashcards = fcRes;
             this.lectures = lecRes;
 
@@ -52,19 +54,33 @@ class DataManager {
                     section: q.section,
                     topic: q.topic,
                     subtopic: q.subtopic || null,
-                    difficulty: q.difficulty || 2,
-                    stem: q.stem,
+                    difficulty: typeof q.difficulty === 'number' ? q.difficulty : 2,
+                    stem: q.stem || q.questionText || '',
                     options: q.options,
-                    answer_index: q.answerIndex,
-                    explanation: q.explanation,
+                    answer_index: q.answerIndex !== undefined ? q.answerIndex : q.correctAnswer,
+                    explanation: q.explanation || '',
                     tags: q.tags || [],
-                    source: q.source || 'original'
+                    source: q.source || 'Ziraat Master Hazırlık Seti'
                 }));
 
                 await supabase.from('questions').upsert(mappedQuestions, { onConflict: 'id', ignoreDuplicates: true });
             }
+
+            // Konu anlatımlarını Supabase'e toplu upsert et
+            if (this.lectures.length > 0) {
+                const mappedLectures = this.lectures.map(l => ({
+                    id: l.id,
+                    section: l.section,
+                    topic: l.topic,
+                    title: l.title,
+                    read_time: l.readTime || '7 dk',
+                    summary: l.summary || '',
+                    content: l.content
+                }));
+                await supabase.from('lectures').upsert(mappedLectures, { onConflict: 'id', ignoreDuplicates: true });
+            }
         } catch (e) {
-            console.warn("Supabase arka plan soru eşitleme bildirimi:", e);
+            console.warn("Supabase arka plan eşitleme bildirimi:", e);
         }
     }
 
@@ -81,7 +97,13 @@ class DataManager {
         let list = [...this.questions];
 
         if (section && section !== 'all') {
-            list = list.filter(q => q.section === section);
+            if (section === 'bankacilik-genel-kultur' || section === 'genel-kultur') {
+                list = list.filter(q => q.section === 'bankacilik-genel-kultur' || q.section === 'genel-kultur');
+            } else if (section === 'oruntu-analitik' || section === 'genel-yetenek') {
+                list = list.filter(q => q.section === 'oruntu-analitik' || q.section === 'genel-yetenek');
+            } else {
+                list = list.filter(q => q.section === section);
+            }
         }
 
         if (topic && topic !== 'all') {
@@ -105,22 +127,18 @@ class DataManager {
         return list;
     }
 
-    // 3. TAM DENEME SINAVI OLUŞTURMA (140 Soru: 20 GK + 40 GY + 40 İngilizce + 40 Alan)
+    // 3. TAM DENEME SINAVI OLUŞTURMA (140 Soru: 20 Bankacılık/GK + 40 Örüntü/GY + 40 İngilizce + 40 Alan)
     generateMockExam() {
-        const gk = this.questions.filter(q => q.section === 'genel-kultur');
-        const gy = this.questions.filter(q => q.section === 'genel-yetenek');
+        const bgk = this.questions.filter(q => q.section === 'bankacilik-genel-kultur' || q.section === 'genel-kultur');
+        const orn = this.questions.filter(q => q.section === 'oruntu-analitik' || q.section === 'genel-yetenek');
         const eng = this.questions.filter(q => q.section === 'ingilizce');
         const alan = this.questions.filter(q => q.section === 'alan');
 
-        // Karıştırıcı yardımcı fonksiyon
         const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
-
-        // İdeal kota: GK 20, GY 40, Eng 40, Alan 40
-        // Soru havuzu geliştikçe kota kadar seçer, henüz soru sayısı azsa eldeki tüm soruları alır
         const pickCount = (arr, count) => shuffle(arr).slice(0, count);
 
-        const examGK = pickCount(gk, 20);
-        const examGY = pickCount(gy, 40);
+        const examGK = pickCount(bgk, 20);
+        const examGY = pickCount(orn, 40);
         const examEng = pickCount(eng, 40);
         const examAlan = pickCount(alan, 40);
 
@@ -321,11 +339,11 @@ class DataManager {
 
             a.isCorrect = isCorrect;
 
-            if (q.section === 'genel-kultur') {
+            if (q.section === 'genel-kultur' || q.section === 'bankacilik-genel-kultur') {
                 if (isCorrect) gkCorrect++;
                 else if (isWrong) gkWrong++;
                 else gkEmpty++;
-            } else if (q.section === 'genel-yetenek') {
+            } else if (q.section === 'genel-yetenek' || q.section === 'oruntu-analitik') {
                 if (isCorrect) gyCorrect++;
                 else if (isWrong) gyWrong++;
                 else gyEmpty++;

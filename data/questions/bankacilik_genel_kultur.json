@@ -1,0 +1,570 @@
+[
+  {
+    "id": "bgk-001",
+    "examQuestionNo": 1,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ziraat Bankası Tarihçesi ve Kuruluşu",
+    "subtopic": "Memleket Sandıkları",
+    "difficulty": 1,
+    "stem": "Ziraat Bankası'nın tarihsel kökeni kabul edilen ve 1863 yılında Niş Valisi Mithat Paşa tarafından çiftçilere uygun koşullarda kredi sağlamak amacıyla kurulan ilk mali teşkilat aşağıdakilerden hangisidir?",
+    "questionText": "Ziraat Bankası'nın tarihsel kökeni kabul edilen ve 1863 yılında Niş Valisi Mithat Paşa tarafından çiftçilere uygun koşullarda kredi sağlamak amacıyla kurulan ilk mali teşkilat aşağıdakilerden hangisidir?",
+    "options": [
+      "Emniyet Sandığı",
+      "Memleket Sandıkları",
+      "Dersaadet Tahvilat Borsası",
+      "Osmanlı İtibar-ı Milli Bankası",
+      "Menafi Sandıkları"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Ziraat Bankası'nın temeli, 1863 yılında Mithat Paşa tarafından Pirot kasabasında kurulan 'Memleket Sandıkları'dır. 1883'te Menafi Sandıkları'na, 15 Ağustos 1888'de ise resmi nizamnamesiyle modern Ziraat Bankası'na dönüştürülmüştür.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "ziraat-bankasi",
+      "mithat-pasa",
+      "tarihce",
+      "memleket-sandiklari"
+    ],
+    "source": "Ziraat Bankası Resmi Tarihçe"
+  },
+  {
+    "id": "bgk-002",
+    "examQuestionNo": 2,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ziraat Bankası Ürün ve Hizmetleri",
+    "subtopic": "Tarım Kartı",
+    "difficulty": 1,
+    "stem": "Ziraat Bankası'nın çiftçi ve üreticilere mazot, gübre, tohum ve yem gibi tarımsal girdi alımlarında faiz sübvansiyonlu veya vadeli harcama imkanı sunan tescilli bankacılık kartı aşağıdakilerden hangisidir?",
+    "questionText": "Ziraat Bankası'nın çiftçi ve üreticilere mazot, gübre, tohum ve yem gibi tarımsal girdi alımlarında faiz sübvansiyonlu veya vadeli harcama imkanı sunan tescilli bankacılık kartı aşağıdakilerden hangisidir?",
+    "options": [
+      "Bankkart Genç",
+      "Başakkart (Bankkart Başak)",
+      "Ziraat Maximum",
+      "Troy Esnaf Kart",
+      "Ziraat Hasat Kart"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Ziraat Bankası üreticilere tarımsal işletme giderlerini finanse etmeleri amacıyla Bankkart Başak (Başakkart) sunmaktadır. Bu kartla anlaşmalı üye işyerlerinden sübvansiyonlu tarımsal girdi temin edilebilir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "ziraat-bankasi",
+      "basakkart",
+      "tarim-kredisi",
+      "kartli-odeme"
+    ],
+    "source": "Ziraat Bankası Tarımsal Bankacılık"
+  },
+  {
+    "id": "bgk-003",
+    "examQuestionNo": 3,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "TCMB ve Para Politikası",
+    "subtopic": "Temel Amaç ve Araçlar",
+    "difficulty": 2,
+    "stem": "1211 sayılı Türkiye Cumhuriyet Merkez Bankası (TCMB) Kanunu'na göre, Merkez Bankası'nın temel ve birincil amacı aşağıdakilerden hangisidir?",
+    "questionText": "1211 sayılı Türkiye Cumhuriyet Merkez Bankası (TCMB) Kanunu'na göre, Merkez Bankası'nın temel ve birincil amacı aşağıdakilerden hangisidir?",
+    "options": [
+      "Bütçe açığını kapatmak için kamuya borç vermek",
+      "Fiyat istikrarını sağlamak",
+      "Bireysel kredi faiz oranlarının üst sınırını tek başına belirlemek",
+      "Döviz kurlarını belirli bir bantta sabit tutmak",
+      "Ticari bankaların karlılık hedeflerini denetlemek"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "1211 sayılı TCMB Kanunu'nun 4. maddesi gereğince Bankanın temel amacı 'fiyat istikrarını sağlamaktır'. Banka, fiyat istikrarı hedefiyle çelişmemek kaydıyla hükümetin büyüme ve istihdam politikalarını destekler.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "tcmb",
+      "fiyat-istikrari",
+      "para-politikasi"
+    ],
+    "source": "TCMB Resmi Mevzuatı (1211 Sayılı Kanun)"
+  },
+  {
+    "id": "bgk-004",
+    "examQuestionNo": 4,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "TCMB ve Para Politikası",
+    "subtopic": "Politika Faizi",
+    "difficulty": 2,
+    "stem": "TCMB Para Politikası Kurulu'nun (PPK) faiz kararlarında referans olarak belirlediği temel 'Politika Faizi' aşağıdakilerden hangisidir?",
+    "questionText": "TCMB Para Politikası Kurulu'nun (PPK) faiz kararlarında referans olarak belirlediği temel 'Politika Faizi' aşağıdakilerden hangisidir?",
+    "options": [
+      "Gecelik Borçlanma Faizi (O/N)",
+      "Geç Likidite Penceresi (GLP) Faizi",
+      "Bir Hafta Vadeli Repo İhale Faiz Oranı",
+      "Bankalararası Para Piyasası Ağırlıklı Ortalama Faizi",
+      "Reeskont Kredi Faiz Oranı"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "TCMB'nin temel politika faizi 'Bir hafta vadeli repo ihale faiz oranı'dır. Merkez Bankası piyasa yapıcı bankalara likiditeyi temel olarak bu oran üzerinden haftalık repo ihaleleriyle sağlar.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "tcmb",
+      "politika-faizi",
+      "repo"
+    ],
+    "source": "TCMB Para Politikası Araçları"
+  },
+  {
+    "id": "bgk-005",
+    "examQuestionNo": 5,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık Düzenleme ve Denetleme",
+    "subtopic": "BDDK ve Rasyolar",
+    "difficulty": 2,
+    "stem": "5411 sayılı Bankacılık Kanunu çerçevesinde Türkiye'de bankaların faaliyet izinlerini veren, rasyolarını denetleyen ve mevzuata uyumunu gözetleyen bağımsız idari otorite hangisidir?",
+    "questionText": "5411 sayılı Bankacılık Kanunu çerçevesinde Türkiye'de bankaların faaliyet izinlerini veren, rasyolarını denetleyen ve mevzuata uyumunu gözetleyen bağımsız idari otorite hangisidir?",
+    "options": [
+      "Sermaye Piyasası Kurulu (SPK)",
+      "Bankacılık Düzenleme ve Denetleme Kurumu (BDDK)",
+      "Tasarruf Mevduatı Sigorta Fonu (TMSF)",
+      "Türkiye Bankalar Birliği (TBB)",
+      "Maliye Bakanlığı Finansal Piyasalar Genel Müdürlüğü"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "BDDK (Bankacılık Düzenleme ve Denetleme Kurumu), bankacılık sektörünün güven ve istikrar içinde çalışmasını sağlamak, mudilerin haklarını korumak ve riskleri denetlemekle görevli bağımsız düzenleyici üst kuruldur.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "bddk",
+      "denetim",
+      "bankacilik-kanunu"
+    ],
+    "source": "BDDK Kurumsal Portalı"
+  },
+  {
+    "id": "bgk-006",
+    "examQuestionNo": 6,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Mevduat ve Kredi Kavramları",
+    "subtopic": "TMSF Mevduat Sigortası",
+    "difficulty": 2,
+    "stem": "Türkiye'de faaliyet gösteren bir mevduat bankasında gerçek kişilerin ticari olmayan tasarruf mevduatlarını yasal limitler dahilinde garanti ve sigorta altına alan resmi kurum hangisidir?",
+    "questionText": "Türkiye'de faaliyet gösteren bir mevduat bankasında gerçek kişilerin ticari olmayan tasarruf mevduatlarını yasal limitler dahilinde garanti ve sigorta altına alan resmi kurum hangisidir?",
+    "options": [
+      "Hazine ve Maliye Bakanlığı",
+      "Tasarruf Mevduatı Sigorta Fonu (TMSF)",
+      "Merkez Bankası Takas ve Saklama Anonim Şirketi",
+      "Sigortacılık ve Özel Emeklilik Düzenleme Kurumu (SEDDK)",
+      "Türkiye Bankalar Birliği Risk Merkezi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "TMSF (Tasarruf Mevduatı Sigorta Fonu), bankalara yatırılan bireysel tasarruf mevduatlarını belirlenen yasal sigorta tutarına kadar devlet garantisi altında tazmin etmekle yetkilidir.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "tmsf",
+      "mevduat-sigortasi",
+      "mudiler"
+    ],
+    "source": "TMSF Mevzuat ve Sigorta Kapsamı"
+  },
+  {
+    "id": "bgk-007",
+    "examQuestionNo": 7,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık Risk Yönetimi",
+    "subtopic": "Kredi Riski ve NPL",
+    "difficulty": 3,
+    "stem": "Bankacılık terminolojisinde borçlunun kredi anapara veya faiz ödemelerini vadesinde yerine getirememesi sonucu 90 günden fazla gecikmeye giren ve takibe aktarılan alacaklara ne ad verilir?",
+    "questionText": "Bankacılık terminolojisinde borçlunun kredi anapara veya faiz ödemelerini vadesinde yerine getirememesi sonucu 90 günden fazla gecikmeye giren ve takibe aktarılan alacaklara ne ad verilir?",
+    "options": [
+      "Kaldıraçlı Alacaklar",
+      "Takipteki Krediler (Non-Performing Loans - NPL)",
+      "Arbitraj Kredileri",
+      "İskontolu Senetler",
+      "Sendikasyon Kredileri"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Vadesi üzerinden 90 gün geçen ve geri ödenmesi şüpheli hale gelen krediler 'Takipteki Alacaklar' (NPL - Non-Performing Loans) kategorisine aktarılır ve bankalar bunlar için karşılık (provision) ayırmak zorundadır.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "kredi-riski",
+      "npl",
+      "takipteki-alacaklar",
+      "risk-yonetimi"
+    ],
+    "source": "BDDK Kredilerin Sınıflandırılması Yönetmeliği"
+  },
+  {
+    "id": "bgk-008",
+    "examQuestionNo": 8,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık Risk Yönetimi",
+    "subtopic": "Likidite ve Sermaye Yeterliliği",
+    "difficulty": 3,
+    "stem": "Basel standartları ve BDDK düzenlemeleri uyarınca bir bankanın sahip olduğu özkaynakların, maruz kaldığı risk ağırlıklı varlıklara (kredi, piyasa ve operasyonel risk) oranlanmasıyla hesaplanan göstergeye ne ad verilir?",
+    "questionText": "Basel standartları ve BDDK düzenlemeleri uyarınca bir bankanın sahip olduğu özkaynakların, maruz kaldığı risk ağırlıklı varlıklara (kredi, piyasa ve operasyonel risk) oranlanmasıyla hesaplanan göstergeye ne ad verilir?",
+    "options": [
+      "Likidite Karşılama Oranı (LCR)",
+      "Net Faiz Marjı (NIM)",
+      "Sermaye Yeterlilik Rasyosu (SYR / CAR)",
+      "Fiyat/Kazanç Oranı (F/K)",
+      "Takipteki Alacak Karşılık Oranı"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Sermaye Yeterlilik Rasyosu (SYR - Capital Adequacy Ratio), bir bankanın olası şoklara ve zararlara karşı yeterli özkaynağa sahip olup olmadığını ölçer. Yasal alt sınır %8, BDDK hedef rasyosu ise genellikle %12'dir.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "syr",
+      "basel",
+      "sermaye-yeterliligi",
+      "risk"
+    ],
+    "source": "BDDK Sermaye Yeterliliği Yönetmeliği"
+  },
+  {
+    "id": "bgk-009",
+    "examQuestionNo": 9,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bireysel ve Ticari Bankacılık",
+    "subtopic": "Kredi Türleri",
+    "difficulty": 2,
+    "stem": "Bir şirketin banka ile belirlediği bir limit dahilinde, ihtiyaç duydukça para çekebildiği ve faizin yalnızca kullanılan gün ve tutar üzerinden hesaplandığı esnek ticari kredi türü hangisidir?",
+    "questionText": "Bir şirketin banka ile belirlediği bir limit dahilinde, ihtiyaç duydukça para çekebildiği ve faizin yalnızca kullanılan gün ve tutar üzerinden hesaplandığı esnek ticari kredi türü hangisidir?",
+    "options": [
+      "Taksitli Ticari Kredi",
+      "Rotatif (Borçlu Cari Hesap) Kredi",
+      "Akreditif Kredisi",
+      "Prefinansman Kredisi",
+      "Forfaiting Kredisi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Rotatif kredi (Borçlu Cari Hesap - BCH), firmanın limit dahilinde dilediğinde para çekip dilediğinde geri yatırabildiği, faizin sadece paranın fiilen kullanıldığı gün üzerinden işletildiği kredidir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "rotatif-kredi",
+      "ticari-bankacilik",
+      "bch"
+    ],
+    "source": "TBB Bankacılık Terimleri Kılavuzu"
+  },
+  {
+    "id": "bgk-010",
+    "examQuestionNo": 10,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ödeme Sistemleri ve Dijital Bankacılık",
+    "subtopic": "FAST Sistemi",
+    "difficulty": 1,
+    "stem": "TCMB tarafından işletilen, farklı bankalardaki hesaplar arasında 7/24 anlık para transferi sağlayan ve Kolay Adresleme (telefon, T.C. kimlik, e-posta) sistemini destekleyen altyapı hangisidir?",
+    "questionText": "TCMB tarafından işletilen, farklı bankalardaki hesaplar arasında 7/24 anlık para transferi sağlayan ve Kolay Adresleme (telefon, T.C. kimlik, e-posta) sistemini destekleyen altyapı hangisidir?",
+    "options": [
+      "EFT (Elektronik Fon Transferi)",
+      "FAST (Fonların Anlık ve Sürekli Transferi)",
+      "SWIFT",
+      "Havale Sistemi",
+      "BKM Express"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "FAST (Fonların Anlık ve Sürekli Transferi), TCMB tarafından hayata geçirilen, haftanın 7 günü 24 saati birkaç saniye içinde farklı bankalar arası para transferi gerçekleştiren modern perakende ödeme sistemidir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "fast",
+      "odeme-sistemleri",
+      "tcmb",
+      "dijital-bankacilik"
+    ],
+    "source": "TCMB FAST Bilgilendirme Sayfası"
+  },
+  {
+    "id": "bgk-011",
+    "examQuestionNo": 11,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bilanço ve Finansal Tablolar",
+    "subtopic": "Banka Bilançosu",
+    "difficulty": 2,
+    "stem": "Bir ticari bankanın bilançosunda müşterilerden toplanan mevduatlar ve bankanın müşterilere kullandırdığı krediler sırasıyla hangi bilanço kalemlerinde yer alır?",
+    "questionText": "Bir ticari bankanın bilançosunda müşterilerden toplanan mevduatlar ve bankanın müşterilere kullandırdığı krediler sırasıyla hangi bilanço kalemlerinde yer alır?",
+    "options": [
+      "Mevduat: Aktif | Krediler: Pasif",
+      "Mevduat: Pasif | Krediler: Aktif",
+      "Her ikisi de Aktif kalemdir",
+      "Her ikisi de Pasif kalemdir",
+      "Mevduat: Gelir Tablosu | Krediler: Nazım Hesaplar"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Bankalar için müşterilerin yatırdığı mevduat bir borç/yükümlülüktür (Pasif). Kullandırılan krediler ise bankanın alacağı olan finansal varlıklardır (Aktif). Bu yönüyle banka bilançosu reel sektör bilançosunun tersi mantıkla çalışır.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "bilanco",
+      "aktif-pasif",
+      "mevduat",
+      "krediler"
+    ],
+    "source": "Finansal Muhasebe İlkeleri"
+  },
+  {
+    "id": "bgk-012",
+    "examQuestionNo": 12,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Enflasyon ve Para Politikası",
+    "subtopic": "Enflasyon Dinamikleri",
+    "difficulty": 2,
+    "stem": "Petrol, elektrik ve döviz kuru gibi üretim girdilerinin maliyetlerinin artması sebebiyle ürün ve hizmet fiyatlarının genel seviyesinin yükselmesine ne ad verilir?",
+    "questionText": "Petrol, elektrik ve döviz kuru gibi üretim girdilerinin maliyetlerinin artması sebebiyle ürün ve hizmet fiyatlarının genel seviyesinin yükselmesine ne ad verilir?",
+    "options": [
+      "Talep Enflasyonu",
+      "Maliyet (Arz) Enflasyonu",
+      "Gizli Enflasyon",
+      "Kronik Enflasyon",
+      "Çekirdek Enflasyon"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Üretim maliyetlerinin (hammadde, enerji, işçilik, kur artışı) yükselmesi nedeniyle toplam arz eğrisinin sola kayması ve fiyatların artması 'Maliyet (veya İtme) Enflasyonu' olarak adlandırılır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "enflasyon",
+      "maliyet-enflasyonu",
+      "ekonomi"
+    ],
+    "source": "TCMB Ekonomi Bülteni"
+  },
+  {
+    "id": "bgk-013",
+    "examQuestionNo": 13,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Tarım Bankacılığı ve Finansman",
+    "subtopic": "Sübvansiyonlu Krediler",
+    "difficulty": 2,
+    "stem": "Ziraat Bankası'nın üreticilere kullandırdığı Hazine faiz destekli (sübvansiyonlu) tarımsal kredilerde faiz indirim oranları hangi resmi kriterlere göre farklılaşır?",
+    "questionText": "Ziraat Bankası'nın üreticilere kullandırdığı Hazine faiz destekli (sübvansiyonlu) tarımsal kredilerde faiz indirim oranları hangi resmi kriterlere göre farklılaşır?",
+    "options": [
+      "Yalnızca borçlunun yaşına göre",
+      "Yatırımın konusu (damla sulama, genç çiftçi, kadın girişimci, sözleşmeli üretim) ve öncelikli ürün grubuna göre",
+      "Tarımsal arazinin tapu kadastro harç bedeline göre",
+      "Yalnızca şirketin halka arz durumuna göre",
+      "Sadece üreticinin kredi kartı harcama geçmişine göre"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Cumhurbaşkanlığı Kararı uyarınca Ziraat Bankası tarımsal kredilerinde; basınçlı sulama sistemleri, genç/kadın çiftçi, stratejik bitkisel üretim ve sözleşmeli tarım gibi hedeflere göre %20'den %100'e (tamamen sıfır faiz) varan indirimler uygulanır.",
+    "estimatedTimeSeconds": 55,
+    "tags": [
+      "tarim-bankaciligi",
+      "subvansiyonlu-kredi",
+      "hazine-destegi",
+      "ziraat"
+    ],
+    "source": "Resmi Gazete Tarımsal Kredi Kararnameleri"
+  },
+  {
+    "id": "bgk-014",
+    "examQuestionNo": 14,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Fintech ve Dijital Dönüşüm",
+    "subtopic": "Açık Bankacılık ve API",
+    "difficulty": 2,
+    "stem": "Bankaların müşteri açık rızasıyla hesap bilgisi ve ödeme başlatma servislerini lisanslı fintech kuruluşlarına standart arayüzlerle sunduğu düzenleme (PSD2 uyumlu) hangisidir?",
+    "questionText": "Bankaların müşteri açık rızasıyla hesap bilgisi ve ödeme başlatma servislerini lisanslı fintech kuruluşlarına standart arayüzlerle sunduğu düzenleme (PSD2 uyumlu) hangisidir?",
+    "options": [
+      "Açık Bankacılık (Open Banking / GEÇS)",
+      "Kapalı Devre Sanal POS",
+      "Gölge Bankacılık (Shadow Banking)",
+      "Kripto Varlık Soğuk Depolama",
+      "Mikro Finans Sistemi"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Açık Bankacılık, TCMB 6493 sayılı kanun düzenlemeleriyle bankaların hesap bilgisi sağlama (HBS) ve ödeme emri başlatma (ÖEB) servislerini API'lar üzerinden yetkili ödeme kuruluşlarına açtığı sistemdir.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "fintech",
+      "acik-bankacilik",
+      "api",
+      "psd2"
+    ],
+    "source": "TCMB Açık Bankacılık Yönetmeliği"
+  },
+  {
+    "id": "bgk-015",
+    "examQuestionNo": 15,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Türkiye Bankacılık Sistemi",
+    "subtopic": "Banka Türleri",
+    "difficulty": 1,
+    "stem": "5411 sayılı Bankacılık Kanunu'na göre Türkiye'de faaliyet gösteren 'Kalkınma ve Yatırım Bankaları'nın mevduat bankalarından en temel yasal farkı aşağıdakilerden hangisidir?",
+    "questionText": "5411 sayılı Bankacılık Kanunu'na göre Türkiye'de faaliyet gösteren 'Kalkınma ve Yatırım Bankaları'nın mevduat bankalarından en temel yasal farkı aşağıdakilerden hangisidir?",
+    "options": [
+      "Kredi verememeleri",
+      "Mevduat kabul edememeleri",
+      "Yabancı para işlemi yapamamaları",
+      "TCMB'ye tabi olmamaları",
+      "Şube açamamaları"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Kalkınma ve Yatırım Bankaları mevduat (veya katılım fonu) toplayamazlar. Fon kaynaklarını özkaynaklar, tahvil ihracı ve uluslararası finans kuruluşlarından sağladıkları uzun vadeli krediler oluşturur (Örn: İller Bankası, Eximbank).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "yatirim-bankaciligi",
+      "mevduat",
+      "banka-turleri"
+    ],
+    "source": "5411 Sayılı Bankacılık Kanunu Madde 3"
+  },
+  {
+    "id": "bgk-016",
+    "examQuestionNo": 16,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Genel Kültür ve Ekonomi Tarihi",
+    "subtopic": "İzmir İktisat Kongresi",
+    "difficulty": 2,
+    "stem": "1923 yılında toplanan İzmir İktisat Kongresi'nde kabul edilen ve yerli üretimi, milli sermayeyi ve tasarrufu özendirmeyi amaçlayan tarihi bildiriye ne ad verilir?",
+    "questionText": "1923 yılında toplanan İzmir İktisat Kongresi'nde kabul edilen ve yerli üretimi, milli sermayeyi ve tasarrufu özendirmeyi amaçlayan tarihi bildiriye ne ad verilir?",
+    "options": [
+      "Misak-ı Milli",
+      "Misak-ı İktisadi",
+      "Teşvik-i Sanayi",
+      "Kanun-i Esasi",
+      "Tekalif-i Milliye"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "İzmir İktisat Kongresi'nde 'Misak-ı İktisadi' (Ekonomi Andı) kabul edilerek genç Cumhuriyetin ekonomik bağımsızlık ilkeleri ve milli kalkınma hedefleri ilan edilmiştir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "cumhuriyet-tarihi",
+      "misak-i-iktisadi",
+      "izmir-iktisat-kongresi"
+    ],
+    "source": "Atatürk Araştırma Merkezi"
+  },
+  {
+    "id": "bgk-017",
+    "examQuestionNo": 17,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Türkiye Ekonomisi",
+    "subtopic": "Cari Denge",
+    "difficulty": 2,
+    "stem": "Bir ülkenin mal ve hizmet ihracatından elde ettiği gelirlerin, mal ve hizmet ithalatına ödediği giderlerden az olması durumunda ortaya çıkan dış ekonomik açık göstergesi hangisidir?",
+    "questionText": "Bir ülkenin mal ve hizmet ihracatından elde ettiği gelirlerin, mal ve hizmet ithalatına ödediği giderlerden az olması durumunda ortaya çıkan dış ekonomik açık göstergesi hangisidir?",
+    "options": [
+      "Bütçe Açığı",
+      "Cari İşlemler Açığı (Cari Açık)",
+      "Reeskont Açığı",
+      "Enflasyon Farkı",
+      "Operasyonel Zarar"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Cari İşlemler Dengesi, bir ülkenin dış ticaret (mal), hizmetler, birincil ve ikincil gelir dengesini kapsar. Giderlerin gelirleri aşması 'Cari Açık' olarak tanımlanır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "cari-acik",
+      "dis-ticaret",
+      "turkiye-ekonomisi"
+    ],
+    "source": "TCMB Ödemeler Dengesi İstatistikleri"
+  },
+  {
+    "id": "bgk-018",
+    "examQuestionNo": 18,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Finansal Piyasalar",
+    "subtopic": "Sermaye Piyasası Kurulu",
+    "difficulty": 1,
+    "stem": "Halka arz edilen şirketlerin hisse senetleri, tahviller ve yatırım fonları gibi sermaye piyasası araçlarının ihracını ve Borsa İstanbul işlemlerini denetleyen üst kurul hangisidir?",
+    "questionText": "Halka arz edilen şirketlerin hisse senetleri, tahviller ve yatırım fonları gibi sermaye piyasası araçlarının ihracını ve Borsa İstanbul işlemlerini denetleyen üst kurul hangisidir?",
+    "options": [
+      "Bankacılık Düzenleme ve Denetleme Kurumu (BDDK)",
+      "Sermaye Piyasası Kurulu (SPK)",
+      "Rekabet Kurumu",
+      "Kamu Gözetimi Kurumu (KGK)",
+      "Merkezi Finans ve İhale Birimi"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "6362 sayılı Sermaye Piyasası Kanunu uyarınca menkul kıymet piyasalarının, halka açık anonim ortaklıkların ve borsa aracı kurumlarının düzenleyicisi SPK'dır.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "spk",
+      "sermaye-piyasasi",
+      "borsa-istanbul"
+    ],
+    "source": "SPK Resmi Portalı"
+  },
+  {
+    "id": "bgk-019",
+    "examQuestionNo": 19,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Bankacılık ve Para Teorisi",
+    "subtopic": "Zorunlu Karşılıklar",
+    "difficulty": 3,
+    "stem": "Merkez Bankası'nın ticari bankalardan topladıkları mevduatın belirli bir oranını kendi bünyesinde bloke etmesini zorunlu kıldığı para politikası aracına ne ad verilir?",
+    "questionText": "Merkez Bankası'nın ticari bankalardan topladıkları mevduatın belirli bir oranını kendi bünyesinde bloke etmesini zorunlu kıldığı para politikası aracına ne ad verilir?",
+    "options": [
+      "Disponibilite Oranı",
+      "Zorunlu Karşılık Oranı (Munzam Karşılık)",
+      "Arbitraj Marjı",
+      "Kredi Değerleme Oranı (LTV)",
+      "Faiz Koridoru"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Zorunlu Karşılık Oranı (Munzam Karşılık), bankaların topladıkları mevduatın kanunen Merkez Bankası'nda tutmak zorunda oldukları yüzdesidir. Bu oran artırıldığında bankaların kredi verme kapasitesi ve piyasadaki para arzı daralır.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "zorunlu-karsilik",
+      "tcmb",
+      "para-politikasi-araclari"
+    ],
+    "source": "TCMB Zorunlu Karşılıklar Tebliği"
+  },
+  {
+    "id": "bgk-020",
+    "examQuestionNo": 20,
+    "section": "bankacilik-genel-kultur",
+    "sectionGroup": 1,
+    "topic": "Ziraat Finans Grubu",
+    "subtopic": "İştirakler ve Ekosistem",
+    "difficulty": 2,
+    "stem": "Ziraat Finans Grubu bünyesinde faizsiz bankacılık ilkeleriyle hizmet vermek amacıyla 2015 yılında Türkiye'nin ilk kamu katılım bankası olarak faaliyete başlayan kurum hangisidir?",
+    "questionText": "Ziraat Finans Grubu bünyesinde faizsiz bankacılık ilkeleriyle hizmet vermek amacıyla 2015 yılında Türkiye'nin ilk kamu katılım bankası olarak faaliyete başlayan kurum hangisidir?",
+    "options": [
+      "Vakıf Katılım Bankası",
+      "Ziraat Katılım Bankası",
+      "Türkiye Emlak Katılım Bankası",
+      "Kuveyt Türk",
+      "Albaraka Türk"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Ziraat Katılım Bankası A.Ş., BDDK izinleriyle 29 Mayıs 2015 tarihinde faaliyete başlamış olup Türkiye'nin kurulan ilk kamu sermayeli katılım bankasıdır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "ziraat-katilim",
+      "ziraat-finans-grubu",
+      "katilim-bankaciligi"
+    ],
+    "source": "Ziraat Katılım Resmi Portalı"
+  }
+]

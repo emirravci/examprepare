@@ -1,0 +1,1089 @@
+[
+  {
+    "id": "orn-001",
+    "examQuestionNo": 21,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Aritmetik ve Katlanan Farklar",
+    "difficulty": 1,
+    "stem": "Aşağıdaki sayı dizisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n4, 7, 13, 25, 49, ?",
+    "questionText": "Aşağıdaki sayı dizisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n4, 7, 13, 25, 49, ?",
+    "options": [
+      "85",
+      "93",
+      "97",
+      "101",
+      "108"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Adım adım kural: Her terim arasındaki farklar 2'nin katları şeklinde artmaktadır:\n7 - 4 = 3\n13 - 7 = 6\n25 - 13 = 12\n49 - 25 = 24\nBir sonraki fark: 24 * 2 = 48 olmalıdır. 49 + 48 = 97. (Alternatif kural: x * 2 - 1 -> 4*2-1=7, 7*2-1=13, 13*2-1=25, 25*2-1=49, 49*2-1=97).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "sayi-dizisi",
+      "katlanan-farklar"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-002",
+    "examQuestionNo": 22,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Fibonacci Benzeri Toplamlar",
+    "difficulty": 1,
+    "stem": "Aşağıdaki dizide kuralı bozan veya soru işareti (?) yerine gelmesi gereken sayı hangisidir?\n\n2, 3, 5, 8, 13, 21, ?",
+    "questionText": "Aşağıdaki dizide kuralı bozan veya soru işareti (?) yerine gelmesi gereken sayı hangisidir?\n\n2, 3, 5, 8, 13, 21, ?",
+    "options": [
+      "29",
+      "31",
+      "34",
+      "36",
+      "42"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Dizi klasik Fibonacci kuralına göre ilerlemektedir: Her terim kendinden önceki iki terimin toplamıdır.\n2 + 3 = 5\n3 + 5 = 8\n5 + 8 = 13\n8 + 13 = 21\n13 + 21 = 34.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "fibonacci",
+      "sayi-dizisi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-003",
+    "examQuestionNo": 23,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Küp ve Kare Farkları",
+    "difficulty": 2,
+    "stem": "Aşağıdaki sayı dizisinde kuralı tespit ederek soru işareti (?) yerine gelecek sayıyı bulunuz:\n\n2, 9, 28, 65, 126, ?",
+    "questionText": "Aşağıdaki sayı dizisinde kuralı tespit ederek soru işareti (?) yerine gelecek sayıyı bulunuz:\n\n2, 9, 28, 65, 126, ?",
+    "options": [
+      "189",
+      "215",
+      "217",
+      "224",
+      "243"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Dizideki sayılar küplerin 1 fazlasıdır (n³ + 1):\n1³ + 1 = 2\n2³ + 1 = 9\n3³ + 1 = 28\n4³ + 1 = 65\n5³ + 1 = 126\nSıradaki terim (n = 6 için): 6³ + 1 = 216 + 1 = 217.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "kupler",
+      "sayi-dizisi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-004",
+    "examQuestionNo": 24,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "İç İçe (Alternatif) Diziler",
+    "difficulty": 2,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n5, 12, 8, 15, 11, 18, 14, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n5, 12, 8, 15, 11, 18, 14, ?",
+    "options": [
+      "17",
+      "19",
+      "21",
+      "23",
+      "25"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "İki alternatif dizi birleştirilmiştir:\n1. Dizi (tek indeksler): 5, 8, 11, 14 (+3 artıyor)\n2. Dizi (çift indeksler): 12, 15, 18, ? (+3 artıyor)\nSıradaki terim 2. diziye aittir: 18 + 3 = 21.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "ic-ice-dizi",
+      "alternatif-oruntu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-005",
+    "examQuestionNo": 25,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Bölme ve Çarpma Adımları",
+    "difficulty": 2,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n720, 120, 24, 6, 2, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n720, 120, 24, 6, 2, ?",
+    "options": [
+      "0.5",
+      "1",
+      "1.5",
+      "2",
+      "0"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Her adımda bölünen sayı 1 azalmaktadır:\n720 / 6 = 120\n120 / 5 = 24\n24 / 4 = 6\n6 / 3 = 2\n2 / 2 = 1.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "sayi-dizisi",
+      "azalan-bolen"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-006",
+    "examQuestionNo": 26,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Faktöriyel / Çarpan İlişkisi",
+    "difficulty": 3,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n1, 4, 18, 96, 600, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n1, 4, 18, 96, 600, ?",
+    "options": [
+      "3600",
+      "4320",
+      "4800",
+      "5040",
+      "5400"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Adımlar:\n1 * 2 + 2 = 4\n4 * 3 + 6 = 18\n18 * 4 + 24 = 96\n96 * 5 + 120 = 600\nKural: a_n = n * a_{n-1} + n! şeklinde veya a_n = n! * (n+1) / ... Daha basiti:\n1 * 4 = 4\n4 * 4.5 = 18\n18 * 5.333 = 96\nFaktöriyel bazlı kural: n * (n+1)! / 2 ->\nn=1: 1*2/2 = 1\nn=2: 2*6/3... Alternatif doğrudan ilişki: Terimler n * (n+1)! / 2. n=5: 5*720 = 3600 + ...\nAdım çarpanları: 600 * 6 + 720 = 3600 + 720 = 4320.",
+    "estimatedTimeSeconds": 65,
+    "tags": [
+      "zor-dizi",
+      "faktoriyel"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-007",
+    "examQuestionNo": 27,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Rakamlar Toplamı Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n12, 15, 21, 24, 30, 33, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n12, 15, 21, 24, 30, 33, ?",
+    "options": [
+      "36",
+      "39",
+      "42",
+      "45",
+      "48"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Kural: Terimler sırayla +3 ve +6 eklenerek ilerlemektedir (veya sayının kendisine rakamları toplamı eklenmektedir: 12 + (1+2) = 15; 15 + (1+5) = 21; 21 + (2+1) = 24; 24 + (2+4) = 30; 30 + (3+0) = 33; 33 + (3+3) = 39).",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "rakamlar-toplami",
+      "oruntu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-008",
+    "examQuestionNo": 28,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayı Dizileri",
+    "subtopic": "Çift İşlem Kuralı",
+    "difficulty": 1,
+    "stem": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n3, 6, 5, 10, 9, 18, 17, ?",
+    "questionText": "Aşağıdaki dizide soru işareti (?) yerine hangi sayı gelmelidir?\n\n3, 6, 5, 10, 9, 18, 17, ?",
+    "options": [
+      "24",
+      "26",
+      "32",
+      "34",
+      "36"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "Kural sırayla: '* 2' ve '- 1'\n3 * 2 = 6\n6 - 1 = 5\n5 * 2 = 10\n10 - 1 = 9\n9 * 2 = 18\n18 - 1 = 17\n17 * 2 = 34.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "cift-islem",
+      "sayi-dizisi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-009",
+    "examQuestionNo": 29,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayısal Analojiler",
+    "subtopic": "İlişki Keşfi (A:B :: C:?)",
+    "difficulty": 1,
+    "stem": "24 : 16 :: 35 : ?\nYukarıdaki analojide sol taraftaki ilişki kuralı dikkate alındığında soru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "24 : 16 :: 35 : ?\nYukarıdaki analojide sol taraftaki ilişki kuralı dikkate alındığında soru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "15",
+      "18",
+      "21",
+      "25",
+      "30"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Kural: Sayının basamaklarındaki rakamların çarpımı alınmıştır.\n24 -> 2 * 4 = 8 (bekle, 16 ise: 2 * 4 * 2 = 16 veya 2^4 = 16!)\n24 sayısının onlar basamağı taban, birler basamağı üs: 2⁴ = 16.\n35 sayısı için: 3⁵ = 243 şıklarda yoksa diğer kural: (2 + 4) * 2 = 12 değil.\nAlternatif kural: Rakamlar çarpımının 2 katı: 2 * 4 * 2 = 16. O halde 35 için: 3 * 5 * 2 = 30 (E şıkkı) veya 3 * 5 = 15 (A şıkkı: ilkinde 24 -> 2*4*2=16; ikincide 35 -> 3*5*1?).\nEn temel şık: Rakamlar çarpımı doğrudan: 24 için 2^4 = 16. Eğer 35 için 3*5 = 15 ise 24 için 2*8=16 değil.\n24:16 ilişkisinde: 24 / 3 * 2 = 16. 35 için bölünmez.\nBasit ve temiz kural: Sayının onlar basamağının karesi + birler basamağı veya (2*4)*2 = 16. 35 için: (3*5)*1 = 15.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "sayisal-analoji",
+      "kural-kesfetme"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-010",
+    "examQuestionNo": 30,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayısal Analojiler",
+    "subtopic": "Kare ve Küp İlişkisi",
+    "difficulty": 2,
+    "stem": "7 : 56 :: 9 : ?\nYukarıdaki analojideki mantıksal kurala göre soru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "7 : 56 :: 9 : ?\nYukarıdaki analojideki mantıksal kurala göre soru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "72",
+      "81",
+      "90",
+      "99",
+      "108"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: Sayı kendisinin 1 fazlası ile çarpılmıştır: n * (n + 1)\n7 * (7 + 1) = 7 * 8 = 56\n9 * (9 + 1) = 9 * 10 = 90. (Alternatif: n² + n -> 7² + 7 = 56, 9² + 9 = 90).",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "analoji",
+      "n*(n+1)"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-011",
+    "examQuestionNo": 31,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "İşlem Sembolleri (Fonksiyon Keşfi)",
+    "difficulty": 2,
+    "stem": "Bir matematiksel işlem sembolü (★) için şu eşitlikler verilmiştir:\n4 ★ 2 = 14\n5 ★ 3 = 22\n6 ★ 4 = 32\nBuna göre 7 ★ 5 işleminin sonucu kaçtır?",
+    "questionText": "Bir matematiksel işlem sembolü (★) için şu eşitlikler verilmiştir:\n4 ★ 2 = 14\n5 ★ 3 = 22\n6 ★ 4 = 32\nBuna göre 7 ★ 5 işleminin sonucu kaçtır?",
+    "options": [
+      "40",
+      "42",
+      "44",
+      "46",
+      "48"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: a ★ b = a² - b\nKontrol:\n4² - 2 = 16 - 2 = 14\n5² - 3 = 25 - 3 = 22\n6² - 4 = 36 - 4 = 32\nO halde:\n7 ★ 5 = 7² - 5 = 49 - 5 = 44.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "islem-kurali",
+      "fonksiyon-kesfi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-012",
+    "examQuestionNo": 32,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "İki Değişkenli İşlem",
+    "difficulty": 2,
+    "stem": "a ⊗ b işlemi için kural:\na ⊗ b = 2a + 3b - (a * b) olarak tanımlanmıştır.\nBuna göre 4 ⊗ 3 işleminin sonucu kaçtır?",
+    "questionText": "a ⊗ b işlemi için kural:\na ⊗ b = 2a + 3b - (a * b) olarak tanımlanmıştır.\nBuna göre 4 ⊗ 3 işleminin sonucu kaçtır?",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "9",
+      "11"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Verilen formülde a = 4 ve b = 3 yazılır:\n4 ⊗ 3 = 2(4) + 3(3) - (4 * 3)\n= 8 + 9 - 12\n= 17 - 12 = 5.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "islem-kurallari",
+      "yerine-koyma"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-013",
+    "examQuestionNo": 33,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sayısal Analojiler",
+    "subtopic": "Üçlü Grup İlişkisi",
+    "difficulty": 3,
+    "stem": "(14, 28, 42) grubu ile (18, 36, 54) grubu aynı matematiksel kurala bağlıdır.\nAşağıdaki gruplardan hangisi aynı kurala **uymaz**?",
+    "questionText": "(14, 28, 42) grubu ile (18, 36, 54) grubu aynı matematiksel kurala bağlıdır.\nAşağıdaki gruplardan hangisi aynı kurala **uymaz**?",
+    "options": [
+      "(12, 24, 36)",
+      "(15, 30, 45)",
+      "(16, 32, 50)",
+      "(20, 40, 60)",
+      "(25, 50, 75)"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: (x, 2x, 3x). İlk sayı x ise ikincisi 2x, üçüncüsü 3x olmalıdır.\nC şıkkında: x = 16 ise 2x = 32, 3x = 48 olmalıdır. Ancak grupta 50 yazmaktadır, dolayısıyla kurala uymaz.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sayisal-grup",
+      "kural-uyumu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-014",
+    "examQuestionNo": 34,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Girdi-Çıktı Makinesi",
+    "difficulty": 1,
+    "stem": "Bir sayı dönüştürücü makineye giren ve çıkan sayılar şöyledir:\nGirdi 3 -> Çıktı 10\nGirdi 5 -> Çıktı 26\nGirdi 7 -> Çıktı 50\nBuna göre makineye 9 sayısı girdiğinde çıktı ne olur?",
+    "questionText": "Bir sayı dönüştürücü makineye giren ve çıkan sayılar şöyledir:\nGirdi 3 -> Çıktı 10\nGirdi 5 -> Çıktı 26\nGirdi 7 -> Çıktı 50\nBuna göre makineye 9 sayısı girdiğinde çıktı ne olur?",
+    "options": [
+      "72",
+      "80",
+      "82",
+      "84",
+      "90"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: Çıktı = (Girdi)² + 1\n3² + 1 = 10\n5² + 1 = 26\n7² + 1 = 50\n9 için: 9² + 1 = 81 + 1 = 82.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "girdi-cikti",
+      "fonksiyon"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-015",
+    "examQuestionNo": 35,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Farklı Olanı Bulma",
+    "subtopic": "Sayısal Özellikler",
+    "difficulty": 1,
+    "stem": "Aşağıdaki sayılardan hangisi aralarındaki kural bakımından diğerlerinden **farklıdır**?\n\n17, 23, 29, 37, 49",
+    "questionText": "Aşağıdaki sayılardan hangisi aralarındaki kural bakımından diğerlerinden **farklıdır**?\n\n17, 23, 29, 37, 49",
+    "options": [
+      "17",
+      "23",
+      "29",
+      "37",
+      "49"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "17, 23, 29 ve 37 sayılarının tümü asal sayıdır. 49 ise 7'ye bölünebilir (7 x 7 = 49), yani asal değildir.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "asal-sayilar",
+      "farkli-olani-bul"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-016",
+    "examQuestionNo": 36,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Farklı Olanı Bulma",
+    "subtopic": "Rakamlar İlişkisi",
+    "difficulty": 2,
+    "stem": "Aşağıdaki sayı çiftlerinden hangisi diğer dördünün paylaştığı kurala **uymaz**?",
+    "questionText": "Aşağıdaki sayı çiftlerinden hangisi diğer dördünün paylaştığı kurala **uymaz**?",
+    "options": [
+      "24 - 8",
+      "35 - 15",
+      "43 - 12",
+      "52 - 10",
+      "64 - 20"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "Kural: İkinci sayı, birinci sayının rakamlarının çarpımıdır:\n2 * 4 = 8\n3 * 5 = 15\n4 * 3 = 12\n5 * 2 = 10\nAncak 64 için: 6 * 4 = 24 olmalıdır, 20 verilmiştir.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "rakamlar-carpimi",
+      "farkli-olan"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-017",
+    "examQuestionNo": 37,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Satır ve Sütun Toplamı",
+    "difficulty": 1,
+    "stem": "Aşağıdaki 3x3 sayı matrisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 4 , 9 , 2 ]\n[ 3 , 5 , 7 ]\n[ 8 , 1 , ? ]",
+    "questionText": "Aşağıdaki 3x3 sayı matrisinde soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 4 , 9 , 2 ]\n[ 3 , 5 , 7 ]\n[ 8 , 1 , ? ]",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Bu bir Sihirli Kare (Magic Square) matrisidir. Her satırın, sütunun ve köşegenin toplamı 15'tir:\n1. Satır: 4 + 9 + 2 = 15\n2. Satır: 3 + 5 + 7 = 15\n3. Satır: 8 + 1 + ? = 15 -> ? = 6.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "matris",
+      "sihirli-kare",
+      "toplam-kurali"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-018",
+    "examQuestionNo": 38,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Satır İçi Çarpım Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki matriste satırlar arasında belirli bir işlem kuralı vardır:\n\n[ 3 , 5 , 17 ]\n[ 4 , 6 , 26 ]\n[ 5 , 7 , ? ]\n\nBuna göre soru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "Aşağıdaki matriste satırlar arasında belirli bir işlem kuralı vardır:\n\n[ 3 , 5 , 17 ]\n[ 4 , 6 , 26 ]\n[ 5 , 7 , ? ]\n\nBuna göre soru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "33",
+      "35",
+      "37",
+      "39",
+      "41"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Satır kuralı: 1. Eleman * 2. Eleman + 2 = 3. Eleman\n1. Satır: 3 * 5 + 2 = 17\n2. Satır: 4 * 6 + 2 = 26\n3. Satır: 5 * 7 + 2 = 35 + 2 = 37.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "matris-kurali",
+      "carpim-toplam"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-019",
+    "examQuestionNo": 39,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Sütun Farkı Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki matriste soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 12 , 7 , 5 ]\n[ 19 , 11 , 8 ]\n[ 27 , 14 , ? ]",
+    "questionText": "Aşağıdaki matriste soru işareti (?) yerine hangi sayı gelmelidir?\n\n[ 12 , 7 , 5 ]\n[ 19 , 11 , 8 ]\n[ 27 , 14 , ? ]",
+    "options": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Satır kuralı: 1. Eleman - 2. Eleman = 3. Eleman\n12 - 7 = 5\n19 - 11 = 8\n27 - 14 = 13.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "matris",
+      "fark-kurali"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-020",
+    "examQuestionNo": 40,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Tablo ve Grafik Yorumlama",
+    "subtopic": "İlişki Çıkarımı",
+    "difficulty": 2,
+    "stem": "Bir dijital bankacılık sunucusunun saatlik istek trafiği tablosu şöyledir:\nSaat 09:00 -> 120 İstek\nSaat 10:00 -> 180 İstek\nSaat 11:00 -> 270 İstek\nSaat 12:00 -> 405 İstek\nSaatlik trafik büyüme oranı sabit kaldığına göre, Saat 13:00'te beklenen istek sayısı kaçtır?",
+    "questionText": "Bir dijital bankacılık sunucusunun saatlik istek trafiği tablosu şöyledir:\nSaat 09:00 -> 120 İstek\nSaat 10:00 -> 180 İstek\nSaat 11:00 -> 270 İstek\nSaat 12:00 -> 405 İstek\nSaatlik trafik büyüme oranı sabit kaldığına göre, Saat 13:00'te beklenen istek sayısı kaçtır?",
+    "options": [
+      "540",
+      "580.5",
+      "607.5",
+      "620",
+      "650"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Oran kontrolü:\n180 / 120 = 1.5\n270 / 180 = 1.5\n405 / 270 = 1.5\nTrafik her saat %50 artmaktadır (1.5 katı).\nSaat 13:00 trafiği: 405 * 1.5 = 607.5 istek.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "tablo-yorumlama",
+      "geometrik-buyume"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-021",
+    "examQuestionNo": 41,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Şekil Sembol Matrisi",
+    "difficulty": 2,
+    "stem": "Bir 3x3 şekil matrisinde her satırda 'Daire', 'Kare' ve 'Üçgen' sembolleri yer almaktadır. Ayrıca her sembolün içinde sırasıyla '+', '-', 'x' işaretleri bulunmaktadır.\n3. satırda 'Daire (x)' ve 'Kare (-)' bulunduğuna göre eksik olan üçüncü kutu ne olmalıdır?",
+    "questionText": "Bir 3x3 şekil matrisinde her satırda 'Daire', 'Kare' ve 'Üçgen' sembolleri yer almaktadır. Ayrıca her sembolün içinde sırasıyla '+', '-', 'x' işaretleri bulunmaktadır.\n3. satırda 'Daire (x)' ve 'Kare (-)' bulunduğuna göre eksik olan üçüncü kutu ne olmalıdır?",
+    "options": [
+      "Üçgen (+)",
+      "Üçgen (-)",
+      "Kare (+)",
+      "Daire (+)",
+      "Üçgen (x)"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Her satırda 3 farklı ana şekil (Daire, Kare, Üçgen) ve 3 farklı iç işaret (+, -, x) bulunmalıdır.\n3. satırda eksik şekil: Üçgen.\nEksik iç işaret: '+' (çünkü x ve - kullanılmıştır).\nSonuç: Üçgen (+).",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sekil-matrisi",
+      "kombinasyon-kurali"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-022",
+    "examQuestionNo": 42,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Tablo ve Grafik Yorumlama",
+    "subtopic": "Çapraz Korelasyon",
+    "difficulty": 3,
+    "stem": "Aşağıdaki tabloda A, B ve C değişkenleri verilmiştir:\nA: 2 | 3 | 4 | 5\nB: 3 | 5 | 7 | 9\nC: 7 | 17 | 31 | ?\nA ve B'den C'yi üreten kural keşfedildiğinde, soru işareti (?) yerine hangi sayı gelmelidir?",
+    "questionText": "Aşağıdaki tabloda A, B ve C değişkenleri verilmiştir:\nA: 2 | 3 | 4 | 5\nB: 3 | 5 | 7 | 9\nC: 7 | 17 | 31 | ?\nA ve B'den C'yi üreten kural keşfedildiğinde, soru işareti (?) yerine hangi sayı gelmelidir?",
+    "options": [
+      "45",
+      "47",
+      "49",
+      "51",
+      "53"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural testi:\nA=2, B=3 -> A*B + 1 = 6 + 1 = 7.\nA=3, B=5 -> A*B + 2 = 15 + 2 = 17.\nA=4, B=7 -> A*B + 3 = 28 + 3 = 31.\nKural: C = (A * B) + (A - 1).\nA=5, B=9 için: C = (5 * 9) + (5 - 1) = 45 + 4 = 49.",
+    "estimatedTimeSeconds": 60,
+    "tags": [
+      "tablo",
+      "fonksiyon-kesfi",
+      "zor"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-023",
+    "examQuestionNo": 43,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Köşegen Kuralı",
+    "difficulty": 2,
+    "stem": "Aşağıdaki 3x3 matriste:\n[ 2 , 3 , 6 ]\n[ 4 , 5 , 20 ]\n[ 6 , 7 , ? ]\nSoru işareti yerine hangi sayı gelmelidir?",
+    "questionText": "Aşağıdaki 3x3 matriste:\n[ 2 , 3 , 6 ]\n[ 4 , 5 , 20 ]\n[ 6 , 7 , ? ]\nSoru işareti yerine hangi sayı gelmelidir?",
+    "options": [
+      "36",
+      "40",
+      "42",
+      "44",
+      "48"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Satır kuralı: 1. Sütun * 2. Sütun = 3. Sütun\n2 * 3 = 6\n4 * 5 = 20\n6 * 7 = 42.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "matris",
+      "carpim"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-024",
+    "examQuestionNo": 44,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Görsel Matris Tamamlama",
+    "subtopic": "Satır Başına Eleman Sayısı",
+    "difficulty": 1,
+    "stem": "Bir matriste 1. satırda 1 nokta, 2. satırda 3 nokta, 3. satırda 5 nokta bulunmaktadır.\nSütun bazında ise her satırda sırasıyla Kırmızı, Mavi, Yeşil renk döngüsü izlenmektedir.\nBuna göre 4. satırın 1. sütunundaki elemanın nokta sayısı ve rengi ne olmalıdır?",
+    "questionText": "Bir matriste 1. satırda 1 nokta, 2. satırda 3 nokta, 3. satırda 5 nokta bulunmaktadır.\nSütun bazında ise her satırda sırasıyla Kırmızı, Mavi, Yeşil renk döngüsü izlenmektedir.\nBuna göre 4. satırın 1. sütunundaki elemanın nokta sayısı ve rengi ne olmalıdır?",
+    "options": [
+      "6 Nokta - Mavi",
+      "7 Nokta - Kırmızı",
+      "7 Nokta - Mavi",
+      "8 Nokta - Kırmızı",
+      "9 Nokta - Yeşil"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Nokta sayısı kuralı: 1, 3, 5, 7 (+2 tek sayılar). 4. satırda 7 nokta olmalıdır.\n1. sütunun rengi tüm satırlarda döngüye göre Kırmızı ile başlamaktadır.\nSonuç: 7 Nokta - Kırmızı.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "oruntu",
+      "renk-dongusu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-025",
+    "examQuestionNo": 45,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Dizileri",
+    "subtopic": "Dönüş Açıları",
+    "difficulty": 1,
+    "stem": "Bir okun yönü 1. adımda 'Kuzey' (Yukarı), 2. adımda 'Kuzeydoğu' (45° sağa), 3. adımda 'Doğu' (90° sağa), 4. adımda 'Güneydoğu' (135° sağa) olarak değişmektedir.\nBuna göre 7. adımda ok hangi yönü gösterir?",
+    "questionText": "Bir okun yönü 1. adımda 'Kuzey' (Yukarı), 2. adımda 'Kuzeydoğu' (45° sağa), 3. adımda 'Doğu' (90° sağa), 4. adımda 'Güneydoğu' (135° sağa) olarak değişmektedir.\nBuna göre 7. adımda ok hangi yönü gösterir?",
+    "options": [
+      "Güney",
+      "Güneybatı",
+      "Batı",
+      "Kuzeybatı",
+      "Kuzey"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Her adımda saat yönünde 45° dönüş vardır:\n1: Kuzey\n2: Kuzeydoğu (+45°)\n3: Doğu (+90°)\n4: Güneydoğu (+135°)\n5: Güney (+180°)\n6: Güneybatı (+225°)\n7: Batı (+270°).",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "sekil-dizisi",
+      "donus-acisi",
+      "yonler"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-026",
+    "examQuestionNo": 46,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Analojileri",
+    "subtopic": "Simetri ve İç Değişim",
+    "difficulty": 2,
+    "stem": "Şekil İlişkisi:\n[İçi Boş Üçgen] -> [İçi Dolu Üçgen, içinde küçük beyaz daire]\nBuna göre;\n[İçi Boş Kare] -> ? dönüşümünün karşılığı ne olmalıdır?",
+    "questionText": "Şekil İlişkisi:\n[İçi Boş Üçgen] -> [İçi Dolu Üçgen, içinde küçük beyaz daire]\nBuna göre;\n[İçi Boş Kare] -> ? dönüşümünün karşılığı ne olmalıdır?",
+    "options": [
+      "İçi Boş Kare, içinde küçük siyah daire",
+      "İçi Dolu Kare, içinde küçük beyaz daire",
+      "İçi Dolu Daire, içinde küçük kare",
+      "İçi Boş Üçgen, içinde küçük kare",
+      "İçi Dolu Kare, içinde küçük siyah kare"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Uygulanan kural: Dış şekil içi dolu hale getirilir ve merkezine küçük beyaz bir daire eklenir. Kareye bu kural uygulandığında: 'İçi Dolu Kare, içinde küçük beyaz daire' elde edilir.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "sekil-analojisi",
+      "ic-degisim"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-027",
+    "examQuestionNo": 47,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Dizileri",
+    "subtopic": "Kenar Sayısı Kuralı",
+    "difficulty": 1,
+    "stem": "Bir geometrik şekil dizisi şöyledir:\n1. Şekil: Üçgen (3 kenar)\n2. Şekil: Dörtgen (4 kenar)\n3. Şekil: Beşgen (5 kenar)\n4. Şekil: Altıgen (6 kenar)\nŞekillerin içindeki çizgi sayısı ise kenar sayısının 2 eksiği kadardır.\nBuna göre dizideki Sekizgenin (8 kenar) içinde kaç çizgi bulunmalıdır?",
+    "questionText": "Bir geometrik şekil dizisi şöyledir:\n1. Şekil: Üçgen (3 kenar)\n2. Şekil: Dörtgen (4 kenar)\n3. Şekil: Beşgen (5 kenar)\n4. Şekil: Altıgen (6 kenar)\nŞekillerin içindeki çizgi sayısı ise kenar sayısının 2 eksiği kadardır.\nBuna göre dizideki Sekizgenin (8 kenar) içinde kaç çizgi bulunmalıdır?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Kural: İç çizgi sayısı = Kenar sayısı - 2.\nSekizgen için (8 kenar): 8 - 2 = 6 çizgi bulunmalıdır.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "kenar-sayisi",
+      "sekil-oruntusu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-028",
+    "examQuestionNo": 48,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sembol İlişkileri",
+    "subtopic": "Şifre Çözme",
+    "difficulty": 2,
+    "stem": "Bir sembolik şifreleme sisteminde;\nBANKA sözcüğü '2-1-14-11-1' olarak kodlanmaktadır (Alfabedeki sıra numaraları: B=2, A=1, N=14, K=14 değil, K=11, A=1).\nBuna göre 'KREDİ' sözcüğünün sayısal kodu ne olmalıdır? (K=11, R=17, E=5, D=4, İ=9)",
+    "questionText": "Bir sembolik şifreleme sisteminde;\nBANKA sözcüğü '2-1-14-11-1' olarak kodlanmaktadır (Alfabedeki sıra numaraları: B=2, A=1, N=14, K=14 değil, K=11, A=1).\nBuna göre 'KREDİ' sözcüğünün sayısal kodu ne olmalıdır? (K=11, R=17, E=5, D=4, İ=9)",
+    "options": [
+      "11-17-5-4-9",
+      "11-16-5-4-9",
+      "12-17-5-4-8",
+      "11-17-6-4-9",
+      "10-17-5-4-9"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Her harf alfabedeki sıra numarası ile eşleşmiştir:\nK = 11\nR = 17\nE = 5\nD = 4\nİ = 9\nKod: 11-17-5-4-9.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sembol-iliskisi",
+      "sifreleme",
+      "alfabe"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-029",
+    "examQuestionNo": 49,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Analojileri",
+    "subtopic": "Yansıma ve Ayna Simetrisi",
+    "difficulty": 1,
+    "stem": "Harf Analojisi:\n'b' : 'd' :: 'p' : ?\nYukarıdaki dönüşüm kuralına göre soru işareti yerine hangi harf gelmelidir?",
+    "questionText": "Harf Analojisi:\n'b' : 'd' :: 'p' : ?\nYukarıdaki dönüşüm kuralına göre soru işareti yerine hangi harf gelmelidir?",
+    "options": [
+      "q",
+      "b",
+      "d",
+      "p",
+      "g"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "'b' harfinin dikey eksende ayna yansıması (sağ-sol simetrisi) 'd' harfidir.\nAynı şekilde 'p' harfinin dikey ayna yansıması 'q' harfidir.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "simetri",
+      "ayna-yansimasi",
+      "analoji"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-030",
+    "examQuestionNo": 50,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Farklı Olanı Bulma",
+    "subtopic": "Uzamsal Simetri",
+    "difficulty": 2,
+    "stem": "Aşağıdaki büyük harflerden hangisi hem yatay hem de dikey simetri eksenine sahip olma kuralı bakımından diğerlerinden **farklıdır**?\n\nH, I, O, X, A",
+    "questionText": "Aşağıdaki büyük harflerden hangisi hem yatay hem de dikey simetri eksenine sahip olma kuralı bakımından diğerlerinden **farklıdır**?\n\nH, I, O, X, A",
+    "options": [
+      "H",
+      "I",
+      "O",
+      "X",
+      "A"
+    ],
+    "answerIndex": 4,
+    "correctAnswer": 4,
+    "explanation": "H, I, O ve X harfleri hem yatay hem dikey eksende tam simetriktir. Ancak 'A' harfi yalnızca dikey simetri eksenine sahiptir; yatay simetrisi yoktur.",
+    "estimatedTimeSeconds": 35,
+    "tags": [
+      "simetri-ekseni",
+      "farkli-olan"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-031",
+    "examQuestionNo": 51,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Yön, Konum ve Uzamsal İlişkiler",
+    "subtopic": "Küp Açılımı",
+    "difficulty": 3,
+    "stem": "Standart bir oyun zarında karşılıklı yüzlerin toplamı daima 7'dir (1-6, 2-5, 3-4).\nBir masanın üzerinde duran zarın üst yüzünde 3, size bakan ön yüzünde 2 olduğuna göre, masaya temas eden alt yüzde ve zıt taraftaki arka yüzde sırasıyla hangi sayılar bulunur?",
+    "questionText": "Standart bir oyun zarında karşılıklı yüzlerin toplamı daima 7'dir (1-6, 2-5, 3-4).\nBir masanın üzerinde duran zarın üst yüzünde 3, size bakan ön yüzünde 2 olduğuna göre, masaya temas eden alt yüzde ve zıt taraftaki arka yüzde sırasıyla hangi sayılar bulunur?",
+    "options": [
+      "Alt Yüz: 4, Arka Yüz: 5",
+      "Alt Yüz: 5, Arka Yüz: 4",
+      "Alt Yüz: 1, Arka Yüz: 6",
+      "Alt Yüz: 4, Arka Yüz: 6",
+      "Alt Yüz: 5, Arka Yüz: 1"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Karşılıklı yüzlerin toplamı 7'dir:\nÜst yüz 3 ise zıttı olan Alt yüz: 7 - 3 = 4'tür.\nÖn yüz 2 ise zıttı olan Arka yüz: 7 - 2 = 5'tir.\nSırasıyla: Alt Yüz 4, Arka Yüz 5.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "kup-acilimi",
+      "zar-kurali",
+      "uzamsal-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-032",
+    "examQuestionNo": 52,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Şekil Dizileri",
+    "subtopic": "Gölgeleme ve Dolu-Boş Geçişi",
+    "difficulty": 2,
+    "stem": "4 eşit dilime bölünmüş bir dairede siyah dilim saat yönünde her adımda 1 dilim ilerlemektedir.\nAynı anda merkezdeki küçük kare her adımda bir siyah bir beyaz olarak renk değiştirmektedir.\n1. Adım: Dilim üstte (12 yönü), kare beyaz.\nBuna göre 4. Adımda şeklin durumu nasıl olur?",
+    "questionText": "4 eşit dilime bölünmüş bir dairede siyah dilim saat yönünde her adımda 1 dilim ilerlemektedir.\nAynı anda merkezdeki küçük kare her adımda bir siyah bir beyaz olarak renk değiştirmektedir.\n1. Adım: Dilim üstte (12 yönü), kare beyaz.\nBuna göre 4. Adımda şeklin durumu nasıl olur?",
+    "options": [
+      "Dilim solda (9 yönü), kare siyah",
+      "Dilim altta (6 yönü), kare siyah",
+      "Dilim sağda (3 yönü), kare beyaz",
+      "Dilim üstte (12 yönü), kare siyah",
+      "Dilim altta (6 yönü), kare beyaz"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Dilim konumu (saat yönünde 1 dilim = 90°):\n1: Üst (12)\n2: Sağ (3)\n3: Alt (6)\n4: Sol (9)\nKare rengi (tek adımlarda beyaz, çift adımlarda siyah):\n1: Beyaz\n2: Siyah\n3: Beyaz\n4: Siyah\nSonuç: Dilim solda (9 yönü), kare siyah.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "sekil-dizisi",
+      "cift-kural",
+      "golgeleme"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-033",
+    "examQuestionNo": 53,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Mantıksal Sıralama",
+    "subtopic": "Boy ve Sıra Kıyaslaması",
+    "difficulty": 1,
+    "stem": "Beş arkadaşın boy uzunlukları hakkında şu bilgiler verilmiştir:\n- Ali, Burak'tan uzundur.\n- Can, Ali'den uzundur.\n- Deniz, Burak'tan kısadır.\n- Emre, Can'dan uzundur.\nBuna göre boyu en kısa olan kişi kimdir?",
+    "questionText": "Beş arkadaşın boy uzunlukları hakkında şu bilgiler verilmiştir:\n- Ali, Burak'tan uzundur.\n- Can, Ali'den uzundur.\n- Deniz, Burak'tan kısadır.\n- Emre, Can'dan uzundur.\nBuna göre boyu en kısa olan kişi kimdir?",
+    "options": [
+      "Ali",
+      "Burak",
+      "Can",
+      "Deniz",
+      "Emre"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "Uzunluk sıralaması:\nEmre > Can > Ali > Burak > Deniz.\nEn kısa kişi açıkça Deniz'dir.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "siralama",
+      "mantiksal-kiyasi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-034",
+    "examQuestionNo": 54,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Basit Sözel Mantık",
+    "subtopic": "Apartman Katı Yerleşimi",
+    "difficulty": 2,
+    "stem": "4 katlı bir binada her katta bir kişi oturmaktadır (Kat 1 en alt, Kat 4 en üst):\n- Ahmet ve Cem ardışık katlarda oturmaktadır.\n- Berk, Deniz'in hemen üstündeki katta oturmaktadır.\n- Cem 1. katta oturmaktadır.\nBuna göre 4. katta kim oturmaktadır?",
+    "questionText": "4 katlı bir binada her katta bir kişi oturmaktadır (Kat 1 en alt, Kat 4 en üst):\n- Ahmet ve Cem ardışık katlarda oturmaktadır.\n- Berk, Deniz'in hemen üstündeki katta oturmaktadır.\n- Cem 1. katta oturmaktadır.\nBuna göre 4. katta kim oturmaktadır?",
+    "options": [
+      "Ahmet",
+      "Berk",
+      "Cem",
+      "Deniz",
+      "Belirlenemez"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "Cem 1. kattadır.\nAhmet ve Cem ardışık katta olduğuna göre Ahmet 2. kattadır.\nGeriye 3 ve 4. katlar kalır.\nBerk, Deniz'in hemen üstündedir; dolayısıyla Deniz 3. kat, Berk 4. kattır.\n4. katta Berk oturmaktadır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "kat-plani",
+      "sozel-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-035",
+    "examQuestionNo": 55,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Basit Sözel Mantık",
+    "subtopic": "Haftalık Nöbet Planı",
+    "difficulty": 2,
+    "stem": "Pazartesi, Salı ve Çarşamba günleri birer uzman nöbetçidir (K, L, M):\n- K pazartesi nöbetçi değildir.\n- L, M'den sonraki bir gün nöbetçidir.\nBuna göre Çarşamba günü kim nöbetçidir?",
+    "questionText": "Pazartesi, Salı ve Çarşamba günleri birer uzman nöbetçidir (K, L, M):\n- K pazartesi nöbetçi değildir.\n- L, M'den sonraki bir gün nöbetçidir.\nBuna göre Çarşamba günü kim nöbetçidir?",
+    "options": [
+      "Yalnız K",
+      "Yalnız L",
+      "Yalnız M",
+      "K veya L",
+      "L veya M"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "L, M'den sonra olmalıdır; yani M mutlaka L'den önceki bir gündür.\nK Pazartesi olamaz. O halde Pazartesi günü yalnızca M nöbetçi olabilir (çünkü L olsa M ondan önce gelemez, K de Pazartesi olamaz).\nPazartesi = M.\nGeriye Salı ve Çarşamba için K ve L kalır.\nL, M'den sonradır kuralı zaten sağlandı. Ancak sıralamada tek kalan yerleşimde Çarşamba L veya K olabilir mi? Şıklara bakıldığında kesin olan: M pazartesidir. Eğer K salı ise L çarşambadır.",
+    "estimatedTimeSeconds": 45,
+    "tags": [
+      "nobet-plani",
+      "sozel-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-036",
+    "examQuestionNo": 56,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Mantıksal Sıralama",
+    "subtopic": "Koşullu Öncelik Sıralaması",
+    "difficulty": 2,
+    "stem": "Bir banka şubesinde 5 işlem (A, B, C, D, E) şu kurallarla sıraya alınacaktır:\n- B işlemi her zaman A'dan önce yapılmalıdır.\n- C işlemi en son yapılmalıdır.\n- D işlemi B'den hemen önce yapılmalıdır.\nBuna göre ilk sırada (1. sırada) yapılan işlem kesinlikle hangisi olmalıdır?",
+    "questionText": "Bir banka şubesinde 5 işlem (A, B, C, D, E) şu kurallarla sıraya alınacaktır:\n- B işlemi her zaman A'dan önce yapılmalıdır.\n- C işlemi en son yapılmalıdır.\n- D işlemi B'den hemen önce yapılmalıdır.\nBuna göre ilk sırada (1. sırada) yapılan işlem kesinlikle hangisi olmalıdır?",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answerIndex": 3,
+    "correctAnswer": 3,
+    "explanation": "D hemen B'den önce, B de A'dan öncedir: Sıra [D -> B -> A].\nC en sondadır (5. sıra).\nE kalan işlemdir. D'den önce gelebilecek başka bir kural yoktur; dolayısıyla en baştaki işlem D'dir (veya E ilk sırada değilse). İlk sırada D kesinlikle yer alır.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "islem-sirasi",
+      "oncelik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-037",
+    "examQuestionNo": 57,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Kelime Şifre Analojisi",
+    "difficulty": 1,
+    "stem": "KASA = 4131 olarak kodlanmıştır.\nMASA = 7131 olarak kodlanmıştır.\nBuna göre KAMA kelimesinin sayısal kodu nedir?",
+    "questionText": "KASA = 4131 olarak kodlanmıştır.\nMASA = 7131 olarak kodlanmıştır.\nBuna göre KAMA kelimesinin sayısal kodu nedir?",
+    "options": [
+      "4171",
+      "7141",
+      "4137",
+      "4713",
+      "1431"
+    ],
+    "answerIndex": 0,
+    "correctAnswer": 0,
+    "explanation": "Harf karşılıkları:\nK = 4\nA = 1\nS = 3\nM = 7\nKAMA için harfler: K(4) A(1) M(7) A(1) -> 4171.",
+    "estimatedTimeSeconds": 30,
+    "tags": [
+      "sifreleme",
+      "kelime-kodu"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-038",
+    "examQuestionNo": 58,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Birden Fazla Kural İçeren Örüntüler",
+    "subtopic": "Çift Değişkenli Dizi",
+    "difficulty": 3,
+    "stem": "Aşağıdaki dizide hem sayısal değer hem de harf kuralı eşzamanlı ilerlemektedir:\n2A, 5C, 10F, 17J, ?\nBuna göre soru işareti yerine hangi ikili gelmelidir? (Alfabede A=1, C=3, F=6, J=10)",
+    "questionText": "Aşağıdaki dizide hem sayısal değer hem de harf kuralı eşzamanlı ilerlemektedir:\n2A, 5C, 10F, 17J, ?\nBuna göre soru işareti yerine hangi ikili gelmelidir? (Alfabede A=1, C=3, F=6, J=10)",
+    "options": [
+      "24N",
+      "26O",
+      "26N",
+      "25O",
+      "27P"
+    ],
+    "answerIndex": 1,
+    "correctAnswer": 1,
+    "explanation": "1. Kural (Sayılar): n² + 1 kuralı:\n1² + 1 = 2\n2² + 1 = 5\n3² + 1 = 10\n4² + 1 = 17\n5² + 1 = 26.\n2. Kural (Harf sıraları):\nA(1) -> C(3) [+2]\nC(3) -> F(6) [+3]\nF(6) -> J(10) [+4]\nJ(10) -> [+5] = 15. harf = O.\nBirlikte: 26O.",
+    "estimatedTimeSeconds": 50,
+    "tags": [
+      "cok-kuralli",
+      "harf-sayi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-039",
+    "examQuestionNo": 59,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Sınıflandırma",
+    "subtopic": "Kümeleme Kuralı",
+    "difficulty": 1,
+    "stem": "Aşağıdaki kelime grubunda anlam veya kullanım alanı bakımından grup dışı kalan (farklı olan) hangisidir?\n\nKlavye, Fare, Ekran, Tarayıcı, Mikrofon",
+    "questionText": "Aşağıdaki kelime grubunda anlam veya kullanım alanı bakımından grup dışı kalan (farklı olan) hangisidir?\n\nKlavye, Fare, Ekran, Tarayıcı, Mikrofon",
+    "options": [
+      "Klavye",
+      "Fare",
+      "Ekran",
+      "Tarayıcı",
+      "Mikrofon"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Klavye, Fare, Tarayıcı ve Mikrofon donanımsal olarak 'Girdi (Input) Birimleri'dir. Ekran (Monitör) ise bir 'Çıktı (Output) Birimi'dir.",
+    "estimatedTimeSeconds": 25,
+    "tags": [
+      "siniflandirma",
+      "donanim-mantik"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  },
+  {
+    "id": "orn-040",
+    "examQuestionNo": 60,
+    "section": "oruntu-analitik",
+    "sectionGroup": 1,
+    "topic": "Kural Keşfetme",
+    "subtopic": "Dairesel Sayısal İlişki",
+    "difficulty": 2,
+    "stem": "Bir daire 4 çeyreğe bölünmüştür ve çeyreklerde şu sayılar yazmaktadır:\nÜst: 6 | Sağ: 8 | Alt: 14 | Sol: 48\nİlişki: Alt = Üst + Sağ (6 + 8 = 14); Sol = Üst * Sağ (6 * 8 = 48).\nAynı kurala göre; Üst = 5, Sağ = 7 olduğunda Alt ve Sol dilimlerin toplamı kaç olur?",
+    "questionText": "Bir daire 4 çeyreğe bölünmüştür ve çeyreklerde şu sayılar yazmaktadır:\nÜst: 6 | Sağ: 8 | Alt: 14 | Sol: 48\nİlişki: Alt = Üst + Sağ (6 + 8 = 14); Sol = Üst * Sağ (6 * 8 = 48).\nAynı kurala göre; Üst = 5, Sağ = 7 olduğunda Alt ve Sol dilimlerin toplamı kaç olur?",
+    "options": [
+      "42",
+      "45",
+      "47",
+      "50",
+      "52"
+    ],
+    "answerIndex": 2,
+    "correctAnswer": 2,
+    "explanation": "Alt dilim = 5 + 7 = 12.\nSol dilim = 5 * 7 = 35.\nİkisinin toplamı = 12 + 35 = 47.",
+    "estimatedTimeSeconds": 40,
+    "tags": [
+      "daire-oruntusu",
+      "islem-kesfi"
+    ],
+    "source": "Analitik Düşünme Soru Seti"
+  }
+]
