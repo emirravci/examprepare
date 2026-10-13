@@ -14,6 +14,7 @@ import {
 } from './supabase.js';
 
 import { db } from './db.js';
+import { englishMaster } from './english_master.js';
 
 // Global Uygulama Durumu
 const state = {
@@ -94,6 +95,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     initReviewMode();
     initProfileForm();
     initKeyboardShortcuts();
+
+    // 4. İngilizce Akademi Modülü
+    englishMaster.init();
+    document.addEventListener('view-english-master-loaded', () => englishMaster.init());
 });
 
 // ==============================================================================

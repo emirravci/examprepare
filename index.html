@@ -555,6 +555,13 @@
                         </button>
                     </li>
                     <li class="nav-item">
+                        <button data-view-target="english-master" class="nav-btn" style="position: relative;">
+                            <i class="fa-solid fa-language text-accent"></i>
+                            <span>İngilizce Akademi</span>
+                            <span class="badge badge-accent" style="font-size: 0.65rem; padding: 2px 6px; margin-left: auto;">18 Konu</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
                         <button data-view-target="resources" class="nav-btn">
                             <i class="fa-solid fa-circle-play"></i>
                             <span>Video & Kaynaklar</span>
@@ -660,6 +667,9 @@
                             <p>Toplam 140 soru, 160 dakika: <strong>GY-GK (≥36)</strong>, <strong>İngilizce (≥24)</strong>, <strong>Alan (≥20)</strong> barajlarını aşmaya odaklan!</p>
                         </div>
                         <div class="welcome-action" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                            <button class="btn btn-warning" data-view-target="english-master" style="background: #f59e0b; color: #0f172a; font-weight: 700; border: none;">
+                                <i class="fa-solid fa-language"></i> İngilizce Akademi (18 Konu)
+                            </button>
                             <button class="btn btn-light" data-view-target="exam">
                                 <i class="fa-solid fa-play"></i> Deneme Başlat
                             </button>
@@ -1482,6 +1492,88 @@
                     </div>
                 </section>
 
+                <!-- ========================================================
+                     VIEW: ENGLISH MASTER / İNGİLİZCE AKADEMİ (18 KONU)
+                     ======================================================== -->
+                <section id="english-master-view" class="view-section">
+                    
+                    <!-- Top Hero Banner & Mastery Tracker -->
+                    <div class="eng-master-hero">
+                        <div class="eng-hero-left">
+                            <div class="eng-hero-badge">
+                                <i class="fa-solid fa-graduation-cap"></i> 24+ BARAJ GARANTİLEME AKADEMİSİ
+                            </div>
+                            <h2>İngilizce Konu & Taktik Akademisi 🇬🇧</h2>
+                            <p>
+                                Sınava özel 18 kritik konu. Kısa ve anlaşılır ders notları, görsel karşılaştırma tabloları, 
+                                şık eleme formülleri ve her konunun ardından <strong>5'er soruluk seviyeli mini testler</strong>.
+                            </p>
+                        </div>
+                        <div class="eng-hero-progress-card">
+                            <div class="eng-progress-header">
+                                <span class="eng-progress-label">Akademi İlerlemesi</span>
+                                <span class="eng-progress-percent" id="eng-stat-percent">%0</span>
+                            </div>
+                            <div class="eng-progress-track">
+                                <div class="eng-progress-bar" id="eng-global-progress-bar" style="width: 0%;"></div>
+                            </div>
+                            <div class="eng-progress-stats-row">
+                                <span class="eng-stat-pill"><i class="fa-solid fa-circle-check text-success"></i> <strong id="eng-stat-completed-count">0 / 18 Konu</strong></span>
+                                <span class="eng-stat-pill"><i class="fa-solid fa-hourglass-half text-amber"></i> <strong id="eng-stat-remaining">18 Konu Kaldı</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Filter & Search Toolbar -->
+                    <div class="eng-master-toolbar">
+                        <div class="eng-search-wrap">
+                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                            <input type="text" id="eng-topic-search" placeholder="18 konu içinde ara (örn: Tenses, Modals, Conditionals, Bağlaçlar)..." class="form-input">
+                        </div>
+                        <div class="eng-filter-pills">
+                            <button class="btn btn-secondary btn-sm active" data-eng-filter="all">Tümü (18)</button>
+                            <button class="btn btn-secondary btn-sm" data-eng-filter="completed"><i class="fa-solid fa-check"></i> Tamamlananlar</button>
+                            <button class="btn btn-secondary btn-sm" data-eng-filter="incomplete"><i class="fa-regular fa-clock"></i> Kalan Konular</button>
+                            <button class="btn btn-outline-danger btn-sm" id="btn-reset-eng-progress" title="İlerlemeyi Sıfırla" style="margin-left: auto;">
+                                <i class="fa-solid fa-rotate-left"></i> Sıfırla
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Master-Detail Split Workspace -->
+                    <div class="eng-master-workspace">
+                        
+                        <!-- Left: Topic Selection List (Sidebar) -->
+                        <aside class="eng-topics-sidebar">
+                            <div class="eng-sidebar-header">
+                                <span class="eng-sidebar-title"><i class="fa-solid fa-list-ol text-indigo"></i> Konu Listesi</span>
+                                <span class="badge badge-neutral" style="font-size: 0.72rem;">18 Modül</span>
+                            </div>
+                            <div class="eng-topics-scroll" id="eng-topic-list-container">
+                                <!-- JS dynamically renders topics list -->
+                            </div>
+                        </aside>
+
+                        <!-- Right: Active Topic Learning Hub & Quiz -->
+                        <main class="eng-workspace-main" id="eng-workspace-main">
+                            <!-- Active Topic Header -->
+                            <div class="eng-active-header-card" id="eng-active-header">
+                                <!-- JS dynamically renders active topic header -->
+                            </div>
+
+                            <!-- Active Topic Tabs Navigation -->
+                            <div class="eng-tabs-nav-bar" id="eng-active-tabs-bar">
+                                <!-- JS dynamically renders tabs bar -->
+                            </div>
+
+                            <!-- Active Tab Content Pane -->
+                            <div class="eng-tab-pane" id="eng-tab-pane-container">
+                                <!-- JS dynamically renders active tab content -->
+                            </div>
+                        </main>
+                    </div>
+                </section>
+
             </main>
         </div>
 
@@ -1494,6 +1586,10 @@
             <button data-view-target="lectures" class="mobile-nav-btn">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <span>Konu</span>
+            </button>
+            <button data-view-target="english-master" class="mobile-nav-btn">
+                <i class="fa-solid fa-language"></i>
+                <span>İngilizce</span>
             </button>
             <button data-view-target="notes" class="mobile-nav-btn">
                 <i class="fa-solid fa-note-sticky"></i>

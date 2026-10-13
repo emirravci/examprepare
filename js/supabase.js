@@ -200,6 +200,7 @@ export async function showView(viewId, extraData = null) {
             'review': 'Yanlış Defteri',
             'flashcards': 'Hap Bilgi Kartları',
             'notes': 'Kişisel Notlarım & Bilgi Panosu',
+            'english-master': '🇬🇧 İngilizce Akademi: 24+ Baraj Modülü',
             'stats': 'İstatistik & Baraj',
             'profile': 'Profil & Ayarlar'
         };
