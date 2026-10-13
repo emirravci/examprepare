@@ -1524,53 +1524,71 @@
                         </div>
                     </div>
 
-                    <!-- Filter & Search Toolbar -->
-                    <div class="eng-master-toolbar">
-                        <div class="eng-search-wrap">
-                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
-                            <input type="text" id="eng-topic-search" placeholder="18 konu içinde ara (örn: Tenses, Modals, Conditionals, Bağlaçlar)..." class="form-input">
+                    <!-- Mode Switch Bar: 18 Konu vs Formüller & Mantık Eğitmeni -->
+                    <div class="eng-module-mode-bar">
+                        <button class="eng-mode-switch-btn active" id="btn-mode-curriculum" data-eng-view-mode="curriculum">
+                            <i class="fa-solid fa-graduation-cap"></i> 18 Konu & Seviyeli Testler
+                        </button>
+                        <button class="eng-mode-switch-btn" id="btn-mode-formulas" data-eng-view-mode="formulas">
+                            <i class="fa-solid fa-square-root-variable"></i> Formüller & Mantık Eğitmeni
+                        </button>
+                    </div>
+
+                    <!-- Mode 1 Container: 18 Konu Akademisi & Seviyeli Testler -->
+                    <div id="eng-curriculum-container" class="eng-view-mode-container">
+                        <!-- Filter & Search Toolbar -->
+                        <div class="eng-master-toolbar">
+                            <div class="eng-search-wrap">
+                                <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                                <input type="text" id="eng-topic-search" placeholder="18 konu içinde ara (örn: Tenses, Modals, Conditionals, Bağlaçlar)..." class="form-input">
+                            </div>
+                            <div class="eng-filter-pills">
+                                <button class="btn btn-secondary btn-sm active" data-eng-filter="all">Tümü (18)</button>
+                                <button class="btn btn-secondary btn-sm" data-eng-filter="completed"><i class="fa-solid fa-check"></i> Tamamlananlar</button>
+                                <button class="btn btn-secondary btn-sm" data-eng-filter="incomplete"><i class="fa-regular fa-clock"></i> Kalan Konular</button>
+                                <button class="btn btn-outline-danger btn-sm" id="btn-reset-eng-progress" title="İlerlemeyi Sıfırla" style="margin-left: auto;">
+                                    <i class="fa-solid fa-rotate-left"></i> Sıfırla
+                                </button>
+                            </div>
                         </div>
-                        <div class="eng-filter-pills">
-                            <button class="btn btn-secondary btn-sm active" data-eng-filter="all">Tümü (18)</button>
-                            <button class="btn btn-secondary btn-sm" data-eng-filter="completed"><i class="fa-solid fa-check"></i> Tamamlananlar</button>
-                            <button class="btn btn-secondary btn-sm" data-eng-filter="incomplete"><i class="fa-regular fa-clock"></i> Kalan Konular</button>
-                            <button class="btn btn-outline-danger btn-sm" id="btn-reset-eng-progress" title="İlerlemeyi Sıfırla" style="margin-left: auto;">
-                                <i class="fa-solid fa-rotate-left"></i> Sıfırla
-                            </button>
+
+                        <!-- Master-Detail Split Workspace -->
+                        <div class="eng-master-workspace">
+                            
+                            <!-- Left: Topic Selection List (Sidebar) -->
+                            <aside class="eng-topics-sidebar">
+                                <div class="eng-sidebar-header">
+                                    <span class="eng-sidebar-title"><i class="fa-solid fa-list-ol text-indigo"></i> Konu Listesi</span>
+                                    <span class="badge badge-neutral" style="font-size: 0.72rem;">18 Modül</span>
+                                </div>
+                                <div class="eng-topics-scroll" id="eng-topic-list-container">
+                                    <!-- JS dynamically renders topics list -->
+                                </div>
+                            </aside>
+
+                            <!-- Right: Active Topic Learning Hub & Quiz -->
+                            <main class="eng-workspace-main" id="eng-workspace-main">
+                                <!-- Active Topic Header -->
+                                <div class="eng-active-header-card" id="eng-active-header">
+                                    <!-- JS dynamically renders active topic header -->
+                                </div>
+
+                                <!-- Active Topic Tabs Navigation -->
+                                <div class="eng-tabs-nav-bar" id="eng-active-tabs-bar">
+                                    <!-- JS dynamically renders tabs bar -->
+                                </div>
+
+                                <!-- Active Tab Content Pane -->
+                                <div class="eng-tab-pane" id="eng-tab-pane-container">
+                                    <!-- JS dynamically renders active tab content -->
+                                </div>
+                            </main>
                         </div>
                     </div>
 
-                    <!-- Master-Detail Split Workspace -->
-                    <div class="eng-master-workspace">
-                        
-                        <!-- Left: Topic Selection List (Sidebar) -->
-                        <aside class="eng-topics-sidebar">
-                            <div class="eng-sidebar-header">
-                                <span class="eng-sidebar-title"><i class="fa-solid fa-list-ol text-indigo"></i> Konu Listesi</span>
-                                <span class="badge badge-neutral" style="font-size: 0.72rem;">18 Modül</span>
-                            </div>
-                            <div class="eng-topics-scroll" id="eng-topic-list-container">
-                                <!-- JS dynamically renders topics list -->
-                            </div>
-                        </aside>
-
-                        <!-- Right: Active Topic Learning Hub & Quiz -->
-                        <main class="eng-workspace-main" id="eng-workspace-main">
-                            <!-- Active Topic Header -->
-                            <div class="eng-active-header-card" id="eng-active-header">
-                                <!-- JS dynamically renders active topic header -->
-                            </div>
-
-                            <!-- Active Topic Tabs Navigation -->
-                            <div class="eng-tabs-nav-bar" id="eng-active-tabs-bar">
-                                <!-- JS dynamically renders tabs bar -->
-                            </div>
-
-                            <!-- Active Tab Content Pane -->
-                            <div class="eng-tab-pane" id="eng-tab-pane-container">
-                                <!-- JS dynamically renders active tab content -->
-                            </div>
-                        </main>
+                    <!-- Mode 2 Container: Formüller & Mantık Eğitmeni -->
+                    <div id="eng-formulas-container" class="eng-view-mode-container" style="display: none;">
+                        <!-- JS dynamically renders english_formulas here -->
                     </div>
                 </section>
 

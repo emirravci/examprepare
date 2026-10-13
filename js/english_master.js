@@ -3,11 +3,14 @@
 // 18 Özel Sınav Konusu, Karşılaştırma Tabloları, Şık Eleme Taktikleri & 5'er Soruluk Testler
 // ==============================================================================
 
+import { englishFormulas } from './english_formulas.js';
+
 class EnglishMasterManager {
     constructor() {
         this.topics = [];
         this.activeTopicId = "eng-topic-01";
         this.activeTab = "lecture"; // "lecture", "tactics", "quiz"
+        this.activeViewMode = "curriculum"; // "curriculum" or "formulas"
         this.progress = this.loadProgress();
         this.quizState = {}; // { [topicId]: { userAnswers: { [qId]: selectedIndex }, submitted: boolean, score: number } }
         this.searchQuery = "";
@@ -49,10 +52,15 @@ class EnglishMasterManager {
             this.activeTopicId = lastActive;
         } else if (this.topics.length > 0) {
             this.activeTopicId = this.topics[0].id;
+        // Mod tercihini kontrol et (varsa son kalınan)
+        const savedMode = localStorage.getItem('ziraat_english_view_mode');
+        if (savedMode === 'formulas' || savedMode === 'curriculum') {
+            this.activeViewMode = savedMode;
         }
 
         this.bindEvents();
         this.render();
+        this.switchViewMode(this.activeViewMode);
     }
 
     bindEvents() {
@@ -76,17 +84,43 @@ class EnglishMasterManager {
             };
         });
 
-        // İlerlemeyi sıfırla butonu
-        const resetBtn = document.getElementById('btn-reset-eng-progress');
-        if (resetBtn) {
-            resetBtn.onclick = () => {
-                if (confirm("İngilizce Akademi ilerlemenizi sıfırlamak istediğinize emin misiniz?")) {
-                    this.progress = {};
-                    this.quizState = {};
-                    this.saveProgress();
-                    this.render();
-                }
+        // Mod Geçiş Butonları (18 Konu vs Formüller & Mantık Eğitmeni)
+        const modeBtns = document.querySelectorAll('[data-eng-view-mode]');
+        modeBtns.forEach(btn => {
+            btn.onclick = () => {
+                const mode = btn.getAttribute('data-eng-view-mode');
+                this.switchViewMode(mode);
             };
+        });
+    }
+
+    switchViewMode(mode) {
+        this.activeViewMode = mode;
+        try {
+            localStorage.setItem('ziraat_english_view_mode', mode);
+        } catch (e) {}
+
+        const curriculumContainer = document.getElementById('eng-curriculum-container');
+        const formulasContainer = document.getElementById('eng-formulas-container');
+        const modeBtns = document.querySelectorAll('[data-eng-view-mode]');
+
+        modeBtns.forEach(b => {
+            if (b.getAttribute('data-eng-view-mode') === mode) {
+                b.classList.add('active');
+            } else {
+                b.classList.remove('active');
+            }
+        });
+
+        if (mode === 'formulas') {
+            if (curriculumContainer) curriculumContainer.style.display = 'none';
+            if (formulasContainer) {
+                formulasContainer.style.display = 'block';
+                englishFormulas.init();
+            }
+        } else {
+            if (curriculumContainer) curriculumContainer.style.display = 'block';
+            if (formulasContainer) formulasContainer.style.display = 'none';
         }
     }
 
